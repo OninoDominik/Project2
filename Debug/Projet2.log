@@ -1,0 +1,16 @@
+﻿  Main.cpp
+e:\projet2\project2\tilemap.h(36): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+e:\projet2\project2\tilemap.h(37): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+e:\projet2\project2\tilemap.h(38): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+e:\projet2\project2\tilemap.h(39): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+e:\projet2\project2\tilemap.h(42): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+e:\projet2\project2\tilemap.h(43): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+e:\projet2\project2\tilemap.h(44): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+e:\projet2\project2\tilemap.h(45): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+e:\projet2\project2\main.cpp(223): warning C4305: 'argument': truncation from 'double' to 'float'
+e:\projet2\project2\main.cpp(225): warning C4305: 'argument': truncation from 'double' to 'float'
+e:\projet2\project2\main.cpp(227): warning C4305: 'argument': truncation from 'double' to 'float'
+e:\projet2\project2\main.cpp(229): warning C4305: 'argument': truncation from 'double' to 'float'
+e:\projet2\project2\main.cpp(231): warning C4305: 'argument': truncation from 'double' to 'float'
+  Projet2.vcxproj -> E:\Projet2\Project2\Debug\Projet2.exe
+  Projet2.vcxproj -> E:\Projet2\Project2\Debug\Projet2.pdb (Partial PDB)
