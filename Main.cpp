@@ -1,17 +1,21 @@
 #include <SFML/Graphics.hpp>
-#include "TileMap.h"
 #include <iostream>
 #include "Database.h"
 #include "./sqlite3.h"
 #include <SFML/Graphics.hpp>
-#include "AnimatedSprite.h"
 #include <iostream>
+#include <string>
+#include "personnage.h"
+#include "mur.h"
 
+using namespace std;
 
 int main()
 {
 	database bdd;
 	bdd.openDatabase();
+	string nomDuSprite = "eline.png";
+
 
 	/*bdd.executeQuery("CREATE TABLE IF NOT EXISTS produits (nom TEXT, prix FLOAT, qtevendue INT)");
 	/*bdd.insertProduit("Banane", 1.3, 10);
@@ -28,9 +32,9 @@ int main()
 	bdd.closeDatabase();*/
 
 	// setup window
-	sf::Vector2i screenDimensions(800, 600);
-	sf::RenderWindow window(sf::VideoMode(screenDimensions.x, screenDimensions.y), "Pathfinder");
-	window.setFramerateLimit(60);
+	sf::Vector2i tailleEcran(800, 600);
+	sf::RenderWindow window(sf::VideoMode(tailleEcran.x, tailleEcran.y), "Pathfinder");
+	window.setFramerateLimit(60);//Limitation du framerate
 
 	// load texture (spritesheet)
 	sf::Texture texture;
@@ -38,7 +42,23 @@ int main()
 	sf::Texture texture3;
 	sf::Texture texture4;
 	sf::Texture texture5;
-	if (!texture.loadFromFile("eline.png"))
+	sf::Texture fond;
+	sf::Image icon;
+	if (!icon.loadFromFile("orion.png"))
+	{
+		std::cout << "pas de sprite" << std::endl;
+		return 1;
+	}
+	window.setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
+
+	if (!fond.loadFromFile("decor.jpg"))
+	{
+		std::cout << "pas de sprite" << std::endl;
+		return 1;
+	}
+
+
+	if (!texture.loadFromFile(nomDuSprite))
 	{
 		std::cout << "pas de sprite" << std::endl;
 		return 1;
@@ -63,8 +83,11 @@ int main()
 		std::cout << "pas de sprite" << std::endl;
 		return 1;
 	}
-	const int level[] =
-	{ 
+	sf::Sprite spritePnjEmma(texture3);
+	spritePnjEmma.setPosition(window.getSize().x / 2, window.getSize().y / 2);
+	spritePnjEmma.setTextureRect(sf::IntRect(0, 0, 32, 32));
+	/*const int level[] =
+	{
 		0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14,15,
 		2, 3, 26, 0, 1, 1, 1, 0, 0, 0, 0, 2, 0, 0, 0, 0,
 		4, 0, 0, 0, 0, 0, 24, 0, 3, 3, 3, 3, 3, 3, 3, 0,
@@ -74,21 +97,22 @@ int main()
 		2, 0, 1, 0, 3, 0, 2, 2, 2, 0, 1, 1, 1, 1, 1, 0,
 		0, 0, 1, 0, 3, 2, 2, 2, 0, 0, 0, 0, 1, 1, 1, 0,
 	};
-	
+
 
 	// create the tilemap from the level definition
 	TileMap map;
 	if (!map.load("decor.jpg", sf::Vector2u(520, 600), level, 16, 8))
-		return -1;
-	//Limitation du framerate
-	window.setFramerateLimit(60);
-	//Création de la forme
-	sf::RectangleShape rectangle(sf::Vector2f(32, 40));
-	//Couleur de remplissage
-	rectangle.setFillColor(sf::Color(50, 100, 250, 250));
+		return -1;*/
+
+		//Création de la forme
+		/*sf::RectangleShape rectangle(sf::Vector2f(32, 40));
+		//Couleur de remplissage
+		rectangle.setFillColor(sf::Color(50, 100, 250, 250));*/
+
+	sf::Sprite spriteFond(fond);
 
 	// set up the animations for all four directions (set spritesheet and push frames)
-	Animation haut;
+	/*Animation haut;
 	haut.setSpriteSheet(texture);
 	haut.addFrame(sf::IntRect(128, 96, 32, 32));
 	haut.addFrame(sf::IntRect(160, 96, 32, 32));
@@ -213,15 +237,22 @@ int main()
 	gauche5.addFrame(sf::IntRect(32, 32, 32, 32));
 	gauche5.addFrame(sf::IntRect(0, 32, 32, 32));
 
+	Animation pnj;
+	pnj.setSpriteSheet(texture5);
+	pnj.addFrame(sf::IntRect(64, 64, 32, 32));
+
+
 	Animation* monAnim = &bas;
 	Animation* monAnim2 = &bas2;
 	Animation* monAnim3 = &bas3;
 	Animation* monAnim4 = &bas4;
 	Animation* monAnim5 = &bas5;
+	Animation* animePnj = &pnj;
+
 
 	// set up AnimatedSprite
 	spriteAnime monSprite(sf::seconds(0.2), true, false);
-	monSprite.setPosition(sf::Vector2f(screenDimensions / 2));
+	monSprite.setPosition(sf::Vector2f(tailleEcran / 2));
 	spriteAnime monSprite2(sf::seconds(0.2), true, false);
 	monSprite2.setPosition(430, 330);
 	spriteAnime monSprite3(sf::seconds(0.2), true, false);
@@ -230,11 +261,46 @@ int main()
 	monSprite4.setPosition(400, 270);
 	spriteAnime monSprite5(sf::seconds(0.2), true, false);
 	monSprite5.setPosition(430, 300);
-
+	spriteAnime test(sf::seconds(0.2), true, false);
+	test.setPosition(100,100);
 	sf::Clock monTick;
 
-	float vitesse = 80.f;
+	float vitesse = 80.f;*/
 	bool aucunAppuyTouche = true;
+	personnage Pj;
+	Pj.sprite.setTexture(texture2);
+	Pj.rect.setTextureRect(sf::IntRect(0, 0, 32, 32));
+	vector<mur>::const_iterator iterateur;
+	vector<mur> ligneMur;
+	sf::Font font;
+	if (!font.loadFromFile("pixel.ttf"))
+	{
+		std::cout << "pas de font pixel" << std::endl;
+		return 1;
+	}
+	sf::Text text("Aidez moi ! ", font, 16);
+	text.setPosition(370, 290);
+	int i = 0;
+	class mur mur1;
+	mur1.rect.setPosition(0, 0);
+	ligneMur.push_back(mur1);
+	while (i < 14)
+	{
+		mur1.rect.setPosition(50 * i, 420);
+		ligneMur.push_back(mur1);
+		mur1.rect.setPosition(50 * i, 0);
+		ligneMur.push_back(mur1);
+		mur1.rect.setPosition(0, 50 * i);
+		ligneMur.push_back(mur1);
+		mur1.rect.setPosition(490, 50 * i);
+		ligneMur.push_back(mur1);
+
+		i++;
+	}
+	mur1.rect.setPosition((400), (300));
+	mur1.rect.setSize(sf::Vector2f(32, 32));
+	ligneMur.push_back(mur1);
+	i = 0;
 
 	while (window.isOpen())
 	{
@@ -247,51 +313,102 @@ int main()
 				window.close();
 		}
 
-		sf::Time leTempsduneFrame = monTick.restart();
+		/*sf::Time leTempsduneFrame = monTick.restart();*/
 
 		// if a key was pressed set the correct animation and move correctly
 		sf::Vector2f movement(0.f, 0.f);
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
 		{
-			monAnim = &haut;
+			/*monAnim = &haut;
 			monAnim2 = &haut2;
 			monAnim3 = &haut3;
 			monAnim4 = &haut4;
 			monAnim5 = &haut5;
 			movement.y -= vitesse;
-			aucunAppuyTouche = false;
+			aucunAppuyTouche = false;*/
 		}
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
 		{
-			monAnim = &bas;
+			/*monAnim = &bas;
 			monAnim2 = &bas2;
 			monAnim3 = &bas3;
 			monAnim4 = &bas4;
 			monAnim5 = &bas5;
 			movement.y += vitesse;
-			aucunAppuyTouche = false;
+			aucunAppuyTouche = false;*/
 		}
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
 		{
-			monAnim = &gauche;
+			/*monAnim = &gauche;
 			monAnim2 = &gauche2;
 			monAnim3 = &gauche3;
 			monAnim4 = &gauche4;
 			monAnim5 = &gauche5;
 			movement.x -= vitesse;
-			aucunAppuyTouche = false;
+			aucunAppuyTouche = false;*/
 		}
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
 		{
-			monAnim = &droite;
+			/*monAnim = &droite;
 			monAnim2 = &droite2;
 			monAnim3 = &droite3;
 			monAnim4 = &droite4;
 			monAnim5 = &droite5;
 			movement.x += vitesse;
-			aucunAppuyTouche = false;
+			aucunAppuyTouche = false;*/
 		}
-		monSprite.play(*monAnim);
+
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::M))
+		{
+			sf::RenderWindow menu(sf::VideoMode(tailleEcran.x, tailleEcran.y), "Option");
+			menu.setFramerateLimit(60);
+			while (menu.isOpen())
+			{
+				while (menu.pollEvent(event))
+				{
+					if (event.type == sf::Event::Closed)
+						menu.close();
+					if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape)
+						menu.close();
+
+				}
+			}
+		}
+		int i = 0;
+		for (iterateur = ligneMur.begin(); iterateur != ligneMur.end(); iterateur++)
+		{
+			if (Pj.rect.getGlobalBounds().intersects(ligneMur[i].rect.getGlobalBounds())) //touche un mur
+			{
+
+				if (Pj.direction == 1) // haut
+				{
+					Pj.monter = false;
+					Pj.rect.move(0, Pj.vitesse);
+				}
+				else if (Pj.direction == 2) // bas
+				{
+					Pj.descendre = false;
+					Pj.rect.move(0, -Pj.vitesse);
+				}
+				else if (Pj.direction == 3) // gauche
+				{
+					Pj.reculer = false;
+					Pj.rect.move(Pj.vitesse, 0);
+				}
+				else if (Pj.direction == 4) // droite
+				{
+					Pj.avancer = false;
+					Pj.rect.move(-Pj.vitesse, 0);
+				}
+				else
+				{
+
+				}
+			}
+
+			i++;
+		}
+		/*monSprite.play(*monAnim);
 		monSprite.move(movement * leTempsduneFrame.asSeconds());
 		monSprite2.play(*monAnim2);
 		monSprite2.move(movement * leTempsduneFrame.asSeconds());
@@ -301,34 +418,46 @@ int main()
 		monSprite4.move(movement * leTempsduneFrame.asSeconds());
 		monSprite5.play(*monAnim5);
 		monSprite5.move(movement * leTempsduneFrame.asSeconds());
+		test.play(*animePnj);*/
 
 
 		// if no key was pressed stop the animation
 		if (aucunAppuyTouche)
 		{
-			monSprite.stop();
+			/*monSprite.stop();
 			monSprite2.stop();
 			monSprite3.stop();
 			monSprite4.stop();
-			monSprite5.stop();
+			monSprite5.stop();*/
 		}
 		aucunAppuyTouche = true;
 
 		// update AnimatedSprite
-		monSprite.update(leTempsduneFrame);
+		/*monSprite.update(leTempsduneFrame);
 		monSprite2.update(leTempsduneFrame);
 		monSprite3.update(leTempsduneFrame);
 		monSprite4.update(leTempsduneFrame);
-		monSprite5.update(leTempsduneFrame);
+		monSprite5.update(leTempsduneFrame);*/
 
 		// draw
-		window.clear(sf::Color(50,200,50));
-		window.draw(map);
-		window.draw(monSprite);
+		Pj.Positionnement();
+		Pj.Mouvement();
+		window.clear();
+		for(i=0;i<ligneMur.size()-1;i++)
+		{
+			window.draw(ligneMur[i].rect);
+		}
+		window.draw(ligneMur[i].rect);
+		window.draw(spriteFond);
+		window.draw(spritePnjEmma);
+		window.draw(Pj.sprite);
+		window.draw(text);
+		/*window.draw(monSprite);
 		window.draw(monSprite2);
 		window.draw(monSprite3);
 		window.draw(monSprite4);
 		window.draw(monSprite5);
+		window.draw(test);*/
 		window.display();
 	}
 

@@ -1,16 +1,13 @@
 ﻿  Main.cpp
-e:\projet2\project2\tilemap.h(36): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
-e:\projet2\project2\tilemap.h(37): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
-e:\projet2\project2\tilemap.h(38): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
-e:\projet2\project2\tilemap.h(39): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
-e:\projet2\project2\tilemap.h(42): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
-e:\projet2\project2\tilemap.h(43): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
-e:\projet2\project2\tilemap.h(44): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
-e:\projet2\project2\tilemap.h(45): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
-e:\projet2\project2\main.cpp(223): warning C4305: 'argument': truncation from 'double' to 'float'
-e:\projet2\project2\main.cpp(225): warning C4305: 'argument': truncation from 'double' to 'float'
-e:\projet2\project2\main.cpp(227): warning C4305: 'argument': truncation from 'double' to 'float'
-e:\projet2\project2\main.cpp(229): warning C4305: 'argument': truncation from 'double' to 'float'
-e:\projet2\project2\main.cpp(231): warning C4305: 'argument': truncation from 'double' to 'float'
-  Projet2.vcxproj -> E:\Projet2\Project2\Debug\Projet2.exe
-  Projet2.vcxproj -> E:\Projet2\Project2\Debug\Projet2.pdb (Partial PDB)
+c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\main.cpp(87): warning C4244: 'argument' : conversion de 'unsigned int' en 'float', perte possible de données
+c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\main.cpp(289): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\main.cpp(291): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\main.cpp(293): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\main.cpp(295): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\main.cpp(386): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\main.cpp(391): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\main.cpp(396): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\main.cpp(401): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\main.cpp(446): warning C4018: '<' : incompatibilité signed/unsigned
+  Projet2.vcxproj -> C:\Users\adai06\Documents\Visual Studio 2015\Projects\Projet2\Project2\Debug\Projet2.exe
+  Projet2.vcxproj -> C:\Users\adai06\Documents\Visual Studio 2015\Projects\Projet2\Project2\Debug\Projet2.pdb (Partial PDB)
