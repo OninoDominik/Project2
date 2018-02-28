@@ -7,11 +7,14 @@
 #include <string>
 #include "personnage.h"
 #include "mur.h"
-
+#include "combat.h"
+#include "paladin.h"
+ 
 using namespace std;
 
 int main()
 {
+	srand(time(NULL));
 	database bdd;
 	bdd.openDatabase();
 	string nomDuSprite = "eline.png";
@@ -44,7 +47,7 @@ int main()
 	sf::Texture texture5;
 	sf::Texture fond;
 	sf::Image icon;
-	if (!icon.loadFromFile("orion.png"))
+	if (!icon.loadFromFile("iconPath.jpeg"))
 	{
 		std::cout << "pas de sprite" << std::endl;
 		return 1;
@@ -267,19 +270,29 @@ int main()
 
 	float vitesse = 80.f;*/
 	bool aucunAppuyTouche = true;
-	personnage Pj;
-	Pj.sprite.setTexture(texture2);
-	Pj.rect.setTextureRect(sf::IntRect(0, 0, 32, 32));
+	personnage* ptrPj = nullptr;
+	if (true)
+	{
+		paladin *Pj = new paladin();
+		ptrPj = Pj;
+	}
+	ptrPj->setNom("Dom");
+	
+	ptrPj->sprite.setTexture(texture2);
+	ptrPj->rect.setTextureRect(sf::IntRect(0, 0, 32, 32));
 	vector<mur>::const_iterator iterateur;
+	vector<mur>::const_iterator iterateur2;
 	vector<mur> ligneMur;
+	vector<mur> ligneMur2;
 	sf::Font font;
 	if (!font.loadFromFile("pixel.ttf"))
 	{
 		std::cout << "pas de font pixel" << std::endl;
 		return 1;
 	}
-	sf::Text text("Aidez moi ! ", font, 16);
+	sf::Text text("Ecartez vous !! Manant !!", font, 16);
 	text.setPosition(370, 290);
+	bool afficheText = false;
 	int i = 0;
 	class mur mur1;
 	mur1.rect.setPosition(0, 0);
@@ -298,10 +311,38 @@ int main()
 		i++;
 	}
 	mur1.rect.setPosition((400), (300));
-	mur1.rect.setSize(sf::Vector2f(32, 32));
+	mur1.rect.setSize(sf::Vector2f(30, 30));
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition((320), (170));
+	mur1.rect.setSize(sf::Vector2f(50, 50));
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition((250), (235));
+	mur1.rect.setSize(sf::Vector2f(2, 2));
 	ligneMur.push_back(mur1);
 	i = 0;
+	mur mur2;
+	mur2.rect.setPosition((399), (299));
+	mur2.rect.setSize(sf::Vector2f(40, 40));
+	ligneMur2.push_back(mur2);
+	personnage emma("Emma");
+	personnage* ptrEmma = &emma;
 
+	/*while (*emma.pvActuel > 0 && *Pj.pvActuel > 0)
+	{
+		Pj.Attaque(emma);
+		if (*emma.pvActuel <= 0)
+		{
+			
+			break;
+		}
+		else
+		{
+			emma.Attaque(Pj);
+		}
+		
+	}*/
+	combat* fight1 = new combat();
+	fight1->startcombat(ptrPj, ptrEmma);
 	while (window.isOpen())
 	{
 		sf::Event event;
@@ -313,10 +354,23 @@ int main()
 				window.close();
 		}
 
+		chose spriteCursor;
+		spriteCursor.rect.setPosition((sf::Vector2f)sf::Mouse::getPosition(window));
+
+		if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && ptrPj->rect.getGlobalBounds().intersects(spriteCursor.rect.getGlobalBounds()))
+		{
+			window.close();
+		}
+		else
+		{
+			
+		}
+
 		/*sf::Time leTempsduneFrame = monTick.restart();*/
 
 		// if a key was pressed set the correct animation and move correctly
 		sf::Vector2f movement(0.f, 0.f);
+
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
 		{
 			/*monAnim = &haut;
@@ -360,8 +414,9 @@ int main()
 
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::M))
 		{
-			sf::RenderWindow menu(sf::VideoMode(tailleEcran.x, tailleEcran.y), "Option");
+			sf::RenderWindow menu(sf::VideoMode(180, 300), "Option");
 			menu.setFramerateLimit(60);
+
 			while (menu.isOpen())
 			{
 				while (menu.pollEvent(event))
@@ -370,35 +425,37 @@ int main()
 						menu.close();
 					if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape)
 						menu.close();
-
+					menu.clear(sf::Color::Yellow);
+					menu.draw(ptrPj->sprite);
 				}
 			}
 		}
 		int i = 0;
 		for (iterateur = ligneMur.begin(); iterateur != ligneMur.end(); iterateur++)
 		{
-			if (Pj.rect.getGlobalBounds().intersects(ligneMur[i].rect.getGlobalBounds())) //touche un mur
+			if (ptrPj->rect.getGlobalBounds().intersects(ligneMur[i].rect.getGlobalBounds())) //touche un mur
 			{
-
-				if (Pj.direction == 1) // haut
+			
+				if (ptrPj->direction == 1) // haut
 				{
-					Pj.monter = false;
-					Pj.rect.move(0, Pj.vitesse);
+					ptrPj->monter = false;
+					ptrPj->rect.move(0, ptrPj->vitesse);
 				}
-				else if (Pj.direction == 2) // bas
+				else if (ptrPj->direction == 2) // bas
 				{
-					Pj.descendre = false;
-					Pj.rect.move(0, -Pj.vitesse);
+					ptrPj->descendre = false;
+					ptrPj->rect.move(0, -ptrPj->vitesse);
+					
 				}
-				else if (Pj.direction == 3) // gauche
+				else if (ptrPj->direction == 3) // gauche
 				{
-					Pj.reculer = false;
-					Pj.rect.move(Pj.vitesse, 0);
+					ptrPj->reculer = false;
+					ptrPj->rect.move(ptrPj->vitesse, 0);
 				}
-				else if (Pj.direction == 4) // droite
+				else if (ptrPj->direction == 4) // droite
 				{
-					Pj.avancer = false;
-					Pj.rect.move(-Pj.vitesse, 0);
+					ptrPj->avancer = false;
+					ptrPj->rect.move(-ptrPj->vitesse, 0);
 				}
 				else
 				{
@@ -408,6 +465,18 @@ int main()
 
 			i++;
 		}
+		for (int i =0;i<ligneMur2.size();i++)
+		{
+			if (ptrPj->rect.getGlobalBounds().intersects(ligneMur2[i].rect.getGlobalBounds())) //touche un mur
+			{
+				afficheText = true;
+			}
+			else
+			{
+				afficheText = false;
+			}
+		}
+		
 		/*monSprite.play(*monAnim);
 		monSprite.move(movement * leTempsduneFrame.asSeconds());
 		monSprite2.play(*monAnim2);
@@ -440,18 +509,24 @@ int main()
 		monSprite5.update(leTempsduneFrame);*/
 
 		// draw
-		Pj.Positionnement();
-		Pj.Mouvement();
+		
+		ptrPj->Positionnement();
+		ptrPj->Mouvement();
 		window.clear();
 		for(i=0;i<ligneMur.size()-1;i++)
 		{
 			window.draw(ligneMur[i].rect);
 		}
-		window.draw(ligneMur[i].rect);
+		//window.draw(ligneMur[i].rect);
+
 		window.draw(spriteFond);
 		window.draw(spritePnjEmma);
-		window.draw(Pj.sprite);
-		window.draw(text);
+		window.draw(ptrPj->sprite);
+		if (afficheText)
+		{
+			window.draw(text);
+		}
+		
 		/*window.draw(monSprite);
 		window.draw(monSprite2);
 		window.draw(monSprite3);
@@ -459,6 +534,7 @@ int main()
 		window.draw(monSprite5);
 		window.draw(test);*/
 		window.display();
+		//cout << (int)sf::Mouse::getPosition(window).x <<"    " <<(int)sf::Mouse::getPosition(window).y << endl;
 	}
 
 	return 0;

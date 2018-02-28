@@ -1,13 +1,116 @@
-﻿  AnimatedSprite.cpp
-e:\projet2\project2\AnimatedSprite.h(2): fatal error C1083: Cannot open include file: 'SFML/Graphics/RenderTarget.hpp': No such file or directory
-  Animation.cpp
-e:\projet2\project2\Animation.h(3): fatal error C1083: Cannot open include file: 'SFML/Graphics/Rect.hpp': No such file or directory
-  Database.cpp
-Database.cpp(81): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-  Main.cpp
-Main.cpp(1): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
-  MyEntity.cpp
-e:\projet2\project2\MyEntity.h(2): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
-  Produit.cpp
-  TileMap.cpp
-e:\projet2\project2\TileMap.h(4): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+﻿sfml-graphics-s-d.lib(Transformable.cpp.obj) : error LNK2038: discordance détectée pour '_ITERATOR_DEBUG_LEVEL' : la valeur '2' ne correspond pas à la valeur '0' in chose.obj
+sfml-graphics-s-d.lib(Transformable.cpp.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MDd_DynamicDebug' ne correspond pas à la valeur 'MD_DynamicRelease' in chose.obj
+sfml-graphics-s-d.lib(Shape.cpp.obj) : error LNK2038: discordance détectée pour '_ITERATOR_DEBUG_LEVEL' : la valeur '2' ne correspond pas à la valeur '0' in chose.obj
+sfml-graphics-s-d.lib(Shape.cpp.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MDd_DynamicDebug' ne correspond pas à la valeur 'MD_DynamicRelease' in chose.obj
+sfml-graphics-s-d.lib(RectangleShape.cpp.obj) : error LNK2038: discordance détectée pour '_ITERATOR_DEBUG_LEVEL' : la valeur '2' ne correspond pas à la valeur '0' in chose.obj
+sfml-graphics-s-d.lib(RectangleShape.cpp.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MDd_DynamicDebug' ne correspond pas à la valeur 'MD_DynamicRelease' in chose.obj
+sfml-graphics-s-d.lib(Sprite.cpp.obj) : error LNK2038: discordance détectée pour '_ITERATOR_DEBUG_LEVEL' : la valeur '2' ne correspond pas à la valeur '0' in chose.obj
+sfml-graphics-s-d.lib(Sprite.cpp.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MDd_DynamicDebug' ne correspond pas à la valeur 'MD_DynamicRelease' in chose.obj
+sfml-graphics-s-d.lib(Text.cpp.obj) : error LNK2038: discordance détectée pour '_ITERATOR_DEBUG_LEVEL' : la valeur '2' ne correspond pas à la valeur '0' in chose.obj
+sfml-graphics-s-d.lib(Text.cpp.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MDd_DynamicDebug' ne correspond pas à la valeur 'MD_DynamicRelease' in chose.obj
+sfml-graphics-s-d.lib(RenderStates.cpp.obj) : error LNK2038: discordance détectée pour '_ITERATOR_DEBUG_LEVEL' : la valeur '2' ne correspond pas à la valeur '0' in chose.obj
+sfml-graphics-s-d.lib(RenderStates.cpp.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MDd_DynamicDebug' ne correspond pas à la valeur 'MD_DynamicRelease' in chose.obj
+sfml-graphics-s-d.lib(Texture.cpp.obj) : error LNK2038: discordance détectée pour '_ITERATOR_DEBUG_LEVEL' : la valeur '2' ne correspond pas à la valeur '0' in chose.obj
+sfml-graphics-s-d.lib(Texture.cpp.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MDd_DynamicDebug' ne correspond pas à la valeur 'MD_DynamicRelease' in chose.obj
+sfml-graphics-s-d.lib(Font.cpp.obj) : error LNK2038: discordance détectée pour '_ITERATOR_DEBUG_LEVEL' : la valeur '2' ne correspond pas à la valeur '0' in chose.obj
+sfml-graphics-s-d.lib(Font.cpp.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MDd_DynamicDebug' ne correspond pas à la valeur 'MD_DynamicRelease' in chose.obj
+sfml-graphics-s-d.lib(RenderWindow.cpp.obj) : error LNK2038: discordance détectée pour '_ITERATOR_DEBUG_LEVEL' : la valeur '2' ne correspond pas à la valeur '0' in chose.obj
+sfml-graphics-s-d.lib(RenderWindow.cpp.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MDd_DynamicDebug' ne correspond pas à la valeur 'MD_DynamicRelease' in chose.obj
+sfml-graphics-s-d.lib(Color.cpp.obj) : error LNK2038: discordance détectée pour '_ITERATOR_DEBUG_LEVEL' : la valeur '2' ne correspond pas à la valeur '0' in chose.obj
+sfml-graphics-s-d.lib(Color.cpp.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MDd_DynamicDebug' ne correspond pas à la valeur 'MD_DynamicRelease' in chose.obj
+sfml-graphics-s-d.lib(VertexArray.cpp.obj) : error LNK2038: discordance détectée pour '_ITERATOR_DEBUG_LEVEL' : la valeur '2' ne correspond pas à la valeur '0' in chose.obj
+sfml-graphics-s-d.lib(VertexArray.cpp.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MDd_DynamicDebug' ne correspond pas à la valeur 'MD_DynamicRelease' in chose.obj
+sfml-graphics-s-d.lib(Image.cpp.obj) : error LNK2038: discordance détectée pour '_ITERATOR_DEBUG_LEVEL' : la valeur '2' ne correspond pas à la valeur '0' in chose.obj
+sfml-graphics-s-d.lib(Image.cpp.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MDd_DynamicDebug' ne correspond pas à la valeur 'MD_DynamicRelease' in chose.obj
+sfml-graphics-s-d.lib(RenderTarget.cpp.obj) : error LNK2038: discordance détectée pour '_ITERATOR_DEBUG_LEVEL' : la valeur '2' ne correspond pas à la valeur '0' in chose.obj
+sfml-graphics-s-d.lib(RenderTarget.cpp.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MDd_DynamicDebug' ne correspond pas à la valeur 'MD_DynamicRelease' in chose.obj
+sfml-graphics-s-d.lib(Transform.cpp.obj) : error LNK2038: discordance détectée pour '_ITERATOR_DEBUG_LEVEL' : la valeur '2' ne correspond pas à la valeur '0' in chose.obj
+sfml-graphics-s-d.lib(Transform.cpp.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MDd_DynamicDebug' ne correspond pas à la valeur 'MD_DynamicRelease' in chose.obj
+sfml-graphics-s-d.lib(GLExtensions.cpp.obj) : error LNK2038: discordance détectée pour '_ITERATOR_DEBUG_LEVEL' : la valeur '2' ne correspond pas à la valeur '0' in chose.obj
+sfml-graphics-s-d.lib(GLExtensions.cpp.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MDd_DynamicDebug' ne correspond pas à la valeur 'MD_DynamicRelease' in chose.obj
+sfml-graphics-s-d.lib(GLCheck.cpp.obj) : error LNK2038: discordance détectée pour '_ITERATOR_DEBUG_LEVEL' : la valeur '2' ne correspond pas à la valeur '0' in chose.obj
+sfml-graphics-s-d.lib(GLCheck.cpp.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MDd_DynamicDebug' ne correspond pas à la valeur 'MD_DynamicRelease' in chose.obj
+sfml-graphics-s-d.lib(ImageLoader.cpp.obj) : error LNK2038: discordance détectée pour '_ITERATOR_DEBUG_LEVEL' : la valeur '2' ne correspond pas à la valeur '0' in chose.obj
+sfml-graphics-s-d.lib(ImageLoader.cpp.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MDd_DynamicDebug' ne correspond pas à la valeur 'MD_DynamicRelease' in chose.obj
+sfml-graphics-s-d.lib(View.cpp.obj) : error LNK2038: discordance détectée pour '_ITERATOR_DEBUG_LEVEL' : la valeur '2' ne correspond pas à la valeur '0' in chose.obj
+sfml-graphics-s-d.lib(View.cpp.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MDd_DynamicDebug' ne correspond pas à la valeur 'MD_DynamicRelease' in chose.obj
+sfml-graphics-s-d.lib(Shader.cpp.obj) : error LNK2038: discordance détectée pour '_ITERATOR_DEBUG_LEVEL' : la valeur '2' ne correspond pas à la valeur '0' in chose.obj
+sfml-graphics-s-d.lib(Shader.cpp.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MDd_DynamicDebug' ne correspond pas à la valeur 'MD_DynamicRelease' in chose.obj
+sfml-graphics-s-d.lib(Glsl.cpp.obj) : error LNK2038: discordance détectée pour '_ITERATOR_DEBUG_LEVEL' : la valeur '2' ne correspond pas à la valeur '0' in chose.obj
+sfml-graphics-s-d.lib(Glsl.cpp.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MDd_DynamicDebug' ne correspond pas à la valeur 'MD_DynamicRelease' in chose.obj
+sfml-window-s-d.lib(Window.cpp.obj) : error LNK2038: discordance détectée pour '_ITERATOR_DEBUG_LEVEL' : la valeur '2' ne correspond pas à la valeur '0' in chose.obj
+sfml-window-s-d.lib(Window.cpp.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MDd_DynamicDebug' ne correspond pas à la valeur 'MD_DynamicRelease' in chose.obj
+sfml-window-s-d.lib(VideoMode.cpp.obj) : error LNK2038: discordance détectée pour '_ITERATOR_DEBUG_LEVEL' : la valeur '2' ne correspond pas à la valeur '0' in chose.obj
+sfml-window-s-d.lib(VideoMode.cpp.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MDd_DynamicDebug' ne correspond pas à la valeur 'MD_DynamicRelease' in chose.obj
+sfml-window-s-d.lib(Context.cpp.obj) : error LNK2038: discordance détectée pour '_ITERATOR_DEBUG_LEVEL' : la valeur '2' ne correspond pas à la valeur '0' in chose.obj
+sfml-window-s-d.lib(Context.cpp.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MDd_DynamicDebug' ne correspond pas à la valeur 'MD_DynamicRelease' in chose.obj
+sfml-window-s-d.lib(GlContext.cpp.obj) : error LNK2038: discordance détectée pour '_ITERATOR_DEBUG_LEVEL' : la valeur '2' ne correspond pas à la valeur '0' in chose.obj
+sfml-window-s-d.lib(GlContext.cpp.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MDd_DynamicDebug' ne correspond pas à la valeur 'MD_DynamicRelease' in chose.obj
+sfml-window-s-d.lib(WindowImpl.cpp.obj) : error LNK2038: discordance détectée pour '_ITERATOR_DEBUG_LEVEL' : la valeur '2' ne correspond pas à la valeur '0' in chose.obj
+sfml-window-s-d.lib(WindowImpl.cpp.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MDd_DynamicDebug' ne correspond pas à la valeur 'MD_DynamicRelease' in chose.obj
+sfml-window-s-d.lib(InputImpl.cpp.obj) : error LNK2038: discordance détectée pour '_ITERATOR_DEBUG_LEVEL' : la valeur '2' ne correspond pas à la valeur '0' in chose.obj
+sfml-window-s-d.lib(InputImpl.cpp.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MDd_DynamicDebug' ne correspond pas à la valeur 'MD_DynamicRelease' in chose.obj
+sfml-window-s-d.lib(VideoModeImpl.cpp.obj) : error LNK2038: discordance détectée pour '_ITERATOR_DEBUG_LEVEL' : la valeur '2' ne correspond pas à la valeur '0' in chose.obj
+sfml-window-s-d.lib(VideoModeImpl.cpp.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MDd_DynamicDebug' ne correspond pas à la valeur 'MD_DynamicRelease' in chose.obj
+sfml-window-s-d.lib(WglContext.cpp.obj) : error LNK2038: discordance détectée pour '_ITERATOR_DEBUG_LEVEL' : la valeur '2' ne correspond pas à la valeur '0' in chose.obj
+sfml-window-s-d.lib(WglContext.cpp.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MDd_DynamicDebug' ne correspond pas à la valeur 'MD_DynamicRelease' in chose.obj
+sfml-window-s-d.lib(JoystickManager.cpp.obj) : error LNK2038: discordance détectée pour '_ITERATOR_DEBUG_LEVEL' : la valeur '2' ne correspond pas à la valeur '0' in chose.obj
+sfml-window-s-d.lib(JoystickManager.cpp.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MDd_DynamicDebug' ne correspond pas à la valeur 'MD_DynamicRelease' in chose.obj
+sfml-window-s-d.lib(SensorManager.cpp.obj) : error LNK2038: discordance détectée pour '_ITERATOR_DEBUG_LEVEL' : la valeur '2' ne correspond pas à la valeur '0' in chose.obj
+sfml-window-s-d.lib(SensorManager.cpp.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MDd_DynamicDebug' ne correspond pas à la valeur 'MD_DynamicRelease' in chose.obj
+sfml-window-s-d.lib(WindowImplWin32.cpp.obj) : error LNK2038: discordance détectée pour '_ITERATOR_DEBUG_LEVEL' : la valeur '2' ne correspond pas à la valeur '0' in chose.obj
+sfml-window-s-d.lib(WindowImplWin32.cpp.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MDd_DynamicDebug' ne correspond pas à la valeur 'MD_DynamicRelease' in chose.obj
+sfml-window-s-d.lib(WglExtensions.cpp.obj) : error LNK2038: discordance détectée pour '_ITERATOR_DEBUG_LEVEL' : la valeur '2' ne correspond pas à la valeur '0' in chose.obj
+sfml-window-s-d.lib(WglExtensions.cpp.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MDd_DynamicDebug' ne correspond pas à la valeur 'MD_DynamicRelease' in chose.obj
+sfml-window-s-d.lib(Joystick.cpp.obj) : error LNK2038: discordance détectée pour '_ITERATOR_DEBUG_LEVEL' : la valeur '2' ne correspond pas à la valeur '0' in chose.obj
+sfml-window-s-d.lib(Joystick.cpp.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MDd_DynamicDebug' ne correspond pas à la valeur 'MD_DynamicRelease' in chose.obj
+sfml-window-s-d.lib(JoystickImpl.cpp.obj) : error LNK2038: discordance détectée pour '_ITERATOR_DEBUG_LEVEL' : la valeur '2' ne correspond pas à la valeur '0' in chose.obj
+sfml-window-s-d.lib(JoystickImpl.cpp.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MDd_DynamicDebug' ne correspond pas à la valeur 'MD_DynamicRelease' in chose.obj
+sfml-system-s-d.lib(String.cpp.obj) : error LNK2038: discordance détectée pour '_ITERATOR_DEBUG_LEVEL' : la valeur '2' ne correspond pas à la valeur '0' in chose.obj
+sfml-system-s-d.lib(String.cpp.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MDd_DynamicDebug' ne correspond pas à la valeur 'MD_DynamicRelease' in chose.obj
+sfml-system-s-d.lib(Err.cpp.obj) : error LNK2038: discordance détectée pour '_ITERATOR_DEBUG_LEVEL' : la valeur '2' ne correspond pas à la valeur '0' in chose.obj
+sfml-system-s-d.lib(Err.cpp.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MDd_DynamicDebug' ne correspond pas à la valeur 'MD_DynamicRelease' in chose.obj
+sfml-system-s-d.lib(ThreadLocal.cpp.obj) : error LNK2038: discordance détectée pour '_ITERATOR_DEBUG_LEVEL' : la valeur '2' ne correspond pas à la valeur '0' in chose.obj
+sfml-system-s-d.lib(ThreadLocal.cpp.obj) : error LNK2038: discordance détectée pour 'RuntimeLibrary' : la valeur 'MDd_DynamicDebug' ne correspond pas à la valeur 'MD_DynamicRelease' in chose.obj
+LINK : warning LNK4098: conflit entre la bibliothèque par défaut 'MSVCRTD' et les autres bibliothèques ; utilisez /NODEFAULTLIB:library
+sfml-window-s-d.lib(WindowImplWin32.cpp.obj) : error LNK2001: symbole externe non résolu __imp___invalid_parameter
+sfml-window-s-d.lib(WglExtensions.cpp.obj) : error LNK2001: symbole externe non résolu __imp___invalid_parameter
+sfml-window-s-d.lib(JoystickImpl.cpp.obj) : error LNK2001: symbole externe non résolu __imp___invalid_parameter
+sfml-system-s-d.lib(String.cpp.obj) : error LNK2001: symbole externe non résolu __imp___invalid_parameter
+sfml-window-s-d.lib(WindowImpl.cpp.obj) : error LNK2001: symbole externe non résolu __imp___invalid_parameter
+sfml-window-s-d.lib(VideoModeImpl.cpp.obj) : error LNK2001: symbole externe non résolu __imp___invalid_parameter
+sfml-window-s-d.lib(WglContext.cpp.obj) : error LNK2001: symbole externe non résolu __imp___invalid_parameter
+sfml-window-s-d.lib(JoystickManager.cpp.obj) : error LNK2001: symbole externe non résolu __imp___invalid_parameter
+sfml-graphics-s-d.lib(Shader.cpp.obj) : error LNK2001: symbole externe non résolu __imp___invalid_parameter
+sfml-window-s-d.lib(Window.cpp.obj) : error LNK2001: symbole externe non résolu __imp___invalid_parameter
+sfml-window-s-d.lib(VideoMode.cpp.obj) : error LNK2001: symbole externe non résolu __imp___invalid_parameter
+sfml-window-s-d.lib(GlContext.cpp.obj) : error LNK2001: symbole externe non résolu __imp___invalid_parameter
+sfml-graphics-s-d.lib(VertexArray.cpp.obj) : error LNK2001: symbole externe non résolu __imp___invalid_parameter
+sfml-graphics-s-d.lib(Image.cpp.obj) : error LNK2001: symbole externe non résolu __imp___invalid_parameter
+sfml-graphics-s-d.lib(GLCheck.cpp.obj) : error LNK2001: symbole externe non résolu __imp___invalid_parameter
+sfml-graphics-s-d.lib(ImageLoader.cpp.obj) : error LNK2001: symbole externe non résolu __imp___invalid_parameter
+sfml-graphics-s-d.lib(Shape.cpp.obj) : error LNK2001: symbole externe non résolu __imp___invalid_parameter
+sfml-graphics-s-d.lib(Text.cpp.obj) : error LNK2001: symbole externe non résolu __imp___invalid_parameter
+sfml-graphics-s-d.lib(Texture.cpp.obj) : error LNK2001: symbole externe non résolu __imp___invalid_parameter
+sfml-graphics-s-d.lib(Font.cpp.obj) : error LNK2001: symbole externe non résolu __imp___invalid_parameter
+sfml-window-s-d.lib(WindowImplWin32.cpp.obj) : error LNK2001: symbole externe non résolu __imp___CrtDbgReportW
+sfml-window-s-d.lib(WglExtensions.cpp.obj) : error LNK2001: symbole externe non résolu __imp___CrtDbgReportW
+sfml-window-s-d.lib(JoystickImpl.cpp.obj) : error LNK2001: symbole externe non résolu __imp___CrtDbgReportW
+sfml-system-s-d.lib(String.cpp.obj) : error LNK2001: symbole externe non résolu __imp___CrtDbgReportW
+sfml-window-s-d.lib(WindowImpl.cpp.obj) : error LNK2001: symbole externe non résolu __imp___CrtDbgReportW
+sfml-window-s-d.lib(VideoModeImpl.cpp.obj) : error LNK2001: symbole externe non résolu __imp___CrtDbgReportW
+sfml-window-s-d.lib(WglContext.cpp.obj) : error LNK2001: symbole externe non résolu __imp___CrtDbgReportW
+sfml-window-s-d.lib(JoystickManager.cpp.obj) : error LNK2001: symbole externe non résolu __imp___CrtDbgReportW
+sfml-graphics-s-d.lib(Shader.cpp.obj) : error LNK2001: symbole externe non résolu __imp___CrtDbgReportW
+sfml-window-s-d.lib(Window.cpp.obj) : error LNK2001: symbole externe non résolu __imp___CrtDbgReportW
+sfml-window-s-d.lib(VideoMode.cpp.obj) : error LNK2001: symbole externe non résolu __imp___CrtDbgReportW
+sfml-window-s-d.lib(GlContext.cpp.obj) : error LNK2001: symbole externe non résolu __imp___CrtDbgReportW
+sfml-graphics-s-d.lib(VertexArray.cpp.obj) : error LNK2001: symbole externe non résolu __imp___CrtDbgReportW
+sfml-graphics-s-d.lib(Image.cpp.obj) : error LNK2001: symbole externe non résolu __imp___CrtDbgReportW
+sfml-graphics-s-d.lib(GLCheck.cpp.obj) : error LNK2001: symbole externe non résolu __imp___CrtDbgReportW
+sfml-graphics-s-d.lib(ImageLoader.cpp.obj) : error LNK2001: symbole externe non résolu __imp___CrtDbgReportW
+sfml-graphics-s-d.lib(Shape.cpp.obj) : error LNK2001: symbole externe non résolu __imp___CrtDbgReportW
+sfml-graphics-s-d.lib(Text.cpp.obj) : error LNK2001: symbole externe non résolu __imp___CrtDbgReportW
+sfml-graphics-s-d.lib(Texture.cpp.obj) : error LNK2001: symbole externe non résolu __imp___CrtDbgReportW
+sfml-graphics-s-d.lib(Font.cpp.obj) : error LNK2001: symbole externe non résolu __imp___CrtDbgReportW
+C:\Users\adai06\Documents\Visual Studio 2015\Projects\Projet2\Project2\Release\Projet2.exe : fatal error LNK1120: 2 externes non résolus
