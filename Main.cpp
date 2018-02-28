@@ -271,10 +271,10 @@ int main()
 	float vitesse = 80.f;*/
 	bool aucunAppuyTouche = true;
 	personnage* ptrPj = nullptr;
+	paladin *ptrPal = new paladin();
 	if (true)
 	{
-		paladin *Pj = new paladin();
-		ptrPj = Pj;
+		ptrPj = ptrPal;
 	}
 	ptrPj->setNom("Dom");
 	
@@ -356,7 +356,7 @@ int main()
 
 		chose spriteCursor;
 		spriteCursor.rect.setPosition((sf::Vector2f)sf::Mouse::getPosition(window));
-
+		spriteCursor.rect.setSize(sf::Vector2f(4, 4));
 		if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && ptrPj->rect.getGlobalBounds().intersects(spriteCursor.rect.getGlobalBounds()))
 		{
 			window.close();

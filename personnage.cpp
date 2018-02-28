@@ -88,6 +88,8 @@ void personnage::Mouvement()
 }
 
 
+
+
 personnage::~personnage()
 {
 }
@@ -129,6 +131,10 @@ int personnage::BonusStat(string stat)
 		return (*intelligence - 10) / 2;
 	}
 }
+void personnage::sesoigne()
+{
+
+}
 void personnage::InfligeDegat(personnage& ennemi)
 {
 	int deg = 0;
@@ -147,17 +153,22 @@ void personnage::InfligeDegat(personnage& ennemi)
 }
 void personnage::Attaque(personnage& ennemi)
 {
-	int jetToucher = 0;
-	jetToucher = (rand() % 20 + 1) + *bonusAttaque;
-	if (ennemi.CA() <= jetToucher)
+	
+	for (int i = 0; i < *this->nbrAttaque; i++)
 	{
-		cout << nom << " touche  " << ennemi.nom << " avec un  " << jetToucher << endl << " la ca de  " << ennemi.nom << " etait de " << ennemi.CA() << endl;
-		InfligeDegat(ennemi);
+		int jetToucher = 0;
+		jetToucher = (rand() % 20 + 1) + *bonusAttaque;
+		if (ennemi.CA() <= jetToucher)
+		{
+			cout << nom << " touche  " << ennemi.nom << " avec un  " << jetToucher << endl << " la ca de  " << ennemi.nom << " etait de " << ennemi.CA() << endl;
+			InfligeDegat(ennemi);
+		}
+		else
+		{
+			cout << nom << " rate  " << ennemi.nom << " avec un  " << jetToucher << endl << " la ca de  " << ennemi.nom << " etait de " << ennemi.CA() << endl;
+		}
 	}
-	else
-	{
-		cout << nom << " rate  " << ennemi.nom << " avec un  " << jetToucher << endl <<" la ca de  " << ennemi.nom << " etait de " << ennemi.CA() << endl;
-	}
+	
 	
 }
 int personnage::Initiative()
@@ -167,4 +178,3 @@ int personnage::Initiative()
 		cout << "init" << initiative << endl;
 		return initiative;
 }
-

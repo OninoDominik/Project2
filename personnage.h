@@ -11,7 +11,7 @@ public:
 	~personnage();
 
 	int vitesse = 2;
-	int direction = 0; // 1 - up, 2 - down, 3 - left, 4 - right
+	int direction = 0; // 1 - haut, 2 - bas, 3 - gauche, 4 - droite
 	bool monter = true;
 	bool descendre = true;
 	bool reculer = true;
@@ -35,8 +35,15 @@ public:
 	int * bonusInitiative = new int(0);
 	int * bonusAttaque = new int(4);
 	int * bonusBouclier = new int(0);
+	int * nbrAttaque = new int(1);
+	int * choix = new int(0);
+	int * nbrDesSoin = new int(0);
+	int * nbrFaceDesSoin = new int(0);
+	int * niveau = new int(2);
+
 	string nomBonusDegat = "force";
 	string nom;
+	virtual void sesoigne();
 	bool * envie = new bool(true);
 
 	int Initiative();

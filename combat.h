@@ -6,6 +6,8 @@ public:
 	combat();
 	~combat();
 
+	void Choixjoueur(personnage * joueur);
+
 	void startcombat(personnage * ami, personnage * ennemi);
 
 
