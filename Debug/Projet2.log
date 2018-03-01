@@ -9,7 +9,7 @@ c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\main.cpp(
 c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\main.cpp(237): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
 c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\main.cpp(243): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
 c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\main.cpp(248): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\main.cpp(258): warning C4018: '<' : incompatibilité signed/unsigned
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\main.cpp(343): warning C4018: '<' : incompatibilité signed/unsigned
+c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\main.cpp(259): warning C4018: '<' : incompatibilité signed/unsigned
+c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\main.cpp(352): warning C4018: '<' : incompatibilité signed/unsigned
   Projet2.vcxproj -> C:\Users\adai06\Documents\Visual Studio 2015\Projects\Projet2\Project2\Debug\Projet2.exe
   Projet2.vcxproj -> C:\Users\adai06\Documents\Visual Studio 2015\Projects\Projet2\Project2\Debug\Projet2.pdb (Partial PDB)

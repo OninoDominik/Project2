@@ -10,7 +10,6 @@ public:
 
 	static void startcombat(personnage * ami, personnage * ennemi);
 	
-
-
+	
 };
 

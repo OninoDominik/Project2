@@ -18,7 +18,7 @@ int main()
 	database bdd;
 	bdd.openDatabase();
 	string nomDuSprite = "eline.png";
-
+	bool * fermeCombatWindow = new bool(false);
 
 	/*bdd.executeQuery("CREATE TABLE IF NOT EXISTS produits (nom TEXT, prix FLOAT, qtevendue INT)");
 	/*bdd.insertProduit("Banane", 1.3, 10);
@@ -255,13 +255,14 @@ int main()
 
 			i++;
 		}
+		*fermeCombatWindow = false;
 		for (int i =0;i<ligneMur2.size();i++)
 		{
 			if (ptrPj->rect.getGlobalBounds().intersects(ligneMur2[i].rect.getGlobalBounds())) //touche un mur
 			{
 				sf::Event combatEvent;
 				afficheText = true;
-				sf::RenderWindow combatWindow(sf::VideoMode(800, 600), "Combat"); //470.145
+				sf::RenderWindow combatWindow(sf::VideoMode(470, 145), "Combat"); //470.145
 
 				chose spriteCurseurCombat;
 				sf::Thread thread(std::bind(&combat::startcombat, ptrPj, ptrEmma));
@@ -305,6 +306,8 @@ int main()
 					chose * boutonAttaquer = new chose();
 					boutonAttaquer->text.setString("Attaquer");
 					boutonAttaquer->text.setFont(font);
+					boutonAttaquer->text.setFillColor(sf::Color::Red);
+					boutonAttaquer->text.setStyle(sf::Text::Bold);
 					boutonAttaquer->text.setCharacterSize(10);
 					boutonAttaquer->text.setPosition(30, 30);
 					boutonAttaquer->rect.setPosition(30, 30);
@@ -325,6 +328,11 @@ int main()
 					combatWindow.draw(ptrEmma->sprite);
 					combatWindow.draw(boutonAttaquer->text);
 					combatWindow.display();
+					if (*ptrPj->fermeCombatWindow)
+					{
+						cout << "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+						break;
+					}
 				}
 				
 
@@ -333,6 +341,7 @@ int main()
 			{
 				afficheText = false;
 			}
+			
 		}
 		
 		

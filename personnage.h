@@ -41,6 +41,7 @@ public:
 	int * nbrDesSoin = new int(0);
 	int * nbrFaceDesSoin = new int(0);
 	int * niveau = new int(2);
+	bool * fermeCombatWindow = new bool(false);
 
 	string nomBonusDegat = "force";
 	string nom;
