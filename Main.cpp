@@ -166,8 +166,8 @@ int main()
 	ligneMur2.push_back(mur2);
 	personnage emma("Emma");
 	personnage* ptrEmma = &emma;
-	combat* fight1 = new combat();
-
+	combat fight1;
+	
 
 	
 	
@@ -182,10 +182,12 @@ int main()
 				window.close();
 		}
 
-		chose spriteCursor;
-		spriteCursor.rect.setPosition((sf::Vector2f)sf::Mouse::getPosition(window));
-		spriteCursor.rect.setSize(sf::Vector2f(4, 4));
-		if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && ptrPj->rect.getGlobalBounds().intersects(spriteCursor.rect.getGlobalBounds()))
+		
+		chose spriteCurseur;
+		spriteCurseur.rect.setPosition((sf::Vector2f)sf::Mouse::getPosition(window));
+		spriteCurseur.rect.setSize(sf::Vector2f(4, 4));
+
+		if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && ptrPj->rect.getGlobalBounds().intersects(spriteCurseur.rect.getGlobalBounds()))
 		{
 			window.close();
 		}
@@ -259,10 +261,15 @@ int main()
 			{
 				sf::Event combatEvent;
 				afficheText = true;
-				sf::RenderWindow combat(sf::VideoMode(470, 145), "Fight");
-				fight1->startcombat(ptrPj, ptrEmma);
+				sf::RenderWindow combatWindow(sf::VideoMode(800, 600), "Combat"); //470.145
+
+				chose spriteCurseurCombat;
+				sf::Thread thread(std::bind(&combat::startcombat, ptrPj, ptrEmma));
+
+				thread.launch(); // start the thread (internally calls task.run())
+				
 				int i = 0;
-				while (combat.isOpen())
+				while (combatWindow.isOpen())
 				{
 					ptrPj->rect.setPosition((100), (105));
 					ptrPj->rect.setSize((sf::Vector2f(32, 32)));
@@ -271,16 +278,21 @@ int main()
 					ptrEmma->rect.setSize((sf::Vector2f(32, 32)));
 					ptrEmma->sprite.setTexture(texture3);
 
-					while (combat.pollEvent(combatEvent))
+					spriteCurseurCombat.rect.setPosition((sf::Vector2f)sf::Mouse::getPosition(combatWindow));
+					spriteCurseurCombat.rect.setSize(sf::Vector2f(4, 4));
+
+					
+					while (combatWindow.pollEvent(combatEvent))
 					{
 						if (combatEvent.type == sf::Event::Closed)
-							combat.close();
+							combatWindow.close();
+
 						if (combatEvent.type == sf::Event::KeyPressed && combatEvent.key.code == sf::Keyboard::Escape)
-							combat.close();
+							combatWindow.close();
 
 					}
 					
-					combat.setFramerateLimit(20);
+					combatWindow.setFramerateLimit(20);
 
 
 					ptrPj->sprite.setTextureRect(sf::IntRect(i * 32, 64, 32, 32));
@@ -290,17 +302,31 @@ int main()
 					ptrEmma->sprite.setTextureRect(sf::IntRect(i * 32, 32, 32, 32));
 					ptrEmma->Positionnement();
 
+					chose * boutonAttaquer = new chose();
+					boutonAttaquer->text.setString("Attaquer");
+					boutonAttaquer->text.setFont(font);
+					boutonAttaquer->text.setCharacterSize(10);
+					boutonAttaquer->text.setPosition(30, 30);
+					boutonAttaquer->rect.setPosition(30, 30);
+					boutonAttaquer->rect.setSize((sf::Vector2f(100, 32)));
+
+					if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && boutonAttaquer->rect.getGlobalBounds().intersects(spriteCurseurCombat.rect.getGlobalBounds()))
+					{
+						*ptrPj->choix = 1;
+					}
+	
 					i = (i + 1) % 3;
 
 					spriteAreneBack.getPosition();
-					combat.clear();
-					combat.draw(spriteAreneBack);
-					combat.draw(spriteAreneFront);
-					combat.draw(ptrPj->sprite);
-					combat.draw(ptrEmma->sprite);
-					combat.display();
+					combatWindow.clear();
+					combatWindow.draw(spriteAreneBack);
+					combatWindow.draw(spriteAreneFront);
+					combatWindow.draw(ptrPj->sprite);
+					combatWindow.draw(ptrEmma->sprite);
+					combatWindow.draw(boutonAttaquer->text);
+					combatWindow.display();
 				}
-				fight1->startcombat(ptrPj, ptrEmma);
+				
 
 			}
 			else

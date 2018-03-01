@@ -6,9 +6,10 @@ public:
 	combat();
 	~combat();
 
-	void Choixjoueur(personnage * joueur);
+	static void Choixjoueur(personnage * joueur);
 
-	void startcombat(personnage * ami, personnage * ennemi);
+	static void startcombat(personnage * ami, personnage * ennemi);
+	
 
 
 };

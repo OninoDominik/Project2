@@ -11,8 +11,10 @@ combat::~combat()
 }
 void combat::Choixjoueur(personnage* joueur)
 {
-	cout << " 1 pour attaquer " << " 2 pour lancer un sort de soin" << "  ";
-		cin >> *joueur->choix;
+	do
+	{
+
+	} while (*joueur->choix==0);
 }
 void combat::startcombat(personnage* ami, personnage* ennemi)
 {
@@ -33,12 +35,15 @@ void combat::startcombat(personnage* ami, personnage* ennemi)
 				{
 				case 1:
 					ami->Attaque(*ennemi);
+					*ami->choix = 0;
 					break;
 				case 2:
 					ami->sesoigne();
+					*ami->choix = 0;
 					cout << "Apres les soins vos Pvs sont de " << *ami->pvActuel<< endl;
 					break;
 				default:
+					*ami->choix = 0;
 					break;
 				}
 			}
