@@ -1,5 +1,6 @@
 #pragma once
 #include "personnage.h"
+#include <time.h>
 class combat
 {
 public:

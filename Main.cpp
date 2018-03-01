@@ -8,13 +8,15 @@
 #include "mur.h"
 #include "combat.h"
 #include "paladin.h"
+#include <time.h>
 
  
 using namespace std;
 
 int main()
 {
-	srand(time(NULL));
+	srand((unsigned) time(0));
+
 	database bdd;
 	bdd.openDatabase();
 	string nomDuSprite = "eline.png";
@@ -35,7 +37,7 @@ int main()
 	bdd.closeDatabase();*/
 
 	// setup window
-	sf::Vector2i tailleEcran(800, 600);
+	sf::Vector2i tailleEcran(530, 420);
 	sf::RenderWindow window(sf::VideoMode(tailleEcran.x, tailleEcran.y), "Pathfinder");
 	window.setFramerateLimit(60);//Limitation du framerate
 
@@ -99,7 +101,7 @@ int main()
 		return 1;
 	}
 	sf::Sprite spritePnjEmma(texture3);
-	spritePnjEmma.setPosition(window.getSize().x / 2, window.getSize().y / 2);
+	
 	spritePnjEmma.setTextureRect(sf::IntRect(0, 0, 32, 32));
 	
 
@@ -125,7 +127,7 @@ int main()
 	vector<mur> ligneMur;
 	vector<mur> ligneMur2;
 	sf::Font font;
-	if (!font.loadFromFile("pixel.ttf"))
+	if (!font.loadFromFile("CloisterBlack.ttf"))
 	{
 		std::cout << "pas de font pixel" << std::endl;
 		return 1;
@@ -163,9 +165,21 @@ int main()
 	mur mur2;
 	mur2.rect.setPosition((399), (299));
 	mur2.rect.setSize(sf::Vector2f(40, 40));
+	spritePnjEmma.setPosition(399, 299);
 	ligneMur2.push_back(mur2);
 	personnage emma("Emma");
 	personnage* ptrEmma = &emma;
+	ptrEmma->text.setString(" ");
+	ptrEmma->text.setFont(font);
+	ptrEmma->text.setFillColor(sf::Color::White);
+	ptrEmma->text.setCharacterSize(16);
+	ptrEmma->text.setPosition(ptrEmma->rect.getPosition());
+	ptrPj->text.setString(" ");
+	ptrPj->text.setFont(font);
+	ptrPj->text.setFillColor(sf::Color::White);
+	ptrPj->text.setCharacterSize(16);
+	ptrPj->text.setPosition(ptrPj->rect.getPosition());
+
 	combat fight1;
 	
 
@@ -306,12 +320,34 @@ int main()
 					chose * boutonAttaquer = new chose();
 					boutonAttaquer->text.setString("Attaquer");
 					boutonAttaquer->text.setFont(font);
-					boutonAttaquer->text.setFillColor(sf::Color::Red);
+					boutonAttaquer->text.setFillColor(sf::Color::White);
 					boutonAttaquer->text.setStyle(sf::Text::Bold);
-					boutonAttaquer->text.setCharacterSize(10);
-					boutonAttaquer->text.setPosition(30, 30);
-					boutonAttaquer->rect.setPosition(30, 30);
+					boutonAttaquer->text.setCharacterSize(16);
+					boutonAttaquer->text.setPosition(0, 40);
+					boutonAttaquer->rect.setPosition(0, 40);
 					boutonAttaquer->rect.setSize((sf::Vector2f(100, 32)));
+
+					chose * scorePjHp = new chose();
+					scorePjHp->text.setString(to_string(*ptrPj->pvActuel)+" / "+ to_string(*ptrPj->pvMax));
+					scorePjHp->text.setFont(font);
+					scorePjHp->text.setFillColor(sf::Color::White);
+					scorePjHp->text.setCharacterSize(16);
+					scorePjHp->text.setPosition(5, 10);
+					scorePjHp->rect.setPosition(0, 0);
+					scorePjHp->rect.setSize((sf::Vector2f(70, 145)));
+					scorePjHp->rect.setFillColor(sf::Color::Black);
+
+					chose*  scorePnjHP = new chose();
+					scorePnjHP->text.setString(to_string(*ptrEmma->pvActuel) + " / " + to_string(*ptrEmma->pvMax));
+					scorePnjHP->text.setFont(font);
+					scorePnjHP->text.setFillColor(sf::Color::White);
+					scorePnjHP->text.setCharacterSize(16);
+					scorePnjHP->text.setPosition(360, 10);
+					scorePnjHP->rect.setPosition(360, 10);
+					scorePnjHP->rect.setSize((sf::Vector2f(70, 145)));
+					scorePnjHP->rect.setFillColor(sf::Color::Black);
+
+
 
 					if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && boutonAttaquer->rect.getGlobalBounds().intersects(spriteCurseurCombat.rect.getGlobalBounds()))
 					{
@@ -324,10 +360,17 @@ int main()
 					combatWindow.clear();
 					combatWindow.draw(spriteAreneBack);
 					combatWindow.draw(spriteAreneFront);
+					combatWindow.draw(scorePjHp->rect);
 					combatWindow.draw(ptrPj->sprite);
 					combatWindow.draw(ptrEmma->sprite);
 					combatWindow.draw(boutonAttaquer->text);
+					combatWindow.draw(scorePjHp->text);
+					combatWindow.draw(scorePnjHP->text);
+					combatWindow.draw(ptrPj->text);
+					combatWindow.draw(ptrEmma->text);
+					
 					combatWindow.display();
+
 					if (*ptrPj->fermeCombatWindow)
 					{
 						cout << "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
@@ -358,6 +401,7 @@ int main()
 		window.draw(spriteFond);
 		window.draw(spritePnjEmma);
 		window.draw(ptrPj->sprite);
+
 		if (afficheText)
 		{
 			window.draw(text);

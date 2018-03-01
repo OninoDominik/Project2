@@ -1,9 +1,10 @@
 #include "combat.h"
 #include "personnage.h"
 #include "paladin.h"
+
 combat::combat() 
 {
-
+	
 }
 
 combat::~combat()
@@ -13,16 +14,18 @@ void combat::Choixjoueur(personnage* joueur)
 {
 	do
 	{
-
+		
 	} while (*joueur->choix==0);
+
 }
+
 void combat::startcombat(personnage* ami, personnage* ennemi)
 {
+	srand((unsigned)time(0));
 	while ((*ami->envie) && (*ennemi->envie))
 	{
 		int initiativeAmi = ami->Initiative();
 		cout << ami->nom << " a une initiative de  " << initiativeAmi << "  " << " pour le tour " << endl;
-
 		int initiativeEnnemi = ennemi->Initiative();
 		cout << ennemi->nom << " a une initiative de  " << initiativeEnnemi << "  " << " pour le tour " << endl;
 		for (int i = 50; i > 0; i--)
@@ -36,11 +39,13 @@ void combat::startcombat(personnage* ami, personnage* ennemi)
 				case 1:
 					ami->Attaque(*ennemi);
 					*ami->choix = 0;
+					sf::sleep(sf::seconds(0.75));
 					break;
 				case 2:
 					ami->sesoigne();
 					*ami->choix = 0;
 					cout << "Apres les soins vos Pvs sont de " << *ami->pvActuel << endl;
+					sf::sleep(sf::seconds(0.75));
 					break;
 				default:
 					*ami->choix = 0;
@@ -49,6 +54,7 @@ void combat::startcombat(personnage* ami, personnage* ennemi)
 			}
 			if (initiativeEnnemi == i)
 			{
+				sf::sleep(sf::seconds(0.75));
 				ennemi->Attaque(*ami);
 			}
 
@@ -56,6 +62,7 @@ void combat::startcombat(personnage* ami, personnage* ennemi)
 			{
 				*ennemi->envie = false;
 				cout << *ennemi->envie << endl;
+				sf::sleep(sf::seconds(0.75));
 				*ami->fermeCombatWindow = true;
 				break;
 			}
@@ -63,6 +70,7 @@ void combat::startcombat(personnage* ami, personnage* ennemi)
 			{
 				*ami->envie = false;
 				cout << *ami->envie << endl;
+
 				*ami->fermeCombatWindow = true;
 				break;
 			}

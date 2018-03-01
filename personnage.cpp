@@ -1,5 +1,6 @@
 #include "personnage.h"
 #include <SFML/Graphics.hpp>
+#include <time.h>
 
 personnage::personnage()
 {
@@ -136,6 +137,9 @@ void personnage::sesoigne()
 }
 void personnage::InfligeDegat(personnage& ennemi)
 {
+	int x = this->rect.getPosition().x;
+	int y = this->rect.getPosition().y;
+
 	int deg = 0;
 	int degtempo;
 	for (int i = 0; i < *nbrDesDegat; i++)
@@ -147,23 +151,41 @@ void personnage::InfligeDegat(personnage& ennemi)
 		cout << "des de degats : " << degtempo << endl;
 		
 	}
+	this->text.setString("j'ai inflige "+to_string(deg)+" degats");
+	this->text.setFillColor(sf::Color::White);
+	this->text.setCharacterSize(16);
+	this->text.setPosition(x-30, y - 30);
 	*ennemi.pvActuel -= deg ;
+	sf::sleep(sf::milliseconds(750));
 	cout << nom << " frappe  " << ennemi.nom << "  et inflige   " << deg << " Degats " << endl << "il lui reste " << *ennemi.pvActuel << " PV" << endl;
 }
 void personnage::Attaque(personnage& ennemi)
 {
+	int x = this->rect.getPosition().x;
+	int y = this->rect.getPosition().y;
 	
 	for (int i = 0; i < *this->nbrAttaque; i++)
 	{
 		int jetToucher = 0;
-		jetToucher = (rand() % 20 + 1) + *bonusAttaque;
+		jetToucher = ((rand()%20) + 1) + *bonusAttaque;
 		if (ennemi.CA() <= jetToucher)
 		{
+			this->text.setString("Toucher");
+			this->text.setFillColor(sf::Color::White);
+			this->text.setCharacterSize(16);
+			
+			this->text.setPosition(x , y - 30);
+			
 			cout << nom << " touche  " << ennemi.nom << " avec un  " << jetToucher << endl << " la ca de  " << ennemi.nom << " etait de " << ennemi.CA() << endl;
 			InfligeDegat(ennemi);
 		}
 		else
 		{
+
+			this->text.setString("Rater");
+			this->text.setFillColor(sf::Color::White);
+			this->text.setCharacterSize(16);
+			this->text.setPosition(x, y - 30);
 			cout << nom << " rate  " << ennemi.nom << " avec un  " << jetToucher << endl << " la ca de  " << ennemi.nom << " etait de " << ennemi.CA() << endl;
 		}
 	}

@@ -1,15 +1,15 @@
-﻿  Main.cpp
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\main.cpp(17): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\main.cpp(102): warning C4244: 'argument' : conversion de 'unsigned int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\main.cpp(142): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\main.cpp(144): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\main.cpp(146): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\main.cpp(148): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\main.cpp(232): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\main.cpp(237): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\main.cpp(243): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\main.cpp(248): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\main.cpp(259): warning C4018: '<' : incompatibilité signed/unsigned
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\main.cpp(352): warning C4018: '<' : incompatibilité signed/unsigned
-  Projet2.vcxproj -> C:\Users\adai06\Documents\Visual Studio 2015\Projects\Projet2\Project2\Debug\Projet2.exe
-  Projet2.vcxproj -> C:\Users\adai06\Documents\Visual Studio 2015\Projects\Projet2\Project2\Debug\Projet2.pdb (Partial PDB)
+﻿  personnage.cpp
+e:\projet2\project2\personnage.cpp(37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\personnage.cpp(50): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\personnage.cpp(63): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\personnage.cpp(76): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\personnage.cpp(140): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+e:\projet2\project2\personnage.cpp(141): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+e:\projet2\project2\personnage.cpp(157): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\personnage.cpp(164): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+e:\projet2\project2\personnage.cpp(165): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+e:\projet2\project2\personnage.cpp(177): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\personnage.cpp(188): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\personnage.cpp(133): warning C4715: 'personnage::BonusStat': not all control paths return a value
+  Projet2.vcxproj -> E:\Projet2\Project2\Debug\Projet2.exe
+  Projet2.vcxproj -> E:\Projet2\Project2\Debug\Projet2.pdb (Partial PDB)

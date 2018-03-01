@@ -1,4 +1,5 @@
 #include "paladin.h"
+#include <time.h>
 
 
 paladin::paladin() 
@@ -24,7 +25,6 @@ paladin::paladin()
 	*choix = 0;
 	*niveau = 2;
 	*nbrAttaque = 2;
-
 }
 
 
