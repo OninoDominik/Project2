@@ -200,16 +200,16 @@ int main()
 
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::M))
 		{
-			sf::RenderWindow menu(sf::VideoMode(180, 300), "Option");
+			sf::RenderWindow menu(sf::VideoMode(100, 800), "Option");
 			menu.setFramerateLimit(60);
-
+			sf::Event menuEvent;
 			while (menu.isOpen())
 			{
-				while (menu.pollEvent(event))
+				while (menu.pollEvent(menuEvent))
 				{
-					if (event.type == sf::Event::Closed)
+					if (menuEvent.type == sf::Event::Closed)
 						menu.close();
-					if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape)
+					if (menuEvent.type == sf::Event::KeyPressed && menuEvent.key.code == sf::Keyboard::Escape)
 						menu.close();
 					
 				}
@@ -257,29 +257,49 @@ int main()
 		{
 			if (ptrPj->rect.getGlobalBounds().intersects(ligneMur2[i].rect.getGlobalBounds())) //touche un mur
 			{
+				sf::Event combatEvent;
 				afficheText = true;
-				sf::RenderWindow combat(sf::VideoMode(300, 300), "Fight");
-				combat.setFramerateLimit(60);
-				ptrPj->rect.setPosition((20), (70));
-				ptrPj->rect.setSize((sf::Vector2f(32, 32)));
-				ptrPj->sprite.setTexture(texture2);
-				ptrPj->rect.setTextureRect(sf::IntRect(0, 0, 32, 32));
-				ptrPj->Positionnement();
-				
-				ptrEmma->rect.setPosition((70), (20));
-				ptrEmma->rect.setSize((sf::Vector2f(32, 32)));
-				ptrEmma->sprite.setTexture(texture3);
-				ptrEmma->rect.setTextureRect(sf::IntRect(0, 0, 32, 32));
-				ptrEmma->Positionnement();
+				sf::RenderWindow combat(sf::VideoMode(470, 145), "Fight");
+				fight1->startcombat(ptrPj, ptrEmma);
+				int i = 0;
+				while (combat.isOpen())
+				{
+					ptrPj->rect.setPosition((100), (105));
+					ptrPj->rect.setSize((sf::Vector2f(32, 32)));
+					ptrPj->sprite.setTexture(texture2);
+					ptrEmma->rect.setPosition((360), (105));
+					ptrEmma->rect.setSize((sf::Vector2f(32, 32)));
+					ptrEmma->sprite.setTexture(texture3);
 
-				spriteAreneBack.getPosition();
-				combat.clear();
-				combat.draw(spriteAreneBack);
-				combat.draw(spriteAreneFront);
-				combat.draw(ptrPj->sprite);
-				combat.draw(ptrEmma->sprite);
-				combat.display();
+					while (combat.pollEvent(combatEvent))
+					{
+						if (combatEvent.type == sf::Event::Closed)
+							combat.close();
+						if (combatEvent.type == sf::Event::KeyPressed && combatEvent.key.code == sf::Keyboard::Escape)
+							combat.close();
 
+					}
+					
+					combat.setFramerateLimit(20);
+
+
+					ptrPj->sprite.setTextureRect(sf::IntRect(i * 32, 64, 32, 32));
+					ptrPj->Positionnement();
+
+
+					ptrEmma->sprite.setTextureRect(sf::IntRect(i * 32, 32, 32, 32));
+					ptrEmma->Positionnement();
+
+					i = (i + 1) % 3;
+
+					spriteAreneBack.getPosition();
+					combat.clear();
+					combat.draw(spriteAreneBack);
+					combat.draw(spriteAreneFront);
+					combat.draw(ptrPj->sprite);
+					combat.draw(ptrEmma->sprite);
+					combat.display();
+				}
 				fight1->startcombat(ptrPj, ptrEmma);
 
 			}
