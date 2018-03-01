@@ -1,21 +1,15 @@
 ﻿  Main.cpp
-e:\projet2\project2\main.cpp(17): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-e:\projet2\project2\main.cpp(90): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
-e:\projet2\project2\main.cpp(302): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\main.cpp(304): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\main.cpp(306): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\main.cpp(308): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\main.cpp(442): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\main.cpp(447): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\main.cpp(453): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\main.cpp(458): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\main.cpp(468): warning C4018: '<': signed/unsigned mismatch
-e:\projet2\project2\main.cpp(516): warning C4018: '<': signed/unsigned mismatch
-  Generating Code...
-  Compiling...
-  paladin.cpp
-  Generating Code...
-  Skipping... (no relevant changes detected)
-  combat.cpp
-  Projet2.vcxproj -> E:\Projet2\Project2\Debug\Projet2.exe
-  Projet2.vcxproj -> E:\Projet2\Project2\Debug\Projet2.pdb (Partial PDB)
+c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\main.cpp(17): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
+c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\main.cpp(102): warning C4244: 'argument' : conversion de 'unsigned int' en 'float', perte possible de données
+c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\main.cpp(142): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\main.cpp(144): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\main.cpp(146): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\main.cpp(148): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\main.cpp(230): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\main.cpp(235): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\main.cpp(241): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\main.cpp(246): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\main.cpp(256): warning C4018: '<' : incompatibilité signed/unsigned
+c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\main.cpp(297): warning C4018: '<' : incompatibilité signed/unsigned
+  Projet2.vcxproj -> C:\Users\adai06\Documents\Visual Studio 2015\Projects\Projet2\Project2\Debug\Projet2.exe
+  Projet2.vcxproj -> C:\Users\adai06\Documents\Visual Studio 2015\Projects\Projet2\Project2\Debug\Projet2.pdb (Partial PDB)

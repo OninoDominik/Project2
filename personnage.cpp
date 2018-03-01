@@ -1,7 +1,6 @@
 #include "personnage.h"
 #include <SFML/Graphics.hpp>
 
-
 personnage::personnage()
 {
 	rect.setSize(sf::Vector2f(32, 32));
@@ -144,7 +143,7 @@ void personnage::InfligeDegat(personnage& ennemi)
 		degtempo = 0;
 		degtempo = ((rand() % (*nbrFaceDesDegat)) + 1 + BonusStat(nomBonusDegat));
 		deg += degtempo;
-		cout << "pv actuel : " << *ennemi.pvActuel;
+		cout << "pv actuel de : " << ennemi.nom  << "  " << *ennemi.pvActuel << endl;
 		cout << "des de degats : " << degtempo << endl;
 		
 	}
@@ -177,4 +176,31 @@ int personnage::Initiative()
 		int initiative = (BonusStat("dexterite") + *bonusInitiative + (rand()%20+1));
 		cout << "init" << initiative << endl;
 		return initiative;
+}
+void personnage::afficheStat()
+{
+	cout << "nom nom nom nom " << this->nom << endl;
+	/*cout << "force = 10; " << *this->force << endl;
+	cout << "constitution = 10; " << *this->constitution << endl;
+	cout << "dexterite = 10; " << *this->dexterite << endl;
+	cout << "sagesse = 10; " << *this->sagesse << endl;
+	cout << "charisme = 10; " << *this->charisme << endl;
+	cout << "intelligence = 10; " << *this->intelligence << endl;
+	cout << "nbrFaceDesDegat = 6; " << *this->nbrFaceDesDegat << endl;
+	cout << "nbrDesDegat = 2; " << *this->nbrDesDegat << endl;
+	cout << "bonusArmure = 5; " << *this->bonusArmure << endl;
+	cout << " taille = 2; " << *this->taille << endl;
+	cout << "pvMax = 40; " << *this->pvMax << endl;
+
+	cout << "pvActuel = pvMax; " << *this->pvActuel << endl;
+	
+	cout << "bonusInitiative = 2; " << *this->bonusInitiative << endl;
+	cout << "bonusAttaque = 5; " << *this->bonusAttaque << endl;
+	cout << "bonusBouclier = 0; " << *this->bonusBouclier << endl;
+	cout << "nbrAttaque = 2; " << *this->nbrAttaque << endl;
+	cout << "choix = 0; " << *this->choix << endl;*/
+
+	cout << "nbrDesSoin = 0; " << *this->nbrDesSoin << endl;
+	cout << " nbrFaceDesSoin = 0; " << *this->nbrFaceDesSoin << endl;
+	cout << " niveau = 2; " << *this->niveau << endl;
 }

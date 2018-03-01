@@ -5,6 +5,7 @@
 
 class personnage : public chose
 {
+	
 public:
 	personnage();
 	personnage(string nomDuPerso);
@@ -47,6 +48,7 @@ public:
 	bool * envie = new bool(true);
 
 	int Initiative();
+	void afficheStat();
 	int CA();
 	void InfligeDegat(personnage& ennemi);
 
