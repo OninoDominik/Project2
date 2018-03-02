@@ -17,10 +17,17 @@ int main()
 {
 	srand((unsigned) time(0));
 
+	sf::Music music;
+	if (!music.openFromFile("Necromancy.ogg"))
+		return -1; // erreur
+	music.play();
+	
+
 	database bdd;
 	bdd.openDatabase();
 	string nomDuSprite = "eline.png";
 	bool * fermeCombatWindow = new bool(false);
+	
 
 	/*bdd.executeQuery("CREATE TABLE IF NOT EXISTS produits (nom TEXT, prix FLOAT, qtevendue INT)");
 	/*bdd.insertProduit("Banane", 1.3, 10);
@@ -36,10 +43,21 @@ int main()
 	bdd.closeDatabase();*/
 
 	// setup window
-	sf::Vector2i tailleEcran(530, 420);
+	sf::Vector2i tailleEcran(800, 600);
 	sf::RenderWindow window(sf::VideoMode(tailleEcran.x, tailleEcran.y), "Pathfinder");
+
+	sf::View vuePj(sf::FloatRect(200, 200, 300, 200));
+	vuePj.setSize(sf::Vector2f(window.getSize().x, window.getSize().y));
+	vuePj.setCenter(sf::Vector2f(vuePj.getSize().x / 2, vuePj.getSize().y / 2));
+	window.setView(vuePj);
+
+
+
+
+
 	window.setFramerateLimit(60);//Limitation du framerate
 
+	
 	// load texture (spritesheet)
 	sf::Texture texture;
 	sf::Texture texture2;
@@ -61,7 +79,7 @@ int main()
 	}
 	window.setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
 
-	if (!fond.loadFromFile("decor.jpg"))
+	if (!fond.loadFromFile("steampunkMap.png"))
 	{
 		std::cout << "pas de sprite" << std::endl;
 		return 1;
@@ -91,7 +109,7 @@ int main()
 		std::cout << "pas de sprite" << std::endl;
 		return 1;
 	}
-	if (!texture4.loadFromFile("rezza.png"))
+	if (!texture4.loadFromFile("darkBoss.png"))
 	{
 		std::cout << "pas de sprite" << std::endl;
 		return 1;
@@ -101,9 +119,21 @@ int main()
 		std::cout << "pas de sprite" << std::endl;
 		return 1;
 	}
+
+	personnage darkBoss("Vampirux");
+	darkBoss.rect.setPosition(27 * 32, 34 * 32);
+	darkBoss.sprite.setTextureRect(sf::IntRect(0, 0, 110, 64));
+	darkBoss.sprite.setTexture(texture4);
+	darkBoss.rect.setSize(sf::Vector2f(110, 64));
+	darkBoss.sprite.setPosition(darkBoss.rect.getPosition());
+	personnage * ptrDB = new personnage();
+	*ptrDB = darkBoss;
+	
+
 	sf::Sprite spritePnjEmma(texture3);
 	
-	spritePnjEmma.setTextureRect(sf::IntRect(0, 0, 32, 32));
+
+	spritePnjEmma.setTextureRect(sf::IntRect(0, 0, 64, 32));
 	
 	sf::Sprite spriteFond(fond);
 	sf::Sprite spriteAreneFront(areneFront);
@@ -119,9 +149,10 @@ int main()
 	}
 	ptrPj->setNom("Dom");
 
-	
+	ptrPj->rect.setPosition(8 * 32, 45 * 32);
 	ptrPj->sprite.setTexture(texture2);
 	ptrPj->rect.setTextureRect(sf::IntRect(0, 0, 32, 32));
+	ptrPj->Positionnement();
 	vector<mur>::const_iterator iterateur;
 	vector<mur>::const_iterator iterateur2;
 	vector<mur> ligneMur;
@@ -140,7 +171,7 @@ int main()
 	class mur mur1;
 	mur1.rect.setPosition(0, 0);
 	ligneMur.push_back(mur1);
-	while (i < 14)
+	/*while (i < 14)
 	{
 		mur1.rect.setPosition(50 * i, 420);
 		ligneMur.push_back(mur1);
@@ -160,12 +191,12 @@ int main()
 	mur1.rect.setPosition((250), (235));
 	mur1.rect.setSize(sf::Vector2f(2, 2));
 	ligneMur.push_back(mur1);
-	i = 0;
+	i = 0;*/
 
 	mur mur2;
-	mur2.rect.setPosition((399), (299));
+	mur2.rect.setPosition((27*32), (10*32));
 	mur2.rect.setSize(sf::Vector2f(40, 40));
-	spritePnjEmma.setPosition(399, 299);
+	spritePnjEmma.setPosition(27 * 32, 10 * 32);
 	ligneMur2.push_back(mur2);
 
 	personnage emma("Emma");
@@ -229,6 +260,120 @@ int main()
 				menu.draw(ptrPj->sprite);
 				menu.display();
 			}
+		}
+		if (ptrPj->rect.getGlobalBounds().intersects(darkBoss.rect.getGlobalBounds()))
+		{
+
+			sf::Event combatEvent;
+			afficheText = true;
+			sf::RenderWindow combatWindow2(sf::VideoMode(470, 145), "Combat"); //470.145
+
+			chose spriteCurseurCombat;
+			sf::Thread thread(std::bind(&combat::startcombat, ptrPj, ptrDB));
+
+			thread.launch(); // start the thread (internally calls task.run())
+			ptrPj->rect.setPosition((100), (105));
+			ptrPj->rect.setSize((sf::Vector2f(32, 32)));
+			ptrPj->sprite.setTexture(texture2);
+			ptrDB->rect.setPosition((360), (77));
+			ptrDB->rect.setSize((sf::Vector2f(110, 64)));
+			ptrDB->sprite.setTexture(texture4);
+
+			int i = 0;
+			int j = 0;
+			while (combatWindow2.isOpen())
+			{
+
+
+				spriteCurseurCombat.rect.setPosition((sf::Vector2f)sf::Mouse::getPosition(combatWindow2));
+				spriteCurseurCombat.rect.setSize(sf::Vector2f(4, 4));
+
+				while (combatWindow2.pollEvent(combatEvent))
+				{
+					if (combatEvent.type == sf::Event::Closed)
+						combatWindow2.close();
+
+					if (combatEvent.type == sf::Event::KeyPressed && combatEvent.key.code == sf::Keyboard::Escape)
+						combatWindow2.close();
+
+				}
+
+				combatWindow2.setFramerateLimit(20);
+
+				ptrPj->sprite.setTextureRect(sf::IntRect(i * 32, 64, 32, 32));
+				ptrPj->Positionnement();
+
+				ptrDB->sprite.setTextureRect(sf::IntRect(j * 110, 64, 110, 64));
+				ptrDB->Positionnement();
+
+				chose * boutonAttaquer = new chose();
+				boutonAttaquer->text.setString("Attaquer");
+				boutonAttaquer->text.setFont(font);
+				boutonAttaquer->text.setFillColor(sf::Color::White);
+				boutonAttaquer->text.setStyle(sf::Text::Bold);
+				boutonAttaquer->text.setCharacterSize(16);
+				boutonAttaquer->text.setPosition(0, 40);
+				boutonAttaquer->rect.setPosition(0, 40);
+				boutonAttaquer->rect.setSize((sf::Vector2f(100, 32)));
+
+				chose * scorePjHp = new chose();
+				scorePjHp->text.setString(to_string(*ptrPj->pvActuel) + " / " + to_string(*ptrPj->pvMax));
+				scorePjHp->text.setFont(font);
+				scorePjHp->text.setFillColor(sf::Color::White);
+				scorePjHp->text.setCharacterSize(16);
+				scorePjHp->text.setPosition(5, 10);
+				scorePjHp->rect.setPosition(0, 0);
+				scorePjHp->rect.setSize((sf::Vector2f(70, 145)));
+				scorePjHp->rect.setFillColor(sf::Color::Black);
+
+				chose*  scorePnjHP = new chose();
+				scorePnjHP->text.setString(to_string(*ptrDB->pvActuel) + " / " + to_string(*ptrDB->pvMax));
+				scorePnjHP->text.setFont(font);
+				scorePnjHP->text.setFillColor(sf::Color::White);
+				scorePnjHP->text.setCharacterSize(16);
+				scorePnjHP->text.setPosition(360, 10);
+				scorePnjHP->rect.setPosition(360, 10);
+				scorePnjHP->rect.setSize((sf::Vector2f(70, 145)));
+				scorePnjHP->rect.setFillColor(sf::Color::Black);
+
+				if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && boutonAttaquer->rect.getGlobalBounds().intersects(spriteCurseurCombat.rect.getGlobalBounds()))
+				{
+					*ptrPj->choix = 1;
+				}
+
+				i = (i + 1) % 3;
+				j = (j + 1) % 4;
+
+				spriteAreneBack.getPosition();
+				combatWindow2.clear();
+				combatWindow2.draw(spriteAreneBack);
+				combatWindow2.draw(spriteAreneFront);
+				combatWindow2.draw(scorePjHp->rect);
+				combatWindow2.draw(ptrPj->sprite);
+				combatWindow2.draw(ptrDB->sprite);
+				combatWindow2.draw(boutonAttaquer->text);
+				combatWindow2.draw(scorePjHp->text);
+				combatWindow2.draw(scorePnjHP->text);
+				combatWindow2.draw(ptrPj->text);
+				combatWindow2.draw(ptrDB->text);
+
+				combatWindow2.display();
+
+				if (*ptrPj->fermeCombatWindow)
+				{
+					darkBoss.rect.setSize(sf::Vector2f(0, 0));
+					for (int i = 0; i < ligneMur2.size(); i++)
+					{
+						ligneMur2[i].rect.setSize(sf::Vector2f(0, 0));
+					}
+
+					ptrPj->rect.setPosition(27 * 32, 10 * 32);
+					cout << "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+					break;
+				}
+			}
+
+		
 		}
 		int i = 0;
 		for (iterateur = ligneMur.begin(); iterateur != ligneMur.end(); iterateur++)
@@ -371,7 +516,7 @@ int main()
 							ligneMur2[i].rect.setSize(sf::Vector2f(0, 0));
 						}
 						
-
+						ptrPj->rect.setPosition(27*32,10*32);
 						cout << "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
 						break;
 					}
@@ -387,6 +532,9 @@ int main()
 		
 		ptrPj->Positionnement();
 		ptrPj->Mouvement();
+
+		window.setView(vuePj);
+		vuePj.setCenter(ptrPj->rect.getPosition());
 		window.clear();
 		for(i=0;i<ligneMur.size()-1;i++)
 		{
@@ -406,8 +554,14 @@ int main()
 			}
 
 		}
+
+		window.draw(darkBoss.sprite);
 		window.draw(spritePnjEmma);
 		window.draw(ptrPj->sprite);
+
+
+		
+
 
 		if (afficheText)
 		{

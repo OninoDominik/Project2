@@ -5,16 +5,12 @@
 personnage::personnage()
 {
 	rect.setSize(sf::Vector2f(32, 32));
-	rect.setPosition(400, 200);
-	rect.setFillColor(sf::Color::Blue);
 	sprite.setTextureRect(sf::IntRect(32, 0, 32, 32));
 
 }
 personnage::personnage(string nomDuPerso)
 {
 	rect.setSize(sf::Vector2f(32, 32));
-	rect.setPosition(400, 200);
-	rect.setFillColor(sf::Color::Blue);
 	sprite.setTextureRect(sf::IntRect(32, 0, 32, 32));
 	this->nom = nomDuPerso;
 	cout << "nom = " << this->nom << endl;
