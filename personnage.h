@@ -42,6 +42,7 @@ public:
 	int * nbrFaceDesSoin = new int(0);
 	int * niveau = new int(2);
 	bool * fermeCombatWindow = new bool(false);
+	bool  estUnJoueur = false;
 
 	string nomBonusDegat = "force";
 	string nom;
@@ -50,10 +51,13 @@ public:
 
 	int Initiative();
 	void afficheStat();
+	void AvancerAttaque();
+	void ReculerAttaque();
 	int CA();
 	void InfligeDegat(personnage& ennemi);
 
 	void Attaque(personnage & ennemi);
+
 
 	int BonusStat(string stat);
 	void setNom(string choixNom);

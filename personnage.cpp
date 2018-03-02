@@ -7,7 +7,7 @@ personnage::personnage()
 	rect.setSize(sf::Vector2f(32, 32));
 	rect.setPosition(400, 200);
 	rect.setFillColor(sf::Color::Blue);
-	sprite.setTextureRect(sf::IntRect( 32, 0, 32, 32));
+	sprite.setTextureRect(sf::IntRect(32, 0, 32, 32));
 
 }
 personnage::personnage(string nomDuPerso)
@@ -61,7 +61,7 @@ void personnage::Mouvement()
 		if (reculer == true)
 		{
 			rect.move(-vitesse, 0);
-			sprite.setTextureRect(sf::IntRect(compteurPas * 32, 32 , 32, 32));
+			sprite.setTextureRect(sf::IntRect(compteurPas * 32, 32, 32, 32));
 			direction = 3;
 			monter = true;
 			descendre = true;
@@ -82,9 +82,9 @@ void personnage::Mouvement()
 			avancer = true;
 		}
 	}
-	compteurPas= (compteurPas+1)%3;
+	compteurPas = (compteurPas + 1) % 3;
 
-	
+
 }
 
 
@@ -95,13 +95,13 @@ personnage::~personnage()
 }
 int personnage::CA()
 {
- 
-	int ca = BonusStat("dexterite") + 10 + 1 +*bonusBouclier +*bonusArmure;
-			if (*taille == 1)
-			{
-				ca++;
-			}
-			return ca;
+
+	int ca = BonusStat("dexterite") + 10 + 1 + *bonusBouclier + *bonusArmure;
+	if (*taille == 1)
+	{
+		ca++;
+	}
+	return ca;
 
 }
 int personnage::BonusStat(string stat)
@@ -137,9 +137,6 @@ void personnage::sesoigne()
 }
 void personnage::InfligeDegat(personnage& ennemi)
 {
-	int x = this->rect.getPosition().x;
-	int y = this->rect.getPosition().y;
-
 	int deg = 0;
 	int degtempo;
 	for (int i = 0; i < *nbrDesDegat; i++)
@@ -147,57 +144,73 @@ void personnage::InfligeDegat(personnage& ennemi)
 		degtempo = 0;
 		degtempo = ((rand() % (*nbrFaceDesDegat)) + 1 + BonusStat(nomBonusDegat));
 		deg += degtempo;
-		cout << "pv actuel de : " << ennemi.nom  << "  " << *ennemi.pvActuel << endl;
+		cout << "pv actuel de : " << ennemi.nom << "  " << *ennemi.pvActuel << endl;
 		cout << "des de degats : " << degtempo << endl;
-		
+
 	}
-	this->text.setString("j'ai inflige "+to_string(deg)+" degats");
-	this->text.setFillColor(sf::Color::White);
-	this->text.setCharacterSize(16);
-	this->text.setPosition(x-30, y - 30);
-	*ennemi.pvActuel -= deg ;
-	sf::sleep(sf::milliseconds(750));
+	this->text.setString("j'ai inflige " + to_string(deg) + " degats");
+
+	sf::sleep(sf::microseconds(650));
+	*ennemi.pvActuel -= deg;
+
 	cout << nom << " frappe  " << ennemi.nom << "  et inflige   " << deg << " Degats " << endl << "il lui reste " << *ennemi.pvActuel << " PV" << endl;
 }
 void personnage::Attaque(personnage& ennemi)
 {
 	int x = this->rect.getPosition().x;
 	int y = this->rect.getPosition().y;
-	
+	cout.clear();
 	for (int i = 0; i < *this->nbrAttaque; i++)
 	{
+
 		int jetToucher = 0;
-		jetToucher = ((rand()%20) + 1) + *bonusAttaque;
+		jetToucher = ((rand() % 20) + 1) + *bonusAttaque;
 		if (ennemi.CA() <= jetToucher)
 		{
+			AvancerAttaque();
+			cout << nom << "avance";
 			this->text.setString("Toucher");
 			this->text.setFillColor(sf::Color::White);
 			this->text.setCharacterSize(16);
-			
-			this->text.setPosition(x , y - 30);
-			
+
+			x = this->rect.getPosition().x;
+			this->text.setPosition(x, y - 30);
+
+
 			cout << nom << " touche  " << ennemi.nom << " avec un  " << jetToucher << endl << " la ca de  " << ennemi.nom << " etait de " << ennemi.CA() << endl;
+
 			InfligeDegat(ennemi);
+			ReculerAttaque();
+
+			if (*ennemi.pvActuel <= 0)
+			{
+				*ennemi.envie = false;
+			}
 		}
 		else
 		{
-
+			AvancerAttaque();
+			cout << nom << "avance";
 			this->text.setString("Rater");
 			this->text.setFillColor(sf::Color::White);
 			this->text.setCharacterSize(16);
+			x = this->rect.getPosition().x;
 			this->text.setPosition(x, y - 30);
+			sf::sleep(sf::milliseconds(750));
+			ReculerAttaque();
 			cout << nom << " rate  " << ennemi.nom << " avec un  " << jetToucher << endl << " la ca de  " << ennemi.nom << " etait de " << ennemi.CA() << endl;
 		}
+
 	}
-	
-	
+
+
 }
 int personnage::Initiative()
 {
 
-		int initiative = (BonusStat("dexterite") + *bonusInitiative + (rand()%20+1));
-		cout << "init" << initiative << endl;
-		return initiative;
+	int initiative = (BonusStat("dexterite") + *bonusInitiative + (rand() % 20 + 1));
+	cout << "init" << initiative << endl;
+	return initiative;
 }
 void personnage::afficheStat()
 {
@@ -215,7 +228,7 @@ void personnage::afficheStat()
 	cout << "pvMax = 40; " << *this->pvMax << endl;
 
 	cout << "pvActuel = pvMax; " << *this->pvActuel << endl;
-	
+
 	cout << "bonusInitiative = 2; " << *this->bonusInitiative << endl;
 	cout << "bonusAttaque = 5; " << *this->bonusAttaque << endl;
 	cout << "bonusBouclier = 0; " << *this->bonusBouclier << endl;
@@ -225,4 +238,49 @@ void personnage::afficheStat()
 	cout << "nbrDesSoin = 0; " << *this->nbrDesSoin << endl;
 	cout << " nbrFaceDesSoin = 0; " << *this->nbrFaceDesSoin << endl;
 	cout << " niveau = 2; " << *this->niveau << endl;
+}
+void personnage::AvancerAttaque()
+{
+
+	for (int i = 1; i <= 25; i++)
+	{
+		if (this->estUnJoueur)
+		{
+			if (i <= 25)
+			{
+				this->rect.move(5, 0);
+				this->text.move(5, 0);
+
+			}
+		}
+		else
+		{
+			this->rect.move(-5, 0);
+			this->text.move(-5, 0);
+
+		}
+		sf::sleep(sf::milliseconds(30));
+	}
+}
+void personnage::ReculerAttaque()
+{
+	sf::sleep(sf::milliseconds(750));
+	for (int i = 1; i <= 25; i++)
+	{
+		if (this->estUnJoueur)
+		{
+			if (i <= 25)
+			{
+				this->rect.move(-5, 0);
+				this->text.move(-5, 0);
+
+			}
+
+		}
+		else
+		{
+			this->rect.move(5, 0);
+			this->text.move(5, 0);
+		}
+	}
 }

@@ -33,7 +33,6 @@ int main()
 		std::cout << (*produits)[i]->nom << " " << (*produits)[i]->prix << std::endl;
 	}
 
-
 	bdd.closeDatabase();*/
 
 	// setup window
@@ -47,12 +46,14 @@ int main()
 	sf::Texture texture3;
 	sf::Texture texture4;
 	sf::Texture texture5;
-	sf::Texture fond;
-	sf::Texture areneBack;
 
+	sf::Texture fond;
+
+	sf::Texture areneBack;
 	sf::Texture areneFront;
 	
 	sf::Image icon;
+
 	if (!icon.loadFromFile("iconPath.jpeg"))
 	{
 		std::cout << "pas de sprite" << std::endl;
@@ -104,15 +105,14 @@ int main()
 	
 	spritePnjEmma.setTextureRect(sf::IntRect(0, 0, 32, 32));
 	
-
 	sf::Sprite spriteFond(fond);
 	sf::Sprite spriteAreneFront(areneFront);
 	sf::Sprite spriteAreneBack(areneBack);
 
-	
 	bool aucunAppuyTouche = true;
 	personnage* ptrPj = nullptr;
 	paladin *ptrPal = new paladin();
+
 	if (true)
 	{
 		ptrPj = ptrPal;
@@ -126,6 +126,7 @@ int main()
 	vector<mur>::const_iterator iterateur2;
 	vector<mur> ligneMur;
 	vector<mur> ligneMur2;
+
 	sf::Font font;
 	if (!font.loadFromFile("CloisterBlack.ttf"))
 	{
@@ -152,21 +153,21 @@ int main()
 
 		i++;
 	}
-	mur1.rect.setPosition((400), (300));
-	mur1.rect.setSize(sf::Vector2f(30, 30));
-	ligneMur.push_back(mur1);
 	mur1.rect.setPosition((320), (170));
 	mur1.rect.setSize(sf::Vector2f(50, 50));
+
 	ligneMur.push_back(mur1);
 	mur1.rect.setPosition((250), (235));
 	mur1.rect.setSize(sf::Vector2f(2, 2));
 	ligneMur.push_back(mur1);
 	i = 0;
+
 	mur mur2;
 	mur2.rect.setPosition((399), (299));
 	mur2.rect.setSize(sf::Vector2f(40, 40));
 	spritePnjEmma.setPosition(399, 299);
 	ligneMur2.push_back(mur2);
+
 	personnage emma("Emma");
 	personnage* ptrEmma = &emma;
 	ptrEmma->text.setString(" ");
@@ -174,6 +175,7 @@ int main()
 	ptrEmma->text.setFillColor(sf::Color::White);
 	ptrEmma->text.setCharacterSize(16);
 	ptrEmma->text.setPosition(ptrEmma->rect.getPosition());
+
 	ptrPj->text.setString(" ");
 	ptrPj->text.setFont(font);
 	ptrPj->text.setFillColor(sf::Color::White);
@@ -181,9 +183,6 @@ int main()
 	ptrPj->text.setPosition(ptrPj->rect.getPosition());
 
 	combat fight1;
-	
-
-	
 	
 	while (window.isOpen())
 	{
@@ -196,7 +195,6 @@ int main()
 				window.close();
 		}
 
-		
 		chose spriteCurseur;
 		spriteCurseur.rect.setPosition((sf::Vector2f)sf::Mouse::getPosition(window));
 		spriteCurseur.rect.setSize(sf::Vector2f(4, 4));
@@ -211,8 +209,6 @@ int main()
 		}
 
 		sf::Vector2f movement(0.f, 0.f);
-
-		
 
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::M))
 		{
@@ -282,21 +278,21 @@ int main()
 				sf::Thread thread(std::bind(&combat::startcombat, ptrPj, ptrEmma));
 
 				thread.launch(); // start the thread (internally calls task.run())
-				
+				ptrPj->rect.setPosition((100), (105));
+				ptrPj->rect.setSize((sf::Vector2f(32, 32)));
+				ptrPj->sprite.setTexture(texture2);
+				ptrEmma->rect.setPosition((360), (105));
+				ptrEmma->rect.setSize((sf::Vector2f(32, 32)));
+				ptrEmma->sprite.setTexture(texture3);
+
 				int i = 0;
 				while (combatWindow.isOpen())
 				{
-					ptrPj->rect.setPosition((100), (105));
-					ptrPj->rect.setSize((sf::Vector2f(32, 32)));
-					ptrPj->sprite.setTexture(texture2);
-					ptrEmma->rect.setPosition((360), (105));
-					ptrEmma->rect.setSize((sf::Vector2f(32, 32)));
-					ptrEmma->sprite.setTexture(texture3);
+					
 
 					spriteCurseurCombat.rect.setPosition((sf::Vector2f)sf::Mouse::getPosition(combatWindow));
 					spriteCurseurCombat.rect.setSize(sf::Vector2f(4, 4));
 
-					
 					while (combatWindow.pollEvent(combatEvent))
 					{
 						if (combatEvent.type == sf::Event::Closed)
@@ -309,10 +305,8 @@ int main()
 					
 					combatWindow.setFramerateLimit(20);
 
-
 					ptrPj->sprite.setTextureRect(sf::IntRect(i * 32, 64, 32, 32));
 					ptrPj->Positionnement();
-
 
 					ptrEmma->sprite.setTextureRect(sf::IntRect(i * 32, 32, 32, 32));
 					ptrEmma->Positionnement();
@@ -347,8 +341,6 @@ int main()
 					scorePnjHP->rect.setSize((sf::Vector2f(70, 145)));
 					scorePnjHP->rect.setFillColor(sf::Color::Black);
 
-
-
 					if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && boutonAttaquer->rect.getGlobalBounds().intersects(spriteCurseurCombat.rect.getGlobalBounds()))
 					{
 						*ptrPj->choix = 1;
@@ -373,12 +365,18 @@ int main()
 
 					if (*ptrPj->fermeCombatWindow)
 					{
+						emma.rect.setSize(sf::Vector2f(0, 0));
+						for (int i = 0; i < ligneMur2.size(); i++)
+						{
+							ligneMur2[i].rect.setSize(sf::Vector2f(0, 0));
+						}
+						
+
 						cout << "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
 						break;
 					}
 				}
 				
-
 			}
 			else
 			{
@@ -387,18 +385,27 @@ int main()
 			
 		}
 		
-		
-		
 		ptrPj->Positionnement();
 		ptrPj->Mouvement();
 		window.clear();
 		for(i=0;i<ligneMur.size()-1;i++)
 		{
 			window.draw(ligneMur[i].rect);
+
 		}
 		
-
 		window.draw(spriteFond);
+
+		if (!*ptrEmma->envie)
+		{
+			
+			if (!texture3.loadFromFile("grave.png"))
+			{
+				std::cout << "pas de sprite" << std::endl;
+				spritePnjEmma.setTexture(texture3);
+			}
+
+		}
 		window.draw(spritePnjEmma);
 		window.draw(ptrPj->sprite);
 

@@ -25,6 +25,7 @@ paladin::paladin()
 	*choix = 0;
 	*niveau = 2;
 	*nbrAttaque = 2;
+	estUnJoueur = true;
 }
 
 
