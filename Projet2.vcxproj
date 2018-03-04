@@ -123,6 +123,7 @@
     <ClCompile Include="chose.cpp" />
     <ClCompile Include="combat.cpp" />
     <ClCompile Include="Database.cpp" />
+    <ClCompile Include="jeu.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="mur.cpp" />
     <ClCompile Include="paladin.cpp" />
@@ -133,6 +134,7 @@
     <ClInclude Include="chose.h" />
     <ClInclude Include="combat.h" />
     <ClInclude Include="Database.h" />
+    <ClInclude Include="jeu.h" />
     <ClInclude Include="mur.h" />
     <ClInclude Include="paladin.h" />
     <ClInclude Include="personnage.h" />

@@ -4,7 +4,7 @@
 
 paladin::paladin() 
 {
-	*nbrDesSoin = 2;
+	*nbrDesSoin = 4;
 	*nbrFaceDesSoin = 6;
 	*force = 14;
 	*constitution = 12;
@@ -24,7 +24,7 @@ paladin::paladin()
 	*nbrAttaque = 2;
 	*choix = 0;
 	*niveau = 2;
-	*nbrAttaque = 2;
+	*nbrAttaque = 6;
 	estUnJoueur = true;
 }
 
@@ -34,6 +34,10 @@ paladin::~paladin()
 }
 void paladin::sesoigne()
 {
+	
+	int x = this->rect.getPosition().x;
+	int y = this->rect.getPosition().y;
+
 	int soin=0;
 
 	for (int i = 0; i < *nbrDesSoin; i++)
@@ -47,4 +51,9 @@ void paladin::sesoigne()
 	{
 		*pvActuel = *pvMax;
 	}
+	this->text.setString(" Soin : "+ to_string(soin));
+	this->text.setFillColor(sf::Color::Green);
+	this->text.setCharacterSize(16);
+	this->text.setPosition(x, y - 30);
+	soin++;
 }

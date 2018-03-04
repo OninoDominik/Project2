@@ -158,7 +158,11 @@ void personnage::Attaque(personnage& ennemi)
 	cout.clear();
 	for (int i = 0; i < *this->nbrAttaque; i++)
 	{
-
+		if (*ennemi.pvActuel <= 0)
+		{
+			*ennemi.envie = false;
+			break;
+		}
 		int jetToucher = 0;
 		jetToucher = ((rand() % 20) + 1) + *bonusAttaque;
 		if (ennemi.CA() <= jetToucher)
@@ -178,10 +182,7 @@ void personnage::Attaque(personnage& ennemi)
 			InfligeDegat(ennemi);
 			ReculerAttaque();
 
-			if (*ennemi.pvActuel <= 0)
-			{
-				*ennemi.envie = false;
-			}
+			
 		}
 		else
 		{
