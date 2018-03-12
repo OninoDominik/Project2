@@ -32,6 +32,7 @@ void combat::startcombat(personnage* ami, personnage* ennemi)
 		{
 			if (initiativeAmi == i)
 			{
+				*ami->choix = 0;
 				Choixjoueur(ami);
 				cout << "Vos Pvs sont de " << *ami->pvActuel << endl;
 				switch (*ami->choix)
@@ -44,8 +45,8 @@ void combat::startcombat(personnage* ami, personnage* ennemi)
 				case 2:
 					ami->sesoigne();
 					*ami->choix = 0;
-					cout << "Apres les soins vos Pvs sont de " << *ami->pvActuel << endl;
-					sf::sleep(sf::seconds(0.75));
+					cout << i << endl;
+					cout << "heal:  " << *ami->pvActuel << endl;
 					break;
 				default:
 					*ami->choix = 0;

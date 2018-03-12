@@ -1,2 +1,9 @@
-﻿  Projet2.vcxproj -> E:\Projet2\Project2\Debug\Projet2.exe
-  Projet2.vcxproj -> E:\Projet2\Project2\Debug\Projet2.pdb (Partial PDB)
+﻿  jeu.cpp
+c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(98): warning C4244: 'argument' : conversion de 'unsigned int' en 'float', perte possible de données
+c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(414): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(419): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(425): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(430): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(545): warning C4018: '<' : incompatibilité signed/unsigned
+  Projet2.vcxproj -> C:\Users\adai06\Documents\Visual Studio 2015\Projects\Projet2\Project2\Debug\Projet2.exe
+  Projet2.vcxproj -> C:\Users\adai06\Documents\Visual Studio 2015\Projects\Projet2\Project2\Debug\Projet2.pdb (Partial PDB)

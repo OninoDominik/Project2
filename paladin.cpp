@@ -55,5 +55,4 @@ void paladin::sesoigne()
 	this->text.setFillColor(sf::Color::Green);
 	this->text.setCharacterSize(16);
 	this->text.setPosition(x, y - 30);
-	soin++;
 }

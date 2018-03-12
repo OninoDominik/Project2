@@ -1,4 +1,5 @@
 #include "jeu.h"
+#include <math.h>
 
 
 
@@ -577,7 +578,7 @@ int jeu::Startjeu()
 		}
 
 		sf::Time tempsUneFrame = chronometre.getElapsedTime();
-		fps->text.setString("Framerate: " + to_string(1.f / tempsUneFrame.asSeconds()) + "Fps");
+		fps->text.setString("Framerate: " + to_string(1.00f /tempsUneFrame.asSeconds()) + "Fps");
 		fps->text.setPosition(ptrPj->rect.getPosition().x - tailleEcran.x / 2, ptrPj->rect.getPosition().y - tailleEcran.y / 2);
 		chronometre.restart().asSeconds();
 		window.draw(fps->text);
