@@ -24,6 +24,7 @@ void combat::startcombat(personnage* ami, personnage* ennemi)
 	srand((unsigned)time(0));
 	while ((*ami->envie) && (*ennemi->envie))
 	{
+		*ami->choix = 0;
 		int initiativeAmi = ami->Initiative();
 		cout << ami->nom << " a une initiative de  " << initiativeAmi << "  " << " pour le tour " << endl;
 		int initiativeEnnemi = ennemi->Initiative();

@@ -31,7 +31,7 @@ public:
 	int * nbrDesDegat = new int(3);
 	int * bonusArmure = new int(5);
 	int * taille = new int(2);
-	int * pvMax = new int(40);
+	int * pvMax = new int(20+*constitution);
 	int * pvActuel= new int(*pvMax);
 	int * bonusInitiative = new int(0);
 	int * bonusAttaque = new int(4);
@@ -41,8 +41,10 @@ public:
 	int * nbrDesSoin = new int(0);
 	int * nbrFaceDesSoin = new int(0);
 	int * niveau = new int(2);
+	int * dot = new int(0);
 	bool * fermeCombatWindow = new bool(false);
 	bool  estUnJoueur = false;
+	int * classe = new int(0);
 
 	string nomBonusDegat = "force";
 	string nom;

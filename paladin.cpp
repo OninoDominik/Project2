@@ -16,7 +16,7 @@ paladin::paladin()
 	*nbrDesDegat = 2;
 	*bonusArmure = 7;
 	*taille = 2;
-	*pvMax = 34;
+	*pvMax = 25+*constitution;
 	 *pvActuel = *pvMax;
 	*bonusInitiative = 0;
 	*bonusAttaque = 4;
@@ -24,7 +24,6 @@ paladin::paladin()
 	*nbrAttaque = 2;
 	*choix = 0;
 	*niveau = 2;
-	*nbrAttaque = 6;
 	estUnJoueur = true;
 }
 

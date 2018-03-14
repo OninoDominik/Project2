@@ -10,6 +10,7 @@
 #include "combat.h"
 #include "paladin.h"
 #include <time.h>
+#include "guerrier.h"
 class jeu
 {
 public:

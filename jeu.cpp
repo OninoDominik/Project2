@@ -185,11 +185,17 @@ int jeu::Startjeu()
 	bool aucunAppuyTouche = true;
 	personnage* ptrPj = nullptr;
 	paladin *ptrPal = new paladin();
+	guerrier * ptrgue = new guerrier();
 
-	if (true)
+	if (false)
 	{
 		ptrPj = ptrPal;
 	}
+	if (true)
+	{
+		ptrPj = ptrgue;
+	}
+
 	ptrPj->setNom("Dom");
 
 	ptrPj->rect.setPosition(8 * 32, 45 * 32);
@@ -200,11 +206,43 @@ int jeu::Startjeu()
 	vector<mur>::const_iterator iterateur2;
 	vector<mur> ligneMur;
 	vector<mur> ligneMur2;
-
+	int tailleblock = 32;
 
 	class mur mur1;
 	mur1.rect.setPosition(0, 0);
+	mur1.rect.setSize(sf::Vector2f(32, 32));
 	ligneMur.push_back(mur1);
+
+	for (int i = 0; i < 50; i++)
+	{
+		mur1.rect.setPosition(-1, i*tailleblock);
+		mur1.rect.setSize(sf::Vector2f(1, tailleblock));
+		ligneMur.push_back(mur1);
+		mur1.rect.setSize(sf::Vector2f(tailleblock, tailleblock));
+		mur1.rect.setPosition(i*tailleblock, 50*tailleblock);
+		ligneMur.push_back(mur1);
+		mur1.rect.setPosition(50*tailleblock, i*tailleblock);
+		ligneMur.push_back(mur1);
+	}
+	mur1.rect.setPosition(4*tailleblock, 41 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(7 * tailleblock, 46 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(18 * tailleblock, 42 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(26 * tailleblock, 43 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(36 * tailleblock, 48 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(37 * tailleblock, 40 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(43 * tailleblock, 44 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(47 * tailleblock, 42 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(49 * tailleblock, 38 * tailleblock);
+	ligneMur.push_back(mur1);
+
 	/*while (i < 14)
 	{
 	mur1.rect.setPosition(50 * i, 420);
@@ -238,10 +276,10 @@ int jeu::Startjeu()
 	ptrEmma->text.setFont(font);
 	ptrEmma->text.setFillColor(sf::Color::White);
 	ptrEmma->text.setCharacterSize(16);
-	ptrEmma->rect.setPosition(27 * 32, 10 * 32);
-	ptrEmma->sprite.setTextureRect(sf::IntRect(0, 0, 32, 32));
+	ptrEmma->rect.setPosition(27 * tailleblock, 10 * tailleblock);
+	ptrEmma->sprite.setTextureRect(sf::IntRect(0, 0, tailleblock, tailleblock));
 	ptrEmma->sprite.setTexture(texture3);
-	ptrEmma->rect.setSize(sf::Vector2f(32, 32));
+	ptrEmma->rect.setSize(sf::Vector2f(tailleblock, tailleblock));
 	ptrEmma->sprite.setPosition(ptrEmma->rect.getPosition());
 
 	ptrPj->text.setString(" ");
@@ -317,10 +355,10 @@ int jeu::Startjeu()
 
 			thread.launch(); // start the thread (internally calls task.run())
 			ptrPj->rect.setPosition((100), (105));
-			ptrPj->rect.setSize((sf::Vector2f(32, 32)));
+			ptrPj->rect.setSize((sf::Vector2f(tailleblock, tailleblock)));
 			ptrPj->sprite.setTexture(texture2);
 			ptrDB->rect.setPosition((360), (77));
-			ptrDB->rect.setSize((sf::Vector2f(110, 64)));
+			ptrDB->rect.setSize((sf::Vector2f(110, tailleblock*2)));
 			ptrDB->sprite.setTexture(texture4);
 
 			int i = 0;
@@ -344,10 +382,10 @@ int jeu::Startjeu()
 
 				combatWindow2.setFramerateLimit(20);
 
-				ptrPj->sprite.setTextureRect(sf::IntRect(i * 32, 64, 32, 32));
+				ptrPj->sprite.setTextureRect(sf::IntRect(i * tailleblock, tailleblock*2, tailleblock, tailleblock));
 				ptrPj->Positionnement();
 
-				ptrDB->sprite.setTextureRect(sf::IntRect(j * 110, 64, 110, 64));
+				ptrDB->sprite.setTextureRect(sf::IntRect(j * 110, tailleblock*2, 110, tailleblock*2));
 				ptrDB->Positionnement();
 
 
@@ -394,8 +432,8 @@ int jeu::Startjeu()
 				if (*ptrPj->fermeCombatWindow)
 				{
 					ptrDB->rect.setSize(sf::Vector2f(0, 0));
-					ptrDB->rect.setPosition(27 * 32, 34 * 32);
-					ptrPj->rect.setPosition(28 * 32, 35 * 32);
+					ptrDB->rect.setPosition(27 * tailleblock, 34 * tailleblock);
+					ptrPj->rect.setPosition(28 * tailleblock, 35 * tailleblock);
 					break;
 				}
 			}
@@ -451,10 +489,10 @@ int jeu::Startjeu()
 
 			thread.launch(); // start the thread (internally calls task.run())
 			ptrPj->rect.setPosition((100), (105));
-			ptrPj->rect.setSize((sf::Vector2f(32, 32)));
+			ptrPj->rect.setSize((sf::Vector2f(tailleblock, tailleblock)));
 			ptrPj->sprite.setTexture(texture2);
 			ptrEmma->rect.setPosition((360), (105));
-			ptrEmma->rect.setSize((sf::Vector2f(32, 32)));
+			ptrEmma->rect.setSize((sf::Vector2f(tailleblock, tailleblock)));
 			ptrEmma->sprite.setTexture(texture3);
 
 			int i = 0;
@@ -476,10 +514,10 @@ int jeu::Startjeu()
 
 				combatWindow.setFramerateLimit(20);
 
-				ptrPj->sprite.setTextureRect(sf::IntRect(i * 32, 64, 32, 32));
+				ptrPj->sprite.setTextureRect(sf::IntRect(i * tailleblock, tailleblock*2, tailleblock, tailleblock));
 				ptrPj->Positionnement();
 
-				ptrEmma->sprite.setTextureRect(sf::IntRect(i * 32, 32, 32, 32));
+				ptrEmma->sprite.setTextureRect(sf::IntRect(i * tailleblock, tailleblock, tailleblock, tailleblock));
 				ptrEmma->Positionnement();
 
 
@@ -522,7 +560,7 @@ int jeu::Startjeu()
 				if (*ptrPj->fermeCombatWindow)
 				{
 					emma.rect.setSize(sf::Vector2f(0, 0));
-					ptrPj->rect.setPosition(27 * 32, 10 * 32);
+					ptrPj->rect.setPosition(27 * tailleblock, 10 * tailleblock);
 					cout << "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
 					break;
 				}
@@ -542,11 +580,11 @@ int jeu::Startjeu()
 		window.setView(vuePj);
 		vuePj.setCenter(ptrPj->rect.getPosition());
 		window.clear();
-		for (i = 0; i < ligneMur.size() - 1; i++)
+		/*for (i = 0; i < ligneMur.size() - 1; i++)
 		{
 			window.draw(ligneMur[i].rect);
 
-		}
+		}*/
 
 		window.draw(spriteFond);
 
@@ -555,16 +593,16 @@ int jeu::Startjeu()
 
 			ptrEmma->rect.setSize(sf::Vector2f(0, 0));
 			ptrEmma->sprite.setTexture(grave);
-			ptrEmma->sprite.setPosition(27 * 32, 10 * 32);
-			ptrEmma->sprite.setTextureRect(sf::IntRect(0, 0, 32, 32));
+			ptrEmma->sprite.setPosition(27 * tailleblock, 10 * tailleblock);
+			ptrEmma->sprite.setTextureRect(sf::IntRect(0, 0, tailleblock, tailleblock));
 
 		}
 		if (!*ptrDB->envie)
 		{
 			ptrDB->rect.setSize(sf::Vector2f(0, 0));
 			ptrDB->sprite.setTexture(grave);
-			ptrDB->sprite.setPosition(27 * 32, 34 * 32);
-			ptrDB->sprite.setTextureRect(sf::IntRect(0, 0, 32, 32));
+			ptrDB->sprite.setPosition(27 * tailleblock, 34 * tailleblock);
+			ptrDB->sprite.setTextureRect(sf::IntRect(0, 0, tailleblock, tailleblock));
 		}
 
 
