@@ -14,5 +14,6 @@ public:
 	
 
 	void sesoigne();
+	void AttaqueSpecial(personnage & ennemi);
 };
 

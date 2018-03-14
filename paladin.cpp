@@ -25,11 +25,73 @@ paladin::paladin()
 	*choix = 0;
 	*niveau = 2;
 	estUnJoueur = true;
+	*nomAttaqueSpecial = "Enchainement";
 }
 
 
 paladin::~paladin()
 {
+}
+void paladin::AttaqueSpecial(personnage& ennemi)
+{
+
+	int x = this->rect.getPosition().x;
+	int y = this->rect.getPosition().y;
+	for (int i = 0; i < 2; i++)
+	{
+		int jetToucher = 0;
+		jetToucher = ((rand() % 20) + 1) + *bonusAttaque + BonusStat(nomBonusDegat);
+
+		if (ennemi.CA()+2 <= jetToucher)
+		{
+			if (i == 0)
+			{
+				AvancerAttaque();
+				this->text.setString("j'ai etourdit l'ennemi");
+				ennemi.estEtourdit = true;
+				this->text.setFillColor(sf::Color::Red);
+				this->text.setCharacterSize(16);
+				x = this->rect.getPosition().x;
+				this->text.setPosition(x, y - 30);
+
+				ReculerAttaque();
+			}
+			else
+			{
+				AvancerAttaque();
+				this->InfligeDegat(ennemi);
+				ReculerAttaque();
+			}
+
+		}
+		else
+		{
+			if (i == 0)
+			{
+				AvancerAttaque();
+				this->text.setString("j'ai rater l'etourdissement");
+				
+				this->text.setFillColor(sf::Color::White);
+				this->text.setCharacterSize(16);
+				x = this->rect.getPosition().x;
+				this->text.setPosition(x, y - 30);
+				sf::sleep(sf::milliseconds(750));
+				ReculerAttaque();
+			}
+			else
+			{
+				AvancerAttaque();
+				this->text.setString("rate");
+				this->text.setFillColor(sf::Color::White);
+				this->text.setCharacterSize(16);
+				x = this->rect.getPosition().x;
+				this->text.setPosition(x, y - 30);
+				ReculerAttaque();
+			}
+
+		}
+	}
+	
 }
 void paladin::sesoigne()
 {

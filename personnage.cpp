@@ -23,9 +23,22 @@ void personnage::Positionnement()
 {
 	sprite.setPosition(rect.getPosition());
 }
+void personnage::AttaqueSpecial(personnage & ennemi)
+{
+
+}
 
 void personnage::Mouvement()
 {
+	Chrono += Chronometre.getElapsedTime();
+	Chronometre.restart();
+
+	if (Chrono >= tempsAnime)
+	{
+		Chrono -= tempsAnime;
+		compteurPas++;
+		compteurPas = (compteurPas) % 3;
+	}
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
 	{
 		if (monter == true)
@@ -78,7 +91,7 @@ void personnage::Mouvement()
 			avancer = true;
 		}
 	}
-	compteurPas = (compteurPas + 1) % 3;
+	
 
 
 }
@@ -131,6 +144,7 @@ void personnage::sesoigne()
 {
 
 }
+
 void personnage::InfligeDegat(personnage& ennemi)
 {
 	int deg = 0;
@@ -138,14 +152,15 @@ void personnage::InfligeDegat(personnage& ennemi)
 	for (int i = 0; i < *nbrDesDegat; i++)
 	{
 		degtempo = 0;
-		degtempo = ((rand() % (*nbrFaceDesDegat)) + 1 + BonusStat(nomBonusDegat));
+		degtempo = ((rand() % (*nbrFaceDesDegat)) + 1 );
 		deg += degtempo;
 		cout << "pv actuel de : " << ennemi.nom << "  " << *ennemi.pvActuel << endl;
 		cout << "des de degats : " << degtempo << endl;
 
 	}
+	
+	deg += BonusStat(nomBonusDegat);
 	this->text.setString("j'ai inflige " + to_string(deg) + " degats");
-
 	sf::sleep(sf::microseconds(650));
 	*ennemi.pvActuel -= deg;
 
@@ -164,7 +179,7 @@ void personnage::Attaque(personnage& ennemi)
 			break;
 		}
 		int jetToucher = 0;
-		jetToucher = ((rand() % 20) + 1) + *bonusAttaque;
+		jetToucher = ((rand() % 20) + 1) + * bonusAttaque + BonusStat(nomBonusDegat);
 		if (ennemi.CA() <= jetToucher)
 		{
 			AvancerAttaque();

@@ -25,6 +25,9 @@ void combat::startcombat(personnage* ami, personnage* ennemi)
 	while ((*ami->envie) && (*ennemi->envie))
 	{
 		*ami->choix = 0;
+		ami->text.setString(" ");
+		ennemi->text.setString(" ");
+
 		int initiativeAmi = ami->Initiative();
 		cout << ami->nom << " a une initiative de  " << initiativeAmi << "  " << " pour le tour " << endl;
 		int initiativeEnnemi = ennemi->Initiative();
@@ -49,6 +52,9 @@ void combat::startcombat(personnage* ami, personnage* ennemi)
 					cout << i << endl;
 					cout << "heal:  " << *ami->pvActuel << endl;
 					break;
+				case 3:
+					ami->AttaqueSpecial(*ennemi);
+					break;
 				default:
 					*ami->choix = 0;
 					break;
@@ -56,8 +62,22 @@ void combat::startcombat(personnage* ami, personnage* ennemi)
 			}
 			if (initiativeEnnemi == i)
 			{
+				if (!(ennemi->estEtourdit))
+				{
 				sf::sleep(sf::seconds(0.75));
+				if (*ennemi->tempsDot > 0)
+				{
+					*ennemi->tempsDot -= 1;
+					*ennemi->pvActuel -= *ennemi->valeurDot;
+
+					cout << "dot" << *ennemi->valeurDot << "        " << *ennemi->tempsDot << endl;
+				}
 				ennemi->Attaque(*ami);
+			}
+				else
+				{
+					ennemi->estEtourdit = false;
+				}
 			}
 
 			if (*ennemi->pvActuel <= 0)

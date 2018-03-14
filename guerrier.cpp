@@ -24,10 +24,29 @@ guerrier::guerrier()
 	*nbrAttaque = 2;
 	*choix = 0;
 	*niveau = 2;
-	 *dot = 3;
+	*tempsDot = 0;
+	*valeurDot = 0;
 	estUnJoueur = true;
+	*nomAttaqueSpecial = "Saignement";
 }
+void guerrier::AttaqueSpecial(personnage& ennemi)
+{
+	int x = this->rect.getPosition().x;
+	int y = this->rect.getPosition().y;
 
+	AvancerAttaque();
+	cout << nom << "Saignement";
+	this->text.setString("Saignement : "+ to_string(2 * BonusStat("force"))+ "pour 3 tours");
+	this->text.setFillColor(sf::Color::Red);
+	this->text.setCharacterSize(16);
+
+	x = this->rect.getPosition().x;
+	this->text.setPosition(x, y - 30);
+
+	*ennemi.tempsDot += 3;
+	*ennemi.valeurDot += 2*BonusStat("force");
+	ReculerAttaque();
+}
 
 guerrier::~guerrier()
 {

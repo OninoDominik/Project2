@@ -1,6 +1,14 @@
-﻿  guerrier.cpp
-e:\projet2\project2\guerrier.cpp(38): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
-e:\projet2\project2\guerrier.cpp(39): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
-e:\projet2\project2\guerrier.cpp(62): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  Projet2.vcxproj -> E:\Projet2\Project2\Debug\Projet2.exe
-  Projet2.vcxproj -> E:\Projet2\Project2\Debug\Projet2.pdb (Partial PDB)
+﻿  paladin.cpp
+c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\paladin.cpp(38): warning C4244: 'initialisation' : conversion de 'const float' en 'int', perte possible de données
+c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\paladin.cpp(39): warning C4244: 'initialisation' : conversion de 'const float' en 'int', perte possible de données
+c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\paladin.cpp(54): warning C4244: '=' : conversion de 'const float' en 'int', perte possible de données
+c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\paladin.cpp(55): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\paladin.cpp(76): warning C4244: '=' : conversion de 'const float' en 'int', perte possible de données
+c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\paladin.cpp(77): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\paladin.cpp(87): warning C4244: '=' : conversion de 'const float' en 'int', perte possible de données
+c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\paladin.cpp(88): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\paladin.cpp(99): warning C4244: 'initialisation' : conversion de 'const float' en 'int', perte possible de données
+c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\paladin.cpp(100): warning C4244: 'initialisation' : conversion de 'const float' en 'int', perte possible de données
+c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\paladin.cpp(118): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+  Projet2.vcxproj -> C:\Users\adai06\Documents\Visual Studio 2015\Projects\Projet2\Project2\Debug\Projet2.exe
+  Projet2.vcxproj -> C:\Users\adai06\Documents\Visual Studio 2015\Projects\Projet2\Project2\Debug\Projet2.pdb (Partial PDB)

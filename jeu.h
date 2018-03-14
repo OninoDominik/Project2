@@ -18,9 +18,10 @@ public:
 	~jeu();
 
 	sf::Texture texture;
-	sf::Texture texture2;
 	sf::Texture texture3;
 	sf::Texture texture4;
+	sf::Texture pala;
+	sf::Texture textureHero;
 	sf::Texture grave;
 	sf::Texture fond;
 	sf::Texture areneBack;
@@ -29,7 +30,8 @@ public:
 	chose * boutonAttaquer = new chose();
 	chose * boutonSoin = new chose();
 	chose * scorePjHp = new chose();
-	chose*  scorePnjHP = new chose();
+	chose * scorePnjHP = new chose();
+	chose * boutonSpecial = new chose();
 	chose spriteCurseurCombat;
 	sf::Event combatEvent;
 	int NiveauUn();
@@ -37,9 +39,12 @@ public:
 	void ChargerBoutonSoin();
 	void ChargerBoutonAttaquer();
 	void ChargerHpPnj(personnage * ptrPNJ);
+	void ChargerBoutonSpecial(personnage * ptrPj);
 	int Startjeu();
 	float framerate = 0;
 	bool AfficherFrameRate = true;
+	
 
 };
+
 

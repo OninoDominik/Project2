@@ -32,8 +32,8 @@ void jeu::ChargerBoutonSoin()
 	boutonSoin->text.setFillColor(sf::Color::White);
 	boutonSoin->text.setStyle(sf::Text::Bold);
 	boutonSoin->text.setCharacterSize(16);
-	boutonSoin->text.setPosition(0, 80);
-	boutonSoin->rect.setPosition(0, 80);
+	boutonSoin->text.setPosition(0, 60);
+	boutonSoin->rect.setPosition(0, 60);
 	boutonSoin->rect.setSize((sf::Vector2f(100, 32)));
 }
 
@@ -44,8 +44,8 @@ void jeu::ChargerBoutonAttaquer()
 	boutonAttaquer->text.setFillColor(sf::Color::White);
 	boutonAttaquer->text.setStyle(sf::Text::Bold);
 	boutonAttaquer->text.setCharacterSize(16);
-	boutonAttaquer->text.setPosition(0, 40);
-	boutonAttaquer->rect.setPosition(0, 40);
+	boutonAttaquer->text.setPosition(0, 30);
+	boutonAttaquer->rect.setPosition(0, 30);
 	boutonAttaquer->rect.setSize((sf::Vector2f(100, 32)));
 }
 void jeu::ChargerHpPnj(personnage * ptrPNJ)
@@ -57,6 +57,16 @@ void jeu::ChargerHpPnj(personnage * ptrPNJ)
 	scorePnjHP->rect.setPosition(360, 10);
 	scorePnjHP->rect.setSize((sf::Vector2f(400, 145)));
 	scorePnjHP->rect.setFillColor(sf::Color::Black);
+}
+void jeu::ChargerBoutonSpecial(personnage * ptrPj)
+{
+	boutonSpecial->text.setString(*ptrPj->nomAttaqueSpecial);
+	boutonSpecial->text.setFillColor(sf::Color::White);
+	boutonSpecial->text.setStyle(sf::Text::Bold);
+	boutonSpecial->text.setCharacterSize(16);
+	boutonSpecial->text.setPosition(0, 90);
+	boutonSpecial->rect.setPosition(0, 90);
+	boutonSpecial->rect.setSize((sf::Vector2f(100, 32)));
 }
 
 
@@ -127,11 +137,7 @@ int jeu::Startjeu()
 		std::cout << "pas de sprite" << std::endl;
 		return 1;
 	}
-	if (!texture2.loadFromFile("knight.png"))
-	{
-		std::cout << "pas de sprite" << std::endl;
-		return 1;
-	}
+	
 	if (!texture3.loadFromFile("emma.png"))
 	{
 		std::cout << "pas de sprite" << std::endl;
@@ -143,6 +149,11 @@ int jeu::Startjeu()
 		return 1;
 	}
 	if (!grave.loadFromFile("grave.png"))
+	{
+		std::cout << "pas de sprite" << std::endl;
+		return 1;
+	}
+	if (!pala.loadFromFile("grave.png"))
 	{
 		std::cout << "pas de sprite" << std::endl;
 		return 1;
@@ -187,25 +198,38 @@ int jeu::Startjeu()
 	paladin *ptrPal = new paladin();
 	guerrier * ptrgue = new guerrier();
 
-	if (false)
-	{
-		ptrPj = ptrPal;
-	}
 	if (true)
 	{
+		if (!textureHero.loadFromFile("knight.png"))
+		{
+			std::cout << "pas de sprite" << std::endl;
+			return 1;
+		}
+		ptrPj = ptrPal;
+		ptrPj->sprite.setTexture(textureHero);
+		ptrPj->rect.setTextureRect(sf::IntRect(0, 0, 32, 32));
+	}
+	if (false)
+	{
+		if (!textureHero.loadFromFile("hero.png"))
+		{
+			std::cout << "pas de sprite" << std::endl;
+			return 1;
+		}
 		ptrPj = ptrgue;
+		ptrPj->sprite.setTexture(textureHero);
+		ptrPj->rect.setTextureRect(sf::IntRect(0, 0, 32, 32));
 	}
 
 	ptrPj->setNom("Dom");
 
 	ptrPj->rect.setPosition(8 * 32, 45 * 32);
-	ptrPj->sprite.setTexture(texture2);
-	ptrPj->rect.setTextureRect(sf::IntRect(0, 0, 32, 32));
+	
 	ptrPj->Positionnement();
 	vector<mur>::const_iterator iterateur;
 	vector<mur>::const_iterator iterateur2;
 	vector<mur> ligneMur;
-	vector<mur> ligneMur2;
+	//vector<mur> ligneMur2;
 	int tailleblock = 32;
 
 	class mur mur1;
@@ -265,10 +289,10 @@ int jeu::Startjeu()
 	ligneMur.push_back(mur1);
 	i = 0;*/
 
-	mur mur2;
+	/*mur mur2;
 	mur2.rect.setPosition((27 * 32), (10 * 32));
 	mur2.rect.setSize(sf::Vector2f(40, 40));
-	ligneMur2.push_back(mur2);
+	ligneMur2.push_back(mur2);*/
 
 	personnage emma("Emma");
 	personnage* ptrEmma = &emma;
@@ -353,10 +377,10 @@ int jeu::Startjeu()
 			chose spriteCurseurCombat;
 			sf::Thread thread(std::bind(&combat::startcombat, ptrPj, ptrDB));
 
-			thread.launch(); // start the thread (internally calls task.run())
+			thread.launch(); 
 			ptrPj->rect.setPosition((100), (105));
 			ptrPj->rect.setSize((sf::Vector2f(tailleblock, tailleblock)));
-			ptrPj->sprite.setTexture(texture2);
+			ptrPj->sprite.setTexture(textureHero);
 			ptrDB->rect.setPosition((360), (77));
 			ptrDB->rect.setSize((sf::Vector2f(110, tailleblock*2)));
 			ptrDB->sprite.setTexture(texture4);
@@ -397,6 +421,9 @@ int jeu::Startjeu()
 				scorePjHp->text.setFont(font);
 				ChargerHpPnj(ptrDB);
 				scorePnjHP->text.setFont(font);
+				ChargerBoutonSpecial(ptrPj);
+				boutonSpecial->text.setFont(font);
+				
 
 				
 
@@ -408,6 +435,11 @@ int jeu::Startjeu()
 				{
 					*ptrPj->choix = 2;
 				}
+				if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && boutonSpecial->rect.getGlobalBounds().intersects(spriteCurseurCombat.rect.getGlobalBounds()))
+					{
+						*ptrPj->choix = 3;
+					}
+
 
 				i = (i + 1) % 3;
 				j = (j + 1) % 4;
@@ -421,6 +453,7 @@ int jeu::Startjeu()
 				combatWindow2.draw(ptrPj->sprite);
 				combatWindow2.draw(ptrDB->sprite);
 				combatWindow2.draw(boutonAttaquer->text);
+				combatWindow2.draw(boutonSpecial->text);
 				combatWindow2.draw(boutonSoin->text);
 				combatWindow2.draw(scorePjHp->text);
 				combatWindow2.draw(scorePnjHP->text);
@@ -490,7 +523,7 @@ int jeu::Startjeu()
 			thread.launch(); // start the thread (internally calls task.run())
 			ptrPj->rect.setPosition((100), (105));
 			ptrPj->rect.setSize((sf::Vector2f(tailleblock, tailleblock)));
-			ptrPj->sprite.setTexture(texture2);
+			ptrPj->sprite.setTexture(textureHero);
 			ptrEmma->rect.setPosition((360), (105));
 			ptrEmma->rect.setSize((sf::Vector2f(tailleblock, tailleblock)));
 			ptrEmma->sprite.setTexture(texture3);
