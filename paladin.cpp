@@ -70,7 +70,7 @@ void paladin::AttaqueSpecial(personnage& ennemi)
 			if (i == 0)
 			{
 				AvancerAttaque();
-				this->text.setString("j'ai rater l'etourdissement");
+				this->text.setString("j'ai rate l'etourdissement");
 				
 				this->text.setFillColor(sf::Color::White);
 				this->text.setCharacterSize(16);

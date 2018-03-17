@@ -15,6 +15,252 @@ int jeu::NiveauUn()
 {
 	return 1;
 }
+vector<mur> jeu::murmap1()
+{
+	vector<mur> ligneMur;
+	int tailleblock =32;
+	mur1.rect.setPosition(0, 0);
+	mur1.rect.setSize(sf::Vector2f(tailleblock, tailleblock));
+	ligneMur.push_back(mur1);
+
+	for (int i = 0; i < 50; i++)
+	{
+		mur1.rect.setPosition(-1, i*tailleblock);
+		mur1.rect.setSize(sf::Vector2f(1, tailleblock));
+		ligneMur.push_back(mur1);
+		mur1.rect.setSize(sf::Vector2f(tailleblock, tailleblock));
+		mur1.rect.setPosition(i*tailleblock, 50 * tailleblock);
+		ligneMur.push_back(mur1);
+		mur1.rect.setPosition(50 * tailleblock, i*tailleblock);
+		ligneMur.push_back(mur1);
+	}
+	mur1.rect.setPosition(4 * tailleblock, 41 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(30 * tailleblock, 32 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(34 * tailleblock, 21 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(34 * tailleblock, 22 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(32 * tailleblock, 15 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(17 * tailleblock, 12 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(29 * tailleblock, 9 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(7 * tailleblock, 46 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(18 * tailleblock, 42 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(26 * tailleblock, 43 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(36 * tailleblock, 48 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(37 * tailleblock, 40 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(43 * tailleblock, 44 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(47 * tailleblock, 42 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(49 * tailleblock, 38 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(14 * tailleblock, 49 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(14 * tailleblock, 49 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setSize(sf::Vector2f(2 * tailleblock, 2 * tailleblock));
+	mur1.rect.setPosition(39 * tailleblock, 30 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(23 * tailleblock, 15 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(27 * tailleblock, 15 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setSize(sf::Vector2f(tailleblock, tailleblock));
+	mur1.rect.setPosition(8 * tailleblock, 20 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(10 * tailleblock, 17 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(9 * tailleblock, 16 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(10 * tailleblock, 15 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(11 * tailleblock, 16 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(10 * tailleblock, 13 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(15 * tailleblock, 12 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(19 * tailleblock, 12 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(20 * tailleblock, 13 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(19 * tailleblock, 14 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(39 * tailleblock, 14 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setSize(sf::Vector2f(5 * tailleblock, 3 * tailleblock));
+	mur1.rect.setPosition(22 * tailleblock, 32 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setSize(sf::Vector2f(7 * tailleblock, 3 * tailleblock));
+	mur1.rect.setPosition(15 * tailleblock, 34 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setSize(sf::Vector2f(7 * tailleblock, 1 * tailleblock));
+	mur1.rect.setPosition(7 * tailleblock, 38 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setSize(sf::Vector2f(5 * tailleblock, 2 * tailleblock));
+	mur1.rect.setPosition(30 * tailleblock, 33 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(33 * tailleblock, 34 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(37 * tailleblock, 35 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setSize(sf::Vector2f(7 * tailleblock, 9 * tailleblock));
+	mur1.rect.setPosition(16 * tailleblock, 15 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setSize(sf::Vector2f(4 * tailleblock, 9 * tailleblock));
+	mur1.rect.setPosition(28 * tailleblock, 15 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setSize(sf::Vector2f(12 * tailleblock, 5 * tailleblock));
+	mur1.rect.setPosition(32 * tailleblock, 16 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setSize(sf::Vector2f(5 * tailleblock, 10 * tailleblock));
+	mur1.rect.setPosition(8 * tailleblock, 23 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setSize(sf::Vector2f(9 * tailleblock, 7 * tailleblock));
+	mur1.rect.setPosition(42 * tailleblock, 26 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setSize(sf::Vector2f(12 * tailleblock, 1 * tailleblock));
+	mur1.rect.setPosition(4 * tailleblock, 22 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(8 * tailleblock, 9 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setSize(sf::Vector2f(3 * tailleblock, 3 * tailleblock));
+	mur1.rect.setPosition(19 * tailleblock, 16 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(25 * tailleblock, 6 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(27 * tailleblock, 5 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(30 * tailleblock, 6 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(33 * tailleblock, 5 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(34 * tailleblock, 7 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(36 * tailleblock, 9 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(39 * tailleblock, 11 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(24 * tailleblock, 0 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setSize(sf::Vector2f(5 * tailleblock, 1 * tailleblock));
+	mur1.rect.setPosition(25 * tailleblock, 4 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(4 * tailleblock, 31 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setSize(sf::Vector2f(1 * tailleblock, 5 * tailleblock));
+	mur1.rect.setPosition(20 * tailleblock, 0 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(30 * tailleblock, 0 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(9 * tailleblock, 10 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(4 * tailleblock, 31 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(15 * tailleblock, 16 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(5 * tailleblock, 17 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(6 * tailleblock, 14 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setSize(sf::Vector2f(11 * tailleblock, 1 * tailleblock));
+	mur1.rect.setPosition(20 * tailleblock, 0 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setSize(sf::Vector2f(2 * tailleblock, 1 * tailleblock));
+	mur1.rect.setPosition(12 * tailleblock, 12 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(11 * tailleblock, 14 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(8 * tailleblock, 18 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(9 * tailleblock, 19 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(23 * tailleblock, 14 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(27 * tailleblock, 14 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(37 * tailleblock, 15 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(39 * tailleblock, 15 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(13 * tailleblock, 38 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(41 * tailleblock, 37 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(43 * tailleblock, 37 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(40 * tailleblock, 37 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(44 * tailleblock, 37 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(44 * tailleblock, 36 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(46 * tailleblock, 35 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(36 * tailleblock, 22 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(47 * tailleblock, 34 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(37 * tailleblock, 23 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(38 * tailleblock, 24 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(39 * tailleblock, 25 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(40 * tailleblock, 26 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(41 * tailleblock, 27 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(36 * tailleblock, 21 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(13 * tailleblock, 37 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(9 * tailleblock, 39 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(11 * tailleblock, 39 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(0 * tailleblock, 36 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(2 * tailleblock, 36 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(3 * tailleblock, 35 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(5 * tailleblock, 35 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setSize(sf::Vector2f(1 * tailleblock, 3 * tailleblock));
+	mur1.rect.setPosition(6 * tailleblock, 36 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(41 * tailleblock, 32 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(13 * tailleblock, 19 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(14 * tailleblock, 19 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(7 * tailleblock, 14 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(8 * tailleblock, 13 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setSize(sf::Vector2f(3 * tailleblock, 1 * tailleblock));
+	mur1.rect.setPosition(9 * tailleblock, 21 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(31 * tailleblock, 9 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(31 * tailleblock, 10 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(26 * tailleblock, 9 * tailleblock);
+	ligneMur.push_back(mur1);
+	return ligneMur;
+}
 void jeu::ChargerHpPjetbarre(personnage * ptrPj)
 {
 	scorePjHp->text.setString(to_string(*ptrPj->pvActuel) + " / " + to_string(*ptrPj->pvMax));
@@ -227,281 +473,11 @@ int jeu::Startjeu()
 	
 	ptrPj->Positionnement();
 	vector<mur>::const_iterator iterateur;
-	vector<mur>::const_iterator iterateur2;
 	vector<mur> ligneMur;
-	//vector<mur> ligneMur2;
 	int tailleblock = 32;
-
-	class mur mur1;
-	mur1.rect.setPosition(0, 0);
-	mur1.rect.setSize(sf::Vector2f(tailleblock, tailleblock));
-	ligneMur.push_back(mur1);
-
-	for (int i = 0; i < 50; i++)
-	{
-		mur1.rect.setPosition(-1, i*tailleblock);
-		mur1.rect.setSize(sf::Vector2f(1, tailleblock));
-		ligneMur.push_back(mur1);
-		mur1.rect.setSize(sf::Vector2f(tailleblock, tailleblock));
-		mur1.rect.setPosition(i*tailleblock, 50*tailleblock);
-		ligneMur.push_back(mur1);
-		mur1.rect.setPosition(50*tailleblock, i*tailleblock);
-		ligneMur.push_back(mur1);
-	}
-	mur1.rect.setPosition(4*tailleblock, 41 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(30 * tailleblock, 32 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(34 * tailleblock, 21 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(34 * tailleblock, 22 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(32 * tailleblock, 15 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(17 * tailleblock, 12 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(29 * tailleblock, 9 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(7 * tailleblock, 46 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(18 * tailleblock, 42 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(26 * tailleblock, 43 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(36 * tailleblock, 48 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(37 * tailleblock, 40 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(43 * tailleblock, 44 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(47 * tailleblock, 42 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(49 * tailleblock, 38 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(14 * tailleblock, 49 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(14 * tailleblock, 49 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setSize(sf::Vector2f(2*tailleblock, 2*tailleblock));
-	mur1.rect.setPosition(39 * tailleblock, 30 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(23 * tailleblock, 15 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(27 * tailleblock, 15 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setSize(sf::Vector2f( tailleblock, tailleblock));
-	mur1.rect.setPosition(8 * tailleblock, 20 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(10 * tailleblock, 17 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(9 * tailleblock, 16 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(10 * tailleblock, 15 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(11 * tailleblock, 16 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(10 * tailleblock, 13 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(15 * tailleblock, 12 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(19 * tailleblock, 12 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(20 * tailleblock, 13 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(19 * tailleblock, 14 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(39 * tailleblock, 14 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setSize(sf::Vector2f(5*tailleblock, 4*tailleblock));
-	mur1.rect.setPosition(22 * tailleblock, 32 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setSize(sf::Vector2f(7 * tailleblock, 3 * tailleblock));
-	mur1.rect.setPosition(15 * tailleblock, 34 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setSize(sf::Vector2f(7 * tailleblock, 2 * tailleblock));
-	mur1.rect.setPosition(7 * tailleblock, 38 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setSize(sf::Vector2f(5 * tailleblock, 2 * tailleblock));
-	mur1.rect.setPosition(30 * tailleblock, 33 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(33 * tailleblock, 34 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(37 * tailleblock, 35 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setSize(sf::Vector2f(7 * tailleblock, 9 * tailleblock));
-	mur1.rect.setPosition(16 * tailleblock, 15 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setSize(sf::Vector2f(4 * tailleblock, 9 * tailleblock));
-	mur1.rect.setPosition(28 * tailleblock, 15 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setSize(sf::Vector2f(12 * tailleblock, 5 * tailleblock));
-	mur1.rect.setPosition(32 * tailleblock, 16 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setSize(sf::Vector2f(6 * tailleblock, 10 * tailleblock));
-	mur1.rect.setPosition(8 * tailleblock, 23 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setSize(sf::Vector2f(9 * tailleblock, 7 * tailleblock));
-	mur1.rect.setPosition(42 * tailleblock, 26 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setSize(sf::Vector2f(12 * tailleblock, 1 * tailleblock));
-	mur1.rect.setPosition(4 * tailleblock, 22 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(8 * tailleblock, 9 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setSize(sf::Vector2f(3 * tailleblock, 3 * tailleblock));
-	mur1.rect.setPosition(19 * tailleblock, 16 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(25 * tailleblock, 6 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(27 * tailleblock, 5 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(30 * tailleblock, 6 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(33 * tailleblock, 5 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(34 * tailleblock, 7 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(36 * tailleblock, 9 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(39 * tailleblock, 11 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(24 * tailleblock, 0 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setSize(sf::Vector2f(5 * tailleblock, 1 * tailleblock));
-	mur1.rect.setPosition(25 * tailleblock, 4 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(4 * tailleblock, 31 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setSize(sf::Vector2f(1 * tailleblock,  5* tailleblock));
-	mur1.rect.setPosition(20 * tailleblock, 0 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(30 * tailleblock, 0 * tailleblock);
-	ligneMur.push_back(mur1); 
-	mur1.rect.setPosition(9 * tailleblock, 10 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(4 * tailleblock, 31 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(15 * tailleblock, 16 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(5 * tailleblock, 17 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(6 * tailleblock, 14 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setSize(sf::Vector2f(11 * tailleblock, 1 * tailleblock));
-	mur1.rect.setPosition(20 * tailleblock, 0 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setSize(sf::Vector2f(2 * tailleblock, 1 * tailleblock));
-	mur1.rect.setPosition(12 * tailleblock, 12 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(11 * tailleblock, 14 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(8 * tailleblock, 18 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(9 * tailleblock, 19 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(23 * tailleblock, 14 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(27 * tailleblock, 14 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(37 * tailleblock, 15 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(39 * tailleblock, 15 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(14 * tailleblock, 38 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(41 * tailleblock, 38 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(43 * tailleblock, 38 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(40 * tailleblock, 37 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(45 * tailleblock, 37 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(46 * tailleblock, 36 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(47 * tailleblock, 35 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(36 * tailleblock, 22 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(37 * tailleblock, 23 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(38 * tailleblock, 24 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(39 * tailleblock, 25 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(40 * tailleblock, 26 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(41 * tailleblock, 27 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(36 * tailleblock, 21 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(14 * tailleblock, 37 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(9 * tailleblock, 40 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(11 * tailleblock, 40 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(0 * tailleblock, 36 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(2 * tailleblock, 36 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(3 * tailleblock, 35 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(5 * tailleblock, 35 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setSize(sf::Vector2f(1 * tailleblock, 3 * tailleblock));
-	mur1.rect.setPosition(6 * tailleblock, 36 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(41 * tailleblock, 32 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(13 * tailleblock, 19 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(14 * tailleblock, 19 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(7 * tailleblock, 14 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(8 * tailleblock, 13 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setSize(sf::Vector2f(3 * tailleblock, 1 * tailleblock));
-	mur1.rect.setPosition(9 * tailleblock, 21 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(31 * tailleblock, 9 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(31 * tailleblock, 10 * tailleblock);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(26 * tailleblock, 9 * tailleblock);
-	ligneMur.push_back(mur1);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
-
-
-
-
-
+	ligneMur = murmap1();
+	/*
+	*/
 
 
 	/*while (i < 14)

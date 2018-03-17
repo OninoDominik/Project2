@@ -37,6 +37,8 @@ public:
 	chose * boutonSpecial = new chose();
 	sf::Event combatEvent;
 	int NiveauUn();
+	vector<mur> murmap1();
+	mur mur1;
 	void ChargerHpPjetbarre(personnage * ptrPj);
 	void ChargerBoutonSoin();
 	void ChargerBoutonAttaquer();
