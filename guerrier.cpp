@@ -6,7 +6,7 @@ guerrier::guerrier()
 {
 	*nbrDesSoin = 1;
 	*nbrFaceDesSoin = 6;
-	*force = 18;
+	*force = 180;
 	*constitution = 16;
 	*dexterite = 14;
 	*sagesse = 8;
@@ -45,7 +45,7 @@ void guerrier::AttaqueSpecial(personnage& ennemi)
 	this->text.setPosition(x, y - 30);
 
 	*ennemi.tempsDot += 3;
-	*ennemi.valeurDot += 2*BonusStat("force");
+	*ennemi.valeurDot = 2*BonusStat("force");
 	ReculerAttaque();
 }
 

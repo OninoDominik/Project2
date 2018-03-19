@@ -126,6 +126,7 @@
     <ClCompile Include="guerrier.cpp" />
     <ClCompile Include="jeu.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="menu.cpp" />
     <ClCompile Include="mur.cpp" />
     <ClCompile Include="paladin.cpp" />
     <ClCompile Include="personnage.cpp" />
@@ -137,6 +138,7 @@
     <ClInclude Include="Database.h" />
     <ClInclude Include="guerrier.h" />
     <ClInclude Include="jeu.h" />
+    <ClInclude Include="menu.h" />
     <ClInclude Include="mur.h" />
     <ClInclude Include="paladin.h" />
     <ClInclude Include="personnage.h" />

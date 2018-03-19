@@ -6,6 +6,107 @@
 jeu::jeu()
 {
 }
+void jeu::Combat32(personnage * ptrPj, personnage * Pnj)
+{
+	*ptrPj->fermeCombatWindow = false;
+	//afficheText = true;
+	int tailleblock = 32;
+
+	
+	sf::RenderWindow combatWindow(sf::VideoMode(470, 145), "Combat"); //470.145
+
+
+	sf::Thread thread(std::bind(&combat::startcombat, ptrPj, Pnj));
+
+	thread.launch(); // start the thread (internally calls task.run())
+	ptrPj->rect.setPosition((100), (105));
+	ptrPj->rect.setSize((sf::Vector2f(tailleblock, tailleblock)));
+	ptrPj->sprite.setTexture(textureHero);
+	Pnj->rect.setPosition((360), (105));
+	Pnj->rect.setSize((sf::Vector2f(tailleblock, tailleblock)));
+	Pnj->sprite.setTexture(texture3);
+
+	int i = 0;
+	sf::Sprite spriteAreneFront(areneFront);
+	sf::Sprite spriteAreneBack(areneBack);
+	while (combatWindow.isOpen())
+	{
+
+		spriteCurseurCombat.rect.setPosition((sf::Vector2f)sf::Mouse::getPosition(combatWindow));
+		spriteCurseurCombat.rect.setSize(sf::Vector2f(4, 4));
+
+		while (combatWindow.pollEvent(combatEvent))
+		{
+			if (combatEvent.type == sf::Event::Closed)
+				combatWindow.close();
+
+			if (combatEvent.type == sf::Event::KeyPressed && combatEvent.key.code == sf::Keyboard::Escape)
+				combatWindow.close();
+
+		}
+
+		combatWindow.setFramerateLimit(20);
+
+		ptrPj->sprite.setTextureRect(sf::IntRect(i * tailleblock, tailleblock * 2, tailleblock, tailleblock));
+		ptrPj->Positionnement();
+
+		Pnj->sprite.setTextureRect(sf::IntRect(i * tailleblock, tailleblock, tailleblock, tailleblock));
+		Pnj->Positionnement();
+
+
+
+		ChargerBoutonAttaquer();
+		ChargerBoutonSoin();
+		ChargerHpPjetbarre(ptrPj);
+		ChargerHpPnj(Pnj);
+		ChargerBoutonSpecial(ptrPj);
+
+
+		
+
+		if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && boutonAttaquer->rect.getGlobalBounds().intersects(spriteCurseurCombat.rect.getGlobalBounds()))
+		{
+			*ptrPj->choix = 1;
+		}
+		if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && boutonSoin->rect.getGlobalBounds().intersects(spriteCurseurCombat.rect.getGlobalBounds()))
+		{
+			*ptrPj->choix = 2;
+		}
+		if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && boutonSpecial->rect.getGlobalBounds().intersects(spriteCurseurCombat.rect.getGlobalBounds()))
+		{
+			*ptrPj->choix = 3;
+		}
+
+		i = (i + 1) % 3;
+		j = (j + 1) % 4;
+
+		
+		spriteAreneFront.getPosition();
+		combatWindow.clear();
+
+		combatWindow.draw(spriteAreneFront);
+		combatWindow.draw(scorePjHp->rect);
+		combatWindow.draw(ptrPj->sprite);
+		combatWindow.draw(Pnj->sprite);
+		combatWindow.draw(boutonAttaquer->text);
+		combatWindow.draw(boutonSpecial->text);
+		combatWindow.draw(boutonSoin->text);
+		combatWindow.draw(scorePjHp->text);
+		combatWindow.draw(scorePnjHP->text);
+		combatWindow.draw(ptrPj->text);
+		combatWindow.draw(Pnj->text);
+
+		combatWindow.display();
+
+		if (*ptrPj->fermeCombatWindow)
+		{
+			Pnj->rect.setSize(sf::Vector2f(0, 0));
+			ptrPj->rect.setPosition(27 * tailleblock, 10 * tailleblock);
+			cout << "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+			break;
+		}
+	}
+}
 
 
 jeu::~jeu()
@@ -18,7 +119,7 @@ int jeu::NiveauUn()
 vector<mur> jeu::murmap1()
 {
 	vector<mur> ligneMur;
-	int tailleblock =32;
+	int tailleblock = 32;
 	mur1.rect.setPosition(0, 0);
 	mur1.rect.setSize(sf::Vector2f(tailleblock, tailleblock));
 	ligneMur.push_back(mur1);
@@ -34,6 +135,8 @@ vector<mur> jeu::murmap1()
 		mur1.rect.setPosition(50 * tailleblock, i*tailleblock);
 		ligneMur.push_back(mur1);
 	}
+	mur1.rect.setPosition(25 * tailleblock, 1 * tailleblock);
+	ligneMur.push_back(mur1);
 	mur1.rect.setPosition(4 * tailleblock, 41 * tailleblock);
 	ligneMur.push_back(mur1);
 	mur1.rect.setPosition(30 * tailleblock, 32 * tailleblock);
@@ -152,6 +255,8 @@ vector<mur> jeu::murmap1()
 	mur1.rect.setPosition(39 * tailleblock, 11 * tailleblock);
 	ligneMur.push_back(mur1);
 	mur1.rect.setPosition(24 * tailleblock, 0 * tailleblock);
+	ligneMur.push_back(mur1);
+	mur1.rect.setPosition(21 * tailleblock, 5 * tailleblock);
 	ligneMur.push_back(mur1);
 	mur1.rect.setSize(sf::Vector2f(5 * tailleblock, 1 * tailleblock));
 	mur1.rect.setPosition(25 * tailleblock, 4 * tailleblock);
@@ -383,7 +488,7 @@ int jeu::Startjeu()
 		std::cout << "pas de sprite" << std::endl;
 		return 1;
 	}
-	
+
 	if (!texture3.loadFromFile("emma.png"))
 	{
 		std::cout << "pas de sprite" << std::endl;
@@ -444,7 +549,7 @@ int jeu::Startjeu()
 	paladin *ptrPal = new paladin();
 	guerrier * ptrgue = new guerrier();
 
-	if (true)
+	if (false)
 	{
 		if (!textureHero.loadFromFile("knight.png"))
 		{
@@ -455,9 +560,9 @@ int jeu::Startjeu()
 		ptrPj->sprite.setTexture(textureHero);
 		ptrPj->rect.setTextureRect(sf::IntRect(0, 0, 32, 32));
 	}
-	if (false)
+	if (true)
 	{
-		if (!textureHero.loadFromFile("hero.png"))
+		if (!textureHero.loadFromFile("guerrier.png"))
 		{
 			std::cout << "pas de sprite" << std::endl;
 			return 1;
@@ -470,42 +575,12 @@ int jeu::Startjeu()
 	ptrPj->setNom("Dom");
 
 	ptrPj->rect.setPosition(8 * 32, 45 * 32);
-	
+
 	ptrPj->Positionnement();
 	vector<mur>::const_iterator iterateur;
 	vector<mur> ligneMur;
 	int tailleblock = 32;
 	ligneMur = murmap1();
-	/*
-	*/
-
-
-	/*while (i < 14)
-	{
-	mur1.rect.setPosition(50 * i, 420);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(50 * i, 0);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(0, 50 * i);
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition(490, 50 * i);
-	ligneMur.push_back(mur1);
-
-	i++;
-	}
-	mur1.rect.setPosition((320), (170));
-	mur1.rect.setSize(sf::Vector2f(50, 50));
-
-	ligneMur.push_back(mur1);
-	mur1.rect.setPosition((250), (235));
-	mur1.rect.setSize(sf::Vector2f(2, 2));
-	ligneMur.push_back(mur1);
-	i = 0;*/
-
-	/*mur mur2;
-	mur2.rect.setPosition((27 * 32), (10 * 32));
-	mur2.rect.setSize(sf::Vector2f(40, 40));
-	ligneMur2.push_back(mur2);*/
 
 	personnage emma("Emma");
 	personnage* ptrEmma = &emma;
@@ -587,15 +662,15 @@ int jeu::Startjeu()
 			afficheText = true;
 			sf::RenderWindow combatWindow2(sf::VideoMode(470, 145), "Combat", sf::Style::Titlebar | sf::Style::Close); //470.145
 
-		
+
 			sf::Thread thread(std::bind(&combat::startcombat, ptrPj, ptrDB));
 
-			thread.launch(); 
+			thread.launch();
 			ptrPj->rect.setPosition((100), (105));
 			ptrPj->rect.setSize((sf::Vector2f(tailleblock, tailleblock)));
 			ptrPj->sprite.setTexture(textureHero);
 			ptrDB->rect.setPosition((360), (77));
-			ptrDB->rect.setSize((sf::Vector2f(110, tailleblock*2)));
+			ptrDB->rect.setSize((sf::Vector2f(110, tailleblock * 2)));
 			ptrDB->sprite.setTexture(texture4);
 
 			int i = 0;
@@ -619,10 +694,10 @@ int jeu::Startjeu()
 
 				combatWindow2.setFramerateLimit(20);
 
-				ptrPj->sprite.setTextureRect(sf::IntRect(i * tailleblock, tailleblock*2, tailleblock, tailleblock));
+				ptrPj->sprite.setTextureRect(sf::IntRect(i * tailleblock, tailleblock * 2, tailleblock, tailleblock));
 				ptrPj->Positionnement();
 
-				ptrDB->sprite.setTextureRect(sf::IntRect(j * 110, tailleblock*2, 110, tailleblock*2));
+				ptrDB->sprite.setTextureRect(sf::IntRect(j * 110, tailleblock * 2, 110, tailleblock * 2));
 				ptrDB->Positionnement();
 
 
@@ -636,9 +711,7 @@ int jeu::Startjeu()
 				scorePnjHP->text.setFont(font);
 				ChargerBoutonSpecial(ptrPj);
 				boutonSpecial->text.setFont(font);
-				
 
-				
 
 				if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && boutonAttaquer->rect.getGlobalBounds().intersects(spriteCurseurCombat.rect.getGlobalBounds()))
 				{
@@ -649,9 +722,9 @@ int jeu::Startjeu()
 					*ptrPj->choix = 2;
 				}
 				if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && boutonSpecial->rect.getGlobalBounds().intersects(spriteCurseurCombat.rect.getGlobalBounds()))
-					{
-						*ptrPj->choix = 3;
-					}
+				{
+					*ptrPj->choix = 3;
+				}
 
 
 				i = (i + 1) % 3;
@@ -713,18 +786,19 @@ int jeu::Startjeu()
 					ptrPj->avancer = false;
 					ptrPj->rect.move(-ptrPj->vitesse, 0);
 				}
-				else
-				{
 
-				}
 			}
-
 			i++;
 		}
 
 
-		if (ptrPj->rect.getGlobalBounds().intersects(ptrEmma->rect.getGlobalBounds())) //touche un mur
+		if (ptrPj->rect.getGlobalBounds().intersects(ptrEmma->rect.getGlobalBounds())) 
 		{
+			afficheText = true;
+			Combat32(ptrPj,ptrEmma);
+			afficheText = false;
+		}
+		 /*{
 			*ptrPj->fermeCombatWindow = false;
 
 			afficheText = true;
@@ -760,7 +834,7 @@ int jeu::Startjeu()
 
 				combatWindow.setFramerateLimit(20);
 
-				ptrPj->sprite.setTextureRect(sf::IntRect(i * tailleblock, tailleblock*2, tailleblock, tailleblock));
+				ptrPj->sprite.setTextureRect(sf::IntRect(i * tailleblock, tailleblock * 2, tailleblock, tailleblock));
 				ptrPj->Positionnement();
 
 				ptrEmma->sprite.setTextureRect(sf::IntRect(i * tailleblock, tailleblock, tailleblock, tailleblock));
@@ -775,6 +849,8 @@ int jeu::Startjeu()
 				scorePjHp->text.setFont(font);
 				ChargerHpPnj(ptrEmma);
 				scorePnjHP->text.setFont(font);
+				ChargerBoutonSpecial(ptrPj);
+				boutonSpecial->text.setFont(font);
 
 				if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && boutonAttaquer->rect.getGlobalBounds().intersects(spriteCurseurCombat.rect.getGlobalBounds()))
 				{
@@ -783,6 +859,10 @@ int jeu::Startjeu()
 				if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && boutonSoin->rect.getGlobalBounds().intersects(spriteCurseurCombat.rect.getGlobalBounds()))
 				{
 					*ptrPj->choix = 2;
+				}
+				if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && boutonSpecial->rect.getGlobalBounds().intersects(spriteCurseurCombat.rect.getGlobalBounds()))
+				{
+					*ptrPj->choix = 3;
 				}
 
 				i = (i + 1) % 3;
@@ -800,6 +880,7 @@ int jeu::Startjeu()
 				combatWindow.draw(scorePnjHP->text);
 				combatWindow.draw(ptrPj->text);
 				combatWindow.draw(ptrEmma->text);
+				combatWindow.draw(boutonSpecial->text);
 
 				combatWindow.display();
 
@@ -811,14 +892,11 @@ int jeu::Startjeu()
 					break;
 				}
 			}
-
-		}
+		}*/
 		else
 		{
 			afficheText = false;
 		}
-
-
 
 		ptrPj->Positionnement();
 		ptrPj->Mouvement();
@@ -826,11 +904,6 @@ int jeu::Startjeu()
 		window.setView(vuePj);
 		vuePj.setCenter(ptrPj->rect.getPosition());
 		window.clear();
-		/*for (i = 0; i < ligneMur.size() - 1; i++)
-		{
-			window.draw(ligneMur[i].rect);
-
-		}*/
 
 		window.draw(spriteFond);
 
@@ -862,7 +935,7 @@ int jeu::Startjeu()
 		}
 
 		sf::Time tempsUneFrame = chronometre.getElapsedTime();
-		fps->text.setString("Framerate: " + to_string(1.00f /tempsUneFrame.asSeconds()) + "Fps");
+		fps->text.setString("Framerate: " + to_string(1.00f / tempsUneFrame.asSeconds()) + "Fps");
 		fps->text.setPosition(ptrPj->rect.getPosition().x - tailleEcran.x / 2, ptrPj->rect.getPosition().y - tailleEcran.y / 2);
 		chronometre.restart().asSeconds();
 		window.draw(fps->text);

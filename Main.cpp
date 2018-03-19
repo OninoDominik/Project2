@@ -10,14 +10,19 @@
 #include "paladin.h"
 #include <time.h>
 #include"jeu.h"
+#include "menu.h"
 
  
 using namespace std;
 
 int main()
 {
-	jeu * partie = new jeu();
+	menu * menuPartie = new menu();
+	menuPartie->menuStart();
+	delete menuPartie;
+	/*jeu * partie = new jeu();
 	partie->Startjeu();
-	delete partie;
+	delete partie;*/
+
 	return 0;
 }

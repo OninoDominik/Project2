@@ -15,6 +15,7 @@ class jeu
 {
 public:
 	jeu();
+	void Combat32(personnage * ptrPj, personnage * Pnj);
 	~jeu();
 
 	sf::Texture texture;
@@ -30,6 +31,9 @@ public:
 	chose spriteCurseurCombat;
 	sf::RenderWindow combatWindow;
 	sf::Image icon;
+	sf::Sprite spriteFond;
+	sf::Sprite spriteAreneFront;
+	sf::Sprite spriteAreneBack;
 	chose * boutonAttaquer = new chose();
 	chose * boutonSoin = new chose();
 	chose * scorePjHp = new chose();
@@ -37,6 +41,8 @@ public:
 	chose * boutonSpecial = new chose();
 	sf::Event combatEvent;
 	int NiveauUn();
+	int i = 0;
+	int j = 0;
 	vector<mur> murmap1();
 	mur mur1;
 	void ChargerHpPjetbarre(personnage * ptrPj);
