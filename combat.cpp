@@ -2,9 +2,9 @@
 #include "personnage.h"
 #include "paladin.h"
 
-combat::combat() 
+combat::combat()
 {
-	
+
 }
 
 combat::~combat()
@@ -12,16 +12,19 @@ combat::~combat()
 }
 void combat::Choixjoueur(personnage* joueur)
 {
+
+
 	do
 	{
-		
-	} while (*joueur->choix==0);
+
+	} while (*joueur->choix == 0);
 
 }
 
 void combat::startcombat(personnage* ami, personnage* ennemi)
 {
 	srand((unsigned)time(0));
+
 	while ((*ami->envie) && (*ennemi->envie))
 	{
 		*ami->choix = 0;
@@ -36,6 +39,8 @@ void combat::startcombat(personnage* ami, personnage* ennemi)
 		{
 			if (initiativeAmi == i)
 			{
+				ami->mouvementCombat = true;
+
 				*ami->choix = 0;
 				Choixjoueur(ami);
 				cout << "Vos Pvs sont de " << *ami->pvActuel << endl;
@@ -45,18 +50,22 @@ void combat::startcombat(personnage* ami, personnage* ennemi)
 					ami->Attaque(*ennemi);
 					*ami->choix = 0;
 					sf::sleep(sf::seconds(0.75));
+					ami->mouvementCombat = false;
 					break;
 				case 2:
 					ami->sesoigne();
 					*ami->choix = 0;
 					sf::sleep(sf::seconds(0.75));
 					cout << "heal:  " << *ami->pvActuel << endl;
+					ami->mouvementCombat = false;
 					break;
 				case 3:
 					ami->AttaqueSpecial(*ennemi);
+					ami->mouvementCombat = false;
 					break;
 				default:
 					*ami->choix = 0;
+					ami->mouvementCombat = false;
 					break;
 				}
 			}
@@ -78,27 +87,29 @@ void combat::startcombat(personnage* ami, personnage* ennemi)
 			}
 			if (initiativeEnnemi == i)
 			{
+				ennemi->mouvementCombat = true;
 				if (!(ennemi->estEtourdit))
 				{
-				sf::sleep(sf::seconds(0.75));
-				if (*ennemi->tempsDot > 0)
-				{
-					*ennemi->tempsDot -= 1;
-					*ennemi->pvActuel -= *ennemi->valeurDot;
+					sf::sleep(sf::seconds(0.75));
+					if (*ennemi->tempsDot > 0)
+					{
+						*ennemi->tempsDot -= 1;
+						*ennemi->pvActuel -= *ennemi->valeurDot;
 
-					cout << "dot" << *ennemi->valeurDot << "        " << *ennemi->tempsDot << endl;
+						cout << "dot" << *ennemi->valeurDot << "        " << *ennemi->tempsDot << endl;
+					}
+					ennemi->Attaque(*ami);
 				}
-				ennemi->Attaque(*ami);
-			}
 				else
 				{
 					ennemi->estEtourdit = false;
 				}
+				ennemi->mouvementCombat = false;
 			}
 
-			
+
 		}
 	}
-	
+
 }
 

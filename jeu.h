@@ -31,6 +31,7 @@ public:
 	sf::Texture fond;
 	sf::Texture areneBack;
 	sf::Texture areneFront;
+	sf::Texture textureOrc;
 	sf::RenderWindow combatWindow2;
 	chose spriteCurseurCombat;
 	sf::RenderWindow combatWindow;
@@ -38,6 +39,7 @@ public:
 	sf::Sprite spriteFond;
 	sf::Sprite spriteAreneFront;
 	sf::Sprite spriteAreneBack;
+	sf::Font font;
 	chose * boutonAttaquer = new chose();
 	chose * boutonSoin = new chose();
 	chose * scorePjHp = new chose();

@@ -48,6 +48,7 @@ public:
 	bool * envie = new bool(true);
 	bool  estUnJoueur = false;
 	bool  estEtourdit = false;
+	bool mouvementCombat = false;
 	int seretourner = 0;
 	sf::Time difference;
 	sf::Time Chrono;

@@ -6,6 +6,9 @@ class combat
 public:
 	combat();
 	~combat();
+	int tailleblock = 32;
+
+	
 
 	static void Choixjoueur(personnage * joueur);
 
