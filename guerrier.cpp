@@ -9,8 +9,8 @@ guerrier::guerrier()
 	*force = 18;
 	*constitution = 16;
 	*dexterite = 14;
-	*sagesse = 10;
-	*charisme = 12;
+	*sagesse = 12;
+	*charisme = 10;
 	*intelligence = 8;
 	*nbrFaceDesDegat = 8;
 	*nbrDesDegat = 2;
@@ -64,7 +64,7 @@ void guerrier::sesoigne()
 	{
 		soin += (rand() % *nbrFaceDesSoin + 1);
 	}
-	soin += BonusStat("charisme");
+	soin += BonusStat("sagesse");
 
 	if (soin <= 0)
 	{

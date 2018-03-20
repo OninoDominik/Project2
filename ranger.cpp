@@ -42,7 +42,7 @@ void ranger::AttaqueSpecial(personnage& ennemi)
 	int jetToucher = 0;
 	int rando = (( rand() % 20) + 1);
 	jetToucher =  rando + *bonusAttaque + BonusStat(*nomBonusDegat) + BonusStat("sagesse");
-	cout << "headshot" << "rando = " << rando << "bonusAttaque = " << *bonusAttaque << "BonusStat(nomBonusDegat)" << *nomBonusDegat << BonusStat(*nomBonusDegat) << endl;;
+	cout << "headshot" << "rando = " << rando <<endl << "bonusAttaque ="  << *bonusAttaque << endl <<"BonusStat(nomBonusDegat)" << BonusStat(*nomBonusDegat)<< endl << *nomBonusDegat << endl <<"sagese" <<BonusStat("sagesse") << endl;;
 
 	if (ennemi.CA() + 7 >= jetToucher)
 	{

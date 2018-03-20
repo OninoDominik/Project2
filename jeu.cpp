@@ -177,7 +177,7 @@ void jeu::ChargerTexteGameover()
 }
 void jeu::ChargerTexteRemerciement()
 {
-	texteRemerciement->text.setString("Merci pour :  \nla musique à \nAdrien von Ziegler\nles Sprites à\n87uhgb\nla map à\nRaZziraZzi,RTPCelianna\nLunarea; Pandamaru");
+	texteRemerciement->text.setString("Merci pour :  \nla musique à \nAdrien von Ziegler\nles sprites sheet à\n87uhgb\nla map à\nRaZziraZzi,RTPCelianna\nLunarea; Pandamaru");
 	texteRemerciement->text.setFillColor(sf::Color::Cyan);
 	texteRemerciement->text.setCharacterSize(20);
 	texteRemerciement->text.setPosition(0, 120);
@@ -366,7 +366,7 @@ int jeu::Startjeu()
 		ptrPj->sprite.setTexture(textureHero);
 		ptrPj->rect.setTextureRect(sf::IntRect(0, 0, 32, 32));
 	}
-	if (true)
+	if (false)
 	{
 		if (!textureHero.loadFromFile("guerrier.png"))
 		{
@@ -377,7 +377,7 @@ int jeu::Startjeu()
 		ptrPj->sprite.setTexture(textureHero);
 		ptrPj->rect.setTextureRect(sf::IntRect(0, 0, 32, 32));
 	}
-	if (false)
+	if (true)
 	{
 		if (!textureHero.loadFromFile("alchimiste.png"))
 		{
