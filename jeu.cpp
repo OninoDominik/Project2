@@ -3,9 +3,18 @@
 
 
 
+jeu::jeu(int largeur,int hauteur, bool Affichagefps)
+{
+	AfficherFrameRate = Affichagefps;
+	largeurEcranPrincipal = largeur;
+	hauteurEcranPrincipal = hauteur;
+
+}
 jeu::jeu()
 {
+
 }
+
 
 void jeu::Combat32(personnage * ptrPj, personnage * Pnj, sf::Texture texturePnj, int coordRepopX, int coordRepopY) // creer une fentre de combat 
 {
@@ -156,6 +165,26 @@ void jeu::ChargerBoutonSoin()
 	boutonSoin->rect.setSize((sf::Vector2f(100, 32)));
 }
 
+void jeu::ChargerTexteGameover()
+{
+	texteGameOver->text.setString(" Game Over");
+	texteGameOver->text.setFillColor(sf::Color::Red);
+	texteGameOver->text.setStyle(sf::Text::Bold);
+	texteGameOver->text.setCharacterSize(55);
+	texteGameOver->text.setPosition(0, 20);
+	texteGameOver->rect.setPosition(0, 20);
+	texteGameOver->rect.setSize((sf::Vector2f(100, 32)));
+}
+void jeu::ChargerTexteRemerciement()
+{
+	texteRemerciement->text.setString("Merci pour :  \nla musique à \nAdrien von Ziegler\nles Sprites à\n87uhgb\nla map à\nRaZziraZzi,RTPCelianna\nLunarea; Pandamaru");
+	texteRemerciement->text.setFillColor(sf::Color::Cyan);
+	texteRemerciement->text.setCharacterSize(20);
+	texteRemerciement->text.setPosition(0, 120);
+	texteRemerciement->rect.setPosition(0, 120);
+	texteRemerciement->rect.setSize((sf::Vector2f(100, 32)));
+}
+
 void jeu::ChargerBoutonAttaquer()
 {
 
@@ -189,6 +218,7 @@ void jeu::ChargerBoutonSpecial(personnage * ptrPj)
 }
 
 
+
 int jeu::Startjeu()
 {
 	sf::Clock chronometre;
@@ -220,8 +250,8 @@ int jeu::Startjeu()
 
 
 	// setup window
-	sf::Vector2i tailleEcran(800, 600);
-	sf::RenderWindow window(sf::VideoMode(tailleEcran.x, tailleEcran.y), "Pathfinder");
+	sf::Vector2i tailleEcranPrincipal(largeurEcranPrincipal, hauteurEcranPrincipal);
+	sf::RenderWindow window(sf::VideoMode(tailleEcranPrincipal.x, tailleEcranPrincipal.y), "Pathfinder");
 
 	sf::View vuePj(sf::FloatRect(200, 200, 300, 200));
 	vuePj.setSize(sf::Vector2f(window.getSize().x, window.getSize().y));
@@ -770,7 +800,37 @@ int jeu::Startjeu()
 			ptrOrc->sprite.setPosition(23 * tailleblock, 39 * tailleblock);
 			ptrOrc->sprite.setTextureRect(sf::IntRect(0, 0, tailleblock, tailleblock));
 		}
+		if (!*ptrPj->envie)
+		{
+			window.close();
+			sf::Event  gameOverEvent;
+			sf::RenderWindow gameOverWindow(sf::VideoMode(300, 320), "Game Over");
+			while (gameOverWindow.isOpen())
+			{
 
+
+				while (gameOverWindow.pollEvent(gameOverEvent))
+				{
+					if (gameOverEvent.type == sf::Event::Closed)
+						gameOverWindow.close();
+
+					if (gameOverEvent.type == sf::Event::KeyPressed && gameOverEvent.key.code == sf::Keyboard::Escape)
+						gameOverWindow.close();
+
+				}
+				ChargerTexteGameover();
+				ChargerTexteRemerciement();
+				texteRemerciement->text.setFont(font);
+				texteGameOver->text.setFont(font);
+
+				gameOverWindow.clear();
+				gameOverWindow.draw(texteGameOver->text);
+				gameOverWindow.draw(texteRemerciement->text);
+				gameOverWindow.display();
+			}
+
+
+		}
 
 		window.draw(ptrDB->sprite);
 		window.draw(ptrEmma->sprite);
@@ -780,13 +840,14 @@ int jeu::Startjeu()
 
 		if (AfficherFrameRate)
 		{
-
+			sf::Time tempsUneFrame = chronometre.getElapsedTime();
+			fps->text.setString("Framerate: " + to_string(1.00f / tempsUneFrame.asSeconds()) + "Fps");
+			fps->text.setPosition(ptrPj->rect.getPosition().x - tailleEcranPrincipal.x / 2, ptrPj->rect.getPosition().y - tailleEcranPrincipal.y / 2);
+			chronometre.restart().asSeconds();
 		}
 
-		sf::Time tempsUneFrame = chronometre.getElapsedTime();
-		fps->text.setString("Framerate: " + to_string(1.00f / tempsUneFrame.asSeconds()) + "Fps");
-		fps->text.setPosition(ptrPj->rect.getPosition().x - tailleEcran.x / 2, ptrPj->rect.getPosition().y - tailleEcran.y / 2);
-		chronometre.restart().asSeconds();
+		
+		
 		window.draw(fps->text);
 		window.display();
 		//cout << (int)sf::Mouse::getPosition(window).x <<"    " <<(int)sf::Mouse::getPosition(window).y << endl;

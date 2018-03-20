@@ -24,8 +24,9 @@ public:
 	sf::Texture textureLogo;
 
 	bool Affichagefps = false;
-
-	int tailleFenetreDeJeu = 1;
+	int largeurFenetreDeJeu=800 ;
+	int hauteurFenetreDeJeu = 800;
+	int choixTailleEcran = 0;
 	int numeroSauvegarde = 0;
 	chose spriteCurseurCombat;
 	void menuStart();
@@ -33,7 +34,16 @@ public:
 	void chargerBoutonChargerPartie();
 	void chargerBoutonOption();
 
-	void chargerBoutons();
+	void chargerBoutonsmenu();
+
+	void ChargerBoutonTailleEcran();
+	void ChargerBoutonFrameRate();
+
+	chose *boutonTailleEcran = new chose();
+	chose *boutonFrameRate = new chose();
+
+
+
 
 
 

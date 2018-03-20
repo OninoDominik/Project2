@@ -19,6 +19,7 @@ class jeu
 {
 public:
 	jeu();
+	jeu(int largeur, int hauteur, bool framerate);
 	void Combat32(personnage * ptrPj, personnage * Pnj, sf::Texture texturePnj, int x, int y);
 	~jeu();
 
@@ -40,11 +41,15 @@ public:
 	sf::Sprite spriteAreneFront;
 	sf::Sprite spriteAreneBack;
 	sf::Font font;
+	int largeurEcranPrincipal = 800;
+	int hauteurEcranPrincipal = 600;
 	chose * boutonAttaquer = new chose();
 	chose * boutonSoin = new chose();
 	chose * scorePjHp = new chose();
 	chose * scorePnjHP = new chose();
 	chose * boutonSpecial = new chose();
+	chose * texteGameOver = new chose();
+	chose * texteRemerciement = new chose();
 	sf::Event combatEvent;
 	int NiveauUn();
 	int i = 0;
@@ -53,6 +58,8 @@ public:
 	mur mur1;
 	void ChargerHpPjetbarre(personnage * ptrPj);
 	void ChargerBoutonSoin();
+	void ChargerTexteGameover();
+	void ChargerTexteRemerciement();
 	void ChargerBoutonAttaquer();
 	void ChargerHpPnj(personnage * ptrPNJ);
 	void ChargerBoutonSpecial(personnage * ptrPj);

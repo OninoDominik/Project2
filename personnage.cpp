@@ -177,12 +177,14 @@ void personnage::Attaque(personnage& ennemi)
 			break;
 		}
 		int jetToucher = 0;
-		jetToucher = ((rand() % 20) + 1) + * bonusAttaque + BonusStat(*nomBonusDegat);
+		jetToucher = ((rand() % 20) + 1) + *bonusAttaque + BonusStat(*nomBonusDegat);
+		cout << BonusStat(*nomBonusDegat) << endl;
+		cout << *nomBonusDegat << endl;
 		if (ennemi.CA() <= jetToucher)
 		{
 			AvancerAttaque();
 			cout << nom << "avance";
-			this->text.setString("Toucher");
+			this->text.setString("Touché");
 			this->text.setFillColor(sf::Color::White);
 			this->text.setCharacterSize(16);
 
@@ -190,6 +192,7 @@ void personnage::Attaque(personnage& ennemi)
 			this->text.setPosition(x, y - 30);
 
 
+			
 			cout << nom << " touche  " << ennemi.nom << " avec un  " << jetToucher << endl << " la ca de  " << ennemi.nom << " etait de " << ennemi.CA() << endl;
 
 			InfligeDegat(ennemi);
@@ -201,7 +204,7 @@ void personnage::Attaque(personnage& ennemi)
 		{
 			AvancerAttaque();
 			cout << nom << "avance";
-			this->text.setString("Rater");
+			this->text.setString("Raté");
 			this->text.setFillColor(sf::Color::White);
 			this->text.setCharacterSize(16);
 			x = this->rect.getPosition().x;
@@ -225,25 +228,6 @@ int personnage::Initiative()
 void personnage::afficheStat()
 {
 	cout << "nom nom nom nom " << this->nom << endl;
-	/*cout << "force = 10; " << *this->force << endl;
-	cout << "constitution = 10; " << *this->constitution << endl;
-	cout << "dexterite = 10; " << *this->dexterite << endl;
-	cout << "sagesse = 10; " << *this->sagesse << endl;
-	cout << "charisme = 10; " << *this->charisme << endl;
-	cout << "intelligence = 10; " << *this->intelligence << endl;
-	cout << "nbrFaceDesDegat = 6; " << *this->nbrFaceDesDegat << endl;
-	cout << "nbrDesDegat = 2; " << *this->nbrDesDegat << endl;
-	cout << "bonusArmure = 5; " << *this->bonusArmure << endl;
-	cout << " taille = 2; " << *this->taille << endl;
-	cout << "pvMax = 40; " << *this->pvMax << endl;
-
-	cout << "pvActuel = pvMax; " << *this->pvActuel << endl;
-
-	cout << "bonusInitiative = 2; " << *this->bonusInitiative << endl;
-	cout << "bonusAttaque = 5; " << *this->bonusAttaque << endl;
-	cout << "bonusBouclier = 0; " << *this->bonusBouclier << endl;
-	cout << "nbrAttaque = 2; " << *this->nbrAttaque << endl;
-	cout << "choix = 0; " << *this->choix << endl;*/
 
 	cout << "nbrDesSoin = 0; " << *this->nbrDesSoin << endl;
 	cout << " nbrFaceDesSoin = 0; " << *this->nbrFaceDesSoin << endl;

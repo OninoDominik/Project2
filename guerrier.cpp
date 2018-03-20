@@ -4,13 +4,13 @@
 
 guerrier::guerrier()
 {
-	*nbrDesSoin = 1;
-	*nbrFaceDesSoin = 6;
+	*nbrDesSoin = 2;
+	*nbrFaceDesSoin = 4;
 	*force = 18;
 	*constitution = 16;
 	*dexterite = 14;
-	*sagesse = 8;
-	*charisme = 6;
+	*sagesse = 10;
+	*charisme = 12;
 	*intelligence = 8;
 	*nbrFaceDesDegat = 8;
 	*nbrDesDegat = 2;

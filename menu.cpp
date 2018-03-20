@@ -43,13 +43,63 @@ void menu::chargerBoutonOption()
 	boutonOption->rect.setSize((sf::Vector2f(200, 50)));
 	
 }
-void menu::chargerBoutons()
+void menu::chargerBoutonsmenu()
 {
 	chargerBoutonOption();
 	chargerBoutonChargerPartie();
 	chargerBoutonNouvellePartie();
 	
 }
+void menu::ChargerBoutonTailleEcran()
+{
+	switch (choixTailleEcran)
+	{
+	case 0:
+		boutonTailleEcran->text.setString("Taille de l'ecran de jeu :800*600");
+		largeurFenetreDeJeu = 800;
+		hauteurFenetreDeJeu = 600;
+		break;
+	case 1:
+		boutonTailleEcran->text.setString("Taille de l'ecran de jeu :1200*900");
+		largeurFenetreDeJeu = 1200;
+		hauteurFenetreDeJeu = 900;
+		break;
+	case 2:
+		boutonTailleEcran->text.setString("Taille de l'ecran de jeu :400*300");
+		largeurFenetreDeJeu = 600;
+		hauteurFenetreDeJeu = 300;
+		break;
+	default:
+		break;
+	}
+	boutonTailleEcran->text.setFillColor(sf::Color::White);
+	boutonTailleEcran->text.setCharacterSize(20);
+	boutonTailleEcran->text.setPosition(0, 20 );
+	boutonTailleEcran->rect.setPosition(0, 20 );
+	boutonTailleEcran->rect.setSize((sf::Vector2f(200, 50)));
+
+}
+void menu::ChargerBoutonFrameRate()
+{
+	switch (Affichagefps)
+	{
+	case 0:
+		boutonFrameRate->text.setString("Affichage acteul du framerate : non");
+		boutonFrameRate->text.setFillColor(sf::Color::Red);
+		break;
+	case 1:
+		boutonFrameRate->text.setString("Affichage acteul du framerate : oui");
+		boutonFrameRate->text.setFillColor(sf::Color::Green);
+		break;
+	default:
+		break;
+	}
+	boutonFrameRate->text.setCharacterSize(16);
+	boutonFrameRate->text.setPosition(0, 70);
+	boutonFrameRate->rect.setPosition(0, 70);
+	boutonFrameRate->rect.setSize((sf::Vector2f(200, 50)));
+}
+
 
 
 
@@ -61,8 +111,9 @@ void menu::chargerBoutons()
 void menu::menuStart()
 {
 	sf::Music music;
-	music.openFromFile("Necromancy.ogg");
+	music.openFromFile("Dreamseer.ogg");
 	music.play();
+	music.setLoop(true);
 	sf::Font font;
 	font.loadFromFile("CloisterBlack.ttf");
 
@@ -98,13 +149,62 @@ void menu::menuStart()
 		{
 			music.stop();
 			menuWindow.close();
-			jeu * partie = new jeu();
+			jeu * partie = new jeu(largeurFenetreDeJeu, hauteurFenetreDeJeu,Affichagefps);
 			partie->Startjeu();
 			delete partie;
 			menuWindow.create(sf::VideoMode(tailleEcran.x, tailleEcran.y), "Pathfinder", sf::Style::Titlebar | sf::Style::Close);
 			music.play();
 		}
-		chargerBoutons();
+		if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && boutonOption->rect.getGlobalBounds().intersects(spriteCurseur.rect.getGlobalBounds()))
+		{
+			menuWindow.setVisible(false);
+			sf::RenderWindow optionWindow(sf::VideoMode((275), 125), "Pathfinder", sf::Style::Titlebar | sf::Style::Close);
+			while (optionWindow.isOpen())
+			{
+				sf::Event optionEvent;
+				while (optionWindow.pollEvent(optionEvent))
+				{
+					if (optionEvent.type == sf::Event::Closed)
+						optionWindow.close();
+					if (optionEvent.type == sf::Event::KeyPressed && optionEvent.key.code == sf::Keyboard::Escape)
+						optionWindow.close();
+				}
+				chose spriteCurseur2;
+				spriteCurseur2.rect.setPosition((sf::Vector2f)sf::Mouse::getPosition(optionWindow));
+				spriteCurseur2.rect.setSize(sf::Vector2f(4, 4));
+				ChargerBoutonTailleEcran();
+				ChargerBoutonFrameRate();
+				if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && boutonTailleEcran->rect.getGlobalBounds().intersects(spriteCurseur2.rect.getGlobalBounds()))
+				{
+
+						choixTailleEcran++;
+						sf::sleep(sf::milliseconds(100));
+						choixTailleEcran = (choixTailleEcran) % 3;
+
+				}
+				if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && boutonFrameRate->rect.getGlobalBounds().intersects(spriteCurseur2.rect.getGlobalBounds()))
+				{
+
+					Affichagefps= !Affichagefps;
+					sf::sleep(sf::milliseconds(100));
+
+				}
+
+				boutonTailleEcran->text.setFont(font);
+				boutonFrameRate->text.setFont(font);
+
+				optionWindow.clear();
+
+				optionWindow.draw(boutonTailleEcran->text);
+				optionWindow.draw(boutonFrameRate->text);
+				optionWindow.display();
+
+
+			}
+			menuWindow.setVisible(true);
+		}
+		
+		chargerBoutonsmenu();
 
 		/*chargerBoutonOption();
 		chargerBoutonChargerPartie();
@@ -113,7 +213,7 @@ void menu::menuStart()
 		boutonOption->text.setFont(font);
 		boutonNouvellePartie->text.setFont(font);
 		boutonChargerPartie->text.setFont(font);
-		
+		menuWindow.clear();
 		menuWindow.draw(boutonChargerPartie->text);
 		menuWindow.draw(boutonNouvellePartie->text);
 		menuWindow.draw(boutonOption->text);

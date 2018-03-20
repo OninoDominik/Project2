@@ -22,7 +22,7 @@ public:
 	void Mouvement();
 
 	int * force = new int(14);
-	int * constitution = new int(12);
+	int * constitution = new int(10);
 	int * dexterite = new int(12);
 	int * sagesse = new int(12);
 	int * charisme = new int(12);
