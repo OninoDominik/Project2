@@ -6,7 +6,7 @@ guerrier::guerrier()
 {
 	*nbrDesSoin = 1;
 	*nbrFaceDesSoin = 6;
-	*force = 180;
+	*force = 18;
 	*constitution = 16;
 	*dexterite = 14;
 	*sagesse = 8;
