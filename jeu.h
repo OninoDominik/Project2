@@ -15,7 +15,7 @@ class jeu
 {
 public:
 	jeu();
-	void Combat32(personnage * ptrPj, personnage * Pnj);
+	void Combat32(personnage * ptrPj, personnage * Pnj, sf::Texture texturePnj, int x, int y);
 	~jeu();
 
 	sf::Texture texture;

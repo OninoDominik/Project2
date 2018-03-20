@@ -91,8 +91,6 @@ void personnage::Mouvement()
 			avancer = true;
 		}
 	}
-	
-
 
 }
 
