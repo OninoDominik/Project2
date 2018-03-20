@@ -21,7 +21,7 @@ public:
 	void Positionnement();
 	void Mouvement();
 
-	int * force = new int(12);
+	int * force = new int(14);
 	int * constitution = new int(12);
 	int * dexterite = new int(12);
 	int * sagesse = new int(12);
@@ -48,13 +48,14 @@ public:
 	bool * envie = new bool(true);
 	bool  estUnJoueur = false;
 	bool  estEtourdit = false;
+	int seretourner = 0;
 	sf::Time difference;
 	sf::Time Chrono;
 	sf::Clock Chronometre;
 	sf::Time tempsAnime = sf::seconds(0.20);
 
 	string * nomAttaqueSpecial = new string("aa");
-	string nomBonusDegat = "force";
+	string * nomBonusDegat = new string("force");
 	string nom;
 
 	virtual void sesoigne();

@@ -41,7 +41,7 @@ void paladin::AttaqueSpecial(personnage& ennemi)
 	for (int i = 0; i < 2; i++)
 	{
 		int jetToucher = 0;
-		jetToucher = ((rand() % 20) + 1) + *bonusAttaque + BonusStat(nomBonusDegat);
+		jetToucher = ((rand() % 20) + 1) + *bonusAttaque + BonusStat(*nomBonusDegat);
 
 		if (ennemi.CA()+2 <= jetToucher)
 		{
@@ -106,7 +106,7 @@ void paladin::sesoigne()
 	{
 		soin += (rand() % *nbrFaceDesSoin + 1);
 	}
-
+	soin += BonusStat("charisme");
 	*pvActuel += soin;
 
 	if (*pvActuel > *pvMax)

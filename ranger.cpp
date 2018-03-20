@@ -1,0 +1,98 @@
+#include "ranger.h"
+
+
+
+ranger::ranger()
+{
+
+	*force = 8;
+	*constitution = 16;
+	*dexterite = 18;
+	*sagesse = 14;
+	*charisme = 10;
+	*intelligence = 12;
+	*nbrFaceDesDegat = 8;
+	*nbrDesDegat = 2;
+	*bonusArmure = 3;
+	*taille = 2;
+	*pvMax = 25 + *constitution;
+	*pvActuel = *pvMax;
+	*bonusInitiative = 4;
+	*bonusAttaque = 3;
+	*bonusBouclier = 0;
+	*nbrAttaque = 2;
+	*choix = 0;
+	*niveau = 2;
+	*tempsDot = 0;
+	*valeurDot = 0;
+	estUnJoueur = true;
+	*classe = 2;
+	*nbrDesSoin = 4;
+	*nbrFaceDesSoin = 4;
+	*nomAttaqueSpecial = "Headshot";
+	*nomBonusDegat = "dexterite";
+}
+
+void ranger::AttaqueSpecial(personnage& ennemi)
+{
+	int x = this->rect.getPosition().x;
+	int y = this->rect.getPosition().y;
+
+	cout << nom << "headshot";
+	int jetToucher = 0;
+	int rando = (( rand() % 20) + 1);
+	jetToucher =  rando + *bonusAttaque + BonusStat(*nomBonusDegat) + BonusStat("sagesse");
+	cout << "headshot" << "rando = " << rando << "bonusAttaque = " << *bonusAttaque << "BonusStat(nomBonusDegat)" << *nomBonusDegat << BonusStat(*nomBonusDegat) << endl;;
+
+	if (ennemi.CA() + 7 >= jetToucher)
+	{
+
+		AvancerAttaque();
+		this->text.setString("j'ai raté");
+		this->text.setFillColor(sf::Color::Red);
+		this->text.setCharacterSize(16);
+		x = this->rect.getPosition().x;
+		this->text.setPosition(x, y - 30);
+		ReculerAttaque();
+	}
+	else
+	{
+		*nbrDesDegat +=4 ;
+		AvancerAttaque();
+		this->InfligeDegat(ennemi);
+		this->text.setString("une fleche dans la tête !!");
+		this->text.setFillColor(sf::Color::Red);
+		this->text.setCharacterSize(16);
+		*nbrDesDegat -= 4;
+		ReculerAttaque();
+	}
+
+}
+void ranger::sesoigne()
+{
+
+	int x = this->rect.getPosition().x;
+	int y = this->rect.getPosition().y;
+
+	int soin = 0;
+
+	for (int i = 0; i < *nbrDesSoin; i++)
+	{
+		soin += (rand() % *nbrFaceDesSoin + 1);
+	}
+	soin += BonusStat("sagesse");
+	*pvActuel += soin;
+
+	if (*pvActuel > *pvMax)
+	{
+		*pvActuel = *pvMax;
+	}
+	this->text.setString(" Soin : " + to_string(soin));
+	this->text.setFillColor(sf::Color::Green);
+	this->text.setCharacterSize(16);
+	this->text.setPosition(x, y - 30);
+}
+
+ranger::~ranger()
+{
+}

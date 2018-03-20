@@ -60,6 +60,22 @@ void combat::startcombat(personnage* ami, personnage* ennemi)
 					break;
 				}
 			}
+			if (*ennemi->pvActuel <= 0)
+			{
+				*ennemi->envie = false;
+				cout << *ennemi->envie << endl;
+				sf::sleep(sf::seconds(0.75));
+				*ami->fermeCombatWindow = true;
+				break;
+			}
+			if (*ami->pvActuel <= 0)
+			{
+				*ami->envie = false;
+				cout << *ami->envie << endl;
+
+				*ami->fermeCombatWindow = true;
+				break;
+			}
 			if (initiativeEnnemi == i)
 			{
 				if (!(ennemi->estEtourdit))
@@ -80,22 +96,7 @@ void combat::startcombat(personnage* ami, personnage* ennemi)
 				}
 			}
 
-			if (*ennemi->pvActuel <= 0)
-			{
-				*ennemi->envie = false;
-				cout << *ennemi->envie << endl;
-				sf::sleep(sf::seconds(0.75));
-				*ami->fermeCombatWindow = true;
-				break;
-			}
-			if (*ami->pvActuel <= 0)
-			{
-				*ami->envie = false;
-				cout << *ami->envie << endl;
-
-				*ami->fermeCombatWindow = true;
-				break;
-			}
+			
 		}
 	}
 	

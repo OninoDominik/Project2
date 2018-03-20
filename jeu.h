@@ -11,6 +11,10 @@
 #include "paladin.h"
 #include <time.h>
 #include "guerrier.h"
+#include "alchimiste.h"
+#include "ranger.h"
+#include "voleur.h"
+
 class jeu
 {
 public:

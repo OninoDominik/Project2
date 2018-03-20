@@ -47,7 +47,7 @@ void jeu::Combat32(personnage * ptrPj, personnage * Pnj, sf::Texture texturePnj,
 
 		combatWindow.setFramerateLimit(20);
 
-		ptrPj->sprite.setTextureRect(sf::IntRect(i * tailleblock, tailleblock * 2, tailleblock, tailleblock));
+		ptrPj->sprite.setTextureRect(sf::IntRect(i * tailleblock, tailleblock * 2+ptrPj->seretourner, tailleblock, tailleblock));
 		ptrPj->Positionnement();
 
 		Pnj->sprite.setTextureRect(sf::IntRect(i * tailleblock, tailleblock, tailleblock, tailleblock));
@@ -299,6 +299,9 @@ int jeu::Startjeu()
 	personnage* ptrPj = nullptr;
 	paladin *ptrPal = new paladin();
 	guerrier * ptrGue = new guerrier();
+	alchimiste * ptrAlc = new alchimiste();
+	ranger * ptrRan = new ranger();
+	voleur * ptrVol = new voleur();
 
 	if (false)
 	{
@@ -311,7 +314,7 @@ int jeu::Startjeu()
 		ptrPj->sprite.setTexture(textureHero);
 		ptrPj->rect.setTextureRect(sf::IntRect(0, 0, 32, 32));
 	}
-	if (true)
+	if (false)
 	{
 		if (!textureHero.loadFromFile("guerrier.png"))
 		{
@@ -322,6 +325,40 @@ int jeu::Startjeu()
 		ptrPj->sprite.setTexture(textureHero);
 		ptrPj->rect.setTextureRect(sf::IntRect(0, 0, 32, 32));
 	}
+	if (false)
+	{
+		if (!textureHero.loadFromFile("alchimiste.png"))
+		{
+			std::cout << "pas de sprite" << std::endl;
+			return 1;
+		}
+		ptrPj = ptrAlc;
+		ptrPj->sprite.setTexture(textureHero);
+		ptrPj->rect.setTextureRect(sf::IntRect(0, 0, 32, 32));
+	}
+	if (false)
+	{
+		if (!textureHero.loadFromFile("ranger.png"))
+		{
+			std::cout << "pas de sprite" << std::endl;
+			return 1;
+		}
+		ptrPj = ptrRan;
+		ptrPj->sprite.setTexture(textureHero);
+		ptrPj->rect.setTextureRect(sf::IntRect(0, 0, 32, 32));
+	}
+	if (true)
+	{
+		if (!textureHero.loadFromFile("voleur.png"))
+		{
+			std::cout << "pas de sprite" << std::endl;
+			return 1;
+		}
+		ptrPj = ptrVol;
+		ptrPj->sprite.setTexture(textureHero);
+		ptrPj->rect.setTextureRect(sf::IntRect(0, 0, 32, 32));
+	}
+
 
 	ptrPj->setNom("Dom");
 
@@ -420,7 +457,7 @@ int jeu::Startjeu()
 			ptrPj->rect.setPosition((100), (105));
 			ptrPj->rect.setSize((sf::Vector2f(tailleblock, tailleblock)));
 			ptrPj->sprite.setTexture(textureHero);
-			ptrDB->rect.setPosition((360), (77));
+			ptrDB->rect.setPosition((300), (77));
 			ptrDB->rect.setSize((sf::Vector2f(110, tailleblock * 2)));
 			ptrDB->sprite.setTexture(texture4);
 
@@ -445,7 +482,7 @@ int jeu::Startjeu()
 
 				combatWindow2.setFramerateLimit(20);
 
-				ptrPj->sprite.setTextureRect(sf::IntRect(i * tailleblock, tailleblock * 2, tailleblock, tailleblock));
+				ptrPj->sprite.setTextureRect(sf::IntRect(i * tailleblock, tailleblock * 2+ptrPj->seretourner, tailleblock, tailleblock));
 				ptrPj->Positionnement();
 
 				ptrDB->sprite.setTextureRect(sf::IntRect(j * 110, tailleblock * 2, 110, tailleblock * 2));

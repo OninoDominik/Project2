@@ -157,7 +157,7 @@ void personnage::InfligeDegat(personnage& ennemi)
 
 	}
 	
-	deg += BonusStat(nomBonusDegat);
+	deg += BonusStat(*nomBonusDegat);
 	this->text.setString("j'ai inflige " + to_string(deg) + " degats");
 	sf::sleep(sf::microseconds(650));
 	*ennemi.pvActuel -= deg;
@@ -177,7 +177,7 @@ void personnage::Attaque(personnage& ennemi)
 			break;
 		}
 		int jetToucher = 0;
-		jetToucher = ((rand() % 20) + 1) + * bonusAttaque + BonusStat(nomBonusDegat);
+		jetToucher = ((rand() % 20) + 1) + * bonusAttaque + BonusStat(*nomBonusDegat);
 		if (ennemi.CA() <= jetToucher)
 		{
 			AvancerAttaque();
