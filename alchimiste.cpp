@@ -28,7 +28,7 @@ alchimiste::alchimiste()
 	estUnJoueur = true;
 	*classe = 2;
 	*nbrDesSoin = 2;
-	*nbrFaceDesSoin = 10;
+	*nbrFaceDesSoin = 8;
 	*nomAttaqueSpecial = "Bombe";
 	*nomBonusDegat = "intelligence";
 }
@@ -42,12 +42,14 @@ void alchimiste::AttaqueSpecial(personnage& ennemi)
 	this->text.setString("Bombe : " + to_string(3 * BonusStat("intelligence")) );
 	this->text.setFillColor(sf::Color::Red);
 	this->text.setCharacterSize(16);
+	this->anim->badaBoom();
 	*ennemi.pvActuel -= 3 * BonusStat("intelligence");
 	if (rand() % 2 == 1)
 	{
 		sf::sleep(sf::seconds(0.75));
 		this->text.setString("degats bonus : " + to_string(2 * BonusStat("intelligence")));
 		*ennemi.pvActuel -= 2 * BonusStat("intelligence");
+		this->anim->burn();
 		sf::sleep(sf::seconds(0.75));
 	}
 	if (rand() % 2 == 1)
@@ -87,6 +89,7 @@ void alchimiste::sesoigne()
 	{
 		*pvActuel = *pvMax;
 	}
+	this->anim->heal();
 	this->text.setString(" Soin : " + to_string(soin));
 	this->text.setFillColor(sf::Color::Green);
 	this->text.setCharacterSize(16);

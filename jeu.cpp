@@ -121,6 +121,7 @@ void jeu::Combat32(personnage * ptrPj, personnage * Pnj, sf::Texture texturePnj,
 		combatWindow.draw(scorePnjHP->text);
 		combatWindow.draw(ptrPj->text);
 		combatWindow.draw(Pnj->text);
+		combatWindow.draw(ptrPj->anim->animSprite);
 
 		combatWindow.display();
 

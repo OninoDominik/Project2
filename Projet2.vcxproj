@@ -121,6 +121,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="alchimiste.cpp" />
+    <ClCompile Include="animationCombat.cpp" />
     <ClCompile Include="chose.cpp" />
     <ClCompile Include="combat.cpp" />
     <ClCompile Include="Database.cpp" />
@@ -137,6 +138,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="alchimiste.h" />
+    <ClInclude Include="animationCombat.h" />
     <ClInclude Include="chose.h" />
     <ClInclude Include="combat.h" />
     <ClInclude Include="Database.h" />

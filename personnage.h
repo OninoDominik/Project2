@@ -1,7 +1,7 @@
 #pragma once
 #include "chose.h"
 #include "string"
-#include "personnage.h"
+#include "animationCombat.h"
 
 class personnage : public chose
 {
@@ -58,6 +58,7 @@ public:
 	string * nomAttaqueSpecial = new string("aa");
 	string * nomBonusDegat = new string("force");
 	string nom;
+	animationCombat * anim = new animationCombat;
 
 	virtual void sesoigne();
 	
