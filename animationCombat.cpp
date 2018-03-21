@@ -18,11 +18,11 @@ void animationCombat::burn()
 	while (compteurPas != -1)
 	{
 
-		if (chronoAnim.getElapsedTime().asMilliseconds() > 25)
+		if (chronoAnim.getElapsedTime().asMilliseconds() > 35)
 		{
-			compteurPas += 75;
+			compteurPas += 80;
 			animSprite.setTextureRect(sf::IntRect(compteurPas, 17 * 32 + 10, 64, 4 * 31));
-			animSprite.setPosition(360 - 80 / 2, 105 - 80 / 2);
+			animSprite.setPosition(360 - 50 / 2, 105 - 50 / 2);
 			sf::sleep(sf::milliseconds(45));
 			if (compteurPas >= 450)
 			{
@@ -81,7 +81,7 @@ void animationCombat::badaBoom()
 			}
 			
 			animSprite.setTextureRect(sf::IntRect(compteurPas, compteurLigne, 79, 79));
-			animSprite.setPosition(360-80/2, 105-80/2);
+			animSprite.setPosition(360-50/2, 105-50/2);
 			sf::sleep(sf::milliseconds(25));
 		}
 	}
