@@ -10,6 +10,35 @@ animationCombat::animationCombat()
 animationCombat::~animationCombat()
 {
 }
+void animationCombat::arrow()
+{
+	compteurLigne = 96;
+	compteurPas = 0;
+	fleche.loadFromFile("arrow.png");
+	animSprite.setTexture(fleche);
+	animSprite.setPosition(232, 90);
+	int longueur = 0;
+	while (longueur<125)
+	{
+
+		if (chronoAnim.getElapsedTime().asMilliseconds() > 45)
+		{
+			compteurPas += 32;
+			animSprite.move(5, 0);
+			longueur += 5;
+			if (compteurPas >= 96)
+			{
+				compteurPas = 0;
+				chronoAnim.restart();
+			}
+
+			animSprite.setTextureRect(sf::IntRect(compteurPas, compteurLigne, 32, 48));
+			sf::sleep(sf::milliseconds(35));
+		}
+	}
+}
+
+
 void animationCombat::coup(int i)
 {
 	compteurPas = 150;
@@ -21,7 +50,9 @@ void animationCombat::coup(int i)
 	{
 		if (i == 0)
 		{
-			animSprite.setPosition(100 - 10, 105 -25 );
+			animSprite.rotate(180);
+			animSprite.setPosition(100 + 40 , 105 + 60 );
+			animSprite.rotate(180);
 		}
 		if (i == 1)
 		{

@@ -9,6 +9,7 @@ class animationCombat
 public:
 	animationCombat();
 	~animationCombat();
+	void arrow();
 	void coup(int i);
 	void sang();
 	void palastun();
@@ -22,6 +23,7 @@ public:
 	sf::Texture saignement;
 	sf::Texture slash;
 	sf::Texture slash2;
+	sf::Texture fleche;
 	//void Boom(personnage & victime);
 
 	//void Boom(personnage & victime);

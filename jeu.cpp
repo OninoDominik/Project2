@@ -26,7 +26,8 @@ void jeu::Combat32(personnage * ptrPj, personnage * Pnj, sf::Texture texturePnj,
 	sf::Time Chrono;
 	sf::Clock Chronometre;
 	sf::RenderWindow combatWindow(sf::VideoMode(470, 145), "Combat"); 
-	
+	sf::Texture pv;
+	pv.loadFromFile("healthbar.png");
 
 	sf::Thread thread(std::bind(&combat::startcombat, ptrPj, Pnj));
 
@@ -85,6 +86,8 @@ void jeu::Combat32(personnage * ptrPj, personnage * Pnj, sf::Texture texturePnj,
 		boutonAttaquer->text.setFont(font);
 		boutonSoin->text.setFont(font);
 		scorePjHp->text.setFont(font);
+		scorePjHp->sprite.setTextureRect(sf::IntRect(350, 550, 220, 40));
+		scorePjHp->sprite.setTexture(pv);
 		scorePnjHP->text.setFont(font);
 		boutonSpecial->text.setFont(font);
 
@@ -133,6 +136,7 @@ void jeu::Combat32(personnage * ptrPj, personnage * Pnj, sf::Texture texturePnj,
 		combatWindow.draw(Pnj->text);
 		combatWindow.draw(ptrPj->anim->animSprite);
 		combatWindow.draw(Pnj->anim->animSprite);
+		combatWindow.draw(scorePjHp->sprite);
 
 		combatWindow.display();
 
@@ -238,6 +242,7 @@ int jeu::Startjeu()
 	if (!music.openFromFile("Necromancy.ogg"))
 		return -1; // erreur
 	music.play();
+	music.setVolume(50);
 	database bdd;
 	bdd.openDatabase();
 
@@ -378,7 +383,7 @@ int jeu::Startjeu()
 		ptrPj->sprite.setTexture(textureHero);
 		ptrPj->rect.setTextureRect(sf::IntRect(0, 0, 32, 32));
 	}
-	if (true)
+	if (false)
 	{
 		if (!textureHero.loadFromFile("guerrier.png"))
 		{
@@ -411,7 +416,7 @@ int jeu::Startjeu()
 		ptrPj->sprite.setTexture(textureHero);
 		ptrPj->rect.setTextureRect(sf::IntRect(0, 0, 32, 32));
 	}
-	if (false)
+	if (true)
 	{
 		if (!textureHero.loadFromFile("voleur.png"))
 		{

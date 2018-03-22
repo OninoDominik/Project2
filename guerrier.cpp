@@ -5,7 +5,7 @@
 guerrier::guerrier()
 {
 	*nbrDesSoin = 2;
-	*nbrFaceDesSoin = 4;
+	*nbrFaceDesSoin = 6;
 	*force = 18;
 	*constitution = 16;
 	*dexterite = 14;
@@ -16,7 +16,7 @@ guerrier::guerrier()
 	*nbrDesDegat = 2;
 	*bonusArmure = 6;
 	*taille = 2;
-	*pvMax = 30+*constitution;
+	*pvMax = 30+2*(*constitution);
 	*pvActuel = *pvMax;
 	*bonusInitiative = 2;
 	*bonusAttaque = 4;

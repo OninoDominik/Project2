@@ -27,8 +27,8 @@ public:
 	int * sagesse = new int(12);
 	int * charisme = new int(12);
 	int * intelligence = new int(12);
-	int * nbrFaceDesDegat = new int(6);
-	int * nbrDesDegat = new int(3);
+	int * nbrFaceDesDegat = new int(8);
+	int * nbrDesDegat = new int(2);
 	int * bonusArmure = new int(5);
 	int * taille = new int(2);
 	int * pvMax = new int(25+*constitution);

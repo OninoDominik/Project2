@@ -26,7 +26,7 @@ voleur::voleur()
 	*valeurDot = 0;
 	estUnJoueur = true;
 	*classe = 2;
-	*nbrDesSoin = 4;
+	*nbrDesSoin = 3;
 	*nbrFaceDesSoin = 4;
 	*nomAttaqueSpecial = "Backstab";
 	*nomBonusDegat = "dexterite";

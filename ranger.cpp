@@ -49,7 +49,7 @@ void ranger::AttaqueSpecial(personnage& ennemi)
 
 		AvancerAttaque();
 		this->text.setString("j'ai raté");
-		this->text.setFillColor(sf::Color::Red);
+		this->text.setFillColor(sf::Color::White);
 		this->text.setCharacterSize(16);
 		x = this->rect.getPosition().x;
 		this->text.setPosition(x, y - 30);
@@ -59,8 +59,9 @@ void ranger::AttaqueSpecial(personnage& ennemi)
 	{
 		*nbrDesDegat +=4 ;
 		AvancerAttaque();
+		this->anim->arrow();
 		this->InfligeDegat(ennemi);
-		this->text.setString("une fleche dans la tête !!");
+		this->text.setString("Headshot !");
 		this->text.setFillColor(sf::Color::Red);
 		this->text.setCharacterSize(16);
 		*nbrDesDegat -= 4;
