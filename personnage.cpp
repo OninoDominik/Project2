@@ -152,7 +152,6 @@ void personnage::InfligeDegat(personnage& ennemi)
 		degtempo = 0;
 		degtempo = ((rand() % (*nbrFaceDesDegat)) + 1 );
 		deg += degtempo;
-		cout << "aaaaaaaaaaaaaaaaaaaaa" << this->estUnJoueur << "AAAAAAAAAAAAAA" << endl;
 		cout << "pv actuel de : " << ennemi.nom << "  " << *ennemi.pvActuel << endl;
 		cout << "des de degats : " << degtempo << endl;
 

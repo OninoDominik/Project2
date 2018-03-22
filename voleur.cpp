@@ -27,7 +27,7 @@ voleur::voleur()
 	estUnJoueur = true;
 	*classe = 2;
 	*nbrDesSoin = 3;
-	*nbrFaceDesSoin = 4;
+	*nbrFaceDesSoin = 5;
 	*nomAttaqueSpecial = "Backstab";
 	*nomBonusDegat = "dexterite";
 	seretourner = 0;
@@ -47,7 +47,7 @@ void voleur::AttaqueSpecial(personnage& ennemi)
 		int rando = ((rand() % 20) + 1);
 		jetToucher = rando + *bonusAttaque + BonusStat(*nomBonusDegat) ;
 
-		if (ennemi.CA() >= jetToucher)
+		if (ennemi.CA()+2 >= jetToucher)
 		{
 			AvancerAttaque();
 			this->text.setString("j'ai raté");
@@ -62,7 +62,7 @@ void voleur::AttaqueSpecial(personnage& ennemi)
 		else
 		{	
 			this->rect.setPosition((392), (105));
-			*nbrDesDegat +=3 ;
+			*nbrDesDegat +=2 ;
 			x = this->rect.getPosition().x;
 			this->text.setPosition(x-30, y - 60);
 			this->seretourner = -32;
@@ -73,7 +73,7 @@ void voleur::AttaqueSpecial(personnage& ennemi)
 				this->InfligeDegat(ennemi);
 				sf::sleep(sf::milliseconds(550));
 			}
-			*nbrDesDegat -= 3;
+			*nbrDesDegat -= 2;
 			this->rect.setPosition((100), (105));
 			this->seretourner = 0;
 			this->text.setString("Ma feinte est perdu");
