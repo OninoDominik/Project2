@@ -152,6 +152,7 @@ void personnage::InfligeDegat(personnage& ennemi)
 		degtempo = 0;
 		degtempo = ((rand() % (*nbrFaceDesDegat)) + 1 );
 		deg += degtempo;
+		cout << "aaaaaaaaaaaaaaaaaaaaa" << this->estUnJoueur << "AAAAAAAAAAAAAA" << endl;
 		cout << "pv actuel de : " << ennemi.nom << "  " << *ennemi.pvActuel << endl;
 		cout << "des de degats : " << degtempo << endl;
 
@@ -159,7 +160,15 @@ void personnage::InfligeDegat(personnage& ennemi)
 	
 	deg += BonusStat(*nomBonusDegat);
 	this->text.setString("j'ai inflige " + to_string(deg) + " degats");
-	sf::sleep(sf::microseconds(650));
+	if (this->estUnJoueur == true)
+	{
+		this->anim->coup(1);
+	}
+	else
+	{
+		this->anim->coup(0);
+	}
+	sf::sleep(sf::microseconds(450));
 	*ennemi.pvActuel -= deg;
 
 	cout << nom << " frappe  " << ennemi.nom << "  et inflige   " << deg << " Degats " << endl << "il lui reste " << *ennemi.pvActuel << " PV" << endl;

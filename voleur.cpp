@@ -117,6 +117,7 @@ void voleur::sesoigne()
 		*pvActuel = *pvMax;
 	}
 	this->text.setString(" Soin : " + to_string(soin));
+	this->anim->heal();
 	this->text.setFillColor(sf::Color::Green);
 	this->text.setCharacterSize(16);
 	this->text.setPosition(x, y - 30);

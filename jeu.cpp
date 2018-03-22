@@ -22,10 +22,11 @@ void jeu::Combat32(personnage * ptrPj, personnage * Pnj, sf::Texture texturePnj,
 	//afficheText = true;
 	int tailleblock = 32;
 
-
-	
+	sf::Time tempsAnime = ptrPj->tempsAnime;
+	sf::Time Chrono;
+	sf::Clock Chronometre;
 	sf::RenderWindow combatWindow(sf::VideoMode(470, 145), "Combat"); 
-
+	
 
 	sf::Thread thread(std::bind(&combat::startcombat, ptrPj, Pnj));
 
@@ -103,8 +104,17 @@ void jeu::Combat32(personnage * ptrPj, personnage * Pnj, sf::Texture texturePnj,
 			*ptrPj->choix = 3;
 		}
 
-		i = (i + 1) % 3;
-		j = (j + 1) % 4;
+		//i = (i + 1) % 3;
+
+		Chrono += Chronometre.getElapsedTime();
+		Chronometre.restart();
+
+		if (Chrono >= tempsAnime)
+		{
+			Chrono -= tempsAnime;
+			i++;
+			i = (i) % 3;
+		}
 
 		
 		spriteAreneFront.getPosition();
@@ -122,6 +132,7 @@ void jeu::Combat32(personnage * ptrPj, personnage * Pnj, sf::Texture texturePnj,
 		combatWindow.draw(ptrPj->text);
 		combatWindow.draw(Pnj->text);
 		combatWindow.draw(ptrPj->anim->animSprite);
+		combatWindow.draw(Pnj->anim->animSprite);
 
 		combatWindow.display();
 
@@ -367,7 +378,7 @@ int jeu::Startjeu()
 		ptrPj->sprite.setTexture(textureHero);
 		ptrPj->rect.setTextureRect(sf::IntRect(0, 0, 32, 32));
 	}
-	if (false)
+	if (true)
 	{
 		if (!textureHero.loadFromFile("guerrier.png"))
 		{
@@ -378,7 +389,7 @@ int jeu::Startjeu()
 		ptrPj->sprite.setTexture(textureHero);
 		ptrPj->rect.setTextureRect(sf::IntRect(0, 0, 32, 32));
 	}
-	if (true)
+	if (false)
 	{
 		if (!textureHero.loadFromFile("alchimiste.png"))
 		{
@@ -606,6 +617,7 @@ int jeu::Startjeu()
 				combatWindow2.draw(scorePnjHP->text);
 				combatWindow2.draw(ptrPj->text);
 				combatWindow2.draw(ptrDB->text);
+				combatWindow2.draw(ptrPj->anim->animSprite);
 
 				combatWindow2.display();
 
@@ -803,6 +815,7 @@ int jeu::Startjeu()
 		}
 		if (!*ptrPj->envie)
 		{
+			music.stop();
 			window.close();
 			sf::Event  gameOverEvent;
 			sf::RenderWindow gameOverWindow(sf::VideoMode(300, 320), "Game Over");
@@ -837,6 +850,7 @@ int jeu::Startjeu()
 		window.draw(ptrEmma->sprite);
 		window.draw(ptrOrc->sprite);
 		window.draw(ptrPj->sprite);
+		
 		
 
 		if (AfficherFrameRate)

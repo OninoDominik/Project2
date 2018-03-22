@@ -37,7 +37,7 @@ void guerrier::AttaqueSpecial(personnage& ennemi)
 
 	AvancerAttaque();
 	cout << nom << "Saignement";
-	this->text.setString("Saignement : "+ to_string(2 * BonusStat("force"))+ "pour 3 tours");
+	this->text.setString("Saignement : "+ to_string(((int)(1.5 * BonusStat("force"))))+ "pour 3 tours");
 	this->text.setFillColor(sf::Color::Red);
 	this->text.setCharacterSize(16);
 
@@ -77,6 +77,7 @@ void guerrier::sesoigne()
 		*pvActuel = *pvMax;
 	}
 	this->text.setString(" Soin : " + to_string(soin));
+	this->anim->heal();
 	this->text.setFillColor(sf::Color::Green);
 	this->text.setCharacterSize(16);
 	this->text.setPosition(x, y - 30);

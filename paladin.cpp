@@ -48,6 +48,7 @@ void paladin::AttaqueSpecial(personnage& ennemi)
 			if (i == 0)
 			{
 				AvancerAttaque();
+				this->anim->palastun();
 				this->text.setString("j'ai etourdit l'ennemi");
 				ennemi.estEtourdit = true;
 				this->text.setFillColor(sf::Color::Red);
@@ -114,6 +115,7 @@ void paladin::sesoigne()
 		*pvActuel = *pvMax;
 	}
 	this->text.setString(" Soin : "+ to_string(soin));
+	this->anim->heal();
 	this->text.setFillColor(sf::Color::Green);
 	this->text.setCharacterSize(16);
 	this->text.setPosition(x, y - 30);

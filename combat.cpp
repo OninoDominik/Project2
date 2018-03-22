@@ -95,7 +95,7 @@ void combat::startcombat(personnage* ami, personnage* ennemi)
 					{
 						*ennemi->tempsDot -= 1;
 						*ennemi->pvActuel -= *ennemi->valeurDot;
-
+						ami->anim->sang();
 						cout << "dot" << *ennemi->valeurDot << "        " << *ennemi->tempsDot << endl;
 					}
 					ennemi->Attaque(*ami);

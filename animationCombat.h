@@ -9,12 +9,19 @@ class animationCombat
 public:
 	animationCombat();
 	~animationCombat();
-	void burn();
+	void coup(int i);
+	void sang();
+	void palastun();
+	void burn(int i);
 	void heal();
 	void badaBoom();
 	sf::Texture explosion;
 	sf::Texture soin;
 	sf::Texture textureBurn;
+	sf::Texture stun;
+	sf::Texture saignement;
+	sf::Texture slash;
+	sf::Texture slash2;
 	//void Boom(personnage & victime);
 
 	//void Boom(personnage & victime);

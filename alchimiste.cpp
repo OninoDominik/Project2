@@ -49,7 +49,7 @@ void alchimiste::AttaqueSpecial(personnage& ennemi)
 		sf::sleep(sf::seconds(0.75));
 		this->text.setString("degats bonus : " + to_string(2 * BonusStat("intelligence")));
 		*ennemi.pvActuel -= 2 * BonusStat("intelligence");
-		this->anim->burn();
+		this->anim->burn(1);
 		sf::sleep(sf::seconds(0.75));
 	}
 	if (rand() % 2 == 1)
@@ -57,6 +57,7 @@ void alchimiste::AttaqueSpecial(personnage& ennemi)
 		sf::sleep(sf::seconds(0.75));
 		this->text.setString("je brule : " + to_string(2 * BonusStat("intelligence")));
 		*this->pvActuel -= 2 * BonusStat("intelligence");
+		this->anim->burn(0);
 		sf::sleep(sf::seconds(0.75));
 		
 	}
@@ -89,8 +90,8 @@ void alchimiste::sesoigne()
 	{
 		*pvActuel = *pvMax;
 	}
-	this->anim->heal();
 	this->text.setString(" Soin : " + to_string(soin));
+	this->anim->heal();
 	this->text.setFillColor(sf::Color::Green);
 	this->text.setCharacterSize(16);
 	this->text.setPosition(x, y - 30);

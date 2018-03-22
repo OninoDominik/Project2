@@ -35,7 +35,7 @@ void menu::chargerBoutonChargerPartie()
 
 void menu::chargerBoutonOption()
 {
-	boutonOption->text.setString("	Option");
+	boutonOption->text.setString("	Options");
 	boutonOption->text.setFillColor(sf::Color::Red);
 	boutonOption->text.setCharacterSize(20);
 	boutonOption->text.setPosition(0, 140 + 220);
@@ -84,11 +84,11 @@ void menu::ChargerBoutonFrameRate()
 	switch (Affichagefps)
 	{
 	case 0:
-		boutonFrameRate->text.setString("Affichage acteul du framerate : non");
+		boutonFrameRate->text.setString("Affichage actuel du framerate : non");
 		boutonFrameRate->text.setFillColor(sf::Color::Red);
 		break;
 	case 1:
-		boutonFrameRate->text.setString("Affichage acteul du framerate : oui");
+		boutonFrameRate->text.setString("Affichage actuel du framerate : oui");
 		boutonFrameRate->text.setFillColor(sf::Color::Green);
 		break;
 	default:
@@ -124,10 +124,10 @@ void menu::menuStart()
 	logo->sprite.setTexture(textureLogo);
 	logo->rect.setSize(sf::Vector2f(110, 64));
 	logo->sprite.setPosition(logo->rect.getPosition());
-
+	chargerBoutonsmenu();
 	sf::Vector2i tailleEcran(220, 420);
 	sf::RenderWindow menuWindow(sf::VideoMode(tailleEcran.x, tailleEcran.y), "Pathfinder", sf::Style::Titlebar | sf::Style::Close);
-
+	sf::Color orange(255, 150, 0);
 	while (menuWindow.isOpen())
 	{
 		sf::Event menuEvent;
@@ -144,6 +144,7 @@ void menu::menuStart()
 		spriteCurseur.rect.setSize(sf::Vector2f(4, 4));
 
 
+		
 
 		if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && boutonNouvellePartie->rect.getGlobalBounds().intersects(spriteCurseur.rect.getGlobalBounds()))
 		{
@@ -155,6 +156,7 @@ void menu::menuStart()
 			menuWindow.create(sf::VideoMode(tailleEcran.x, tailleEcran.y), "Pathfinder", sf::Style::Titlebar | sf::Style::Close);
 			music.play();
 		}
+		
 		if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && boutonOption->rect.getGlobalBounds().intersects(spriteCurseur.rect.getGlobalBounds()))
 		{
 			menuWindow.setVisible(false);
@@ -169,11 +171,12 @@ void menu::menuStart()
 					if (optionEvent.type == sf::Event::KeyPressed && optionEvent.key.code == sf::Keyboard::Escape)
 						optionWindow.close();
 				}
+				ChargerBoutonTailleEcran();
+				ChargerBoutonFrameRate();
 				chose spriteCurseur2;
 				spriteCurseur2.rect.setPosition((sf::Vector2f)sf::Mouse::getPosition(optionWindow));
 				spriteCurseur2.rect.setSize(sf::Vector2f(4, 4));
-				ChargerBoutonTailleEcran();
-				ChargerBoutonFrameRate();
+				
 				if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && boutonTailleEcran->rect.getGlobalBounds().intersects(spriteCurseur2.rect.getGlobalBounds()))
 				{
 
@@ -189,12 +192,21 @@ void menu::menuStart()
 					sf::sleep(sf::milliseconds(100));
 
 				}
+				if (boutonFrameRate->rect.getGlobalBounds().intersects(spriteCurseur.rect.getGlobalBounds()))
+				{
+					boutonFrameRate->text.setFillColor(orange);
+				}
+				if (boutonTailleEcran->rect.getGlobalBounds().intersects(spriteCurseur.rect.getGlobalBounds()))
+				{
+					boutonTailleEcran->text.setFillColor(orange);
+				}
+
+				
 
 				boutonTailleEcran->text.setFont(font);
 				boutonFrameRate->text.setFont(font);
 
 				optionWindow.clear();
-
 				optionWindow.draw(boutonTailleEcran->text);
 				optionWindow.draw(boutonFrameRate->text);
 				optionWindow.display();
@@ -203,13 +215,34 @@ void menu::menuStart()
 			}
 			menuWindow.setVisible(true);
 		}
-		
-		chargerBoutonsmenu();
 
 		/*chargerBoutonOption();
 		chargerBoutonChargerPartie();
 		chargerBoutonNouvellePartie();*/
-
+		if (boutonNouvellePartie->rect.getGlobalBounds().intersects(spriteCurseur.rect.getGlobalBounds()))
+		{
+			boutonNouvellePartie->text.setFillColor(orange);
+		}
+		if (boutonChargerPartie->rect.getGlobalBounds().intersects(spriteCurseur.rect.getGlobalBounds()))
+		{
+			boutonChargerPartie->text.setFillColor(orange);
+		}
+		if (boutonOption->rect.getGlobalBounds().intersects(spriteCurseur.rect.getGlobalBounds()))
+		{
+			boutonOption->text.setFillColor(orange);
+		}
+		if  (!(boutonNouvellePartie->rect.getGlobalBounds().intersects(spriteCurseur.rect.getGlobalBounds())))
+		{
+			boutonNouvellePartie->text.setFillColor(sf::Color::White);
+		}
+		if (!(boutonChargerPartie->rect.getGlobalBounds().intersects(spriteCurseur.rect.getGlobalBounds())))
+		{
+			boutonChargerPartie->text.setFillColor(sf::Color::White);
+		}
+		if (!(boutonOption->rect.getGlobalBounds().intersects(spriteCurseur.rect.getGlobalBounds())))
+		{
+			boutonOption->text.setFillColor(sf::Color::Red);
+		}
 		boutonOption->text.setFont(font);
 		boutonNouvellePartie->text.setFont(font);
 		boutonChargerPartie->text.setFont(font);
