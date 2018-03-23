@@ -76,7 +76,7 @@ void menu::ChargerBoutonTailleEcran()
 	boutonTailleEcran->text.setCharacterSize(20);
 	boutonTailleEcran->text.setPosition(0, 20 );
 	boutonTailleEcran->rect.setPosition(0, 20 );
-	boutonTailleEcran->rect.setSize((sf::Vector2f(200, 50)));
+	boutonTailleEcran->rect.setSize((sf::Vector2f(275, 50)));
 
 }
 void menu::ChargerBoutonFrameRate()
@@ -97,7 +97,7 @@ void menu::ChargerBoutonFrameRate()
 	boutonFrameRate->text.setCharacterSize(16);
 	boutonFrameRate->text.setPosition(0, 70);
 	boutonFrameRate->rect.setPosition(0, 70);
-	boutonFrameRate->rect.setSize((sf::Vector2f(200, 50)));
+	boutonFrameRate->rect.setSize((sf::Vector2f(275, 50)));
 }
 
 

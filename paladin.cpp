@@ -6,11 +6,11 @@ paladin::paladin()
 {
 	*nbrDesSoin = 4;
 	*nbrFaceDesSoin = 6;
-	*force = 14;
-	*constitution = 12;
-	*dexterite = 10;
+	*force = 18;
+	*constitution = 16;
+	*dexterite = 12;
 	*sagesse = 8;
-	*charisme = 12;
+	*charisme = 14;
 	*intelligence = 8;
 	*nbrFaceDesDegat = 6;
 	*nbrDesDegat = 2;

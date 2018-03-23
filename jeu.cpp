@@ -163,8 +163,8 @@ void jeu::Combat32(personnage * ptrPj, personnage * Pnj, sf::Texture texturePnj,
 		combatWindow.draw(boutonAttaquer->text);
 		combatWindow.draw(boutonSpecial->text);
 		combatWindow.draw(boutonSoin->text);
-		combatWindow.draw(scorePjHp->text);
-		combatWindow.draw(scorePnjHP->text);
+		//combatWindow.draw(scorePjHp->text);
+		//combatWindow.draw(scorePnjHP->text);
 		combatWindow.draw(scorePnjHP->sprite);
 		combatWindow.draw(ptrPj->text);
 		combatWindow.draw(Pnj->text);
@@ -275,10 +275,11 @@ int jeu::Startjeu()
 {
 	sf::Clock chronometre;
 	sf::Music music;
-	if (!music.openFromFile("Necromancy.ogg"))
+	if (!music.openFromFile("Gleipnir.ogg"))
 		return -1; // erreur
 	music.play();
 	music.setVolume(50);
+	music.setLoop(true);
 	database bdd;
 	bdd.openDatabase();
 
@@ -408,7 +409,7 @@ int jeu::Startjeu()
 	ranger * ptrRan = new ranger();
 	voleur * ptrVol = new voleur();
 
-	if (false)
+	if (true)
 	{
 		if (!textureHero.loadFromFile("paladin.png"))
 		{
@@ -452,7 +453,7 @@ int jeu::Startjeu()
 		ptrPj->sprite.setTexture(textureHero);
 		ptrPj->rect.setTextureRect(sf::IntRect(0, 0, 32, 32));
 	}
-	if (true)
+	if (false)
 	{
 		if (!textureHero.loadFromFile("voleur.png"))
 		{
@@ -892,8 +893,6 @@ int jeu::Startjeu()
 		window.draw(ptrOrc->sprite);
 		window.draw(ptrPj->sprite);
 
-
-
 		if (AfficherFrameRate)
 		{
 			sf::Time tempsUneFrame = chronometre.getElapsedTime();
@@ -901,8 +900,6 @@ int jeu::Startjeu()
 			fps->text.setPosition(ptrPj->rect.getPosition().x - tailleEcranPrincipal.x / 2, ptrPj->rect.getPosition().y - tailleEcranPrincipal.y / 2);
 			chronometre.restart().asSeconds();
 		}
-
-
 
 		window.draw(fps->text);
 		window.display();
@@ -915,6 +912,7 @@ int jeu::Startjeu()
 
 	return 0;
 }
+
 vector<mur> jeu::murmap1()
 {
 	vector<mur> ligneMur;

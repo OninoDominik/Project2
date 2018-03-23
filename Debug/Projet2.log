@@ -1,157 +1,157 @@
 ﻿  jeu.cpp
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\personnage.h(56): warning C4305: 'argument' : troncation de 'double' à 'float'
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(48): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(51): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(182): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(310): warning C4244: 'argument' : conversion de 'unsigned int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(484): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(487): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(498): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(501): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(576): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(580): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(668): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(669): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(685): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(690): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(696): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(701): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(712): warning C4244: 'initialisation' : conversion de 'const float' en 'int', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(713): warning C4244: 'initialisation' : conversion de 'const float' en 'int', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(720): warning C4244: 'initialisation' : conversion de 'const float' en 'int', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(721): warning C4244: 'initialisation' : conversion de 'const float' en 'int', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(839): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(847): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(854): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(923): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(928): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(929): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(931): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(932): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(934): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(937): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(939): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(941): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(943): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(945): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(947): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(949): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(951): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(953): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(955): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(957): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(959): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(961): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(963): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(965): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(967): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(969): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(971): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(973): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(974): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(976): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(978): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(980): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(981): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(983): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(985): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(987): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(989): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(991): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(993): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(995): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(997): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(999): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1001): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1003): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1004): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1006): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1007): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1009): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1010): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1012): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1013): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1015): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1017): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1019): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1020): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1022): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1023): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1025): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1026): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1028): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1029): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1031): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1032): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1034): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1035): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1037): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1039): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1040): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1042): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1044): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1046): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1048): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1050): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1052): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1054): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1056): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1058): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1060): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1061): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1063): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1065): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1066): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1068): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1070): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1072): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1074): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1076): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1078): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1080): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1081): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1083): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1084): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1086): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1088): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1090): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1092): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1094): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1096): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1098): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1100): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1102): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1104): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1106): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1108): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1110): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1112): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1114): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1116): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1118): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1120): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1122): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1124): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1126): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1128): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1130): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1132): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1134): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1136): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1138): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1140): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1142): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1144): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1145): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1147): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1149): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1151): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1153): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1155): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1157): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1158): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1160): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1162): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\jeu.cpp(1164): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-  Projet2.vcxproj -> C:\Users\adai06\Documents\Visual Studio 2015\Projects\Projet2\Project2\Debug\Projet2.exe
-  Projet2.vcxproj -> C:\Users\adai06\Documents\Visual Studio 2015\Projects\Projet2\Project2\Debug\Projet2.pdb (Partial PDB)
+e:\projet2\project2\personnage.h(56): warning C4305: 'argument': truncation from 'double' to 'float'
+e:\projet2\project2\jeu.cpp(48): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(51): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(182): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(311): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(485): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(488): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(499): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(502): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(577): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(581): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(669): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(670): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(686): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(691): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(697): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(702): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(713): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+e:\projet2\project2\jeu.cpp(714): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+e:\projet2\project2\jeu.cpp(721): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+e:\projet2\project2\jeu.cpp(722): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+e:\projet2\project2\jeu.cpp(840): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(848): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(855): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(921): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(926): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(927): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(929): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(930): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(932): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(935): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(937): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(939): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(941): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(943): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(945): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(947): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(949): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(951): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(953): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(955): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(957): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(959): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(961): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(963): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(965): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(967): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(969): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(971): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(972): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(974): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(976): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(978): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(979): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(981): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(983): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(985): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(987): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(989): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(991): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(993): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(995): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(997): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(999): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1001): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1002): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1004): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1005): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1007): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1008): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1010): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1011): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1013): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1015): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1017): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1018): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1020): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1021): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1023): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1024): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1026): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1027): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1029): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1030): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1032): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1033): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1035): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1037): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1038): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1040): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1042): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1044): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1046): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1048): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1050): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1052): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1054): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1056): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1058): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1059): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1061): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1063): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1064): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1066): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1068): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1070): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1072): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1074): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1076): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1078): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1079): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1081): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1082): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1084): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1086): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1088): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1090): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1092): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1094): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1096): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1098): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1100): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1102): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1104): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1106): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1108): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1110): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1112): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1114): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1116): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1118): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1120): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1122): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1124): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1126): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1128): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1130): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1132): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1134): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1136): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1138): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1140): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1142): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1143): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1145): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1147): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1149): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1151): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1153): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1155): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1156): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1158): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1160): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\jeu.cpp(1162): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Projet2.vcxproj -> E:\Projet2\Project2\Debug\Projet2.exe
+  Projet2.vcxproj -> E:\Projet2\Project2\Debug\Projet2.pdb (Partial PDB)
