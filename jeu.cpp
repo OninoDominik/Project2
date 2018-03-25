@@ -23,8 +23,8 @@ void jeu::Combat32(personnage * ptrPj, personnage * Pnj, sf::Texture texturePnj,
 	int tailleblock = 32;
 
 	sf::Time tempsAnime = ptrPj->tempsAnime;
-	sf::Time Chrono;
-	sf::Clock Chronometre;
+	sf::Time Chronos;
+	sf::Clock Chronometres;
 	sf::RenderWindow combatWindow(sf::VideoMode(470, 145), "Combat");
 	sf::Texture pv;
 	sf::Texture pvRed;
@@ -142,12 +142,12 @@ void jeu::Combat32(personnage * ptrPj, personnage * Pnj, sf::Texture texturePnj,
 
 		//i = (i + 1) % 3;
 
-		Chrono += Chronometre.getElapsedTime();
-		Chronometre.restart();
+		Chronos += Chronometres.getElapsedTime();
+		Chronometres.restart();
 
-		if (Chrono >= tempsAnime)
+		if (Chronos >= tempsAnime)
 		{
-			Chrono -= tempsAnime;
+			Chronos -= tempsAnime;
 			i++;
 			i = (i) % 3;
 		}
@@ -180,7 +180,6 @@ void jeu::Combat32(personnage * ptrPj, personnage * Pnj, sf::Texture texturePnj,
 		{
 			Pnj->rect.setSize(sf::Vector2f(0, 0));
 			ptrPj->rect.setPosition(coordRepopX, coordRepopY);
-
 			break;
 		}
 	}
