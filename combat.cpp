@@ -12,11 +12,12 @@ combat::~combat()
 }
 void combat::Choixjoueur(personnage* joueur)
 {
+	cout << *joueur->choix << endl;
 	*joueur->choix = 0;
-	int i=0;
 	do
 	{
-		i++;
+		cout << *joueur->choix << endl;
+		
 	} while (*joueur->choix == 0);
 
 }
@@ -40,8 +41,6 @@ void combat::startcombat(personnage* ami, personnage* ennemi)
 			if (initiativeAmi == i)
 			{
 				ami->mouvementCombat = true;
-
-				*ami->choix = 0;
 				Choixjoueur(ami);
 				cout << "Vos Pvs sont de " << *ami->pvActuel << endl;
 				switch (*ami->choix)
