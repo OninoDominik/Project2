@@ -39,24 +39,24 @@ void alchimiste::AttaqueSpecial(personnage& ennemi)
 
 	AvancerAttaque();
 	cout << nom << "Bombe";
-	this->text.setString("Bombe : " + to_string(3 * BonusStat("intelligence")) );
+	this->text.setString("Bombe : " + to_string(4+2 * BonusStat("intelligence")) );
 	this->text.setFillColor(sf::Color::Red);
 	this->text.setCharacterSize(16);
 	this->anim->badaBoom();
-	*ennemi.pvActuel -= 3 * BonusStat("intelligence");
+	*ennemi.pvActuel -= 4+2 * BonusStat("intelligence");
 	if (rand() % 2 == 1)
 	{
 		sf::sleep(sf::seconds(0.75));
-		this->text.setString("degats bonus : " + to_string(2 * BonusStat("intelligence")));
-		*ennemi.pvActuel -= 2 * BonusStat("intelligence");
+		this->text.setString("degats bonus : " + to_string(4 + BonusStat("intelligence")));
+		*ennemi.pvActuel -= 4+ BonusStat("intelligence");
 		this->anim->burn(1);
 		sf::sleep(sf::seconds(0.75));
 	}
 	if (rand() % 2 == 1)
 	{
 		sf::sleep(sf::seconds(0.75));
-		this->text.setString("je brule : " + to_string(2 * BonusStat("intelligence")));
-		*this->pvActuel -= 2 * BonusStat("intelligence");
+		this->text.setString("je brule : " + to_string(4+ BonusStat("intelligence")));
+		*this->pvActuel -= 4+ BonusStat("intelligence");
 		this->anim->burn(0);
 		sf::sleep(sf::seconds(0.75));
 		

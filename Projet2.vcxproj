@@ -103,7 +103,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalLibraryDirectories>C:\Users\adai06\Documents\Visual Studio 2015\Projects\Projet2\Sfml\sfgui-0.3.1-vs2015-32\lib;E:\Projet2\SFML-2.4.2\lib;C:\Users\adai06\Documents\Visual Studio 2015\Projects\Projet2\Sfml\SFML-2.4.2\lib;C:\Users\adai06\Documents\Visual Studio 2015\Projects\Projet2\Projet2;C:\Users\adai06\Documents\Visual Studio 2015\Projects\Projet2\Projet2\Sfml\SFML-2.4.2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sfml-graphics-s-d.lib;freetype.lib;jpeg.lib;sfml-window-s-d.lib;opengl32.lib;gdi32.lib;sfml-audio-s-d.lib;openal32.lib;flac.lib;vorbisenc.lib;vorbisfile.lib;vorbis.lib;ogg.lib;sfml-network-s-d.lib;ws2_32.lib;sfml-system-s-d.lib;winmm.lib;sqlite3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>sfml-graphics-s.lib;freetype.lib;jpeg.lib;sfml-window-s.lib;opengl32.lib;gdi32.lib;sfml-audio-s.lib;openal32.lib;flac.lib;vorbisenc.lib;vorbisfile.lib;vorbis.lib;ogg.lib;sfml-network-s.lib;ws2_32.lib;sfml-system-s.lib;winmm.lib;sqlite3.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -124,6 +124,7 @@
     <ClCompile Include="animationCombat.cpp" />
     <ClCompile Include="chose.cpp" />
     <ClCompile Include="combat.cpp" />
+    <ClCompile Include="creationPerso.cpp" />
     <ClCompile Include="Database.cpp" />
     <ClCompile Include="guerrier.cpp" />
     <ClCompile Include="jeu.cpp" />
@@ -141,6 +142,7 @@
     <ClInclude Include="animationCombat.h" />
     <ClInclude Include="chose.h" />
     <ClInclude Include="combat.h" />
+    <ClInclude Include="creationPerso.h" />
     <ClInclude Include="Database.h" />
     <ClInclude Include="guerrier.h" />
     <ClInclude Include="jeu.h" />

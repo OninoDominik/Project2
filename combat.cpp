@@ -12,11 +12,11 @@ combat::~combat()
 }
 void combat::Choixjoueur(personnage* joueur)
 {
-
-
+	*joueur->choix = 0;
+	int i=0;
 	do
 	{
-
+		i++;
 	} while (*joueur->choix == 0);
 
 }

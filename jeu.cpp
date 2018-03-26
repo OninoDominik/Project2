@@ -22,7 +22,7 @@ void jeu::Combat32(personnage * ptrPj, personnage * Pnj, sf::Texture texturePnj,
 	//afficheText = true;
 	int tailleblock = 32;
 
-	sf::Time tempsAnime = ptrPj->tempsAnime;
+	sf::Time tempsAnime = sf::seconds(0.20);
 	sf::Time Chronos;
 	sf::Clock Chronometres;
 	sf::RenderWindow combatWindow(sf::VideoMode(470, 145), "Combat");
@@ -53,7 +53,7 @@ void jeu::Combat32(personnage * ptrPj, personnage * Pnj, sf::Texture texturePnj,
 	ptrPj->sprite.setTextureRect(sf::IntRect(i * tailleblock, tailleblock * 2 + ptrPj->seretourner, tailleblock, tailleblock));
 	Pnj->sprite.setTextureRect(sf::IntRect(i * tailleblock, tailleblock, tailleblock, tailleblock));
 
-	int i = 0;
+	int compteurPas = 0;
 	sf::Sprite spriteAreneFront(areneFront);
 	sf::Sprite spriteAreneBack(areneBack);
 	while (combatWindow.isOpen())
@@ -75,14 +75,14 @@ void jeu::Combat32(personnage * ptrPj, personnage * Pnj, sf::Texture texturePnj,
 		combatWindow.setFramerateLimit(20);
 		if (ptrPj->mouvementCombat)
 		{
-			ptrPj->sprite.setTextureRect(sf::IntRect(i * tailleblock, tailleblock * 2 + ptrPj->seretourner, tailleblock, tailleblock));
+			ptrPj->sprite.setTextureRect(sf::IntRect(compteurPas * tailleblock, tailleblock * 2 + ptrPj->seretourner, tailleblock, tailleblock));
 		}
 
 		ptrPj->Positionnement();
 
 		if (Pnj->mouvementCombat)
 		{
-			Pnj->sprite.setTextureRect(sf::IntRect(i * tailleblock, tailleblock, tailleblock, tailleblock));
+			Pnj->sprite.setTextureRect(sf::IntRect(compteurPas * tailleblock, tailleblock, tailleblock, tailleblock));
 		}
 		Pnj->Positionnement();
 
@@ -144,14 +144,13 @@ void jeu::Combat32(personnage * ptrPj, personnage * Pnj, sf::Texture texturePnj,
 
 		Chronos += Chronometres.getElapsedTime();
 		Chronometres.restart();
-
 		if (Chronos >= tempsAnime)
 		{
 			Chronos -= tempsAnime;
-			i++;
-			i = (i) % 3;
+			compteurPas++;
+			compteurPas = (compteurPas) % 3;
 		}
-
+		
 
 		spriteAreneFront.getPosition();
 		combatWindow.clear();
@@ -270,7 +269,7 @@ void jeu::ChargerBoutonSpecial(personnage * ptrPj)
 
 
 
-int jeu::Startjeu()
+int jeu::Startjeu(int classe, int force, int dexterite,int constitution,int charisme,int sagesse, int intelligence)
 {
 	sf::Clock chronometre;
 	sf::Music music;
@@ -408,7 +407,7 @@ int jeu::Startjeu()
 	ranger * ptrRan = new ranger();
 	voleur * ptrVol = new voleur();
 
-	if (true)
+	if (classe == 2)
 	{
 		if (!textureHero.loadFromFile("paladin.png"))
 		{
@@ -419,7 +418,7 @@ int jeu::Startjeu()
 		ptrPj->sprite.setTexture(textureHero);
 		ptrPj->rect.setTextureRect(sf::IntRect(0, 0, 32, 32));
 	}
-	if (false)
+	if (classe == 1)
 	{
 		if (!textureHero.loadFromFile("guerrier.png"))
 		{
@@ -430,7 +429,7 @@ int jeu::Startjeu()
 		ptrPj->sprite.setTexture(textureHero);
 		ptrPj->rect.setTextureRect(sf::IntRect(0, 0, 32, 32));
 	}
-	if (false)
+	if (classe == 4)
 	{
 		if (!textureHero.loadFromFile("alchimiste.png"))
 		{
@@ -441,7 +440,7 @@ int jeu::Startjeu()
 		ptrPj->sprite.setTexture(textureHero);
 		ptrPj->rect.setTextureRect(sf::IntRect(0, 0, 32, 32));
 	}
-	if (false)
+	if (classe == 3)
 	{
 		if (!textureHero.loadFromFile("ranger.png"))
 		{
@@ -452,7 +451,7 @@ int jeu::Startjeu()
 		ptrPj->sprite.setTexture(textureHero);
 		ptrPj->rect.setTextureRect(sf::IntRect(0, 0, 32, 32));
 	}
-	if (false)
+	if (classe == 5)
 	{
 		if (!textureHero.loadFromFile("voleur.png"))
 		{
@@ -465,8 +464,15 @@ int jeu::Startjeu()
 	}
 
 
+
 	ptrPj->setNom("Dom");
 
+	*ptrPj->force = force;
+	*ptrPj->constitution = constitution;
+	*ptrPj->dexterite = dexterite;
+	*ptrPj->charisme = charisme;
+	*ptrPj->intelligence = intelligence;
+	*ptrPj->sagesse = sagesse;
 	ptrPj->rect.setPosition(8 * 32, 45 * 32);
 
 	ptrPj->Positionnement();

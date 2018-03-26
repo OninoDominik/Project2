@@ -150,9 +150,10 @@ void menu::menuStart()
 		{
 			music.stop();
 			menuWindow.close();
-			jeu * partie = new jeu(largeurFenetreDeJeu, hauteurFenetreDeJeu,Affichagefps);
-			partie->Startjeu();
-			delete partie;
+			
+			creationPerso * crea = new creationPerso(largeurFenetreDeJeu, hauteurFenetreDeJeu, Affichagefps);
+			crea->start();
+			delete crea;
 			menuWindow.create(sf::VideoMode(tailleEcran.x, tailleEcran.y), "Pathfinder", sf::Style::Titlebar | sf::Style::Close);
 			music.play();
 		}

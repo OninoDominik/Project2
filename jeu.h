@@ -14,6 +14,7 @@
 #include "alchimiste.h"
 #include "ranger.h"
 #include "voleur.h"
+#include "creationPerso.h"
 
 class jeu
 {
@@ -54,6 +55,7 @@ public:
 	int NiveauUn();
 	int i = 0;
 	int j = 0;
+	int Startjeu(int classe, int force, int dexterite, int constitution, int charisme, int sagesse, int intelligence);
 	vector<mur> murmap1();
 	mur mur1;
 	void ChargerHpPjetbarre(personnage * ptrPj);
