@@ -56,6 +56,7 @@ public:
 	int i = 0;
 	int j = 0;
 	int Startjeu(int classe, int force, int dexterite, int constitution, int charisme, int sagesse, int intelligence);
+	int Startjeu(int classe, int currenthp, int force, int dexterite, int constitution, int charisme, int sagesse, int intelligence, int coordx, int coordy, int mob1, int mob2, int mob3, int numeroSauvegarde);
 	vector<mur> murmap1();
 	mur mur1;
 	void ChargerHpPjetbarre(personnage * ptrPj);

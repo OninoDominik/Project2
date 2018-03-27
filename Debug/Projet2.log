@@ -1,2 +1,7 @@
-﻿  Projet2.vcxproj -> C:\Users\adai06\Documents\Visual Studio 2015\Projects\Projet2\Project2\Debug\Projet2.exe
-  Projet2.vcxproj -> C:\Users\adai06\Documents\Visual Studio 2015\Projects\Projet2\Project2\Debug\Projet2.pdb (Partial PDB)
+﻿  Database.cpp
+e:\projet2\project2\personnage.h(56): warning C4305: 'argument': truncation from 'double' to 'float'
+e:\projet2\project2\database.cpp(113): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+e:\projet2\project2\database.cpp(114): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+e:\projet2\project2\database.cpp(115): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+  Projet2.vcxproj -> E:\Projet2\Project2\Debug\Projet2.exe
+  Projet2.vcxproj -> E:\Projet2\Project2\Debug\Projet2.pdb (Partial PDB)

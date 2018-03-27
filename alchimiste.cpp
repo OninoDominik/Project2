@@ -26,7 +26,7 @@ alchimiste::alchimiste()
 	*tempsDot = 0;
 	*valeurDot = 0;
 	estUnJoueur = true;
-	*classe = 2;
+	*classe = 4;
 	*nbrDesSoin = 2;
 	*nbrFaceDesSoin = 8;
 	*nomAttaqueSpecial = "Bombe";

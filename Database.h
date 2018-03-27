@@ -1,9 +1,10 @@
 #pragma once
 
 #include "./sqlite3.h"
-#include <string>
 #include <vector>
-#include "produit.h"
+#include "sauvegarde.h"
+#include <iostream>
+#include <string>
 
 class database
 {
@@ -15,10 +16,14 @@ public:
 	void closeDatabase();
 	bool executeQuery(std::string query);
 
+	bool insertSauvegardeSansDoublon(std::string nomClasse, int classe, int currentHp, int force, int constitution, int dexterite, int sagesse, int charisme, int intelligence, int coordx, int coordy, int mob1, int mob2, int mob3, int id);
+
+
 	bool insertProduit(std::string nom, float prix, int qtevendue);
-	std::vector<Produit*>* getAllProduits();
-	bool updateProduit(Produit* produit);
+	std::vector<sauvegarde*>* getAllSauvegarde();
+	bool updateSauvegarde(sauvegarde* save);
 	bool deleteProduit(int id);
+
 protected:
 
 private:

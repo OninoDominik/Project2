@@ -371,7 +371,7 @@ void creationPerso::start()
 		{
 			creaWindow.close();
 			jeu * partie = new jeu(lFenetreDeJeu, hFenetreDeJeu, Affichfps);
-			partie->Startjeu(classe, force, dexterite, constitution, charisme, sagesse, intelligence);
+			partie->Startjeu(classe,99 ,force, dexterite, constitution, charisme, sagesse, intelligence, 256,1440 ,1,1,1,1);
 			delete partie;
 		}
 
@@ -478,7 +478,7 @@ void creationPerso::chargerBoutonclasses()
 }
 void creationPerso::chargerIntro()
 {
-	intro->text.setString("Tu as 12 ans, ton nom est Gallwell.\nTu n'as connus que ton orphelinat comme foyer.\nUn soir, la gardienne de l'orphelinat reveille tout les enfants et les fait attendre dans un couloir,\nA tour de rôle vous rentrer un par un dans le bureau du directeur.\nles enfants ne restent que quelque secondes dans le bureau pour ressortir sans rien dire, ton tour arrive tu entre\nTu vois un homme à la peaux grise et au cheveux noirs ebene, il te regarde de ces yeux severes.\nIl dit :Je suis Rezza, Heros de Kenabres, Liberateur de Drezen; Un eclat d'une pierre de garde s'est loger dans ton âme\nCelle ci te donnera acces a une grandeur que les autres ne peuvent entrevoir.\nJe suis ici pour te donner un choix,que souhaite tu devenir ?");
+	intro->text.setString("Tu as 15 ans, ton nom est Gallwell.\nTu n'as connus que ton orphelinat comme foyer.\nUn soir, la gardienne de l'orphelinat reveille tout les enfants et les fait attendre dans un couloir,\nA tour de rôle vous rentrer un par un dans le bureau du directeur.\nles enfants ne restent que quelque secondes dans le bureau pour ressortir sans rien dire, ton tour arrive tu entre\nTu vois un homme à la peaux grise et au cheveux noirs ebene, il te regarde de ces yeux severes.\nIl dit :Je suis Rezza, Heros de Kenabres, Liberateur de Drezen; Un eclat d'une pierre de garde s'est loger dans ton âme\nCelle ci te donnera acces a une grandeur que les autres ne peuvent entrevoir.\nJe suis ici pour te donner un choix,que souhaite tu devenir ?");
 	intro->text.setFillColor(sf::Color::White);
 	intro->text.setCharacterSize(16);
 	intro->text.setPosition(50, 10);

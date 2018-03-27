@@ -24,7 +24,7 @@ paladin::paladin()
 	*nbrAttaque = 2;
 	*choix = 0;
 	*niveau = 2;
-	*classe = 1;
+	*classe = 2;
 	estUnJoueur = true;
 	*nomAttaqueSpecial = "Enchainement";
 }

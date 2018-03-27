@@ -266,10 +266,10 @@ void jeu::ChargerBoutonSpecial(personnage * ptrPj)
 	boutonSpecial->rect.setPosition(0, 90);
 	boutonSpecial->rect.setSize((sf::Vector2f(100, 32)));
 }
-
-
-
-int jeu::Startjeu(int classe, int force, int dexterite,int constitution,int charisme,int sagesse, int intelligence)
+///////
+//////
+/////
+int jeu::Startjeu(int classe,int currenthp, int force, int dexterite,int constitution,int charisme,int sagesse, int intelligence, int coordx, int coordy, int mob1, int mob2, int mob3 ,int numeroSauvegarde)
 {
 	sf::Clock chronometre;
 	sf::Music music;
@@ -278,25 +278,13 @@ int jeu::Startjeu(int classe, int force, int dexterite,int constitution,int char
 	music.play();
 	music.setVolume(50);
 	music.setLoop(true);
-	database bdd;
-	bdd.openDatabase();
 
 
 
 
 
-	/*bdd.executeQuery("CREATE TABLE IF NOT EXISTS produits (nom TEXT, prix FLOAT, qtevendue INT)");
-	/*bdd.insertProduit("Banane", 1.3, 10);
-	bdd.insertProduit("Avocat", 2.5, 1);
-	bdd.insertProduit("Tomate", 1., 666);
 
-	std::vector<Produit*>* produits = bdd.getAllProduits();
-	for (int i = 0; i<produits->size(); i++)
-	{
-	std::cout << (*produits)[i]->nom << " " << (*produits)[i]->prix << std::endl;
-	}
-
-	bdd.closeDatabase();*/
+	
 
 	bool * fermeCombatWindow = new bool(false);
 
@@ -389,6 +377,7 @@ int jeu::Startjeu(int classe, int force, int dexterite,int constitution,int char
 	ptrDB->text.setFont(font);
 	ptrDB->text.setFillColor(sf::Color::White);
 	ptrDB->text.setCharacterSize(16);
+	*ptrDB->envie = mob2;
 
 	sf::Sprite spritePnjEmma(texture3);
 
@@ -398,7 +387,7 @@ int jeu::Startjeu(int classe, int force, int dexterite,int constitution,int char
 	sf::Sprite spriteFond(fond);
 	sf::Sprite spriteAreneFront(areneFront);
 	sf::Sprite spriteAreneBack(areneBack);
-
+	int tailleblock = 32;
 	bool aucunAppuyTouche = true;
 	personnage* ptrPj = nullptr;
 	paladin *ptrPal = new paladin();
@@ -416,7 +405,7 @@ int jeu::Startjeu(int classe, int force, int dexterite,int constitution,int char
 		}
 		ptrPj = ptrPal;
 		ptrPj->sprite.setTexture(textureHero);
-		ptrPj->rect.setTextureRect(sf::IntRect(0, 0, 32, 32));
+		ptrPj->rect.setTextureRect(sf::IntRect(0, 0, tailleblock, tailleblock));
 	}
 	if (classe == 1)
 	{
@@ -427,7 +416,7 @@ int jeu::Startjeu(int classe, int force, int dexterite,int constitution,int char
 		}
 		ptrPj = ptrGue;
 		ptrPj->sprite.setTexture(textureHero);
-		ptrPj->rect.setTextureRect(sf::IntRect(0, 0, 32, 32));
+		ptrPj->rect.setTextureRect(sf::IntRect(0, 0, tailleblock, tailleblock));
 	}
 	if (classe == 4)
 	{
@@ -438,7 +427,7 @@ int jeu::Startjeu(int classe, int force, int dexterite,int constitution,int char
 		}
 		ptrPj = ptrAlc;
 		ptrPj->sprite.setTexture(textureHero);
-		ptrPj->rect.setTextureRect(sf::IntRect(0, 0, 32, 32));
+		ptrPj->rect.setTextureRect(sf::IntRect(0, 0, tailleblock, tailleblock));
 	}
 	if (classe == 3)
 	{
@@ -449,7 +438,7 @@ int jeu::Startjeu(int classe, int force, int dexterite,int constitution,int char
 		}
 		ptrPj = ptrRan;
 		ptrPj->sprite.setTexture(textureHero);
-		ptrPj->rect.setTextureRect(sf::IntRect(0, 0, 32, 32));
+		ptrPj->rect.setTextureRect(sf::IntRect(0, 0, tailleblock, tailleblock));
 	}
 	if (classe == 5)
 	{
@@ -460,7 +449,7 @@ int jeu::Startjeu(int classe, int force, int dexterite,int constitution,int char
 		}
 		ptrPj = ptrVol;
 		ptrPj->sprite.setTexture(textureHero);
-		ptrPj->rect.setTextureRect(sf::IntRect(0, 0, 32, 32));
+		ptrPj->rect.setTextureRect(sf::IntRect(0, 0, tailleblock, tailleblock));
 	}
 
 
@@ -473,12 +462,17 @@ int jeu::Startjeu(int classe, int force, int dexterite,int constitution,int char
 	*ptrPj->charisme = charisme;
 	*ptrPj->intelligence = intelligence;
 	*ptrPj->sagesse = sagesse;
-	ptrPj->rect.setPosition(8 * 32, 45 * 32);
+	ptrPj->rect.setPosition(coordx, coordy);
+	*ptrPj->pvActuel = currenthp;
+	if ((*ptrPj->pvActuel) > (*ptrPj->pvMax))
+	{
+		*ptrPj->pvActuel = *ptrPj->pvMax;
+	}
 
 	ptrPj->Positionnement();
 	vector<mur>::const_iterator iterateur;
 	vector<mur> ligneMur;
-	int tailleblock = 32;
+	
 	ligneMur = murmap1();
 
 	personnage emma("Emma");
@@ -492,6 +486,7 @@ int jeu::Startjeu(int classe, int force, int dexterite,int constitution,int char
 	ptrEmma->sprite.setTexture(texture3);
 	ptrEmma->rect.setSize(sf::Vector2f(tailleblock, tailleblock));
 	ptrEmma->sprite.setPosition(ptrEmma->rect.getPosition());
+	*ptrEmma->envie = mob3;
 
 	sf::Sprite spritePnjOrc(textureOrc);
 	spritePnjOrc.setTextureRect(sf::IntRect(0, 0, 64, 32));
@@ -506,6 +501,7 @@ int jeu::Startjeu(int classe, int force, int dexterite,int constitution,int char
 	ptrOrc->sprite.setTexture(textureOrc);
 	ptrOrc->rect.setSize(sf::Vector2f(tailleblock, tailleblock));
 	ptrOrc->sprite.setPosition(ptrOrc->rect.getPosition());
+	*ptrOrc->envie = mob1;
 
 	ptrPj->text.setString(" ");
 	ptrPj->text.setFont(font);
@@ -545,27 +541,75 @@ int jeu::Startjeu(int classe, int force, int dexterite,int constitution,int char
 		{
 
 		}
+		if (!(*ptrEmma->envie))
+		{
+
+			ptrEmma->rect.setSize(sf::Vector2f(0, 0));
+			ptrEmma->sprite.setTexture(grave);
+			ptrEmma->sprite.setPosition(27 * tailleblock, 10 * tailleblock);
+			ptrEmma->sprite.setTextureRect(sf::IntRect(0, 0, tailleblock, tailleblock));
+
+		}
+		if (!*ptrDB->envie)
+		{
+			ptrDB->rect.setSize(sf::Vector2f(0, 0));
+			ptrDB->sprite.setTexture(grave);
+			ptrDB->sprite.setPosition(28 * tailleblock, 34 * tailleblock);
+			ptrDB->sprite.setTextureRect(sf::IntRect(0, 0, tailleblock, tailleblock));
+		}
+		if (!*ptrOrc->envie)
+		{
+			ptrOrc->rect.setSize(sf::Vector2f(0, 0));
+			ptrOrc->sprite.setTexture(grave);
+			ptrOrc->sprite.setPosition(23 * tailleblock, 39 * tailleblock);
+			ptrOrc->sprite.setTextureRect(sf::IntRect(0, 0, tailleblock, tailleblock));
+		}
 
 		sf::Vector2f movement(0.f, 0.f);
 
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::M))
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
 		{
-			sf::RenderWindow menu(sf::VideoMode(200, 400), "Option");
-			menu.setFramerateLimit(60);
-			sf::Event menuEvent;
-			while (menu.isOpen())
+			sf::sleep(sf::milliseconds(200));
+			string classeSave;
+			sf::RenderWindow sauvegarder(sf::VideoMode(200, 400), "Sauvegarde");
+			sauvegarder.setFramerateLimit(60);
+			sf::Event sauvegarderEvent;
+			while (sauvegarder.isOpen())
 			{
-				while (menu.pollEvent(menuEvent))
+				while (sauvegarder.pollEvent(sauvegarderEvent))
 				{
-					if (menuEvent.type == sf::Event::Closed)
-						menu.close();
-					if (menuEvent.type == sf::Event::KeyPressed && menuEvent.key.code == sf::Keyboard::Escape)
-						menu.close();
+					if (sauvegarderEvent.type == sf::Event::Closed)
+						sauvegarder.close();
+					if (sauvegarderEvent.type == sf::Event::KeyPressed && sauvegarderEvent.key.code == sf::Keyboard::Escape)
+						sauvegarder.close();
 
 				}
-				menu.clear(sf::Color::Yellow);
-				menu.draw(ptrPj->sprite);
-				menu.display();
+				sauvegarder.clear(sf::Color::Yellow);
+				switch (*ptrPj->classe)
+				{
+				case 1:
+					classeSave = "Guerrier";
+					break;
+				case 2:
+					classeSave = "Paladin";
+					break;
+				case 3:
+					classeSave = "Ranger";
+					break;
+				case 4:
+					classeSave = "Alchimiste";
+					break;
+				default:
+					classeSave = "Assassin";
+					break;
+				}
+				sauvegarde * encours = new sauvegarde(classeSave, ptrPj, *ptrOrc->envie, *ptrDB->envie, *ptrEmma->envie, numeroSauvegarde);
+				database bdd;
+				bdd.openDatabase();
+				bdd.updateSauvegarde(encours);
+				sauvegarder.display();
+				sf::sleep(sf::milliseconds(200));
+				sauvegarder.close();
 			}
 		}
 		if (ptrPj->rect.getGlobalBounds().intersects(ptrDB->rect.getGlobalBounds()))
@@ -719,6 +763,7 @@ int jeu::Startjeu(int classe, int force, int dexterite,int constitution,int char
 			int coordRepopY = ptrPj->rect.getPosition().y;
 			Combat32(ptrPj, ptrEmma, texture3, coordRepopX, coordRepopY);
 			afficheText = false;
+			chronometre.restart();
 		}
 		if (ptrPj->rect.getGlobalBounds().intersects(ptrOrc->rect.getGlobalBounds()))
 		{
@@ -727,6 +772,7 @@ int jeu::Startjeu(int classe, int force, int dexterite,int constitution,int char
 			int coordRepopY = ptrPj->rect.getPosition().y;
 			Combat32(ptrPj, ptrOrc, textureOrc, coordRepopX, coordRepopY);
 			afficheText = false;
+			chronometre.restart();
 		}
 		/*{
 		   *ptrPj->fermeCombatWindow = false;
@@ -837,29 +883,7 @@ int jeu::Startjeu(int classe, int force, int dexterite,int constitution,int char
 
 		window.draw(spriteFond);
 
-		if (!(*ptrEmma->envie))
-		{
-
-			ptrEmma->rect.setSize(sf::Vector2f(0, 0));
-			ptrEmma->sprite.setTexture(grave);
-			ptrEmma->sprite.setPosition(27 * tailleblock, 10 * tailleblock);
-			ptrEmma->sprite.setTextureRect(sf::IntRect(0, 0, tailleblock, tailleblock));
-
-		}
-		if (!*ptrDB->envie)
-		{
-			ptrDB->rect.setSize(sf::Vector2f(0, 0));
-			ptrDB->sprite.setTexture(grave);
-			ptrDB->sprite.setPosition(28 * tailleblock, 34 * tailleblock);
-			ptrDB->sprite.setTextureRect(sf::IntRect(0, 0, tailleblock, tailleblock));
-		}
-		if (!*ptrOrc->envie)
-		{
-			ptrOrc->rect.setSize(sf::Vector2f(0, 0));
-			ptrOrc->sprite.setTexture(grave);
-			ptrOrc->sprite.setPosition(23 * tailleblock, 39 * tailleblock);
-			ptrOrc->sprite.setTextureRect(sf::IntRect(0, 0, tailleblock, tailleblock));
-		}
+		
 		if (!*ptrPj->envie)
 		{
 			music.stop();

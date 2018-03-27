@@ -8,6 +8,8 @@
 #include <time.h>
 #include "chose.h"
 #include "jeu.h"
+#include <stdio.h>
+#include "charger.h"
 
 class menu
 {
@@ -16,10 +18,14 @@ public:
 	~menu();
 
 	sf::RenderWindow menuWindow;
-	
+	sf::RenderWindow chargerdeWindow;
 	chose * boutonChargerPartie = new chose();
 	chose * boutonNouvellePartie = new chose();
 	chose * boutonOption = new chose();
+	chose * boutonSauvegarde1 = new chose();
+	chose * boutonSauvegarde2 = new chose();
+	chose * boutonSauvegarde3 = new chose();
+	
 	chose * logo = new chose();
 	sf::Texture textureLogo;
 
@@ -36,11 +42,17 @@ public:
 
 	void chargerBoutonsmenu();
 
+	void chargerBoutonSauvegarde();
+
+	void chargerBoutonSauvegarde1();
+	void chargerBoutonSauvegarde2();
+	void chargerBoutonSauvegarde3();
 	void ChargerBoutonTailleEcran();
 	void ChargerBoutonFrameRate();
 
 	chose *boutonTailleEcran = new chose();
 	chose *boutonFrameRate = new chose();
+	chose *boutonSauvegarde = new chose();
 
 
 

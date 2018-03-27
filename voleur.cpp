@@ -12,12 +12,12 @@ voleur::voleur()
 	*intelligence = 12;
 	*nbrFaceDesDegat = 6;
 	*nbrDesDegat = 3;
-	*bonusArmure = 3;
+	*bonusArmure = 4;
 	*taille = 2;
 	*pvMax = 25 + *constitution;
 	*pvActuel = *pvMax;
 	*bonusInitiative = 8;
-	*bonusAttaque = 2;
+	*bonusAttaque = 4;
 	*bonusBouclier = 0;
 	*nbrAttaque = 2;
 	*choix = 0;
@@ -25,7 +25,7 @@ voleur::voleur()
 	*tempsDot = 0;
 	*valeurDot = 0;
 	estUnJoueur = true;
-	*classe = 2;
+	*classe = 5;
 	*nbrDesSoin = 3;
 	*nbrFaceDesSoin = 5;
 	*nomAttaqueSpecial = "Backstab";
@@ -62,7 +62,7 @@ void voleur::AttaqueSpecial(personnage& ennemi)
 		else
 		{	
 			this->rect.setPosition((392), (105));
-			*nbrDesDegat +=2 ;
+			*nbrDesDegat +=3 ;
 			x = this->rect.getPosition().x;
 			this->text.setPosition(x-30, y - 60);
 			this->seretourner = -32;
@@ -73,7 +73,7 @@ void voleur::AttaqueSpecial(personnage& ennemi)
 				this->InfligeDegat(ennemi);
 				sf::sleep(sf::milliseconds(550));
 			}
-			*nbrDesDegat -= 2;
+			*nbrDesDegat -= 3;
 			this->rect.setPosition((100), (105));
 			this->seretourner = 0;
 			this->text.setString("Ma feinte est perdu");

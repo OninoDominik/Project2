@@ -27,7 +27,7 @@ guerrier::guerrier()
 	*tempsDot = 0;
 	*valeurDot = 0;
 	estUnJoueur = true;
-	*classe = 2;
+	*classe = 1;
 	*nomAttaqueSpecial = "Saignement";
 }
 void guerrier::AttaqueSpecial(personnage& ennemi)

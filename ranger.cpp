@@ -26,7 +26,7 @@ ranger::ranger()
 	*tempsDot = 0;
 	*valeurDot = 0;
 	estUnJoueur = true;
-	*classe = 2;
+	*classe = 3;
 	*nbrDesSoin = 4;
 	*nbrFaceDesSoin = 4;
 	*nomAttaqueSpecial = "Headshot";
