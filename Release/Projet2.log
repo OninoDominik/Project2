@@ -1,11 +1,242 @@
-﻿  menu.cpp
+﻿  alchimiste.cpp
 e:\projet2\project2\personnage.h(56): warning C4305: 'argument': truncation from 'double' to 'float'
-menu.cpp(124): warning C4809: switch statement has redundant 'default' label; all possible 'case' labels are given
-menu.cpp(151): warning C4018: '<': signed/unsigned mismatch
+alchimiste.cpp(37): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+alchimiste.cpp(38): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+alchimiste.cpp(65): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+alchimiste.cpp(66): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+alchimiste.cpp(76): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+alchimiste.cpp(77): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+alchimiste.cpp(97): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  charger.cpp
+e:\projet2\project2\personnage.h(56): warning C4305: 'argument': truncation from 'double' to 'float'
+charger.cpp(95): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+charger.cpp(101): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+charger.cpp(108): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+  creationPerso.cpp
+e:\projet2\project2\personnage.h(56): warning C4305: 'argument': truncation from 'double' to 'float'
+  Database.cpp
+e:\projet2\project2\personnage.h(56): warning C4305: 'argument': truncation from 'double' to 'float'
+Database.cpp(113): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+Database.cpp(114): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+Database.cpp(115): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+  guerrier.cpp
+e:\projet2\project2\personnage.h(56): warning C4305: 'argument': truncation from 'double' to 'float'
+guerrier.cpp(35): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+guerrier.cpp(36): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+guerrier.cpp(44): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+guerrier.cpp(45): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+guerrier.cpp(58): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+guerrier.cpp(59): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+guerrier.cpp(83): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  jeu.cpp
+e:\projet2\project2\personnage.h(56): warning C4305: 'argument': truncation from 'double' to 'float'
+jeu.cpp(25): warning C4305: 'argument': truncation from 'double' to 'float'
+jeu.cpp(48): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(51): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(181): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(297): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+jeu.cpp(380): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+jeu.cpp(465): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(484): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(487): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(489): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+jeu.cpp(499): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(502): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(504): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+jeu.cpp(549): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(557): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(564): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(626): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(630): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(718): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(719): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(735): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(740): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(746): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(751): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(762): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+jeu.cpp(763): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+jeu.cpp(771): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+jeu.cpp(772): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+jeu.cpp(950): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(955): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(956): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(958): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(959): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(961): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(964): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(966): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(968): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(970): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(972): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(974): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(976): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(978): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(980): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(982): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(984): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(986): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(988): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(990): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(992): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(994): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(996): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(998): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1000): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1001): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1003): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1005): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1007): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1008): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1010): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1012): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1014): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1016): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1018): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1020): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1022): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1024): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1026): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1028): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1030): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1031): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1033): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1034): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1036): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1037): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1039): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1040): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1042): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1044): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1046): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1047): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1049): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1050): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1052): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1053): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1055): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1056): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1058): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1059): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1061): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1062): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1064): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1066): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1067): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1069): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1071): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1073): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1075): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1077): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1079): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1081): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1083): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1085): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1087): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1088): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1090): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1092): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1093): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1095): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1097): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1099): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1101): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1103): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1105): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1107): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1108): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1110): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1111): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1113): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1115): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1117): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1119): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1121): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1123): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1125): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1127): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1129): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1131): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1133): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1135): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1137): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1139): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1141): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1143): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1145): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1147): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1149): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1151): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1153): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1155): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1157): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1159): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1161): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1163): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1165): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1167): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1169): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1171): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1172): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1174): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1176): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1178): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1180): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1182): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1184): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1185): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1187): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1189): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+jeu.cpp(1191): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Main.cpp
+e:\projet2\project2\personnage.h(56): warning C4305: 'argument': truncation from 'double' to 'float'
+  menu.cpp
+e:\projet2\project2\personnage.h(56): warning C4305: 'argument': truncation from 'double' to 'float'
+menu.cpp(98): warning C4809: switch statement has redundant 'default' label; all possible 'case' labels are given
+menu.cpp(124): warning C4018: '<': signed/unsigned mismatch
+  paladin.cpp
+e:\projet2\project2\personnage.h(56): warning C4305: 'argument': truncation from 'double' to 'float'
+paladin.cpp(39): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+paladin.cpp(40): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+paladin.cpp(56): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+paladin.cpp(57): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+paladin.cpp(78): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+paladin.cpp(79): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+paladin.cpp(89): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+paladin.cpp(90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+paladin.cpp(101): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+paladin.cpp(102): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+paladin.cpp(121): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  ranger.cpp
+e:\projet2\project2\personnage.h(56): warning C4305: 'argument': truncation from 'double' to 'float'
+ranger.cpp(38): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+ranger.cpp(39): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+ranger.cpp(54): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+ranger.cpp(55): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+ranger.cpp(75): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+ranger.cpp(76): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+ranger.cpp(95): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  sauvegarde.cpp
+e:\projet2\project2\personnage.h(56): warning C4305: 'argument': truncation from 'double' to 'float'
+sauvegarde.cpp(14): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+sauvegarde.cpp(15): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+  voleur.cpp
+e:\projet2\project2\personnage.h(56): warning C4305: 'argument': truncation from 'double' to 'float'
+voleur.cpp(41): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+voleur.cpp(42): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+voleur.cpp(56): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+voleur.cpp(57): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+voleur.cpp(66): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+voleur.cpp(67): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+voleur.cpp(90): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+voleur.cpp(91): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+voleur.cpp(98): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+voleur.cpp(99): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+voleur.cpp(123): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   Generating code
-  2 of 616 functions ( 0.3%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    7 functions had inline decision re-evaluated but remain unchanged
+  56 of 621 functions ( 9.0%) were compiled, the rest were copied from previous compilation.
+    9 functions were new in current compilation
+    75 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   Projet2.vcxproj -> E:\Projet2\Project2\Release\Projet2.exe
   Projet2.vcxproj -> E:\Projet2\Project2\Release\Projet2.pdb (Full PDB)

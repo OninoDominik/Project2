@@ -355,7 +355,7 @@ int jeu::Startjeu(int classe,int currenthp, int force, int dexterite,int constit
 
 
 	//sf::Font font;
-	if (!font.loadFromFile("CloisterBlack.ttf"))
+	if (!font.loadFromFile("Champ.ttf"))
 	{
 		std::cout << "pas de font pixel" << std::endl;
 		return 1;

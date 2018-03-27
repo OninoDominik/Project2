@@ -22,7 +22,7 @@ void creationPerso::start()
 
 
 
-	font.loadFromFile("CloisterBlack.ttf");
+	font.loadFromFile("Champ.ttf");
 
 	chargerBoutonForce();
 	chargerBoutonDexterite();

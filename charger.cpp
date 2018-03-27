@@ -59,7 +59,7 @@ void charger::start()
 	bdd.openDatabase();
 	std::vector<sauvegarde*>* touteSauvegarde;
 	touteSauvegarde = bdd.getAllSauvegarde();
-	font.loadFromFile("CloisterBlack.ttf");
+	font.loadFromFile("Champ.ttf");
 
 	while (chargerWindow.isOpen())
 	{
