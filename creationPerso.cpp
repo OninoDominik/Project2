@@ -455,8 +455,8 @@ void creationPerso::chargerBoutonAlchimiste()
 	boutonAlchimiste->text.setString("Alchimiste");
 	boutonAlchimiste->text.setFillColor(sf::Color::Magenta);
 	boutonAlchimiste->text.setCharacterSize(20);
-	boutonAlchimiste->text.setPosition(410, 200);
-	boutonAlchimiste->rect.setPosition(410, 200);
+	boutonAlchimiste->text.setPosition(400, 200);
+	boutonAlchimiste->rect.setPosition(400, 200);
 	boutonAlchimiste->rect.setSize((sf::Vector2f(100, 40)));
 }
 void creationPerso::chargerBoutonVoleur()

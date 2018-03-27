@@ -50,6 +50,7 @@ public:
 	bool  estEtourdit = false;
 	bool mouvementCombat = false;
 	int seretourner = 0;
+	bool feinte = false;
 	sf::Time difference;
 	sf::Time Chrono;
 	sf::Clock Chronometre;

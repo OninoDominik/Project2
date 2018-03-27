@@ -258,7 +258,24 @@ void jeu::ChargerHpPnj(personnage * ptrPNJ)
 }
 void jeu::ChargerBoutonSpecial(personnage * ptrPj)
 {
-	boutonSpecial->text.setString(*ptrPj->nomAttaqueSpecial);
+	string nomattaque = "Backstab";
+	if (*ptrPj->classe == 5)
+	{
+		if (ptrPj->feinte)
+		{
+			nomattaque = (*ptrPj->nomAttaqueSpecial);
+		}
+		else
+		{
+			nomattaque = "Feinte";
+		}
+
+	}
+	else
+	{
+		nomattaque = (*ptrPj->nomAttaqueSpecial);
+	}
+	boutonSpecial->text.setString(nomattaque);
 	boutonSpecial->text.setFillColor(sf::Color::White);
 	boutonSpecial->text.setStyle(sf::Text::Bold);
 	boutonSpecial->text.setCharacterSize(16);
@@ -889,7 +906,7 @@ int jeu::Startjeu(int classe,int currenthp, int force, int dexterite,int constit
 			music.stop();
 			window.close();
 			sf::Event  gameOverEvent;
-			sf::RenderWindow gameOverWindow(sf::VideoMode(300, 320), "Game Over");
+			sf::RenderWindow gameOverWindow(sf::VideoMode(320, 320), "Game Over");
 			while (gameOverWindow.isOpen())
 			{
 

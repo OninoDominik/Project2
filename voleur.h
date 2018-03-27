@@ -8,6 +8,5 @@ public:
 	~voleur();
 	void AttaqueSpecial(personnage & ennemi);
 	void sesoigne();
-	bool feinte = false;
 };
 

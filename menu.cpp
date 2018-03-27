@@ -78,7 +78,7 @@ void menu::ChargerBoutonTailleEcran()
 	boutonTailleEcran->text.setCharacterSize(20);
 	boutonTailleEcran->text.setPosition(0, 20 );
 	boutonTailleEcran->rect.setPosition(0, 20 );
-	boutonTailleEcran->rect.setSize((sf::Vector2f(300, 50)));
+	boutonTailleEcran->rect.setSize((sf::Vector2f(325, 50)));
 
 }
 void menu::ChargerBoutonFrameRate()
@@ -99,7 +99,7 @@ void menu::ChargerBoutonFrameRate()
 	boutonFrameRate->text.setCharacterSize(16);
 	boutonFrameRate->text.setPosition(0, 70);
 	boutonFrameRate->rect.setPosition(0, 70);
-	boutonFrameRate->rect.setSize((sf::Vector2f(300, 50)));
+	boutonFrameRate->rect.setSize((sf::Vector2f(325, 50)));
 }
 
 
@@ -254,7 +254,7 @@ void menu::menuStart()
 		if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && boutonOption->rect.getGlobalBounds().intersects(spriteCurseur.rect.getGlobalBounds()))
 		{
 			menuWindow.setVisible(false);
-			sf::RenderWindow optionWindow(sf::VideoMode((300), 125), "Pathfinder", sf::Style::Titlebar | sf::Style::Close);
+			sf::RenderWindow optionWindow(sf::VideoMode((325), 125), "Pathfinder", sf::Style::Titlebar | sf::Style::Close);
 			while (optionWindow.isOpen())
 			{
 				sf::Event optionEvent;
