@@ -16,6 +16,11 @@ creationPerso::~creationPerso()
 
 void creationPerso::start()
 {
+	database bdd;
+	bdd.openDatabase();
+	std::vector<sauvegarde*>* touteSauvegarde;
+	touteSauvegarde = bdd.getAllSauvegarde();
+
 	sf::RenderWindow creaWindow(sf::VideoMode(1000, 510), "Creation de personnage");
 	chargerBoutonclasses();
 	chargerIntro();
@@ -369,9 +374,43 @@ void creationPerso::start()
 		}
 		if (i == 3)
 		{
+			choixSauvegarde = true;
+			apreschoix = false;
+			choixCarac->text.setString("A quel endroit se ferons tes futurs sauvegardes?");
+			chargerBoutonSauvegarde2();
+			chargerBoutonSauvegarde3();
+			chargerBoutonSauvegarde1();
+			boutonSauvegarde1->text.setString("1 " + ((*touteSauvegarde)[0]->nomClasse));
+			boutonSauvegarde1->text.setFont(font);
+			boutonSauvegarde2->text.setString("2 " + ((*touteSauvegarde)[1]->nomClasse));
+			boutonSauvegarde2->text.setFont(font);
+			boutonSauvegarde3->text.setString("3 " + ((*touteSauvegarde)[2]->nomClasse));
+			boutonSauvegarde3->text.setFont(font);
+			boutonSauvegarde3->rect.setSize((sf::Vector2f(200, 50)));
+			boutonSauvegarde2->rect.setSize((sf::Vector2f(200, 50)));
+			boutonSauvegarde1->rect.setSize((sf::Vector2f(200, 50)));
+			if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && boutonSauvegarde1->rect.getGlobalBounds().intersects(spriteCurseurCrea.rect.getGlobalBounds()))
+			{
+				slotSauvegarde = 1;
+				i++;
+
+			}
+			if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && boutonSauvegarde2->rect.getGlobalBounds().intersects(spriteCurseurCrea.rect.getGlobalBounds()))
+			{
+				slotSauvegarde = 2;
+				i++;
+			}
+			if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && boutonSauvegarde3->rect.getGlobalBounds().intersects(spriteCurseurCrea.rect.getGlobalBounds()))
+			{
+				slotSauvegarde = 3;
+				i++;
+			}
+		}
+		if (i == 4)
+		{
 			creaWindow.close();
 			jeu * partie = new jeu(lFenetreDeJeu, hFenetreDeJeu, Affichfps);
-			partie->Startjeu(classe,99 ,force, dexterite, constitution, charisme, sagesse, intelligence, 256,1440 ,1,1,1,1);
+			partie->Startjeu(classe,99 ,force, dexterite, constitution, charisme, sagesse, intelligence, 256,1440 ,1,1,1,slotSauvegarde);
 			delete partie;
 		}
 
@@ -413,9 +452,17 @@ void creationPerso::start()
 
 			creaWindow.draw(choixCarac->text);
 		}
-
-
-		creaWindow.draw(intro->text);
+		if (choixSauvegarde)
+		{
+			creaWindow.draw(boutonSauvegarde1->text);
+			creaWindow.draw(boutonSauvegarde2->text);
+			creaWindow.draw(boutonSauvegarde3->text);
+			creaWindow.draw(choixCarac->text);
+		}
+		if (!choixSauvegarde)
+		{
+			creaWindow.draw(intro->text);
+		}
 		creaWindow.display();
 	}
 }
@@ -539,7 +586,8 @@ void creationPerso::chargerBoutonIntelligence()
 	boutonIntelligence->rect.setPosition(550, 400);
 	boutonIntelligence->rect.setSize((sf::Vector2f(100, 40)));
 
-}void creationPerso::chargerBoutonCaracteristique()
+}
+void creationPerso::chargerBoutonCaracteristique()
 {
 	chargerBoutonForce();
 	chargerBoutonDexterite();
@@ -558,6 +606,35 @@ void creationPerso::chargerChoixCarac()
 	choixCarac->text.setPosition(50, 250);
 	choixCarac->rect.setPosition(50, 250);
 	choixCarac->rect.setSize((sf::Vector2f(100, 40)));
+}
+void creationPerso::chargerBoutonSauvegarde1()
+{
+	boutonSauvegarde1->text.setString("1 ");
+	boutonSauvegarde1->text.setFillColor(sf::Color::Red);
+	boutonSauvegarde1->text.setCharacterSize(20);
+	boutonSauvegarde1->text.setPosition(0, 50);
+	boutonSauvegarde1->rect.setPosition(0, 50);
+	boutonSauvegarde1->rect.setSize((sf::Vector2f(200, 50)));;
+}
+
+void creationPerso::chargerBoutonSauvegarde2()
+{
+	boutonSauvegarde2->text.setString("2 ");
+	boutonSauvegarde2->text.setFillColor(sf::Color::Magenta);
+	boutonSauvegarde2->text.setCharacterSize(20);
+	boutonSauvegarde2->text.setPosition(0, 110);
+	boutonSauvegarde2->rect.setPosition(0, 110);
+	boutonSauvegarde2->rect.setSize((sf::Vector2f(200, 50)));;
+}
+
+void creationPerso::chargerBoutonSauvegarde3()
+{
+	boutonSauvegarde3->text.setString("3 ");
+	boutonSauvegarde3->text.setFillColor(sf::Color::Cyan);
+	boutonSauvegarde3->text.setCharacterSize(20);
+	boutonSauvegarde3->text.setPosition(0, 170);
+	boutonSauvegarde3->rect.setPosition(0, 170);
+	boutonSauvegarde3->rect.setSize((sf::Vector2f(200, 50)));;
 }
 
 

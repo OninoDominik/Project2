@@ -22,6 +22,9 @@ public:
 	chose * boutonSagesse = new chose();
 	chose * boutonIntelligence = new chose();
 	chose * choixCarac = new chose();
+	chose * boutonSauvegarde1 = new chose();
+	chose * boutonSauvegarde2 = new chose();
+	chose * boutonSauvegarde3 = new chose();
 	chose spriteCurseurCrea;
 
 	sf::Font font;
@@ -35,6 +38,7 @@ public:
 	int sagesse = 10;
 	int charisme = 10;
 	int intelligence = 10;
+	int slotSauvegarde = 1;
 
 	bool apreschoix = false;
 	bool avantChoix = true;
@@ -44,6 +48,7 @@ public:
 	bool choixSagesse = true;
 	bool choixCharisme = true;
 	bool choixIntelligence = true;
+	bool choixSauvegarde = false;
 
 	void start();
 	void chargerBoutonGuerrier();
@@ -52,8 +57,6 @@ public:
 	void chargerBoutonAlchimiste();
 	void chargerBoutonVoleur();
 	void chargerBoutonclasses();
-
-	
 
 	void chargerIntro();
 
@@ -66,6 +69,9 @@ public:
 	void chargerBoutonCaracteristique();
 	void chargerChoixCarac();
 
+	void chargerBoutonSauvegarde1();
+	void chargerBoutonSauvegarde2();
+	void chargerBoutonSauvegarde3();
 
 };
 
