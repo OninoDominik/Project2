@@ -22,7 +22,7 @@ void jeu::Combat32(personnage * ptrPj, personnage * Pnj, sf::Texture texturePnj,
 	//afficheText = true;
 	int tailleblock = 32;
 
-	sf::Time tempsAnime = sf::seconds(0.20);
+	sf::Time tempsAnime = sf::seconds(0.18);
 	sf::Time Chronos;
 	sf::Clock Chronometres;
 	sf::RenderWindow combatWindow(sf::VideoMode(470, 145), "Combat");
@@ -72,7 +72,7 @@ void jeu::Combat32(personnage * ptrPj, personnage * Pnj, sf::Texture texturePnj,
 
 		}
 
-		combatWindow.setFramerateLimit(20);
+		combatWindow.setFramerateLimit(60);
 		if (ptrPj->mouvementCombat)
 		{
 			ptrPj->sprite.setTextureRect(sf::IntRect(compteurPas * tailleblock, tailleblock * 2 + ptrPj->seretourner, tailleblock, tailleblock));
@@ -94,6 +94,7 @@ void jeu::Combat32(personnage * ptrPj, personnage * Pnj, sf::Texture texturePnj,
 		ChargerHpPjetbarre(ptrPj);
 		ChargerHpPnj(Pnj);
 		ChargerBoutonSpecial(ptrPj);
+
 		ChargerBoutonAttaquer();
 		boutonAttaquer->text.setFont(font);
 		boutonSoin->text.setFont(font);
@@ -156,7 +157,7 @@ void jeu::Combat32(personnage * ptrPj, personnage * Pnj, sf::Texture texturePnj,
 		combatWindow.clear();
 
 		combatWindow.draw(spriteAreneFront);
-		combatWindow.draw(scorePjHp->rect);
+		
 		combatWindow.draw(ptrPj->sprite);
 		combatWindow.draw(Pnj->sprite);
 		combatWindow.draw(boutonAttaquer->text);
@@ -164,12 +165,13 @@ void jeu::Combat32(personnage * ptrPj, personnage * Pnj, sf::Texture texturePnj,
 		combatWindow.draw(boutonSoin->text);
 		//combatWindow.draw(scorePjHp->text);
 		//combatWindow.draw(scorePnjHP->text);
-		combatWindow.draw(scorePnjHP->sprite);
 		combatWindow.draw(ptrPj->text);
 		combatWindow.draw(Pnj->text);
 		combatWindow.draw(ptrPj->anim->animSprite);
 		combatWindow.draw(Pnj->anim->animSprite);
+		combatWindow.draw(scorePnjHP->sprite);
 		combatWindow.draw(scorePjHp->sprite);
+		combatWindow.draw(scorePjHp->rect);
 		combatWindow.draw(viePj);
 		combatWindow.draw(viePnj);
 
@@ -632,8 +634,25 @@ int jeu::Startjeu(int classe,int currenthp, int force, int dexterite,int constit
 		if (ptrPj->rect.getGlobalBounds().intersects(ptrDB->rect.getGlobalBounds()))
 		{
 			*ptrPj->fermeCombatWindow = false;
+			sf::Time tempsAnime = sf::seconds(0.18);
+			sf::Time Chronos;
+			sf::Clock Chronometres;
 			sf::Event combatEvent;
 			afficheText = true;
+			sf::Texture pv;
+			sf::Texture pvRed;
+			sf::Sprite viePj;
+			sf::Sprite viePnj;
+			int compteurPas = 0;
+			int compteurPasPNJ = 0;
+			float pourcentPnj = 0;
+			float pourcentPj = 0;
+			viePj.setTexture(pvRed);
+			viePnj.setTexture(pvRed);
+			viePj.setTextureRect(sf::IntRect(10, 10, 72, 8));
+			viePnj.setTextureRect(sf::IntRect(10, 10, 72, 8));
+			pv.loadFromFile("hpBar.png");
+			pvRed.loadFromFile("red.png");
 			sf::RenderWindow combatWindow2(sf::VideoMode(470, 145), "Combat", sf::Style::Titlebar | sf::Style::Close); //470.145
 
 			sf::Thread thread(std::bind(&combat::startcombat, ptrPj, ptrDB));
@@ -665,18 +684,21 @@ int jeu::Startjeu(int classe,int currenthp, int force, int dexterite,int constit
 						combatWindow2.close();
 
 				}
+				ChargerHpPjetbarre(ptrPj);
+				ChargerHpPnj(ptrDB);
+				ChargerBoutonSpecial(ptrPj);
 
-				combatWindow2.setFramerateLimit(20);
+				combatWindow2.setFramerateLimit(60);
 				if (ptrPj->mouvementCombat)
 				{
-					ptrPj->sprite.setTextureRect(sf::IntRect(i * tailleblock, tailleblock * 2 + ptrPj->seretourner, tailleblock, tailleblock));
+					ptrPj->sprite.setTextureRect(sf::IntRect(compteurPas * tailleblock, tailleblock * 2 + ptrPj->seretourner, tailleblock, tailleblock));
 				}
 
 				ptrPj->Positionnement();
 
 				if (ptrDB->mouvementCombat)
 				{
-					ptrDB->sprite.setTextureRect(sf::IntRect(j * 110, tailleblock * 2, 110, tailleblock * 2));
+					ptrDB->sprite.setTextureRect(sf::IntRect(compteurPasPNJ * 110, tailleblock * 2, 110, tailleblock * 2));
 				}
 				ptrDB->Positionnement();
 
@@ -690,6 +712,19 @@ int jeu::Startjeu(int classe,int currenthp, int force, int dexterite,int constit
 				ChargerHpPnj(ptrDB);
 				scorePnjHP->text.setFont(font);
 				ChargerBoutonSpecial(ptrPj);
+				boutonSpecial->text.setFont(font);
+				scorePjHp->text.setFont(font);
+				scorePjHp->sprite.setTextureRect(sf::IntRect(175, 275, 110, 20));
+				scorePjHp->sprite.setPosition(90, 1);
+				scorePjHp->sprite.setTexture(pv);
+				viePj.setPosition(118, 6);
+				viePnj.setPosition(318, 6);
+				viePj.setScale(pourcentPj, 1);
+				viePnj.setScale(pourcentPnj, 1);
+				scorePnjHP->text.setFont(font);
+				scorePnjHP->sprite.setTextureRect(sf::IntRect(175, 275, 110, 20));
+				scorePnjHP->sprite.setPosition(290, 1);
+				scorePnjHP->sprite.setTexture(pv);
 				boutonSpecial->text.setFont(font);
 
 
@@ -707,12 +742,40 @@ int jeu::Startjeu(int classe,int currenthp, int force, int dexterite,int constit
 				}
 
 
-				i = (i + 1) % 3;
-				j = (j + 1) % 4;
+				
+				
+				Chronos += Chronometres.getElapsedTime();
+				Chronometres.restart();
+				if (Chronos >= tempsAnime)
+				{
+					Chronos -= tempsAnime;
+					compteurPas++;
+					compteurPas = (compteurPas) % 3;
+					compteurPasPNJ++;
+					compteurPasPNJ = (compteurPasPNJ) % 4;
+				}
 
 				spriteAreneBack.getPosition();
+				pourcentPj = ((float)(*ptrPj->pvActuel / ((float)*ptrPj->pvMax)));
+				if (pourcentPj < 0)
+				{
+					pourcentPj = 0;
+				}
+				pourcentPnj = ((float)(*ptrDB->pvActuel / ((float)*ptrDB->pvMax)));
+				if (pourcentPnj < 0)
+				{
+					pourcentPnj = 0;
+				}
 
-				combatWindow2.clear();
+
+				viePj.setScale(pourcentPj, 1);
+				viePnj.setScale(pourcentPnj, 1);
+				scorePnjHP->text.setFont(font);
+				scorePnjHP->sprite.setTextureRect(sf::IntRect(175, 275, 110, 20));
+				scorePnjHP->sprite.setPosition(290, 1);
+				scorePnjHP->sprite.setTexture(pv);
+
+				/*combatWindow2.clear();
 				combatWindow2.draw(spriteAreneBack);
 				combatWindow2.draw(spriteAreneFront);
 				combatWindow2.draw(scorePjHp->rect);
@@ -726,6 +789,29 @@ int jeu::Startjeu(int classe,int currenthp, int force, int dexterite,int constit
 				combatWindow2.draw(ptrPj->text);
 				combatWindow2.draw(ptrDB->text);
 				combatWindow2.draw(ptrPj->anim->animSprite);
+				combatWindow2.draw(scorePnjHP->sprite);
+				combatWindow2.draw(scorePjHp->sprite);
+				combatWindow2.draw(scorePjHp->rect);
+				combatWindow2.draw(viePj);
+				combatWindow2.draw(viePnj);*/
+
+				combatWindow2.clear();
+				combatWindow2.draw(spriteAreneFront);
+				combatWindow2.draw(ptrPj->sprite);
+				combatWindow2.draw(ptrDB->sprite);
+				combatWindow2.draw(ptrPj->text);
+				combatWindow2.draw(ptrDB->text);
+				combatWindow2.draw(ptrPj->anim->animSprite);
+				combatWindow2.draw(ptrDB->anim->animSprite);
+				
+				combatWindow2.draw(scorePnjHP->sprite);
+				combatWindow2.draw(scorePjHp->sprite);
+				combatWindow2.draw(scorePjHp->rect);
+				combatWindow2.draw(boutonAttaquer->text);
+				combatWindow2.draw(boutonSpecial->text);
+				combatWindow2.draw(boutonSoin->text);
+				combatWindow2.draw(viePj);
+				combatWindow2.draw(viePnj);
 
 				combatWindow2.display();
 
