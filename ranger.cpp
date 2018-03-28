@@ -48,6 +48,10 @@ void ranger::AttaqueSpecial(personnage& ennemi)
 	{
 
 		AvancerAttaque();
+		this->buffer.loadFromFile("rate.ogg");
+		this->sound.setBuffer(this->buffer);
+		this->sound.setVolume(50);
+		this->sound.play();
 		this->text.setString("j'ai raté");
 		this->text.setFillColor(sf::Color::White);
 		this->text.setCharacterSize(16);
@@ -57,8 +61,13 @@ void ranger::AttaqueSpecial(personnage& ennemi)
 	}
 	else
 	{
+		
 		*nbrDesDegat +=4 ;
 		AvancerAttaque();
+		this->buffer.loadFromFile("arrow.ogg");
+		this->sound.setBuffer(this->buffer);
+		this->sound.setVolume(50);
+		this->sound.play();
 		this->anim->arrow();
 		this->InfligeDegat(ennemi);
 		this->text.setString("Headshot !");

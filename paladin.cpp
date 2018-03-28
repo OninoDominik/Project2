@@ -26,7 +26,7 @@ paladin::paladin()
 	*niveau = 2;
 	*classe = 2;
 	estUnJoueur = true;
-	*nomAttaqueSpecial = "Enchainement";
+	*nomAttaqueSpecial = "Justice";
 }
 
 
@@ -47,7 +47,13 @@ void paladin::AttaqueSpecial(personnage& ennemi)
 		{
 			if (i == 0)
 			{
+				
 				AvancerAttaque();
+				this->buffer.loadFromFile("blind.ogg");
+				this->sound.setBuffer(this->buffer);
+				this->sound.setVolume(50);
+				this->sound.setPlayingOffset(sf::seconds(24));
+				this->sound.play();
 				this->anim->palastun();
 				this->text.setString("j'ai etourdit l'ennemi");
 				ennemi.estEtourdit = true;
@@ -62,7 +68,7 @@ void paladin::AttaqueSpecial(personnage& ennemi)
 			{
 				AvancerAttaque();
 				this->InfligeDegat(ennemi);
-				ReculerAttaque();
+				ReculerAttaque(); 
 			}
 
 		}

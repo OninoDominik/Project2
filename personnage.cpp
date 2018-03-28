@@ -145,6 +145,8 @@ void personnage::sesoigne()
 
 void personnage::InfligeDegat(personnage& ennemi)
 {
+	
+
 	int deg = 0;
 	int degtempo;
 	for (int i = 0; i < *nbrDesDegat; i++)
@@ -156,7 +158,10 @@ void personnage::InfligeDegat(personnage& ennemi)
 		cout << "des de degats : " << degtempo << endl;
 
 	}
-	
+	buffer.loadFromFile("hit.ogg");
+	sound.setBuffer(buffer);
+	sound.setVolume(50);
+	sound.play();
 	deg += BonusStat(*nomBonusDegat);
 	this->text.setString("j'ai inflige " + to_string(deg) + " degats");
 	if (this->estUnJoueur == true)
@@ -169,6 +174,7 @@ void personnage::InfligeDegat(personnage& ennemi)
 	}
 	sf::sleep(sf::microseconds(450));
 	*ennemi.pvActuel -= deg;
+	
 
 	cout << nom << " frappe  " << ennemi.nom << "  et inflige   " << deg << " Degats " << endl << "il lui reste " << *ennemi.pvActuel << " PV" << endl;
 }
@@ -212,6 +218,10 @@ void personnage::Attaque(personnage& ennemi)
 		{
 			AvancerAttaque();
 			cout << nom << "avance";
+			this->buffer.loadFromFile("rate.ogg");
+			this->sound.setBuffer(this->buffer);
+			this->sound.setVolume(50);
+			this->sound.play();
 			this->text.setString("Raté");
 			this->text.setFillColor(sf::Color::White);
 			this->text.setCharacterSize(16);

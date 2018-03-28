@@ -44,6 +44,12 @@ void guerrier::AttaqueSpecial(personnage& ennemi)
 	x = this->rect.getPosition().x;
 	this->text.setPosition(x, y - 30);
 
+	this->buffer.loadFromFile("saignement.ogg");
+	this->sound.setBuffer(this->buffer);
+	this->sound.setVolume(50);
+	this->sound.setPlayingOffset(sf::seconds(3));
+	this->sound.play();
+
 	*ennemi.tempsDot += 3;
 	*ennemi.valeurDot = 2*BonusStat("force");
 	ReculerAttaque();

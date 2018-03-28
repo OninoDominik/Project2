@@ -40,6 +40,9 @@ void combat::startcombat(personnage* ami, personnage* ennemi)
 		{
 			if (initiativeAmi == i)
 			{
+				ami->text.setString(" ");
+				ennemi->text.setString(" ");
+
 				ami->mouvementCombat = true;
 				Choixjoueur(ami);
 				cout << "Vos Pvs sont de " << *ami->pvActuel << endl;
@@ -68,11 +71,20 @@ void combat::startcombat(personnage* ami, personnage* ennemi)
 					break;
 				}
 			}
+			ami->text.setString(" ");
+			ennemi->text.setString(" ");
 			if (*ennemi->pvActuel <= 0)
 			{
+				ami->buffer.loadFromFile("mort.ogg");
+				ami->sound.setBuffer(ami->buffer);
+				ami->sound.setVolume(50);
+				ami->sound.play();
+
 				*ennemi->envie = false;
 				cout << *ennemi->envie << endl;
 				sf::sleep(sf::seconds(0.75));
+
+				
 				*ami->fermeCombatWindow = true;
 				break;
 			}
@@ -89,9 +101,15 @@ void combat::startcombat(personnage* ami, personnage* ennemi)
 				ennemi->mouvementCombat = true;
 				if (!(ennemi->estEtourdit))
 				{
-					sf::sleep(sf::seconds(0.75));
+					sf::sleep(sf::seconds(0.05));
 					if (*ennemi->tempsDot > 0)
 					{
+						ami->buffer.loadFromFile("saignement.ogg");
+						ami->sound.setBuffer(ami->buffer);
+						ami->sound.setVolume(50);
+						ami->sound.setPlayingOffset(sf::seconds(3));
+						ami->sound.play(); 
+						sf::sleep(sf::seconds(0.55));
 						*ennemi->tempsDot -= 1;
 						*ennemi->pvActuel -= *ennemi->valeurDot;
 						ami->anim->sang();

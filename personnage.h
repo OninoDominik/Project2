@@ -53,6 +53,8 @@ public:
 	bool feinte = false;
 	sf::Time difference;
 	sf::Time Chrono;
+	sf::Sound sound;
+	sf::SoundBuffer buffer;
 	sf::Clock Chronometre;
 	sf::Time tempsAnime = sf::seconds(0.20);
 

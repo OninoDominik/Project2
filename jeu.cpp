@@ -18,6 +18,8 @@ jeu::jeu()
 
 void jeu::Combat32(personnage * ptrPj, personnage * Pnj, sf::Texture texturePnj, int coordRepopX, int coordRepopY) // creer une fentre de combat 
 {
+
+
 	*ptrPj->fermeCombatWindow = false;
 	//afficheText = true;
 	int tailleblock = 32;
@@ -172,6 +174,9 @@ void jeu::Combat32(personnage * ptrPj, personnage * Pnj, sf::Texture texturePnj,
 		combatWindow.draw(scorePnjHP->sprite);
 		combatWindow.draw(scorePjHp->sprite);
 		combatWindow.draw(scorePjHp->rect);
+		combatWindow.draw(boutonAttaquer->text);
+		combatWindow.draw(boutonSpecial->text);
+		combatWindow.draw(boutonSoin->text);
 		combatWindow.draw(viePj);
 		combatWindow.draw(viePnj);
 
@@ -295,15 +300,8 @@ int jeu::Startjeu(int classe,int currenthp, int force, int dexterite,int constit
 	if (!music.openFromFile("Gleipnir.ogg"))
 		return -1; // erreur
 	music.play();
-	music.setVolume(50);
+	music.setVolume(10);
 	music.setLoop(true);
-
-
-
-
-
-
-	
 
 	bool * fermeCombatWindow = new bool(false);
 
@@ -991,8 +989,14 @@ int jeu::Startjeu(int classe,int currenthp, int force, int dexterite,int constit
 		{
 			music.stop();
 			window.close();
+			ptrPj->buffer.loadFromFile("gameOver.ogg");
+			ptrPj->sound.setBuffer(ptrPj->buffer);
+			ptrPj->sound.setPlayingOffset(sf::seconds(1));
+			ptrPj->sound.play();
+			ptrPj->sound.setVolume(60);
 			sf::Event  gameOverEvent;
 			sf::RenderWindow gameOverWindow(sf::VideoMode(320, 320), "Game Over");
+			
 			while (gameOverWindow.isOpen())
 			{
 

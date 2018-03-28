@@ -47,10 +47,10 @@ void voleur::AttaqueSpecial(personnage& ennemi)
 		int rando = ((rand() % 20) + 1);
 		jetToucher = rando + *bonusAttaque + BonusStat(*nomBonusDegat) ;
 
-		if (ennemi.CA()+2 >= jetToucher)
+		if (ennemi.CA()+2 > jetToucher)
 		{
 			AvancerAttaque();
-			this->text.setString("j'ai raté");
+			this->text.setString("Raté");
 			this->text.setFillColor(sf::Color::Red);
 			this->text.setCharacterSize(16);
 			x = this->rect.getPosition().x;
@@ -60,7 +60,13 @@ void voleur::AttaqueSpecial(personnage& ennemi)
 			(this->feinte) = false;
 		}
 		else
-		{	
+		{
+			this->buffer.loadFromFile("vanish.ogg");
+			this->sound.setBuffer(this->buffer);
+			this->sound.setVolume(50);
+			this->sound.setPlayingOffset(sf::seconds(24));
+			this->sound.play();
+			sf::sleep(sf::milliseconds(250));
 			this->rect.setPosition((392), (105));
 			*nbrDesDegat +=3 ;
 			x = this->rect.getPosition().x;
@@ -71,7 +77,7 @@ void voleur::AttaqueSpecial(personnage& ennemi)
 			for (int i = 0; i < 2; i++)
 			{
 				this->InfligeDegat(ennemi);
-				sf::sleep(sf::milliseconds(550));
+				sf::sleep(sf::milliseconds(250));
 			}
 			*nbrDesDegat -= 3;
 			this->rect.setPosition((100), (105));
