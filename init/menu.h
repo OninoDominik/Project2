@@ -1,13 +1,13 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include <iostream>
-#include "Database.h"
-#include "./sqlite3.h"
+#include "../database/Database.h"
+#include "../sqlite3.h"
 #include <iostream>
 #include <string>
 #include <time.h>
-#include "chose.h"
-#include "jeu.h"
+#include "../personnage/chose.h"
+#include "../game/jeu.h"
 #include <stdio.h>
 #include "charger.h"
 

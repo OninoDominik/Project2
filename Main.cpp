@@ -1,16 +1,15 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
-#include "Database.h"
+#include "./database/Database.h"
 #include "./sqlite3.h"
 #include <iostream>
 #include <string>
-#include "personnage.h"
-#include "mur.h"
-#include "combat.h"
-#include "paladin.h"
+#include "./personnage/personnage.h"
+#include "./game/mur.h"
+#include "./gestionCombat/combat.h"
 #include <time.h>
-#include"jeu.h"
-#include "menu.h"
+#include"./game/jeu.h"
+#include "./init/menu.h"
 
  
 using namespace std;

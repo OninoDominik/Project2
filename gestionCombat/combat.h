@@ -1,5 +1,5 @@
 #pragma once
-#include "personnage.h"
+#include "../personnage/personnage.h"
 #include <time.h>
 class combat
 {

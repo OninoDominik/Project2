@@ -1,6 +1,5 @@
 #include "combat.h"
-#include "personnage.h"
-#include "paladin.h"
+#include "../personnage/personnage.h"
 
 combat::combat()
 {
@@ -25,6 +24,7 @@ void combat::Choixjoueur(personnage* joueur)
 void combat::startcombat(personnage* ami, personnage* ennemi)
 {
 	srand((unsigned)time(0));
+	ami->enCombat = true;
 
 	while ((*ami->envie) && (*ennemi->envie))
 	{
@@ -82,9 +82,10 @@ void combat::startcombat(personnage* ami, personnage* ennemi)
 
 				*ennemi->envie = false;
 				cout << *ennemi->envie << endl;
+				
 				sf::sleep(sf::seconds(0.75));
 
-				
+				ami->enCombat = false;
 				*ami->fermeCombatWindow = true;
 				break;
 			}
@@ -92,7 +93,7 @@ void combat::startcombat(personnage* ami, personnage* ennemi)
 			{
 				*ami->envie = false;
 				cout << *ami->envie << endl;
-
+				ami->enCombat = false;
 				*ami->fermeCombatWindow = true;
 				break;
 			}

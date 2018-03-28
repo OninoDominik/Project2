@@ -1,15 +1,8 @@
-﻿  paladin.cpp
-e:\projet2\project2\personnage.h(59): warning C4305: 'argument': truncation from 'double' to 'float'
-e:\projet2\project2\paladin.cpp(39): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
-e:\projet2\project2\paladin.cpp(40): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
-e:\projet2\project2\paladin.cpp(62): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
-e:\projet2\project2\paladin.cpp(63): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\paladin.cpp(84): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
-e:\projet2\project2\paladin.cpp(85): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\paladin.cpp(95): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
-e:\projet2\project2\paladin.cpp(96): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\paladin.cpp(107): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
-e:\projet2\project2\paladin.cpp(108): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
-e:\projet2\project2\paladin.cpp(127): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+﻿  combat.cpp
+e:\projet2\project2\personnage\personnage.h(60): warning C4305: 'argument': truncation from 'double' to 'float'
+e:\projet2\project2\gestioncombat\combat.cpp(105): warning C4305: 'argument': truncation from 'double' to 'float'
+e:\projet2\project2\gestioncombat\combat.cpp(113): warning C4305: 'argument': truncation from 'double' to 'float'
+  animationCombat.cpp
+  Generating Code...
   Projet2.vcxproj -> E:\Projet2\Project2\Debug\Projet2.exe
   Projet2.vcxproj -> E:\Projet2\Project2\Debug\Projet2.pdb (Partial PDB)

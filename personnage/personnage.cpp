@@ -32,65 +32,74 @@ void personnage::Mouvement()
 {
 	Chrono += Chronometre.getElapsedTime();
 	Chronometre.restart();
+	if (this->enCombat)
+	{
+		
+	}
+	else
+	{
 
-	if (Chrono >= tempsAnime)
-	{
-		Chrono -= tempsAnime;
-		compteurPas++;
-		compteurPas = (compteurPas) % 3;
-	}
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
-	{
-		if (monter == true)
+		if (Chrono >= tempsAnime)
 		{
-			rect.move(0, -vitesse);
-			sprite.setTextureRect(sf::IntRect(compteurPas * 32, 32 * 3, 32, 32));
-			direction = 1;
-			monter = true;
-			descendre = true;
-			reculer = true;
-			avancer = true;
+			Chrono -= tempsAnime;
+			compteurPas++;
+
+			compteurPas = (compteurPas) % 3;
+		}
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
+		{
+			if (monter == true)
+			{
+				rect.move(0, -vitesse);
+				sprite.setTextureRect(sf::IntRect(compteurPas * 32, 32 * 3, 32, 32));
+				direction = 1;
+				monter = true;
+				descendre = true;
+				reculer = true;
+				avancer = true;
+			}
+		}
+		else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
+		{
+			if (descendre == true)
+			{
+				rect.move(0, vitesse);
+				sprite.setTextureRect(sf::IntRect(compteurPas * 32, 0, 32, 32));
+				direction = 2;
+				monter = true;
+				descendre = true;
+				reculer = true;
+				avancer = true;
+			}
+		}
+		else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+		{
+			if (reculer == true)
+			{
+				rect.move(-vitesse, 0);
+				sprite.setTextureRect(sf::IntRect(compteurPas * 32, 32, 32, 32));
+				direction = 3;
+				monter = true;
+				descendre = true;
+				reculer = true;
+				avancer = true;
+			}
+		}
+		else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+		{
+			if (avancer == true)
+			{
+				rect.move(vitesse, 0);
+				sprite.setTextureRect(sf::IntRect(compteurPas * 32, 32 * 2, 32, 32));
+				direction = 4;
+				monter = true;
+				descendre = true;
+				reculer = true;
+				avancer = true;
+			}
 		}
 	}
-	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
-	{
-		if (descendre == true)
-		{
-			rect.move(0, vitesse);
-			sprite.setTextureRect(sf::IntRect(compteurPas * 32, 0, 32, 32));
-			direction = 2;
-			monter = true;
-			descendre = true;
-			reculer = true;
-			avancer = true;
-		}
-	}
-	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
-	{
-		if (reculer == true)
-		{
-			rect.move(-vitesse, 0);
-			sprite.setTextureRect(sf::IntRect(compteurPas * 32, 32, 32, 32));
-			direction = 3;
-			monter = true;
-			descendre = true;
-			reculer = true;
-			avancer = true;
-		}
-	}
-	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
-	{
-		if (avancer == true)
-		{
-			rect.move(vitesse, 0);
-			sprite.setTextureRect(sf::IntRect(compteurPas * 32, 32 * 2, 32, 32));
-			direction = 4;
-			monter = true;
-			descendre = true;
-			reculer = true;
-			avancer = true;
-		}
-	}
+	
 
 }
 

@@ -13,114 +13,185 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="personnage">
+      <UniqueIdentifier>{217fc754-5cb9-4875-8cc2-7243bf552280}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="personnage\alchimiste">
+      <UniqueIdentifier>{b2b038c7-995e-4eef-b81f-1bfe6b841c26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="personnage\guerrier">
+      <UniqueIdentifier>{e29389fd-ac47-4a67-826a-2ed0c9d188ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="personnage\voleur">
+      <UniqueIdentifier>{d8da26b1-69fc-4b7d-bdfb-f34013a0c85f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="personnage\paladin">
+      <UniqueIdentifier>{4d3ccbd0-2838-41ef-bdb4-b1ba950da6cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="personnage\ranger">
+      <UniqueIdentifier>{56993bac-7c62-414a-b007-5a34cf05c089}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="init">
+      <UniqueIdentifier>{52a3d6b5-6cf1-49b4-84e8-a51385f923ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game">
+      <UniqueIdentifier>{be172ee5-d279-4151-ae6c-53d4373e4c4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="database">
+      <UniqueIdentifier>{9481e04e-6d61-4938-85aa-d56c5bb1d78f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets">
+      <UniqueIdentifier>{6b5e262d-4d12-4eac-94eb-cb4abaee1bb3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\img">
+      <UniqueIdentifier>{1a8ad168-b54d-4c74-9332-cc3b2ff1d151}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\sound">
+      <UniqueIdentifier>{f4a205df-88e0-4fd3-a505-9a1ab7af2a19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\img\voleur">
+      <UniqueIdentifier>{5cc6d730-e2bf-40b2-9c70-3b35689a6b2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\img\ranger">
+      <UniqueIdentifier>{b924dabd-46d4-4860-bfa8-3e065ee74995}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\img\alchimiste">
+      <UniqueIdentifier>{b8a736cb-a8bc-4803-b39a-30a5a0dd34f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\img\guerrier">
+      <UniqueIdentifier>{39cf4a3d-c894-41cc-9960-900cf7828353}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\img\paladin">
+      <UniqueIdentifier>{3aa1109d-8b1e-4b1e-bbcd-7422a3e340d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\sound\alchimiste">
+      <UniqueIdentifier>{8dff5968-6bd5-4e1c-9fe1-2ce798e17dd0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\sound\guerrier">
+      <UniqueIdentifier>{5fb99727-56b3-498e-82d9-17aecf1199c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\sound\voleur">
+      <UniqueIdentifier>{0bbbbea0-3994-494e-bf75-c5d59e288283}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\sound\paladin">
+      <UniqueIdentifier>{419c8814-32ff-41e8-8dff-a7236c664b98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\sound\ranger">
+      <UniqueIdentifier>{bb43d145-42c7-4fb9-868a-6d5864fe5321}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\font">
+      <UniqueIdentifier>{9d9c0685-4cdd-4efa-9cf2-7d15ae256bfa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gestionCombat">
+      <UniqueIdentifier>{fc475fde-721c-47ea-a1fb-d5058481882d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="Produit.cpp">
-      <Filter>Fichiers sources</Filter>
+    <ClCompile Include="personnage\alchimiste\alchimiste.cpp">
+      <Filter>personnage\alchimiste</Filter>
     </ClCompile>
-    <ClCompile Include="Database.cpp">
-      <Filter>Fichiers sources</Filter>
+    <ClCompile Include="personnage\guerrier\guerrier.cpp">
+      <Filter>personnage\guerrier</Filter>
     </ClCompile>
-    <ClCompile Include="chose.cpp">
-      <Filter>Fichiers sources</Filter>
+    <ClCompile Include="personnage\voleur\voleur.cpp">
+      <Filter>personnage\voleur</Filter>
     </ClCompile>
-    <ClCompile Include="personnage.cpp">
-      <Filter>Fichiers sources</Filter>
+    <ClCompile Include="personnage\paladin\paladin.cpp">
+      <Filter>personnage\paladin</Filter>
     </ClCompile>
-    <ClCompile Include="mur.cpp">
-      <Filter>Fichiers sources</Filter>
+    <ClCompile Include="personnage\ranger\ranger.cpp">
+      <Filter>personnage\ranger</Filter>
     </ClCompile>
-    <ClCompile Include="combat.cpp">
-      <Filter>Fichiers sources</Filter>
+    <ClCompile Include="personnage\personnage.cpp">
+      <Filter>personnage</Filter>
     </ClCompile>
-    <ClCompile Include="paladin.cpp">
-      <Filter>Fichiers sources</Filter>
+    <ClCompile Include="game\jeu.cpp">
+      <Filter>game</Filter>
     </ClCompile>
-    <ClCompile Include="jeu.cpp">
-      <Filter>Fichiers sources</Filter>
+    <ClCompile Include="database\Database.cpp">
+      <Filter>database</Filter>
     </ClCompile>
-    <ClCompile Include="guerrier.cpp">
-      <Filter>Fichiers sources</Filter>
+    <ClCompile Include="database\sauvegarde.cpp">
+      <Filter>database</Filter>
     </ClCompile>
-    <ClCompile Include="menu.cpp">
-      <Filter>Fichiers sources</Filter>
+    <ClCompile Include="game\mur.cpp">
+      <Filter>game</Filter>
     </ClCompile>
-    <ClCompile Include="alchimiste.cpp">
-      <Filter>Fichiers sources</Filter>
+    <ClCompile Include="init\menu.cpp">
+      <Filter>init</Filter>
     </ClCompile>
-    <ClCompile Include="ranger.cpp">
-      <Filter>Fichiers sources</Filter>
+    <ClCompile Include="init\charger.cpp">
+      <Filter>init</Filter>
     </ClCompile>
-    <ClCompile Include="voleur.cpp">
-      <Filter>Fichiers sources</Filter>
+    <ClCompile Include="game\creationPerso.cpp">
+      <Filter>game</Filter>
     </ClCompile>
-    <ClCompile Include="animationCombat.cpp">
-      <Filter>Fichiers sources</Filter>
+    <ClCompile Include="personnage\chose.cpp">
+      <Filter>personnage</Filter>
     </ClCompile>
-    <ClCompile Include="creationPerso.cpp">
-      <Filter>Fichiers sources</Filter>
+    <ClCompile Include="gestionCombat\animationCombat.cpp">
+      <Filter>gestionCombat</Filter>
     </ClCompile>
-    <ClCompile Include="sauvegarde.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="charger.cpp">
-      <Filter>Fichiers sources</Filter>
+    <ClCompile Include="gestionCombat\combat.cpp">
+      <Filter>gestionCombat</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Produit.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+    <ClInclude Include="personnage\alchimiste\alchimiste.h">
+      <Filter>personnage\alchimiste</Filter>
     </ClInclude>
-    <ClInclude Include="Database.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+    <ClInclude Include="personnage\guerrier\guerrier.h">
+      <Filter>personnage\guerrier</Filter>
     </ClInclude>
-    <ClInclude Include="chose.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+    <ClInclude Include="personnage\voleur\voleur.h">
+      <Filter>personnage\voleur</Filter>
     </ClInclude>
-    <ClInclude Include="personnage.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+    <ClInclude Include="personnage\paladin\paladin.h">
+      <Filter>personnage\paladin</Filter>
     </ClInclude>
-    <ClInclude Include="mur.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+    <ClInclude Include="personnage\ranger\ranger.h">
+      <Filter>personnage\ranger</Filter>
     </ClInclude>
-    <ClInclude Include="combat.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+    <ClInclude Include="personnage\personnage.h">
+      <Filter>personnage</Filter>
     </ClInclude>
-    <ClInclude Include="paladin.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+    <ClInclude Include="game\jeu.h">
+      <Filter>game</Filter>
     </ClInclude>
-    <ClInclude Include="jeu.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+    <ClInclude Include="database\Database.h">
+      <Filter>database</Filter>
     </ClInclude>
-    <ClInclude Include="guerrier.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+    <ClInclude Include="database\sauvegarde.h">
+      <Filter>database</Filter>
     </ClInclude>
-    <ClInclude Include="menu.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+    <ClInclude Include="game\mur.h">
+      <Filter>game</Filter>
     </ClInclude>
-    <ClInclude Include="alchimiste.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+    <ClInclude Include="init\menu.h">
+      <Filter>init</Filter>
     </ClInclude>
-    <ClInclude Include="ranger.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+    <ClInclude Include="init\charger.h">
+      <Filter>init</Filter>
     </ClInclude>
-    <ClInclude Include="voleur.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+    <ClInclude Include="game\creationPerso.h">
+      <Filter>game</Filter>
     </ClInclude>
-    <ClInclude Include="animationCombat.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+    <ClInclude Include="personnage\chose.h">
+      <Filter>personnage</Filter>
     </ClInclude>
-    <ClInclude Include="creationPerso.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+    <ClInclude Include="gestionCombat\animationCombat.h">
+      <Filter>gestionCombat</Filter>
     </ClInclude>
-    <ClInclude Include="sauvegarde.h">
-      <Filter>Fichiers d%27en-tête</Filter>
+    <ClInclude Include="gestionCombat\combat.h">
+      <Filter>gestionCombat</Filter>
     </ClInclude>
-    <ClInclude Include="charger.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="database\database.db">
+      <Filter>database</Filter>
+    </None>
   </ItemGroup>
 </Project>

@@ -1,6 +1,6 @@
 #pragma once
 #include <string>
-#include "personnage.h"
+#include "../personnage/personnage.h"
 
 class sauvegarde
 {

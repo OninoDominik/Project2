@@ -27,7 +27,7 @@ void jeu::Combat32(personnage * ptrPj, personnage * Pnj, sf::Texture texturePnj,
 	sf::Time tempsAnime = sf::seconds(0.18);
 	sf::Time Chronos;
 	sf::Clock Chronometres;
-	sf::RenderWindow combatWindow(sf::VideoMode(470, 145), "Combat");
+	sf::RenderWindow combatWindow(sf::VideoMode(470, 145), "Combat", sf::Style::Titlebar );
 	sf::Texture pv;
 	sf::Texture pvRed;
 	sf::Sprite viePj;
@@ -300,7 +300,7 @@ int jeu::Startjeu(int classe,int currenthp, int force, int dexterite,int constit
 	if (!music.openFromFile("Gleipnir.ogg"))
 		return -1; // erreur
 	music.play();
-	music.setVolume(10);
+	music.setVolume(5);
 	music.setLoop(true);
 
 	bool * fermeCombatWindow = new bool(false);
@@ -651,7 +651,7 @@ int jeu::Startjeu(int classe,int currenthp, int force, int dexterite,int constit
 			viePnj.setTextureRect(sf::IntRect(10, 10, 72, 8));
 			pv.loadFromFile("hpBar.png");
 			pvRed.loadFromFile("red.png");
-			sf::RenderWindow combatWindow2(sf::VideoMode(470, 145), "Combat", sf::Style::Titlebar | sf::Style::Close); //470.145
+			sf::RenderWindow combatWindow2(sf::VideoMode(470, 145), "Combat", sf::Style::Titlebar); //470.145
 
 			sf::Thread thread(std::bind(&combat::startcombat, ptrPj, ptrDB));
 
@@ -868,12 +868,13 @@ int jeu::Startjeu(int classe,int currenthp, int force, int dexterite,int constit
 		}
 		if (ptrPj->rect.getGlobalBounds().intersects(ptrOrc->rect.getGlobalBounds()))
 		{
+			window.setVisible(false);
 			afficheText = true;
 			int coordRepopX = ptrPj->rect.getPosition().x;
 			int coordRepopY = ptrPj->rect.getPosition().y;
 			Combat32(ptrPj, ptrOrc, textureOrc, coordRepopX, coordRepopY);
+			window.setVisible(true);
 			afficheText = false;
-			chronometre.restart();
 		}
 		/*{
 		   *ptrPj->fermeCombatWindow = false;

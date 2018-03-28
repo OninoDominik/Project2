@@ -120,43 +120,44 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="alchimiste.cpp" />
-    <ClCompile Include="animationCombat.cpp" />
-    <ClCompile Include="charger.cpp" />
-    <ClCompile Include="chose.cpp" />
-    <ClCompile Include="combat.cpp" />
-    <ClCompile Include="creationPerso.cpp" />
-    <ClCompile Include="Database.cpp" />
-    <ClCompile Include="guerrier.cpp" />
-    <ClCompile Include="jeu.cpp" />
+    <ClCompile Include="database\Database.cpp" />
+    <ClCompile Include="database\sauvegarde.cpp" />
+    <ClCompile Include="game\creationPerso.cpp" />
+    <ClCompile Include="game\jeu.cpp" />
+    <ClCompile Include="game\mur.cpp" />
+    <ClCompile Include="gestionCombat\animationCombat.cpp" />
+    <ClCompile Include="gestionCombat\combat.cpp" />
+    <ClCompile Include="init\charger.cpp" />
+    <ClCompile Include="init\menu.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="menu.cpp" />
-    <ClCompile Include="mur.cpp" />
-    <ClCompile Include="paladin.cpp" />
-    <ClCompile Include="personnage.cpp" />
-    <ClCompile Include="Produit.cpp" />
-    <ClCompile Include="ranger.cpp" />
-    <ClCompile Include="sauvegarde.cpp" />
-    <ClCompile Include="voleur.cpp" />
+    <ClCompile Include="personnage\alchimiste\alchimiste.cpp" />
+    <ClCompile Include="personnage\chose.cpp" />
+    <ClCompile Include="personnage\guerrier\guerrier.cpp" />
+    <ClCompile Include="personnage\paladin\paladin.cpp" />
+    <ClCompile Include="personnage\personnage.cpp" />
+    <ClCompile Include="personnage\ranger\ranger.cpp" />
+    <ClCompile Include="personnage\voleur\voleur.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="alchimiste.h" />
-    <ClInclude Include="animationCombat.h" />
-    <ClInclude Include="charger.h" />
-    <ClInclude Include="chose.h" />
-    <ClInclude Include="combat.h" />
-    <ClInclude Include="creationPerso.h" />
-    <ClInclude Include="Database.h" />
-    <ClInclude Include="guerrier.h" />
-    <ClInclude Include="jeu.h" />
-    <ClInclude Include="menu.h" />
-    <ClInclude Include="mur.h" />
-    <ClInclude Include="paladin.h" />
-    <ClInclude Include="personnage.h" />
-    <ClInclude Include="Produit.h" />
-    <ClInclude Include="ranger.h" />
-    <ClInclude Include="sauvegarde.h" />
-    <ClInclude Include="voleur.h" />
+    <ClInclude Include="database\Database.h" />
+    <ClInclude Include="database\sauvegarde.h" />
+    <ClInclude Include="game\creationPerso.h" />
+    <ClInclude Include="game\jeu.h" />
+    <ClInclude Include="game\mur.h" />
+    <ClInclude Include="gestionCombat\animationCombat.h" />
+    <ClInclude Include="gestionCombat\combat.h" />
+    <ClInclude Include="init\charger.h" />
+    <ClInclude Include="init\menu.h" />
+    <ClInclude Include="personnage\alchimiste\alchimiste.h" />
+    <ClInclude Include="personnage\chose.h" />
+    <ClInclude Include="personnage\guerrier\guerrier.h" />
+    <ClInclude Include="personnage\paladin\paladin.h" />
+    <ClInclude Include="personnage\personnage.h" />
+    <ClInclude Include="personnage\ranger\ranger.h" />
+    <ClInclude Include="personnage\voleur\voleur.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="database\database.db" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

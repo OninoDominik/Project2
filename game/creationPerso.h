@@ -1,5 +1,5 @@
 #pragma once
-#include "personnage.h"
+#include "../personnage/personnage.h"
 #include <SFML/Graphics.hpp>
 #include "jeu.h"
 class creationPerso

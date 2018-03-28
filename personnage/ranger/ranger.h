@@ -1,12 +1,12 @@
 #pragma once
-#include "personnage.h"
+#include "../personnage.h"
 
-class voleur : public personnage
+class ranger : public personnage
 {
 public:
-	voleur();
-	~voleur();
+	ranger();
 	void AttaqueSpecial(personnage & ennemi);
 	void sesoigne();
+	~ranger();
 };
 

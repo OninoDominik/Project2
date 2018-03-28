@@ -1,7 +1,7 @@
 #pragma once
 #include "chose.h"
 #include "string"
-#include "animationCombat.h"
+#include "../gestionCombat/animationCombat.h"
 
 class personnage : public chose
 {
@@ -49,6 +49,7 @@ public:
 	bool  estUnJoueur = false;
 	bool  estEtourdit = false;
 	bool mouvementCombat = false;
+	bool enCombat = false;
 	int seretourner = 0;
 	bool feinte = false;
 	sf::Time difference;

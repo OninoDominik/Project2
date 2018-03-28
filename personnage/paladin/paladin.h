@@ -1,5 +1,5 @@
 #pragma once
-#include "personnage.h"
+#include "../personnage.h"
 
 class paladin : public personnage
 {

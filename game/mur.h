@@ -1,5 +1,5 @@
 #pragma once
-#include "chose.h"
+#include "../personnage/chose.h"
 
 class mur : public chose
 {
