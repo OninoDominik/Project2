@@ -5,8 +5,8 @@
 class sauvegarde
 {
 public:
+	sauvegarde(string nomdelaClasse, personnage * ptrPj, bool viemob1, bool viemob2, bool viemob3, bool viemob4, int rowid);
 	sauvegarde();
-	sauvegarde(string nomdelaClasse, personnage * ptrPj, bool viemob1, bool viemob2, bool viemob3, int rowid);
 	~sauvegarde();
 
 	int classe;
@@ -24,6 +24,7 @@ public:
 	bool mob1 = true;
 	bool mob2 = true;
 	bool mob3 = true;
+	bool mob4 = true;
 	/*bool mob4 = true;
 	bool mob5 = true;
 	bool mob6 = true;

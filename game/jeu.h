@@ -34,6 +34,7 @@ public:
 	sf::Texture areneBack;
 	sf::Texture areneFront;
 	sf::Texture textureOrc;
+	sf::Texture texturegobMage;
 	sf::RenderWindow combatWindow2;
 	chose spriteCurseurCombat;
 	sf::RenderWindow combatWindow;
@@ -55,8 +56,8 @@ public:
 	int NiveauUn();
 	int i = 0;
 	int j = 0;
-	int Startjeu(int classe, int force, int dexterite, int constitution, int charisme, int sagesse, int intelligence);
-	int Startjeu(int classe, int currenthp, int force, int dexterite, int constitution, int charisme, int sagesse, int intelligence, int coordx, int coordy, int mob1, int mob2, int mob3, int numeroSauvegarde);
+	//int Startjeu(int classe, int force, int dexterite, int constitution, int charisme, int sagesse, int intelligence);
+	int Startjeu(int classe, int currenthp, int force, int dexterite, int constitution, int charisme, int sagesse, int intelligence, int coordx, int coordy, int mob1, int mob2, int mob3,int mob4, int numeroSauvegarde);
 	vector<mur> murmap1();
 	mur mur1;
 	void ChargerHpPjetbarre(personnage * ptrPj);
@@ -66,7 +67,6 @@ public:
 	void ChargerBoutonAttaquer();
 	void ChargerHpPnj(personnage * ptrPNJ);
 	void ChargerBoutonSpecial(personnage * ptrPj);
-	int Startjeu();
 	float framerate = 0;
 	bool AfficherFrameRate = true;
 	

@@ -41,14 +41,14 @@ bool database::executeQuery(std::string query)
 	}
 }
 
-bool database::insertSauvegardeSansDoublon(std::string nomClasse, int classe,int currentHp, int force, int constitution,int dexterite, int sagesse, int charisme, int intelligence, int coordx, int coordy , int mob1, int mob2, int mob3, int id)
+bool database::insertSauvegardeSansDoublon(std::string nomClasse, int classe,int currentHp, int force, int constitution,int dexterite, int sagesse, int charisme, int intelligence, int coordx, int coordy , int mob1, int mob2, int mob3, int mob4, int id)
 {
 	/*char bnomClasse[10];
 	char bclasse[10];
 	sprintf_s(bnomClasse, "%f", nomClasse);
 	sprintf_s(bclasse, "%d", classe);*/
 
-	std::string query = "INSERT INTO sauvegarde(nomClasse,classe,currentHp,force,constitution,dexterite,sagesse,charisme,intelligence,coordx,coordy,mob1,mob2,mob3, id) select'" + nomClasse + "'," + std::to_string(classe) + "," + std::to_string(currentHp) + "," + std::to_string(force) + "," + std::to_string(constitution) + "," + std::to_string(dexterite) + "," + std::to_string(sagesse) + "," + std::to_string(charisme) + "," + std::to_string(intelligence) + "," + std::to_string(coordx) + "," + std::to_string(coordy) + "," + std::to_string(mob1) + "," + std::to_string(mob2) + "," + std::to_string(mob3) +","+ std::to_string(id)+" WHERE NOT EXISTS (SELECT 1 FROM sauvegarde WHERE id="+ std::to_string(id)+" )";
+	std::string query = "INSERT INTO sauvegarde(nomClasse,classe,currentHp,force,constitution,dexterite,sagesse,charisme,intelligence,coordx,coordy,mob1,mob2,mob3,mob4, id) select'" + nomClasse + "'," + std::to_string(classe) + "," + std::to_string(currentHp) + "," + std::to_string(force) + "," + std::to_string(constitution) + "," + std::to_string(dexterite) + "," + std::to_string(sagesse) + "," + std::to_string(charisme) + "," + std::to_string(intelligence) + "," + std::to_string(coordx) + "," + std::to_string(coordy) + "," + std::to_string(mob1) + "," + std::to_string(mob2) + "," + std::to_string(mob3) +"," + std::to_string(mob4) + "," + std::to_string(id)+" WHERE NOT EXISTS (SELECT 1 FROM sauvegarde WHERE id="+ std::to_string(id)+" )";
 
 	//std::string query = "INSERT INTO sauvegarde VALUES('"+ nomClasse +"'," + std::to_string(classe) +","+ std::to_string(force)+","+ std::to_string(constitution)+","+ std::to_string(dexterite)+","+ std::to_string(sagesse)+","+ std::to_string(charisme)+","+ std::to_string(intelligence)+","+ std::to_string(coordx)+","+ std::to_string(coordy)+","+ std::to_string(mob1)+","+ std::to_string(mob2)+","+ std::to_string(mob3)+")";
 	/*query += nomClasse;
@@ -113,7 +113,8 @@ std::vector<sauvegarde*>* database::getAllSauvegarde()
 			save->mob1 = sqlite3_column_int(stmt, 12);
 			save->mob2 = sqlite3_column_int(stmt, 13);
 			save->mob3 = sqlite3_column_int(stmt, 14);
-			save->rowID = sqlite3_column_int(stmt, 15);
+			save->mob4 = sqlite3_column_int(stmt, 15);
+			save->rowID = sqlite3_column_int(stmt, 16);
 
 		}
 	} while (i == SQLITE_ROW);
@@ -123,7 +124,7 @@ std::vector<sauvegarde*>* database::getAllSauvegarde()
 
 bool database::updateSauvegarde(sauvegarde* save)
 {
-	std::string query = "UPDATE sauvegarde set nomClasse=?, classe=?,currentHp=?, force=?, constitution=?, dexterite=?,sagesse=?, charisme=?, intelligence=?, coordx=?, coordy=?, mob1=?, mob2 =?, mob3=? WHERE id=?"; //where rowid=?";//"UPDATE produits SET nom=?, prix=?, qtevendue=? WHERE rowid=?";
+	std::string query = "UPDATE sauvegarde set nomClasse=?, classe=?,currentHp=?, force=?, constitution=?, dexterite=?,sagesse=?, charisme=?, intelligence=?, coordx=?, coordy=?, mob1=?, mob2 =?, mob3=?, mob4=? WHERE id=?"; //where rowid=?";//"UPDATE produits SET nom=?, prix=?, qtevendue=? WHERE rowid=?";
 	sqlite3_stmt * stmt;
 	sqlite3_prepare_v2(db, query.c_str(), strlen(query.c_str()) + 1, &stmt, NULL);
 
@@ -142,7 +143,8 @@ bool database::updateSauvegarde(sauvegarde* save)
 	sqlite3_bind_int(stmt, 12, save->mob1);
 	sqlite3_bind_int(stmt, 13, save->mob2);
 	sqlite3_bind_int(stmt, 14, save->mob3);
-	sqlite3_bind_int(stmt, 15, save->rowID);
+	sqlite3_bind_int(stmt, 15, save->mob4);
+	sqlite3_bind_int(stmt, 16, save->rowID);
 
 
 	//Execute
