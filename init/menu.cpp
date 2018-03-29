@@ -115,7 +115,7 @@ void menu::menuStart()
 
 	database bdd;
 	bdd.openDatabase();
-	bdd.executeQuery("CREATE TABLE IF NOT EXISTS sauvegarde (nomClasse TEXT,classe INT,currentHp Int,force INT, constitution INT, dexterite INT, sagesse INT, charisme INT, intelligence INT, coordx INT, coordY INT,mob1 INT, mob2 INT, mob3 INT , id INT)"); // prix FLOAT, qtevendue INT, nom TEXT
+	bdd.executeQuery("CREATE TABLE IF NOT EXISTS sauvegarde (nomClasse TEXT,classe INT,currentHp Int,force INT, constitution INT, dexterite INT, sagesse INT, charisme INT, intelligence INT, coordx INT, coordY INT,mob1 INT, mob2 INT, mob3 INT, mob4 INT, id INT)"); // prix FLOAT, qtevendue INT, nom TEXT
 	bdd.insertSauvegardeSansDoublon("Alchimiste", 4,99, 10, 16, 10, 10, 6, 18, 256, 1440, 1, 1, 1, 1,1);
 	bdd.insertSauvegardeSansDoublon("Paladin", 2,99, 16, 10, 10, 6, 18, 10, 256, 1440, 1, 1, 1, 1,2);
 	bdd.insertSauvegardeSansDoublon("Ranger", 3,99, 10, 10, 18, 16, 6, 10,256, 1440, 1, 1, 1, 1,3);

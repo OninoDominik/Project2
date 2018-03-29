@@ -616,20 +616,25 @@ int jeu::Startjeu(int classe,int currenthp, int force, int dexterite,int constit
 		{
 			sf::sleep(sf::milliseconds(200));
 			string classeSave;
-			sf::RenderWindow sauvegarder(sf::VideoMode(200, 400), "Sauvegarde");
-			sauvegarder.setFramerateLimit(60);
+			sf::RenderWindow sauvegarderWindow(sf::VideoMode(190, 50), "Sauvegarde");
+			sauvegarderWindow.setFramerateLimit(60);
+			sf::Text texteSauvegarde;
+			texteSauvegarde.setFont(font);
+			texteSauvegarde.setString("Partie sauvegardée");
+			texteSauvegarde.setFillColor(sf::Color::Yellow);
+			texteSauvegarde.setCharacterSize(22);
 			sf::Event sauvegarderEvent;
-			while (sauvegarder.isOpen())
+			while (sauvegarderWindow.isOpen())
 			{
-				while (sauvegarder.pollEvent(sauvegarderEvent))
+				while (sauvegarderWindow.pollEvent(sauvegarderEvent))
 				{
 					if (sauvegarderEvent.type == sf::Event::Closed)
-						sauvegarder.close();
+						sauvegarderWindow.close();
 					if (sauvegarderEvent.type == sf::Event::KeyPressed && sauvegarderEvent.key.code == sf::Keyboard::Escape)
-						sauvegarder.close();
+						sauvegarderWindow.close();
 
 				}
-				sauvegarder.clear(sf::Color::Yellow);
+				sauvegarderWindow.clear(sf::Color::Black);
 				switch (*ptrPj->classe)
 				{
 				case 1:
@@ -652,10 +657,12 @@ int jeu::Startjeu(int classe,int currenthp, int force, int dexterite,int constit
 				database bdd;
 				bdd.openDatabase();
 				bdd.updateSauvegarde(encours);
-				sauvegarder.display();
-				sf::sleep(sf::milliseconds(200));
-				sauvegarder.close();
+				sauvegarderWindow.draw(texteSauvegarde);
+				sauvegarderWindow.display();
+				sf::sleep(sf::milliseconds(400));
+				sauvegarderWindow.close();
 			}
+			
 		}
 		if (ptrPj->rect.getGlobalBounds().intersects(ptrDB->rect.getGlobalBounds()))
 		{
