@@ -193,5 +193,123 @@
     <None Include="database\database.db">
       <Filter>database</Filter>
     </None>
+    <None Include="assets\sound\Dreamseer.ogg">
+      <Filter>assets\sound</Filter>
+    </None>
+    <None Include="assets\sound\gameOver.ogg">
+      <Filter>assets\sound</Filter>
+    </None>
+    <None Include="assets\sound\Gleipnir.ogg">
+      <Filter>assets\sound</Filter>
+    </None>
+    <None Include="assets\sound\heal.ogg">
+      <Filter>assets\sound</Filter>
+    </None>
+    <None Include="assets\sound\hit.ogg">
+      <Filter>assets\sound</Filter>
+    </None>
+    <None Include="assets\sound\mort.ogg">
+      <Filter>assets\sound</Filter>
+    </None>
+    <None Include="assets\sound\Necromancy.ogg">
+      <Filter>assets\sound</Filter>
+    </None>
+    <None Include="assets\sound\rate.ogg">
+      <Filter>assets\sound</Filter>
+    </None>
+    <None Include="assets\sound\alchimiste\boom.ogg">
+      <Filter>assets\sound\alchimiste</Filter>
+    </None>
+    <None Include="assets\sound\alchimiste\brulure.ogg">
+      <Filter>assets\sound\alchimiste</Filter>
+    </None>
+    <None Include="assets\sound\guerrier\saignement.ogg">
+      <Filter>assets\sound\guerrier</Filter>
+    </None>
+    <None Include="assets\sound\paladin\blind.ogg">
+      <Filter>assets\sound\paladin</Filter>
+    </None>
+    <None Include="assets\sound\ranger\arrow.ogg">
+      <Filter>assets\sound\ranger</Filter>
+    </None>
+    <None Include="assets\sound\voleur\vanish.ogg">
+      <Filter>assets\sound\voleur</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="assets\img\alchimiste\alchimiste.png">
+      <Filter>assets\img\alchimiste</Filter>
+    </Image>
+    <Image Include="assets\img\guerrier\guerrier.png">
+      <Filter>assets\img\guerrier</Filter>
+    </Image>
+    <Image Include="assets\img\paladin\paladin.png">
+      <Filter>assets\img\paladin</Filter>
+    </Image>
+    <Image Include="assets\img\ranger\ranger.png">
+      <Filter>assets\img\ranger</Filter>
+    </Image>
+    <Image Include="assets\img\voleur\voleur.png">
+      <Filter>assets\img\voleur</Filter>
+    </Image>
+    <Image Include="assets\img\fx.png">
+      <Filter>assets\img</Filter>
+    </Image>
+    <Image Include="assets\img\hpBar.png">
+      <Filter>assets\img</Filter>
+    </Image>
+    <Image Include="assets\img\red.png">
+      <Filter>assets\img</Filter>
+    </Image>
+    <Image Include="assets\img\alchimiste\Boom.png">
+      <Filter>assets\img\alchimiste</Filter>
+    </Image>
+    <Image Include="assets\img\guerrier\bloody2.png">
+      <Filter>assets\img\guerrier</Filter>
+    </Image>
+    <Image Include="assets\img\ranger\arrow.png">
+      <Filter>assets\img\ranger</Filter>
+    </Image>
+    <Image Include="assets\img\arenaFront.png">
+      <Filter>assets\img</Filter>
+    </Image>
+    <Image Include="assets\img\areneback.png">
+      <Filter>assets\img</Filter>
+    </Image>
+    <Image Include="assets\img\darkBoss.png">
+      <Filter>assets\img</Filter>
+    </Image>
+    <Image Include="assets\img\Emma.png">
+      <Filter>assets\img</Filter>
+    </Image>
+    <Image Include="assets\img\grave.png">
+      <Filter>assets\img</Filter>
+    </Image>
+    <Image Include="assets\img\iconPath.jpeg">
+      <Filter>assets\img</Filter>
+    </Image>
+    <Image Include="assets\img\Orc.png">
+      <Filter>assets\img</Filter>
+    </Image>
+    <Image Include="assets\img\sword.png">
+      <Filter>assets\img</Filter>
+    </Image>
+    <Image Include="assets\img\sword2.png">
+      <Filter>assets\img</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="assets\font\Champ.ttf">
+      <Filter>assets\font</Filter>
+    </Font>
+    <Font Include="assets\font\CloisterBlack.ttf">
+      <Filter>assets\font</Filter>
+    </Font>
+    <Font Include="assets\font\pixel.ttf">
+      <Filter>assets\font</Filter>
+    </Font>
+    <Font Include="assets\font\varsity.ttf">
+      <Filter>assets\font</Filter>
+    </Font>
   </ItemGroup>
 </Project>

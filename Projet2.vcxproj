@@ -157,7 +157,49 @@
     <ClInclude Include="personnage\voleur\voleur.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="assets\sound\alchimiste\boom.ogg" />
+    <None Include="assets\sound\alchimiste\brulure.ogg" />
+    <None Include="assets\sound\Dreamseer.ogg" />
+    <None Include="assets\sound\gameOver.ogg" />
+    <None Include="assets\sound\Gleipnir.ogg" />
+    <None Include="assets\sound\guerrier\saignement.ogg" />
+    <None Include="assets\sound\heal.ogg" />
+    <None Include="assets\sound\hit.ogg" />
+    <None Include="assets\sound\mort.ogg" />
+    <None Include="assets\sound\Necromancy.ogg" />
+    <None Include="assets\sound\paladin\blind.ogg" />
+    <None Include="assets\sound\ranger\arrow.ogg" />
+    <None Include="assets\sound\rate.ogg" />
+    <None Include="assets\sound\voleur\vanish.ogg" />
     <None Include="database\database.db" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="assets\img\alchimiste\alchimiste.png" />
+    <Image Include="assets\img\alchimiste\Boom.png" />
+    <Image Include="assets\img\arenaFront.png" />
+    <Image Include="assets\img\areneback.png" />
+    <Image Include="assets\img\darkBoss.png" />
+    <Image Include="assets\img\Emma.png" />
+    <Image Include="assets\img\fx.png" />
+    <Image Include="assets\img\grave.png" />
+    <Image Include="assets\img\guerrier\bloody2.png" />
+    <Image Include="assets\img\guerrier\guerrier.png" />
+    <Image Include="assets\img\hpBar.png" />
+    <Image Include="assets\img\iconPath.jpeg" />
+    <Image Include="assets\img\Orc.png" />
+    <Image Include="assets\img\paladin\paladin.png" />
+    <Image Include="assets\img\ranger\arrow.png" />
+    <Image Include="assets\img\ranger\ranger.png" />
+    <Image Include="assets\img\red.png" />
+    <Image Include="assets\img\sword.png" />
+    <Image Include="assets\img\sword2.png" />
+    <Image Include="assets\img\voleur\voleur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="assets\font\Champ.ttf" />
+    <Font Include="assets\font\CloisterBlack.ttf" />
+    <Font Include="assets\font\pixel.ttf" />
+    <Font Include="assets\font\varsity.ttf" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
