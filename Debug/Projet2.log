@@ -1,6 +1,8 @@
-﻿  menu.cpp
+﻿  Database.cpp
 e:\projet2\project2\personnage\personnage.h(60): warning C4305: 'argument': truncation from 'double' to 'float'
-e:\projet2\project2\init\menu.cpp(98): warning C4809: switch statement has redundant 'default' label; all possible 'case' labels are given
-e:\projet2\project2\init\menu.cpp(124): warning C4018: '<': signed/unsigned mismatch
+e:\projet2\project2\database\database.cpp(113): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+e:\projet2\project2\database\database.cpp(114): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+e:\projet2\project2\database\database.cpp(115): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+e:\projet2\project2\database\database.cpp(116): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
   Projet2.vcxproj -> E:\Projet2\Project2\Debug\Projet2.exe
   Projet2.vcxproj -> E:\Projet2\Project2\Debug\Projet2.pdb (Partial PDB)
