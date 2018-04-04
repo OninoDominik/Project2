@@ -300,10 +300,10 @@
     <Image Include="assets\img\sword2.png">
       <Filter>assets\img</Filter>
     </Image>
-    <Image Include="Release\assets\img\map\cactus.png">
+    <Image Include="Release\assets\img\map\steampunkMap.png">
       <Filter>assets\img\map</Filter>
     </Image>
-    <Image Include="Release\assets\img\map\steampunkMap.png">
+    <Image Include="assets\img\map\cactus2.png">
       <Filter>assets\img\map</Filter>
     </Image>
   </ItemGroup>

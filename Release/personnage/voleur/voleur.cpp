@@ -46,7 +46,7 @@ void voleur::AttaqueSpecial(personnage& ennemi)
 		int jetToucher = 0;
 		int rando = ((rand() % 20) + 1);
 		jetToucher = rando + *bonusAttaque + BonusStat(*nomBonusDegat) ;
-
+		*(this->bonusArmure) -= 4;
 		if (ennemi.CA()+2 > jetToucher)
 		{
 			AvancerAttaque();
@@ -101,7 +101,14 @@ void voleur::AttaqueSpecial(personnage& ennemi)
 		x = this->rect.getPosition().x;
 		this->text.setPosition(x, y - 30);
 		(this->feinte) = true;
+		*(this->bonusArmure) += 4;
+		int nbrCA = this->CA();
+		int testttt;
+		testttt = *this->bonusArmure;
+		cout << nbrCA << "   " << testttt << endl;
 	}
+
+
 }
 void voleur::sesoigne()
 {

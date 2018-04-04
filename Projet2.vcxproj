@@ -186,6 +186,7 @@
     <Image Include="assets\img\guerrier\guerrier.png" />
     <Image Include="assets\img\hpBar.png" />
     <Image Include="assets\img\iconPath.jpeg" />
+    <Image Include="assets\img\map\cactus2.png" />
     <Image Include="assets\img\Orc.png" />
     <Image Include="assets\img\paladin\paladin.png" />
     <Image Include="assets\img\ranger\arrow.png" />
@@ -194,7 +195,6 @@
     <Image Include="assets\img\sword.png" />
     <Image Include="assets\img\sword2.png" />
     <Image Include="assets\img\voleur\voleur.png" />
-    <Image Include="Release\assets\img\map\cactus.png" />
     <Image Include="Release\assets\img\map\steampunkMap.png" />
   </ItemGroup>
   <ItemGroup>

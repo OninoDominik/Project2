@@ -325,6 +325,12 @@ int jeu::Startjeu(int classe,int currenthp, int force, int dexterite,int constit
 		std::cout << "pas de sprite" << std::endl;
 		return 1;
 	}
+	if (!cactus.loadFromFile("./assets/img/map/cactus2.png"))
+	{
+		std::cout << "pas de sprite" << std::endl;
+		return 1;
+	}
+
 	if (!areneBack.loadFromFile("./assets/img/arenaFront.png"))
 	{
 		std::cout << "pas de sprite" << std::endl;
@@ -395,7 +401,7 @@ int jeu::Startjeu(int classe,int currenthp, int force, int dexterite,int constit
 	*ptrDB->envie = mob2;
 
 	sf::Sprite spritePnjEmma(texture3);
-
+	sf::Sprite spriteCactus(cactus);
 
 	spritePnjEmma.setTextureRect(sf::IntRect(0, 0, 64, 32));
 
@@ -971,11 +977,13 @@ int jeu::Startjeu(int classe,int currenthp, int force, int dexterite,int constit
 
 		}
 
+		window.draw(ptrPj->sprite);
 		window.draw(ptrDB->sprite);
 		window.draw(ptrEmma->sprite);
 		window.draw(ptrOrc->sprite);
 		window.draw(ptrGobMage->sprite);
 		window.draw(ptrPj->sprite);
+		window.draw(spriteCactus);
 
 
 		if (AfficherFrameRate)

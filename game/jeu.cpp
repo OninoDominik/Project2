@@ -325,7 +325,7 @@ int jeu::Startjeu(int classe,int currenthp, int force, int dexterite,int constit
 		std::cout << "pas de sprite" << std::endl;
 		return 1;
 	}
-	if (!cactus.loadFromFile("./assets/img/map/cactus.png"))
+	if (!cactus.loadFromFile("./assets/img/map/cactus2.png"))
 	{
 		std::cout << "pas de sprite" << std::endl;
 		return 1;
@@ -977,6 +977,7 @@ int jeu::Startjeu(int classe,int currenthp, int force, int dexterite,int constit
 
 		}
 
+		window.draw(ptrPj->sprite);
 		window.draw(ptrDB->sprite);
 		window.draw(ptrEmma->sprite);
 		window.draw(ptrOrc->sprite);

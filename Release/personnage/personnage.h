@@ -21,6 +21,7 @@
 */
 class personnage : public chose
 {
+protected:
 	
 public:
 
@@ -75,7 +76,7 @@ public:
 	int * dexterite = new int(10);/*!< pointeur d'un entier qui est  la dexterite du personnage */
 	int * sagesse = new int(12);/*!< pointeur d'un entier qui est la sagesse du personnage */
 	int * charisme = new int(12);/*!< pointeur d'un entier qui est la charisme du personnage */
-	int * intelligence = new int(12);/*!< pointeur d'un entier qui est l intelligence du personnage */
+	int * intelligence = new int(12);/*!< pointeur d'un entier qui est l intelligence du personnage */ 
 	int * nbrFaceDesDegat = new int(6); /*!< pointeur d'un entier qui est nombre de face des des(dices) de degats du personnage */
 	int * nbrDesDegat = new int(3); /*!< pointeur d'un entier qui est le nombre de des (dice) lance pour calculer les degats*/
 	int * bonusArmure = new int(5); /*!< pointeur d'un entier qui est le bonus d'armure pour etre plus dur a toucher */
@@ -199,6 +200,8 @@ public:
 	*/
 	void setNom(string choixNom);
 
+	
+	
 };
 
 

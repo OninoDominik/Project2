@@ -84,6 +84,7 @@ public:
 	sf::Texture fond; /*!< une texture qui generera la carte*/
 	sf::Texture areneBack; /*!< une texture pour l'arene*/
 	sf::Texture areneFront; /*!< une texture pour l'arene*/
+	sf::Texture cactus;/*!< une texture pour les cactus*/
 	sf::Texture textureOrc; /*!< une texture de monstre*/
 	sf::Texture texturegobMage; /*!< une texture de monstre*/
 	sf::RenderWindow combatWindow2; /*!< fenetre de combat pour ennemi dont le sprite ne fait pas une taille de 32*32pixels**/

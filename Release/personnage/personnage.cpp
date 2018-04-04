@@ -112,7 +112,8 @@ personnage::~personnage()
 int personnage::CA()
 {
 
-	int ca = BonusStat("dexterite") + 10 + 1 + *bonusBouclier + *bonusArmure;
+	int ca = BonusStat("dexterite") + 10 + 1 + *(this->bonusBouclier) + *(this->bonusArmure);
+	cout <<"boubou"<< *bonusBouclier << "  armure " << *bonusArmure << "  stat  " << BonusStat("dexterite") << endl;
 	if (*taille == 1)
 	{
 		ca++;
