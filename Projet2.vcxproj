@@ -194,6 +194,8 @@
     <Image Include="assets\img\sword.png" />
     <Image Include="assets\img\sword2.png" />
     <Image Include="assets\img\voleur\voleur.png" />
+    <Image Include="Release\assets\img\map\cactus.png" />
+    <Image Include="Release\assets\img\map\steampunkMap.png" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="assets\font\Champ.ttf" />

@@ -14,14 +14,14 @@ guerrier::guerrier()
 	*intelligence = 8;
 	*nbrFaceDesDegat = 8;
 	*nbrDesDegat = 2;
-	*bonusArmure = 6;
+	*bonusArmure = 7;
 	*taille = 2;
 	*pvMax = 30+2*(*constitution);
 	*pvActuel = *pvMax;
 	*bonusInitiative = 2;
 	*bonusAttaque = 4;
 	*bonusBouclier = 0;
-	*nbrAttaque = 2;
+	*nbrAttaque = 3;
 	*choix = 0;
 	*niveau = 2;
 	*tempsDot = 0;

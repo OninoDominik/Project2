@@ -42,7 +42,7 @@ public:
 	* sinon la met sur vrai
 	* lance les animations et les sounds
 	*
-	* \param ennemi: pointeur d'un objet personnage  (un ennemie)
+	* \param ennemi: adresse d'un objet personnage  (un ennemie)
 	*/
 	void AttaqueSpecial(personnage & ennemi);
 	/**

@@ -142,7 +142,6 @@ void jeu::Combat32(personnage * ptrPj, personnage * Pnj, sf::Texture texturePnj,
 			*ptrPj->choix = 3;
 		}
 
-		//i = (i + 1) % 3;
 
 		Chronos += Chronometres.getElapsedTime();
 		Chronometres.restart();
@@ -164,8 +163,6 @@ void jeu::Combat32(personnage * ptrPj, personnage * Pnj, sf::Texture texturePnj,
 		combatWindow.draw(boutonAttaquer->text);
 		combatWindow.draw(boutonSpecial->text);
 		combatWindow.draw(boutonSoin->text);
-		//combatWindow.draw(scorePjHp->text);
-		//combatWindow.draw(scorePnjHP->text);
 		combatWindow.draw(ptrPj->text);
 		combatWindow.draw(Pnj->text);
 		combatWindow.draw(ptrPj->anim->animSprite);
@@ -522,6 +519,7 @@ int jeu::Startjeu(int classe,int currenthp, int force, int dexterite,int constit
 	ptrOrc->sprite.setPosition(ptrOrc->rect.getPosition());
 	*ptrOrc->envie = mob1;
 	*ptrOrc->bonusBouclier = 1;
+	*ptrOrc->nbrDesDegat = 4;
 
 	sf::Sprite spritePnjgobMage(texturegobMage);
 	spritePnjgobMage.setTextureRect(sf::IntRect(0, 0, 64, 32));

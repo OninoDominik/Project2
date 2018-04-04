@@ -180,6 +180,8 @@ void menu::menuStart()
 			menuWindow.close();
 			charger * chargeSauvegarde = new charger(largeurFenetreDeJeu, hauteurFenetreDeJeu, Affichagefps);
 			chargeSauvegarde->start();
+			menuWindow.create(sf::VideoMode(tailleEcran.x, tailleEcran.y), "Pathfinder", sf::Style::Titlebar | sf::Style::Close);
+			music.play();
 			
 		}
 		

@@ -1,8 +1,15 @@
-﻿  Database.cpp
-e:\projet2\project2\personnage\personnage.h(60): warning C4305: 'argument': truncation from 'double' to 'float'
-e:\projet2\project2\database\database.cpp(113): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
-e:\projet2\project2\database\database.cpp(114): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
-e:\projet2\project2\database\database.cpp(115): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
-e:\projet2\project2\database\database.cpp(116): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+﻿  voleur.cpp
+e:\projet2\project2\personnage\personnage.h(110): warning C4305: 'argument': truncation from 'double' to 'float'
+e:\projet2\project2\personnage\voleur\voleur.cpp(41): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+e:\projet2\project2\personnage\voleur\voleur.cpp(42): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+e:\projet2\project2\personnage\voleur\voleur.cpp(60): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+e:\projet2\project2\personnage\voleur\voleur.cpp(61): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\personnage\voleur\voleur.cpp(76): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+e:\projet2\project2\personnage\voleur\voleur.cpp(77): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\personnage\voleur\voleur.cpp(101): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+e:\projet2\project2\personnage\voleur\voleur.cpp(102): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\personnage\voleur\voleur.cpp(119): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+e:\projet2\project2\personnage\voleur\voleur.cpp(120): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+e:\projet2\project2\personnage\voleur\voleur.cpp(144): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   Projet2.vcxproj -> E:\Projet2\Project2\Debug\Projet2.exe
   Projet2.vcxproj -> E:\Projet2\Project2\Debug\Projet2.pdb (Partial PDB)

@@ -85,6 +85,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="assets\img\map">
+      <UniqueIdentifier>{d564947b-9b7c-4f14-a819-d7eeed0c6f17}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -296,6 +299,12 @@
     </Image>
     <Image Include="assets\img\sword2.png">
       <Filter>assets\img</Filter>
+    </Image>
+    <Image Include="Release\assets\img\map\cactus.png">
+      <Filter>assets\img\map</Filter>
+    </Image>
+    <Image Include="Release\assets\img\map\steampunkMap.png">
+      <Filter>assets\img\map</Filter>
     </Image>
   </ItemGroup>
   <ItemGroup>

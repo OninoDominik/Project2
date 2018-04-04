@@ -599,7 +599,6 @@ void creationPerso::chargerBoutonCaracteristique()
 	chargerBoutonSagesse();
 	chargerBoutonCharisme();
 	chargerBoutonIntelligence();
-	chargerBoutonCaracteristique();
 	chargerChoixCarac();
 }
 void creationPerso::chargerChoixCarac()

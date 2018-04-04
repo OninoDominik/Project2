@@ -1,1 +1,1 @@
-Lancer project2 en tant qu'administrateur
+APRES L'INSTALLATION, EXECUTER PROJECT2.EXE EN ADMINISTRATEUR

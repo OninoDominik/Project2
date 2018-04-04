@@ -72,7 +72,7 @@ public:
 
 	int * force = new int(16);  /*!< pointeur d'un entier qui est la force du personnage */
 	int * constitution = new int(12);/*!< pointeur d'un entier qui est la constitution du personnage */
-	int * dexterite = new int(12);/*!< pointeur d'un entier qui est  la dexterite du personnage */
+	int * dexterite = new int(10);/*!< pointeur d'un entier qui est  la dexterite du personnage */
 	int * sagesse = new int(12);/*!< pointeur d'un entier qui est la sagesse du personnage */
 	int * charisme = new int(12);/*!< pointeur d'un entier qui est la charisme du personnage */
 	int * intelligence = new int(12);/*!< pointeur d'un entier qui est l intelligence du personnage */

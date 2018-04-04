@@ -43,7 +43,7 @@ public:
 	* calcul les effets du stun et lance une attaque apres  et lance les sounds 
 	* lance les animations et lance les sounds
 	*
-	* \param ennemi :pointeur d'un objet personnage (un ennemie)
+	* \param ennemi :adresse d'un objet personnage (un ennemie)
 	*/
 	void AttaqueSpecial(personnage & ennemi);
 

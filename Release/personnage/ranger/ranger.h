@@ -40,7 +40,7 @@ public:
 	*
 	* calcul les effets des degats si l'attaque touche, et lance les animations et lance les sounds
 	*
-	* \param ennemi :pointeur d'un objet personnage (un ennemie)
+	* \param ennemi :adresse d'un objet personnage (un ennemie)
 	*/
 	void AttaqueSpecial(personnage & ennemi);
 	/**

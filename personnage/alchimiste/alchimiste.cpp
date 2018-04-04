@@ -27,8 +27,8 @@ alchimiste::alchimiste()
 	*valeurDot = 0;
 	estUnJoueur = true;
 	*classe = 4;
-	*nbrDesSoin = 2;
-	*nbrFaceDesSoin = 8;
+	*nbrDesSoin = 5;
+	*nbrFaceDesSoin = 4;
 	*nomAttaqueSpecial = "Bombe";
 	*nomBonusDegat = "intelligence";
 }
@@ -47,7 +47,7 @@ void alchimiste::AttaqueSpecial(personnage& ennemi)
 	this->text.setFillColor(sf::Color::Red);
 	this->text.setCharacterSize(16);
 	this->anim->badaBoom();
-	*ennemi.pvActuel -= 4+2 * BonusStat("intelligence");
+	*ennemi.pvActuel -= 6+2 * BonusStat("intelligence");
 	if (rand() % 2 == 1)
 	{
 		
@@ -57,7 +57,7 @@ void alchimiste::AttaqueSpecial(personnage& ennemi)
 		this->sound.setVolume(50);
 		this->sound.play();
 		this->text.setString("degats bonus : " + to_string(4 + BonusStat("intelligence")));
-		*ennemi.pvActuel -= 4+ BonusStat("intelligence");
+		*ennemi.pvActuel -= 6+ BonusStat("intelligence");
 		this->anim->burn(1);
 		sf::sleep(sf::seconds(0.75));
 		
@@ -71,7 +71,7 @@ void alchimiste::AttaqueSpecial(personnage& ennemi)
 		this->sound.setVolume(50);
 		this->sound.play();
 		this->text.setString("Je brule : " + to_string(4+ BonusStat("intelligence")));
-		*this->pvActuel -= 4+ BonusStat("intelligence");
+		*this->pvActuel -= 6+ BonusStat("intelligence");
 		this->anim->burn(0);
 		sf::sleep(sf::seconds(0.75));
 		

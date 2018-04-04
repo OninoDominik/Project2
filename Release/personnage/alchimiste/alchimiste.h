@@ -41,7 +41,7 @@ public:
 	* calcul les effets de l'attaque bombe et lance les animations et les sounds 
 	* calcul les degats et regarde si l'ennemi ou les joueurs subissent des degats supplementaire   
 	*
-	* \param ennemi : pointeur d'un objet personnage  (un ennemie)
+	* \param ennemi : adresse d'un objet personnage  (un ennemie)
 	*/
 	void AttaqueSpecial(personnage & ennemi);
 	/**
