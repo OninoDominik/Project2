@@ -1,0 +1,528 @@
+\hypertarget{classjeu}{}\section{jeu Class Reference}
+\label{classjeu}\index{jeu@{jeu}}
+
+
+permet de jouer apres la creation de personnage  
+
+
+
+
+{\ttfamily \#include $<$jeu.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classjeu_a38513a7bfd0a7ea4e3a5612da2856016}{jeu}} ()
+\begin{DoxyCompactList}\small\item\em constructeur \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classjeu_a2f669239f8bb86c9cac7fadacfc52095}{jeu}} (int largeur, int hauteur, bool \mbox{\hyperlink{classjeu_a6a6fdfc55acc0b08ea2c7f9874060f58}{framerate}})
+\begin{DoxyCompactList}\small\item\em constructeur \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classjeu_a63596fcd7c1a89fa40d5f5d89a159828}{Combat32}} (\mbox{\hyperlink{classpersonnage}{personnage}} $\ast$ptr\+Pj, \mbox{\hyperlink{classpersonnage}{personnage}} $\ast$Pnj, sf\+::\+Texture texture\+Pnj, int x, int y)
+\begin{DoxyCompactList}\small\item\em lance une fenetre de combat et un thread d\textquotesingle{}un objet combat \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classjeu_a55385a33ef40e0579eb3a3634566c4a8}{$\sim$jeu}} ()
+\begin{DoxyCompactList}\small\item\em destructeur \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classjeu_aeb59c51913d23e2f449ad04f0de2072b}{Startjeu}} (int classe, int currenthp, int force, int dexterite, int constitution, int charisme, int sagesse, int intelligence, int coordx, int coordy, int mob1, int mob2, int mob3, int mob4, int numero\+Sauvegarde)
+\begin{DoxyCompactList}\small\item\em lance la fentre principal de jeu \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{classmur}{mur}} $>$ \mbox{\hyperlink{classjeu_a4671d4fd828d6709ca472994855ab4ff}{murmap1}} ()
+\item 
+void \mbox{\hyperlink{classjeu_a2793dcdba700455a3b1353dcc18a048e}{Charger\+Hp\+Pjetbarre}} (\mbox{\hyperlink{classpersonnage}{personnage}} $\ast$ptr\+Pj)
+\begin{DoxyCompactList}\small\item\em charge le sprite qui entoure la barre de vie et gerre la redimension de la barre de vie \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classjeu_a176fa4a5355a3529a833592d8f81294e}{Charger\+Bouton\+Soin}} ()
+\begin{DoxyCompactList}\small\item\em creer un bouton\+Soin \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classjeu_a79b4c4305a9aa1dde4183547ffb94203}{Charger\+Texte\+Gameover}} ()
+\begin{DoxyCompactList}\small\item\em genere une zone de texte \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classjeu_a3c2e2246dd5ee2d41ccf37c7e78262d0}{Charger\+Texte\+Remerciement}} ()
+\begin{DoxyCompactList}\small\item\em genere une zone de texte \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classjeu_a9d82e7f21e8863d1ed8bc7ef7d7aec87}{Charger\+Bouton\+Attaquer}} ()
+\begin{DoxyCompactList}\small\item\em creer un bouton\+Attaquer \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classjeu_a6cf6a0482228d4b76ba62a6589aab74e}{Charger\+Hp\+Pnj}} (\mbox{\hyperlink{classpersonnage}{personnage}} $\ast$ptr\+P\+NJ)
+\begin{DoxyCompactList}\small\item\em charge le sprite qui entoure la barre de vie et gerre la redimension de la barre de vie \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classjeu_a78dcb0b1f6e462a994ddcf28ce059115}{Charger\+Bouton\+Special}} (\mbox{\hyperlink{classpersonnage}{personnage}} $\ast$ptr\+Pj)
+\begin{DoxyCompactList}\small\item\em creer un bouton\+Special \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Texture \mbox{\hyperlink{classjeu_ad8d2f3b66c694c4ea003bb5bc6904e1a}{texture}}
+\item 
+sf\+::\+Texture \mbox{\hyperlink{classjeu_addb3c0ca950f7d707b53d24b4fbfa03e}{texture3}}
+\item 
+sf\+::\+Texture \mbox{\hyperlink{classjeu_a81c879ee186537a4e177bb29d9dbd7bc}{texture4}}
+\item 
+sf\+::\+Texture \mbox{\hyperlink{classjeu_acba2731c1a3cf75b98bfba2149a00c8e}{texture\+Hero}}
+\item 
+sf\+::\+Texture \mbox{\hyperlink{classjeu_a93bcfdf5661eae0e78c7b098e921a5ce}{grave}}
+\item 
+sf\+::\+Texture \mbox{\hyperlink{classjeu_a4838e0877a52488f9b2adabb5c8860f2}{fond}}
+\item 
+sf\+::\+Texture \mbox{\hyperlink{classjeu_a5afb10301e3f76d2482ed9859c3db9bc}{arene\+Back}}
+\item 
+sf\+::\+Texture \mbox{\hyperlink{classjeu_aa42fb5a7a75a731cdabbabafbd8c6afa}{arene\+Front}}
+\item 
+sf\+::\+Texture \mbox{\hyperlink{classjeu_a0082b3920e78d4471d157a53608e1674}{texture\+Orc}}
+\item 
+sf\+::\+Texture \mbox{\hyperlink{classjeu_a558ca100cca1c6e3e97adba954a404fe}{texturegob\+Mage}}
+\item 
+sf\+::\+Render\+Window \mbox{\hyperlink{classjeu_ae6f1468cb8e294592cfe59c9bcf0cea2}{combat\+Window2}}
+\item 
+\mbox{\hyperlink{classchose}{chose}} \mbox{\hyperlink{classjeu_ae0756dafcae0740b3992d631e38888df}{sprite\+Curseur\+Combat}}
+\item 
+sf\+::\+Render\+Window \mbox{\hyperlink{classjeu_a2f5828306a38cec451fda205a71ee04c}{combat\+Window}}
+\item 
+sf\+::\+Image \mbox{\hyperlink{classjeu_a0b83688b41ae808f264c473b6a1d253f}{icon}}
+\item 
+sf\+::\+Sprite \mbox{\hyperlink{classjeu_a9c949f4b3a6e66d3b311ebdc22f1688c}{sprite\+Fond}}
+\item 
+sf\+::\+Sprite \mbox{\hyperlink{classjeu_aff95549a72e18bea919e76c1c80032cb}{sprite\+Arene\+Front}}
+\item 
+sf\+::\+Sprite \mbox{\hyperlink{classjeu_a0c9e3f7c5f2f0cf31bd5da9e3916fcb0}{sprite\+Arene\+Back}}
+\item 
+sf\+::\+Font \mbox{\hyperlink{classjeu_a685fe02c4c50c625c50732830a9a09f3}{font}}
+\item 
+int \mbox{\hyperlink{classjeu_a1fcaf4729384cac7fdeb17bad1d602b0}{largeur\+Ecran\+Principal}} = 800
+\item 
+int \mbox{\hyperlink{classjeu_aab57f032f42308237e6bf9069f42870e}{hauteur\+Ecran\+Principal}} = 600
+\item 
+\mbox{\hyperlink{classchose}{chose}} $\ast$ \mbox{\hyperlink{classjeu_ac2abbfb40adca68f9d6ef5b3c34e2deb}{bouton\+Attaquer}} = new \mbox{\hyperlink{classchose}{chose}}()
+\item 
+\mbox{\hyperlink{classchose}{chose}} $\ast$ \mbox{\hyperlink{classjeu_a6396acebe5d701ce532d0b27fb9468dd}{bouton\+Soin}} = new \mbox{\hyperlink{classchose}{chose}}()
+\item 
+\mbox{\hyperlink{classchose}{chose}} $\ast$ \mbox{\hyperlink{classjeu_a80f00b1c807ea6817bdb432a069600b7}{score\+Pj\+Hp}} = new \mbox{\hyperlink{classchose}{chose}}()
+\item 
+\mbox{\hyperlink{classchose}{chose}} $\ast$ \mbox{\hyperlink{classjeu_abc8d0cfa5849ba7e4159fcf5fbe7e91a}{score\+Pnj\+HP}} = new \mbox{\hyperlink{classchose}{chose}}()
+\item 
+\mbox{\hyperlink{classchose}{chose}} $\ast$ \mbox{\hyperlink{classjeu_a90c1e01c86044871fa86b3c1e1f3c3ea}{bouton\+Special}} = new \mbox{\hyperlink{classchose}{chose}}()
+\item 
+\mbox{\hyperlink{classchose}{chose}} $\ast$ \mbox{\hyperlink{classjeu_a2fdd2cefbf2b699bb0fb47ccea1cae69}{texte\+Game\+Over}} = new \mbox{\hyperlink{classchose}{chose}}()
+\item 
+\mbox{\hyperlink{classchose}{chose}} $\ast$ \mbox{\hyperlink{classjeu_a506ea767918d5ac9622a4cadf1b8eaea}{texte\+Remerciement}} = new \mbox{\hyperlink{classchose}{chose}}()
+\item 
+sf\+::\+Event \mbox{\hyperlink{classjeu_aa3d0d1f40c3f67f92a2bd01da43acc12}{combat\+Event}}
+\item 
+int \mbox{\hyperlink{classjeu_a6ea074d22112a65a6da5b898cdc87ea2}{i}} = 0
+\item 
+int \mbox{\hyperlink{classjeu_a91c0fab688b58c38cd214c0d8cd8cc8e}{j}} = 0
+\item 
+\mbox{\hyperlink{classmur}{mur}} \mbox{\hyperlink{classjeu_aae067b47cfeb93fa11ddf3b7d1c9910d}{mur1}}
+\item 
+float \mbox{\hyperlink{classjeu_a6a6fdfc55acc0b08ea2c7f9874060f58}{framerate}} = 60
+\item 
+bool \mbox{\hyperlink{classjeu_a838215cb29965391c0e4c8313a6442da}{Afficher\+Frame\+Rate}} = true
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+permet de jouer apres la creation de personnage 
+
+permete de creer une fenetre , de bouger un sprite sur une map de lancer des combat et de generer une fenetre de combat 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classjeu_a38513a7bfd0a7ea4e3a5612da2856016}\label{classjeu_a38513a7bfd0a7ea4e3a5612da2856016}} 
+\index{jeu@{jeu}!jeu@{jeu}}
+\index{jeu@{jeu}!jeu@{jeu}}
+\subsubsection{\texorpdfstring{jeu()}{jeu()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily jeu\+::jeu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+constructeur 
+
+Constructeur de la classe jeu \mbox{\Hypertarget{classjeu_a2f669239f8bb86c9cac7fadacfc52095}\label{classjeu_a2f669239f8bb86c9cac7fadacfc52095}} 
+\index{jeu@{jeu}!jeu@{jeu}}
+\index{jeu@{jeu}!jeu@{jeu}}
+\subsubsection{\texorpdfstring{jeu()}{jeu()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily jeu\+::jeu (\begin{DoxyParamCaption}\item[{int}]{largeur,  }\item[{int}]{hauteur,  }\item[{bool}]{framerate }\end{DoxyParamCaption})}
+
+
+
+constructeur 
+
+Constructeur de la classe jeu surcharge
+
+
+\begin{DoxyParams}{Parameters}
+{\em largeur} & \+: stocke la taille de la largeur de la fentere principal \\
+\hline
+{\em hauteur} & \+: stocke la taille de la hauteur de la fentere principal \\
+\hline
+{\em framerate} & \+: stocke l\textquotesingle{}information si l\textquotesingle{}utilisateur souhaite l\textquotesingle{}affichage des frames par seconde \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjeu_a55385a33ef40e0579eb3a3634566c4a8}\label{classjeu_a55385a33ef40e0579eb3a3634566c4a8}} 
+\index{jeu@{jeu}!````~jeu@{$\sim$jeu}}
+\index{````~jeu@{$\sim$jeu}!jeu@{jeu}}
+\subsubsection{\texorpdfstring{$\sim$jeu()}{~jeu()}}
+{\footnotesize\ttfamily jeu\+::$\sim$jeu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+destructeur 
+
+destructeur de la classe jeu 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classjeu_a9d82e7f21e8863d1ed8bc7ef7d7aec87}\label{classjeu_a9d82e7f21e8863d1ed8bc7ef7d7aec87}} 
+\index{jeu@{jeu}!Charger\+Bouton\+Attaquer@{Charger\+Bouton\+Attaquer}}
+\index{Charger\+Bouton\+Attaquer@{Charger\+Bouton\+Attaquer}!jeu@{jeu}}
+\subsubsection{\texorpdfstring{Charger\+Bouton\+Attaquer()}{ChargerBoutonAttaquer()}}
+{\footnotesize\ttfamily void jeu\+::\+Charger\+Bouton\+Attaquer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+creer un bouton\+Attaquer 
+
+transforme le pointeur d\textquotesingle{}objet chose bouton\+Attaquer en zone cliquable n zone cliquable avec le texte \char`\"{}\+Attaquer\char`\"{} affiche \mbox{\Hypertarget{classjeu_a176fa4a5355a3529a833592d8f81294e}\label{classjeu_a176fa4a5355a3529a833592d8f81294e}} 
+\index{jeu@{jeu}!Charger\+Bouton\+Soin@{Charger\+Bouton\+Soin}}
+\index{Charger\+Bouton\+Soin@{Charger\+Bouton\+Soin}!jeu@{jeu}}
+\subsubsection{\texorpdfstring{Charger\+Bouton\+Soin()}{ChargerBoutonSoin()}}
+{\footnotesize\ttfamily void jeu\+::\+Charger\+Bouton\+Soin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+creer un bouton\+Soin 
+
+transforme le pointeur d\textquotesingle{}objet chose bouton\+Soin en zone cliquable n zone cliquable avec le texte \char`\"{}soin\char`\"{} affiche \mbox{\Hypertarget{classjeu_a78dcb0b1f6e462a994ddcf28ce059115}\label{classjeu_a78dcb0b1f6e462a994ddcf28ce059115}} 
+\index{jeu@{jeu}!Charger\+Bouton\+Special@{Charger\+Bouton\+Special}}
+\index{Charger\+Bouton\+Special@{Charger\+Bouton\+Special}!jeu@{jeu}}
+\subsubsection{\texorpdfstring{Charger\+Bouton\+Special()}{ChargerBoutonSpecial()}}
+{\footnotesize\ttfamily void jeu\+::\+Charger\+Bouton\+Special (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpersonnage}{personnage}} $\ast$}]{ptr\+Pj }\end{DoxyParamCaption})}
+
+
+
+creer un bouton\+Special 
+
+transforme le pointeur d\textquotesingle{}objet chose bouton\+Soin en zone cliquable n zone cliquable avec le texte qui contient le nom de l\textquotesingle{}attaque special du metier choisi affiche \mbox{\Hypertarget{classjeu_a2793dcdba700455a3b1353dcc18a048e}\label{classjeu_a2793dcdba700455a3b1353dcc18a048e}} 
+\index{jeu@{jeu}!Charger\+Hp\+Pjetbarre@{Charger\+Hp\+Pjetbarre}}
+\index{Charger\+Hp\+Pjetbarre@{Charger\+Hp\+Pjetbarre}!jeu@{jeu}}
+\subsubsection{\texorpdfstring{Charger\+Hp\+Pjetbarre()}{ChargerHpPjetbarre()}}
+{\footnotesize\ttfamily void jeu\+::\+Charger\+Hp\+Pjetbarre (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpersonnage}{personnage}} $\ast$}]{ptr\+Pj }\end{DoxyParamCaption})}
+
+
+
+charge le sprite qui entoure la barre de vie et gerre la redimension de la barre de vie 
+
+charge le sprite qui entoure la barre de vie et gerre la redimension de la barre de vie du joueur
+
+
+\begin{DoxyParams}{Parameters}
+{\em classe} & \+:pointeur d\textquotesingle{}un objet personnage ( le personnage principal du Personnage Joueur) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjeu_a6cf6a0482228d4b76ba62a6589aab74e}\label{classjeu_a6cf6a0482228d4b76ba62a6589aab74e}} 
+\index{jeu@{jeu}!Charger\+Hp\+Pnj@{Charger\+Hp\+Pnj}}
+\index{Charger\+Hp\+Pnj@{Charger\+Hp\+Pnj}!jeu@{jeu}}
+\subsubsection{\texorpdfstring{Charger\+Hp\+Pnj()}{ChargerHpPnj()}}
+{\footnotesize\ttfamily void jeu\+::\+Charger\+Hp\+Pnj (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpersonnage}{personnage}} $\ast$}]{ptr\+P\+NJ }\end{DoxyParamCaption})}
+
+
+
+charge le sprite qui entoure la barre de vie et gerre la redimension de la barre de vie 
+
+charge le sprite qui entoure la barre de vie et gerre la redimension de la barre de vie de l\textquotesingle{}ennemi
+
+
+\begin{DoxyParams}{Parameters}
+{\em classe} & \+:pointeur d\textquotesingle{}un objet personnage ( ennemie) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjeu_a79b4c4305a9aa1dde4183547ffb94203}\label{classjeu_a79b4c4305a9aa1dde4183547ffb94203}} 
+\index{jeu@{jeu}!Charger\+Texte\+Gameover@{Charger\+Texte\+Gameover}}
+\index{Charger\+Texte\+Gameover@{Charger\+Texte\+Gameover}!jeu@{jeu}}
+\subsubsection{\texorpdfstring{Charger\+Texte\+Gameover()}{ChargerTexteGameover()}}
+{\footnotesize\ttfamily void jeu\+::\+Charger\+Texte\+Gameover (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+genere une zone de texte 
+
+genere une zone de texte Game Over \mbox{\Hypertarget{classjeu_a3c2e2246dd5ee2d41ccf37c7e78262d0}\label{classjeu_a3c2e2246dd5ee2d41ccf37c7e78262d0}} 
+\index{jeu@{jeu}!Charger\+Texte\+Remerciement@{Charger\+Texte\+Remerciement}}
+\index{Charger\+Texte\+Remerciement@{Charger\+Texte\+Remerciement}!jeu@{jeu}}
+\subsubsection{\texorpdfstring{Charger\+Texte\+Remerciement()}{ChargerTexteRemerciement()}}
+{\footnotesize\ttfamily void jeu\+::\+Charger\+Texte\+Remerciement (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+genere une zone de texte 
+
+genere une zone de texte Credits \mbox{\Hypertarget{classjeu_a63596fcd7c1a89fa40d5f5d89a159828}\label{classjeu_a63596fcd7c1a89fa40d5f5d89a159828}} 
+\index{jeu@{jeu}!Combat32@{Combat32}}
+\index{Combat32@{Combat32}!jeu@{jeu}}
+\subsubsection{\texorpdfstring{Combat32()}{Combat32()}}
+{\footnotesize\ttfamily void jeu\+::\+Combat32 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classpersonnage}{personnage}} $\ast$}]{ptr\+Pj,  }\item[{\mbox{\hyperlink{classpersonnage}{personnage}} $\ast$}]{Pnj,  }\item[{sf\+::\+Texture}]{texture\+Pnj,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+lance une fenetre de combat et un thread d\textquotesingle{}un objet combat 
+
+lance une fenetre de combat et un thread d\textquotesingle{}un objet combat afin de pouvoir cliquer sur les choix de combat et d\textquotesingle{}afficher les actions qui en resulte
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptr\+Pj} & \+: pointeur sur un objet \mbox{\hyperlink{classpersonnage}{personnage( le personnage principal du Personnage Joueur)}} \\
+\hline
+{\em Pnj} & \+: pointeur sur un objet personnage ( un ennemie) \\
+\hline
+{\em texture\+Pnj} & \+: stocke la texture pour els animation de l ennemie \\
+\hline
+{\em x} & abscisse de la position du joueur \\
+\hline
+{\em y} & ordonne de la position du joueur \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classjeu_a4671d4fd828d6709ca472994855ab4ff}\label{classjeu_a4671d4fd828d6709ca472994855ab4ff}} 
+\index{jeu@{jeu}!murmap1@{murmap1}}
+\index{murmap1@{murmap1}!jeu@{jeu}}
+\subsubsection{\texorpdfstring{murmap1()}{murmap1()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classmur}{mur}} $>$ jeu\+::murmap1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+listes contenant tout les objet murs de la carte \mbox{\Hypertarget{classjeu_aeb59c51913d23e2f449ad04f0de2072b}\label{classjeu_aeb59c51913d23e2f449ad04f0de2072b}} 
+\index{jeu@{jeu}!Startjeu@{Startjeu}}
+\index{Startjeu@{Startjeu}!jeu@{jeu}}
+\subsubsection{\texorpdfstring{Startjeu()}{Startjeu()}}
+{\footnotesize\ttfamily int jeu\+::\+Startjeu (\begin{DoxyParamCaption}\item[{int}]{classe,  }\item[{int}]{currenthp,  }\item[{int}]{force,  }\item[{int}]{dexterite,  }\item[{int}]{constitution,  }\item[{int}]{charisme,  }\item[{int}]{sagesse,  }\item[{int}]{intelligence,  }\item[{int}]{coordx,  }\item[{int}]{coordy,  }\item[{int}]{mob1,  }\item[{int}]{mob2,  }\item[{int}]{mob3,  }\item[{int}]{mob4,  }\item[{int}]{numero\+Sauvegarde }\end{DoxyParamCaption})}
+
+
+
+lance la fentre principal de jeu 
+
+permet de creer une fenetre, de bouger un sprite sur une map
+
+
+\begin{DoxyParams}{Parameters}
+{\em classe} & \+: code de la classe afin de charger le bon sprite en focntion du choix lors de la creationd e personnage ( le personnage principal du Personnage Joueur) \\
+\hline
+{\em currenthp} & \+: point vie du personnage au debut du jeu ou lors du chargement de la sauvegarde \\
+\hline
+{\em force} & score de force \\
+\hline
+{\em constitution} & \+: score de constitution \\
+\hline
+{\em dexterite} & \+: score de dexterite \\
+\hline
+{\em sagesse} & \+: score de sagesse \\
+\hline
+{\em charisme} & \+: score de charisme \\
+\hline
+{\em intelligence} & \+: score de intelligence \\
+\hline
+{\em coordx} & \+: absysse de la position du joueur \\
+\hline
+{\em coordy} & \+: ordonne de la position du joueur \\
+\hline
+{\em mob1} & \+: indicateur si le monstre 1 est en vie \\
+\hline
+{\em mob2} & \+: indicateur si le monstre 2 est en vie \\
+\hline
+{\em mob3} & \+: indicateur si le monstre 3 est en vie \\
+\hline
+{\em mob4} & \+: indicateur si le monstre 4 est en vie \\
+\hline
+{\em numero\+Sauvegarde} & \+: numero du slot de sauvegarde \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classjeu_a838215cb29965391c0e4c8313a6442da}\label{classjeu_a838215cb29965391c0e4c8313a6442da}} 
+\index{jeu@{jeu}!Afficher\+Frame\+Rate@{Afficher\+Frame\+Rate}}
+\index{Afficher\+Frame\+Rate@{Afficher\+Frame\+Rate}!jeu@{jeu}}
+\subsubsection{\texorpdfstring{Afficher\+Frame\+Rate}{AfficherFrameRate}}
+{\footnotesize\ttfamily bool jeu\+::\+Afficher\+Frame\+Rate = true}
+
+afficher framerate \mbox{\Hypertarget{classjeu_a5afb10301e3f76d2482ed9859c3db9bc}\label{classjeu_a5afb10301e3f76d2482ed9859c3db9bc}} 
+\index{jeu@{jeu}!arene\+Back@{arene\+Back}}
+\index{arene\+Back@{arene\+Back}!jeu@{jeu}}
+\subsubsection{\texorpdfstring{arene\+Back}{areneBack}}
+{\footnotesize\ttfamily sf\+::\+Texture jeu\+::arene\+Back}
+
+une texture pour l\textquotesingle{}arene \mbox{\Hypertarget{classjeu_aa42fb5a7a75a731cdabbabafbd8c6afa}\label{classjeu_aa42fb5a7a75a731cdabbabafbd8c6afa}} 
+\index{jeu@{jeu}!arene\+Front@{arene\+Front}}
+\index{arene\+Front@{arene\+Front}!jeu@{jeu}}
+\subsubsection{\texorpdfstring{arene\+Front}{areneFront}}
+{\footnotesize\ttfamily sf\+::\+Texture jeu\+::arene\+Front}
+
+une texture pour l\textquotesingle{}arene \mbox{\Hypertarget{classjeu_ac2abbfb40adca68f9d6ef5b3c34e2deb}\label{classjeu_ac2abbfb40adca68f9d6ef5b3c34e2deb}} 
+\index{jeu@{jeu}!bouton\+Attaquer@{bouton\+Attaquer}}
+\index{bouton\+Attaquer@{bouton\+Attaquer}!jeu@{jeu}}
+\subsubsection{\texorpdfstring{bouton\+Attaquer}{boutonAttaquer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classchose}{chose}}$\ast$ jeu\+::bouton\+Attaquer = new \mbox{\hyperlink{classchose}{chose}}()}
+
+pointeur d\textquotesingle{}un objet chose bouton attaquer \mbox{\Hypertarget{classjeu_a6396acebe5d701ce532d0b27fb9468dd}\label{classjeu_a6396acebe5d701ce532d0b27fb9468dd}} 
+\index{jeu@{jeu}!bouton\+Soin@{bouton\+Soin}}
+\index{bouton\+Soin@{bouton\+Soin}!jeu@{jeu}}
+\subsubsection{\texorpdfstring{bouton\+Soin}{boutonSoin}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classchose}{chose}}$\ast$ jeu\+::bouton\+Soin = new \mbox{\hyperlink{classchose}{chose}}()}
+
+pointeur d\textquotesingle{}un objet chose bouton Soin \mbox{\Hypertarget{classjeu_a90c1e01c86044871fa86b3c1e1f3c3ea}\label{classjeu_a90c1e01c86044871fa86b3c1e1f3c3ea}} 
+\index{jeu@{jeu}!bouton\+Special@{bouton\+Special}}
+\index{bouton\+Special@{bouton\+Special}!jeu@{jeu}}
+\subsubsection{\texorpdfstring{bouton\+Special}{boutonSpecial}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classchose}{chose}}$\ast$ jeu\+::bouton\+Special = new \mbox{\hyperlink{classchose}{chose}}()}
+
+pointeur d\textquotesingle{}un objet chose bouton special (bouton qui change de nom en fonction du metier choisi par le joueur \mbox{\Hypertarget{classjeu_aa3d0d1f40c3f67f92a2bd01da43acc12}\label{classjeu_aa3d0d1f40c3f67f92a2bd01da43acc12}} 
+\index{jeu@{jeu}!combat\+Event@{combat\+Event}}
+\index{combat\+Event@{combat\+Event}!jeu@{jeu}}
+\subsubsection{\texorpdfstring{combat\+Event}{combatEvent}}
+{\footnotesize\ttfamily sf\+::\+Event jeu\+::combat\+Event}
+
+evenement de la fenetre de combat \mbox{\Hypertarget{classjeu_a2f5828306a38cec451fda205a71ee04c}\label{classjeu_a2f5828306a38cec451fda205a71ee04c}} 
+\index{jeu@{jeu}!combat\+Window@{combat\+Window}}
+\index{combat\+Window@{combat\+Window}!jeu@{jeu}}
+\subsubsection{\texorpdfstring{combat\+Window}{combatWindow}}
+{\footnotesize\ttfamily sf\+::\+Render\+Window jeu\+::combat\+Window}
+
+fenetre de combat pour ennemi dont le sprite fait une taille de 32$\ast$32pixels \mbox{\Hypertarget{classjeu_ae6f1468cb8e294592cfe59c9bcf0cea2}\label{classjeu_ae6f1468cb8e294592cfe59c9bcf0cea2}} 
+\index{jeu@{jeu}!combat\+Window2@{combat\+Window2}}
+\index{combat\+Window2@{combat\+Window2}!jeu@{jeu}}
+\subsubsection{\texorpdfstring{combat\+Window2}{combatWindow2}}
+{\footnotesize\ttfamily sf\+::\+Render\+Window jeu\+::combat\+Window2}
+
+fenetre de combat pour ennemi dont le sprite ne fait pas une taille de 32$\ast$32pixels \mbox{\Hypertarget{classjeu_a4838e0877a52488f9b2adabb5c8860f2}\label{classjeu_a4838e0877a52488f9b2adabb5c8860f2}} 
+\index{jeu@{jeu}!fond@{fond}}
+\index{fond@{fond}!jeu@{jeu}}
+\subsubsection{\texorpdfstring{fond}{fond}}
+{\footnotesize\ttfamily sf\+::\+Texture jeu\+::fond}
+
+une texture qui generera la carte \mbox{\Hypertarget{classjeu_a685fe02c4c50c625c50732830a9a09f3}\label{classjeu_a685fe02c4c50c625c50732830a9a09f3}} 
+\index{jeu@{jeu}!font@{font}}
+\index{font@{font}!jeu@{jeu}}
+\subsubsection{\texorpdfstring{font}{font}}
+{\footnotesize\ttfamily sf\+::\+Font jeu\+::font}
+
+Font qui definit la police d\textquotesingle{}ecriture \mbox{\Hypertarget{classjeu_a6a6fdfc55acc0b08ea2c7f9874060f58}\label{classjeu_a6a6fdfc55acc0b08ea2c7f9874060f58}} 
+\index{jeu@{jeu}!framerate@{framerate}}
+\index{framerate@{framerate}!jeu@{jeu}}
+\subsubsection{\texorpdfstring{framerate}{framerate}}
+{\footnotesize\ttfamily float jeu\+::framerate = 60}
+
+framerate de base a 60 \mbox{\Hypertarget{classjeu_a93bcfdf5661eae0e78c7b098e921a5ce}\label{classjeu_a93bcfdf5661eae0e78c7b098e921a5ce}} 
+\index{jeu@{jeu}!grave@{grave}}
+\index{grave@{grave}!jeu@{jeu}}
+\subsubsection{\texorpdfstring{grave}{grave}}
+{\footnotesize\ttfamily sf\+::\+Texture jeu\+::grave}
+
+une texture pour indiquer la mort d\textquotesingle{}un ennemi \mbox{\Hypertarget{classjeu_aab57f032f42308237e6bf9069f42870e}\label{classjeu_aab57f032f42308237e6bf9069f42870e}} 
+\index{jeu@{jeu}!hauteur\+Ecran\+Principal@{hauteur\+Ecran\+Principal}}
+\index{hauteur\+Ecran\+Principal@{hauteur\+Ecran\+Principal}!jeu@{jeu}}
+\subsubsection{\texorpdfstring{hauteur\+Ecran\+Principal}{hauteurEcranPrincipal}}
+{\footnotesize\ttfamily int jeu\+::hauteur\+Ecran\+Principal = 600}
+
+hauteur de la fentere principal \mbox{\Hypertarget{classjeu_a6ea074d22112a65a6da5b898cdc87ea2}\label{classjeu_a6ea074d22112a65a6da5b898cdc87ea2}} 
+\index{jeu@{jeu}!i@{i}}
+\index{i@{i}!jeu@{jeu}}
+\subsubsection{\texorpdfstring{i}{i}}
+{\footnotesize\ttfamily int jeu\+::i = 0}
+
+compteur \mbox{\Hypertarget{classjeu_a0b83688b41ae808f264c473b6a1d253f}\label{classjeu_a0b83688b41ae808f264c473b6a1d253f}} 
+\index{jeu@{jeu}!icon@{icon}}
+\index{icon@{icon}!jeu@{jeu}}
+\subsubsection{\texorpdfstring{icon}{icon}}
+{\footnotesize\ttfamily sf\+::\+Image jeu\+::icon}
+
+image qui est en icone dans le coin superieur gauche de la fenetre \mbox{\Hypertarget{classjeu_a91c0fab688b58c38cd214c0d8cd8cc8e}\label{classjeu_a91c0fab688b58c38cd214c0d8cd8cc8e}} 
+\index{jeu@{jeu}!j@{j}}
+\index{j@{j}!jeu@{jeu}}
+\subsubsection{\texorpdfstring{j}{j}}
+{\footnotesize\ttfamily int jeu\+::j = 0}
+
+compteur \mbox{\Hypertarget{classjeu_a1fcaf4729384cac7fdeb17bad1d602b0}\label{classjeu_a1fcaf4729384cac7fdeb17bad1d602b0}} 
+\index{jeu@{jeu}!largeur\+Ecran\+Principal@{largeur\+Ecran\+Principal}}
+\index{largeur\+Ecran\+Principal@{largeur\+Ecran\+Principal}!jeu@{jeu}}
+\subsubsection{\texorpdfstring{largeur\+Ecran\+Principal}{largeurEcranPrincipal}}
+{\footnotesize\ttfamily int jeu\+::largeur\+Ecran\+Principal = 800}
+
+largeur de la fentere principal \mbox{\Hypertarget{classjeu_aae067b47cfeb93fa11ddf3b7d1c9910d}\label{classjeu_aae067b47cfeb93fa11ddf3b7d1c9910d}} 
+\index{jeu@{jeu}!mur1@{mur1}}
+\index{mur1@{mur1}!jeu@{jeu}}
+\subsubsection{\texorpdfstring{mur1}{mur1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmur}{mur}} jeu\+::mur1}
+
+objet mur \mbox{\Hypertarget{classjeu_a80f00b1c807ea6817bdb432a069600b7}\label{classjeu_a80f00b1c807ea6817bdb432a069600b7}} 
+\index{jeu@{jeu}!score\+Pj\+Hp@{score\+Pj\+Hp}}
+\index{score\+Pj\+Hp@{score\+Pj\+Hp}!jeu@{jeu}}
+\subsubsection{\texorpdfstring{score\+Pj\+Hp}{scorePjHp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classchose}{chose}}$\ast$ jeu\+::score\+Pj\+Hp = new \mbox{\hyperlink{classchose}{chose}}()}
+
+pointeur d\textquotesingle{}un objet chose pour afficher la barre de vie du joueur \mbox{\Hypertarget{classjeu_abc8d0cfa5849ba7e4159fcf5fbe7e91a}\label{classjeu_abc8d0cfa5849ba7e4159fcf5fbe7e91a}} 
+\index{jeu@{jeu}!score\+Pnj\+HP@{score\+Pnj\+HP}}
+\index{score\+Pnj\+HP@{score\+Pnj\+HP}!jeu@{jeu}}
+\subsubsection{\texorpdfstring{score\+Pnj\+HP}{scorePnjHP}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classchose}{chose}}$\ast$ jeu\+::score\+Pnj\+HP = new \mbox{\hyperlink{classchose}{chose}}()}
+
+pointeur d\textquotesingle{}un objet chose pour afficher la barre de vie de l\textquotesingle{}ennemi \mbox{\Hypertarget{classjeu_a0c9e3f7c5f2f0cf31bd5da9e3916fcb0}\label{classjeu_a0c9e3f7c5f2f0cf31bd5da9e3916fcb0}} 
+\index{jeu@{jeu}!sprite\+Arene\+Back@{sprite\+Arene\+Back}}
+\index{sprite\+Arene\+Back@{sprite\+Arene\+Back}!jeu@{jeu}}
+\subsubsection{\texorpdfstring{sprite\+Arene\+Back}{spriteAreneBack}}
+{\footnotesize\ttfamily sf\+::\+Sprite jeu\+::sprite\+Arene\+Back}
+
+un sprite qui generera la carte arende combat \mbox{\Hypertarget{classjeu_aff95549a72e18bea919e76c1c80032cb}\label{classjeu_aff95549a72e18bea919e76c1c80032cb}} 
+\index{jeu@{jeu}!sprite\+Arene\+Front@{sprite\+Arene\+Front}}
+\index{sprite\+Arene\+Front@{sprite\+Arene\+Front}!jeu@{jeu}}
+\subsubsection{\texorpdfstring{sprite\+Arene\+Front}{spriteAreneFront}}
+{\footnotesize\ttfamily sf\+::\+Sprite jeu\+::sprite\+Arene\+Front}
+
+un sprite qui generera la carte arende combat \mbox{\Hypertarget{classjeu_ae0756dafcae0740b3992d631e38888df}\label{classjeu_ae0756dafcae0740b3992d631e38888df}} 
+\index{jeu@{jeu}!sprite\+Curseur\+Combat@{sprite\+Curseur\+Combat}}
+\index{sprite\+Curseur\+Combat@{sprite\+Curseur\+Combat}!jeu@{jeu}}
+\subsubsection{\texorpdfstring{sprite\+Curseur\+Combat}{spriteCurseurCombat}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classchose}{chose}} jeu\+::sprite\+Curseur\+Combat}
+
+objet chose qui permetetra de traquer la position de la sourie \mbox{\Hypertarget{classjeu_a9c949f4b3a6e66d3b311ebdc22f1688c}\label{classjeu_a9c949f4b3a6e66d3b311ebdc22f1688c}} 
+\index{jeu@{jeu}!sprite\+Fond@{sprite\+Fond}}
+\index{sprite\+Fond@{sprite\+Fond}!jeu@{jeu}}
+\subsubsection{\texorpdfstring{sprite\+Fond}{spriteFond}}
+{\footnotesize\ttfamily sf\+::\+Sprite jeu\+::sprite\+Fond}
+
+un prite qui generera la carte \mbox{\Hypertarget{classjeu_a2fdd2cefbf2b699bb0fb47ccea1cae69}\label{classjeu_a2fdd2cefbf2b699bb0fb47ccea1cae69}} 
+\index{jeu@{jeu}!texte\+Game\+Over@{texte\+Game\+Over}}
+\index{texte\+Game\+Over@{texte\+Game\+Over}!jeu@{jeu}}
+\subsubsection{\texorpdfstring{texte\+Game\+Over}{texteGameOver}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classchose}{chose}}$\ast$ jeu\+::texte\+Game\+Over = new \mbox{\hyperlink{classchose}{chose}}()}
+
+pointeur d\textquotesingle{}un objet chose pour afficher le texte de Game Over \mbox{\Hypertarget{classjeu_a506ea767918d5ac9622a4cadf1b8eaea}\label{classjeu_a506ea767918d5ac9622a4cadf1b8eaea}} 
+\index{jeu@{jeu}!texte\+Remerciement@{texte\+Remerciement}}
+\index{texte\+Remerciement@{texte\+Remerciement}!jeu@{jeu}}
+\subsubsection{\texorpdfstring{texte\+Remerciement}{texteRemerciement}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classchose}{chose}}$\ast$ jeu\+::texte\+Remerciement = new \mbox{\hyperlink{classchose}{chose}}()}
+
+pointeur d\textquotesingle{}un objet chose pour afficher le texte des credits \mbox{\Hypertarget{classjeu_ad8d2f3b66c694c4ea003bb5bc6904e1a}\label{classjeu_ad8d2f3b66c694c4ea003bb5bc6904e1a}} 
+\index{jeu@{jeu}!texture@{texture}}
+\index{texture@{texture}!jeu@{jeu}}
+\subsubsection{\texorpdfstring{texture}{texture}}
+{\footnotesize\ttfamily sf\+::\+Texture jeu\+::texture}
+
+une texture de monstre \mbox{\Hypertarget{classjeu_addb3c0ca950f7d707b53d24b4fbfa03e}\label{classjeu_addb3c0ca950f7d707b53d24b4fbfa03e}} 
+\index{jeu@{jeu}!texture3@{texture3}}
+\index{texture3@{texture3}!jeu@{jeu}}
+\subsubsection{\texorpdfstring{texture3}{texture3}}
+{\footnotesize\ttfamily sf\+::\+Texture jeu\+::texture3}
+
+une texture de monstre \mbox{\Hypertarget{classjeu_a81c879ee186537a4e177bb29d9dbd7bc}\label{classjeu_a81c879ee186537a4e177bb29d9dbd7bc}} 
+\index{jeu@{jeu}!texture4@{texture4}}
+\index{texture4@{texture4}!jeu@{jeu}}
+\subsubsection{\texorpdfstring{texture4}{texture4}}
+{\footnotesize\ttfamily sf\+::\+Texture jeu\+::texture4}
+
+une texture de monstre \mbox{\Hypertarget{classjeu_a558ca100cca1c6e3e97adba954a404fe}\label{classjeu_a558ca100cca1c6e3e97adba954a404fe}} 
+\index{jeu@{jeu}!texturegob\+Mage@{texturegob\+Mage}}
+\index{texturegob\+Mage@{texturegob\+Mage}!jeu@{jeu}}
+\subsubsection{\texorpdfstring{texturegob\+Mage}{texturegobMage}}
+{\footnotesize\ttfamily sf\+::\+Texture jeu\+::texturegob\+Mage}
+
+une texture de monstre \mbox{\Hypertarget{classjeu_acba2731c1a3cf75b98bfba2149a00c8e}\label{classjeu_acba2731c1a3cf75b98bfba2149a00c8e}} 
+\index{jeu@{jeu}!texture\+Hero@{texture\+Hero}}
+\index{texture\+Hero@{texture\+Hero}!jeu@{jeu}}
+\subsubsection{\texorpdfstring{texture\+Hero}{textureHero}}
+{\footnotesize\ttfamily sf\+::\+Texture jeu\+::texture\+Hero}
+
+une texture qui stocke le skin du perso enf ocntion du metier choisis \mbox{\Hypertarget{classjeu_a0082b3920e78d4471d157a53608e1674}\label{classjeu_a0082b3920e78d4471d157a53608e1674}} 
+\index{jeu@{jeu}!texture\+Orc@{texture\+Orc}}
+\index{texture\+Orc@{texture\+Orc}!jeu@{jeu}}
+\subsubsection{\texorpdfstring{texture\+Orc}{textureOrc}}
+{\footnotesize\ttfamily sf\+::\+Texture jeu\+::texture\+Orc}
+
+une texture de monstre 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Release/game/\mbox{\hyperlink{jeu_8h}{jeu.\+h}}\item 
+Release/game/jeu.\+cpp\end{DoxyCompactItemize}

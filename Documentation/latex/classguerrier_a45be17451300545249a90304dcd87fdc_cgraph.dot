@@ -1,0 +1,13 @@
+digraph "guerrier::AttaqueSpecial"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node4 [label="guerrier::AttaqueSpecial",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="personnage::AvancerAttaque",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpersonnage.html#a98da8fa6b4dd288153df279561b46bac",tooltip="fait avancer le personnage vers son adversaire en combat "];
+  Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="personnage::BonusStat",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpersonnage.html#a4682ab356ead77283d2b0f62e230b5a1",tooltip="calcul un bonus en fonction de la caractristique du personnage "];
+  Node4 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="personnage::ReculerAttaque",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpersonnage.html#a082fb3d5cd2b55f138267f282c28456f",tooltip="fait avancer le personnage vers son adversaire en combat "];
+}

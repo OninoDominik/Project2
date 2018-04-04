@@ -2,6 +2,10 @@
 
 
 
+creationPerso::creationPerso()
+{
+}
+
 creationPerso::creationPerso(int largeurFenetreDeJeu, int hauteurFenetreDeJeu, bool Affichagefps)
 {
 	lFenetreDeJeu = largeurFenetreDeJeu;

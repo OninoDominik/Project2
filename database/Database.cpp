@@ -43,40 +43,9 @@ bool database::executeQuery(std::string query)
 
 bool database::insertSauvegardeSansDoublon(std::string nomClasse, int classe,int currentHp, int force, int constitution,int dexterite, int sagesse, int charisme, int intelligence, int coordx, int coordy , int mob1, int mob2, int mob3, int mob4, int id)
 {
-	/*char bnomClasse[10];
-	char bclasse[10];
-	sprintf_s(bnomClasse, "%f", nomClasse);
-	sprintf_s(bclasse, "%d", classe);*/
+	
 
 	std::string query = "INSERT INTO sauvegarde(nomClasse,classe,currentHp,force,constitution,dexterite,sagesse,charisme,intelligence,coordx,coordy,mob1,mob2,mob3,mob4, id) select'" + nomClasse + "'," + std::to_string(classe) + "," + std::to_string(currentHp) + "," + std::to_string(force) + "," + std::to_string(constitution) + "," + std::to_string(dexterite) + "," + std::to_string(sagesse) + "," + std::to_string(charisme) + "," + std::to_string(intelligence) + "," + std::to_string(coordx) + "," + std::to_string(coordy) + "," + std::to_string(mob1) + "," + std::to_string(mob2) + "," + std::to_string(mob3) +"," + std::to_string(mob4) + "," + std::to_string(id)+" WHERE NOT EXISTS (SELECT 1 FROM sauvegarde WHERE id="+ std::to_string(id)+" )";
-
-	//std::string query = "INSERT INTO sauvegarde VALUES('"+ nomClasse +"'," + std::to_string(classe) +","+ std::to_string(force)+","+ std::to_string(constitution)+","+ std::to_string(dexterite)+","+ std::to_string(sagesse)+","+ std::to_string(charisme)+","+ std::to_string(intelligence)+","+ std::to_string(coordx)+","+ std::to_string(coordy)+","+ std::to_string(mob1)+","+ std::to_string(mob2)+","+ std::to_string(mob3)+")";
-	/*query += nomClasse;
-	query += "',";
-	query += classe;
-	query += ",";
-	query += force;
-	query += ",";
-	query += constitution;
-	query += ",";
-	query += dexterite;
-	query += ",";
-	query += sagesse;
-	query += ",";
-	query += charisme;
-	query += ",";
-	query += intelligence;
-	query += ",";
-	query += coordx;
-	query += ",";
-	query += coordy;
-	query += ",";
-	query += mob1;
-	query += ",";
-	query += mob2;
-	query += ",";
-	query += mob3;
-	query += ")";*/
 
 	std::cout << query << std::endl;
 
@@ -154,19 +123,4 @@ bool database::updateSauvegarde(sauvegarde* save)
 	return true;
 }
 
-/*bool database::deleteProduit(int id)
-{
-	std::string query = "DELETE FROM produits WHERE rowid=?";
-	sqlite3_stmt * stmt;
-	sqlite3_prepare_v2(db, query.c_str(), strlen(query.c_str()) + 1, &stmt, NULL);
-
-	//Bind
-	sqlite3_bind_int(stmt, 1, id);
-
-	//Execute
-	sqlite3_step(stmt);
-	sqlite3_finalize(stmt);
-
-	return true;
-}*/
 

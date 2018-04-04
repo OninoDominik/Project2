@@ -1,0 +1,11 @@
+digraph "guerrier::sesoigne"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node9 [label="guerrier::sesoigne",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="personnage::BonusStat",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpersonnage.html#a4682ab356ead77283d2b0f62e230b5a1",tooltip="calcul un bonus en fonction de la caractristique du personnage "];
+  Node9 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="animationCombat::heal",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classanimation_combat.html#a1cf99a956ed99eeb294cdb15a25351de",tooltip="affiche une animation d&#39;un halo de soin "];
+}

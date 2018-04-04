@@ -2,7 +2,7 @@
 
 
 
-sauvegarde::sauvegarde(string nomdelaClasse, personnage * ptrPj, bool viemob1, bool viemob2, bool viemob3, int rowid)
+sauvegarde::sauvegarde(string nomdelaClasse, personnage * ptrPj, bool viemob1, bool viemob2, bool viemob3,bool viemob4, int rowid)
 {
 	nomClasse = nomdelaClasse;
 	force = *ptrPj->force;
@@ -17,6 +17,7 @@ sauvegarde::sauvegarde(string nomdelaClasse, personnage * ptrPj, bool viemob1, b
 	mob1 = viemob1;
 	mob2 = viemob2;
 	mob3 = viemob3;
+	mob4 = viemob4;
 	rowID = rowid;
 	currentHp = *ptrPj->pvActuel;
 }

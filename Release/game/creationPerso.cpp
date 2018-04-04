@@ -2,6 +2,10 @@
 
 
 
+creationPerso::creationPerso()
+{
+}
+
 creationPerso::creationPerso(int largeurFenetreDeJeu, int hauteurFenetreDeJeu, bool Affichagefps)
 {
 	lFenetreDeJeu = largeurFenetreDeJeu;
@@ -410,7 +414,7 @@ void creationPerso::start()
 		{
 			creaWindow.close();
 			jeu * partie = new jeu(lFenetreDeJeu, hFenetreDeJeu, Affichfps);
-			partie->Startjeu(classe,99 ,force, dexterite, constitution, charisme, sagesse, intelligence, 256,1440 ,1,1,1,slotSauvegarde);
+			partie->Startjeu(classe,99 ,force, dexterite, constitution, charisme, sagesse, intelligence, 256,1440 ,1,1,1,1,slotSauvegarde);
 			delete partie;
 		}
 

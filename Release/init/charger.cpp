@@ -93,20 +93,20 @@ void charger::start()
 			
 			chargerWindow.close();
 			jeu * partie = new jeu(largeurFenetreDeJeu, hauteurFenetreDeJeu, Affichagefps);
-			partie->Startjeu((*touteSauvegarde)[0]->classe, (*touteSauvegarde)[0]->currentHp, (*touteSauvegarde)[0]->force, (*touteSauvegarde)[0]->dexterite, (*touteSauvegarde)[0]->constitution, (*touteSauvegarde)[0]->charisme, (*touteSauvegarde)[0]->sagesse, (*touteSauvegarde)[0]->intelligence, (*touteSauvegarde)[0]->coordx, (*touteSauvegarde)[0]->coordy, (*touteSauvegarde)[0]->mob1, (*touteSauvegarde)[0]->mob2, (*touteSauvegarde)[0]->mob3, 1);
+			partie->Startjeu((*touteSauvegarde)[0]->classe, (*touteSauvegarde)[0]->currentHp, (*touteSauvegarde)[0]->force, (*touteSauvegarde)[0]->dexterite, (*touteSauvegarde)[0]->constitution, (*touteSauvegarde)[0]->charisme, (*touteSauvegarde)[0]->sagesse, (*touteSauvegarde)[0]->intelligence, (*touteSauvegarde)[0]->coordx, (*touteSauvegarde)[0]->coordy, (*touteSauvegarde)[0]->mob1, (*touteSauvegarde)[0]->mob2, (*touteSauvegarde)[0]->mob3,(*touteSauvegarde)[0]->mob4, 1);
 		}
 		if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && boutonSauvegarde2->rect.getGlobalBounds().intersects(spriteCurseurCharger.rect.getGlobalBounds()))
 		{
 			chargerWindow.close();
 			jeu * partie = new jeu(largeurFenetreDeJeu, hauteurFenetreDeJeu, Affichagefps);
-			partie->Startjeu((*touteSauvegarde)[1]->classe, (*touteSauvegarde)[1]->currentHp, (*touteSauvegarde)[1]->force, (*touteSauvegarde)[1]->dexterite, (*touteSauvegarde)[1]->constitution, (*touteSauvegarde)[1]->charisme, (*touteSauvegarde)[1]->sagesse, (*touteSauvegarde)[1]->intelligence, (*touteSauvegarde)[1]->coordx, (*touteSauvegarde)[1]->coordy, (*touteSauvegarde)[1]->mob1, (*touteSauvegarde)[1]->mob2, (*touteSauvegarde)[1]->mob3, 2);
+			partie->Startjeu((*touteSauvegarde)[1]->classe, (*touteSauvegarde)[1]->currentHp, (*touteSauvegarde)[1]->force, (*touteSauvegarde)[1]->dexterite, (*touteSauvegarde)[1]->constitution, (*touteSauvegarde)[1]->charisme, (*touteSauvegarde)[1]->sagesse, (*touteSauvegarde)[1]->intelligence, (*touteSauvegarde)[1]->coordx, (*touteSauvegarde)[1]->coordy, (*touteSauvegarde)[1]->mob1, (*touteSauvegarde)[1]->mob2, (*touteSauvegarde)[1]->mob3, (*touteSauvegarde)[1]->mob4, 2);
 			
 		}
 		if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && boutonSauvegarde3->rect.getGlobalBounds().intersects(spriteCurseurCharger.rect.getGlobalBounds()))
 		{
 			chargerWindow.close();
 			jeu * partie = new jeu(largeurFenetreDeJeu, hauteurFenetreDeJeu, Affichagefps);
-			partie->Startjeu((*touteSauvegarde)[2]->classe, (*touteSauvegarde)[2]->currentHp, (*touteSauvegarde)[2]->force, (*touteSauvegarde)[2]->dexterite, (*touteSauvegarde)[2]->constitution, (*touteSauvegarde)[2]->charisme, (*touteSauvegarde)[2]->sagesse, (*touteSauvegarde)[2]->intelligence, (*touteSauvegarde)[2]->coordx, (*touteSauvegarde)[2]->coordy, (*touteSauvegarde)[2]->mob1, (*touteSauvegarde)[2]->mob2, (*touteSauvegarde)[2]->mob3, 3);
+			partie->Startjeu((*touteSauvegarde)[2]->classe, (*touteSauvegarde)[2]->currentHp, (*touteSauvegarde)[2]->force, (*touteSauvegarde)[2]->dexterite, (*touteSauvegarde)[2]->constitution, (*touteSauvegarde)[2]->charisme, (*touteSauvegarde)[2]->sagesse, (*touteSauvegarde)[2]->intelligence, (*touteSauvegarde)[2]->coordx, (*touteSauvegarde)[2]->coordy, (*touteSauvegarde)[2]->mob1, (*touteSauvegarde)[2]->mob2, (*touteSauvegarde)[2]->mob3, (*touteSauvegarde)[2]->mob4, 3);
 		}
 
 		chargerWindow.clear();

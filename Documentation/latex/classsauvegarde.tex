@@ -1,0 +1,216 @@
+\hypertarget{classsauvegarde}{}\section{sauvegarde Class Reference}
+\label{classsauvegarde}\index{sauvegarde@{sauvegarde}}
+
+
+Cette classe tampon qui permet de prendre directement les informations du jeu afin qu\textquotesingle{}elles soient utilisees par la classe Data\+Base.  
+
+
+
+
+{\ttfamily \#include $<$sauvegarde.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsauvegarde_a2e3a965ae68f9de4531cdac8f49c8efc}{sauvegarde}} (string nomdela\+Classe, \mbox{\hyperlink{classpersonnage}{personnage}} $\ast$ptr\+Pj, bool viemob1, bool viemob2, bool viemob3, bool viemob4, int rowid)
+\begin{DoxyCompactList}\small\item\em constructeur \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsauvegarde_a33f97d222d0c31bb2c9bbdede25ed90a}{sauvegarde}} ()
+\begin{DoxyCompactList}\small\item\em constructeur \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsauvegarde_a4a83cdaed16faa198b7b8b16a9d16a01}{$\sim$sauvegarde}} ()
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classsauvegarde_aac8c952d4816b64287a25d945d3213c2}{classe}}
+\item 
+std\+::string \mbox{\hyperlink{classsauvegarde_a3c9a4c2dbb3da4fd09c816012ee78655}{nom\+Classe}}
+\item 
+int \mbox{\hyperlink{classsauvegarde_a858afe68a31658d493f3f5abf4bb997a}{force}} = 10
+\item 
+int \mbox{\hyperlink{classsauvegarde_ad29a99de4fba76c900edfd5c4c814ec8}{constitution}} = 10
+\item 
+int \mbox{\hyperlink{classsauvegarde_ada794b3462e13aff90bf35f36098da3d}{dexterite}} = 10
+\item 
+int \mbox{\hyperlink{classsauvegarde_ad53565a7435fc18c5a4ee09709e3dbdb}{sagesse}} = 10
+\item 
+int \mbox{\hyperlink{classsauvegarde_a4e6c6ce21ae52120984f79144ddee95d}{charisme}} = 10
+\item 
+int \mbox{\hyperlink{classsauvegarde_a8553de458faa853addf2c0e908c963c1}{intelligence}} = 10
+\item 
+int \mbox{\hyperlink{classsauvegarde_aae22f75401bf04fb42dc28c3e03ae4a2}{coordx}} = 8 $\ast$ 32
+\item 
+int \mbox{\hyperlink{classsauvegarde_afacd741e4368c4c16e2f33f080e99002}{coordy}} = 45 $\ast$ 32
+\item 
+int \mbox{\hyperlink{classsauvegarde_a85065e9b3b749e04d24c18238a4d74f1}{row\+ID}} =0
+\item 
+int \mbox{\hyperlink{classsauvegarde_af2a0ae926aeb4b4b97a6e993d82d6eae}{current\+Hp}} =99
+\item 
+bool \mbox{\hyperlink{classsauvegarde_a6622f2f3ed50a4cb3a318e9fe32eeec1}{mob1}} = true
+\item 
+bool \mbox{\hyperlink{classsauvegarde_af6635c848e63bfa93c24386434c67823}{mob2}} = true
+\item 
+bool \mbox{\hyperlink{classsauvegarde_a335355cf40458a3587c66db08951d2a8}{mob3}} = true
+\item 
+bool \mbox{\hyperlink{classsauvegarde_a05cc593a25304fe90757c1633870f317}{mob4}} = true
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Cette classe tampon qui permet de prendre directement les informations du jeu afin qu\textquotesingle{}elles soient utilisees par la classe Data\+Base. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classsauvegarde_a2e3a965ae68f9de4531cdac8f49c8efc}\label{classsauvegarde_a2e3a965ae68f9de4531cdac8f49c8efc}} 
+\index{sauvegarde@{sauvegarde}!sauvegarde@{sauvegarde}}
+\index{sauvegarde@{sauvegarde}!sauvegarde@{sauvegarde}}
+\subsubsection{\texorpdfstring{sauvegarde()}{sauvegarde()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily sauvegarde\+::sauvegarde (\begin{DoxyParamCaption}\item[{string}]{nomdela\+Classe,  }\item[{\mbox{\hyperlink{classpersonnage}{personnage}} $\ast$}]{ptr\+Pj,  }\item[{bool}]{viemob1,  }\item[{bool}]{viemob2,  }\item[{bool}]{viemob3,  }\item[{bool}]{viemob4,  }\item[{int}]{rowid }\end{DoxyParamCaption})}
+
+
+
+constructeur 
+
+Constructeur de la classe sauvegarde surcharge 
+\begin{DoxyParams}{Parameters}
+{\em nomdela\+Classe} & \+: nom du metier choisi par le joueur \\
+\hline
+{\em ptr\+Pj} & \+: pointeur sur un objet personnage (le personnage principal du Personnage Joueur) \\
+\hline
+{\em mob1} & \+: indicateur si le monstre 1 est en vie \\
+\hline
+{\em mob2} & \+: indicateur si le monstre 2 est en vie \\
+\hline
+{\em mob3} & \+: indicateur si le monstre 3 est en vie \\
+\hline
+{\em mob4} & \+: indicateur si le monstre 4 est en vie \\
+\hline
+{\em rowid} & \+: numero du slot de sauvegarde \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si la requete a ete execute 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classsauvegarde_a33f97d222d0c31bb2c9bbdede25ed90a}\label{classsauvegarde_a33f97d222d0c31bb2c9bbdede25ed90a}} 
+\index{sauvegarde@{sauvegarde}!sauvegarde@{sauvegarde}}
+\index{sauvegarde@{sauvegarde}!sauvegarde@{sauvegarde}}
+\subsubsection{\texorpdfstring{sauvegarde()}{sauvegarde()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily sauvegarde\+::sauvegarde (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+constructeur 
+
+Constructeur de la classe sauvegarde \mbox{\Hypertarget{classsauvegarde_a4a83cdaed16faa198b7b8b16a9d16a01}\label{classsauvegarde_a4a83cdaed16faa198b7b8b16a9d16a01}} 
+\index{sauvegarde@{sauvegarde}!````~sauvegarde@{$\sim$sauvegarde}}
+\index{````~sauvegarde@{$\sim$sauvegarde}!sauvegarde@{sauvegarde}}
+\subsubsection{\texorpdfstring{$\sim$sauvegarde()}{~sauvegarde()}}
+{\footnotesize\ttfamily sauvegarde\+::$\sim$sauvegarde (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructeur. 
+
+Destructeur de la classe sauvegarde 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classsauvegarde_a4e6c6ce21ae52120984f79144ddee95d}\label{classsauvegarde_a4e6c6ce21ae52120984f79144ddee95d}} 
+\index{sauvegarde@{sauvegarde}!charisme@{charisme}}
+\index{charisme@{charisme}!sauvegarde@{sauvegarde}}
+\subsubsection{\texorpdfstring{charisme}{charisme}}
+{\footnotesize\ttfamily int sauvegarde\+::charisme = 10}
+
+charisme du personnage initialise a 10 \mbox{\Hypertarget{classsauvegarde_aac8c952d4816b64287a25d945d3213c2}\label{classsauvegarde_aac8c952d4816b64287a25d945d3213c2}} 
+\index{sauvegarde@{sauvegarde}!classe@{classe}}
+\index{classe@{classe}!sauvegarde@{sauvegarde}}
+\subsubsection{\texorpdfstring{classe}{classe}}
+{\footnotesize\ttfamily int sauvegarde\+::classe}
+
+code chiffre de la classe \mbox{\Hypertarget{classsauvegarde_ad29a99de4fba76c900edfd5c4c814ec8}\label{classsauvegarde_ad29a99de4fba76c900edfd5c4c814ec8}} 
+\index{sauvegarde@{sauvegarde}!constitution@{constitution}}
+\index{constitution@{constitution}!sauvegarde@{sauvegarde}}
+\subsubsection{\texorpdfstring{constitution}{constitution}}
+{\footnotesize\ttfamily int sauvegarde\+::constitution = 10}
+
+constitution du personnage initialise a 10 \mbox{\Hypertarget{classsauvegarde_aae22f75401bf04fb42dc28c3e03ae4a2}\label{classsauvegarde_aae22f75401bf04fb42dc28c3e03ae4a2}} 
+\index{sauvegarde@{sauvegarde}!coordx@{coordx}}
+\index{coordx@{coordx}!sauvegarde@{sauvegarde}}
+\subsubsection{\texorpdfstring{coordx}{coordx}}
+{\footnotesize\ttfamily int sauvegarde\+::coordx = 8 $\ast$ 32}
+
+absysse du personnage initialise a 256 \mbox{\Hypertarget{classsauvegarde_afacd741e4368c4c16e2f33f080e99002}\label{classsauvegarde_afacd741e4368c4c16e2f33f080e99002}} 
+\index{sauvegarde@{sauvegarde}!coordy@{coordy}}
+\index{coordy@{coordy}!sauvegarde@{sauvegarde}}
+\subsubsection{\texorpdfstring{coordy}{coordy}}
+{\footnotesize\ttfamily int sauvegarde\+::coordy = 45 $\ast$ 32}
+
+ordonnee du personnage initialise a 1440 \mbox{\Hypertarget{classsauvegarde_af2a0ae926aeb4b4b97a6e993d82d6eae}\label{classsauvegarde_af2a0ae926aeb4b4b97a6e993d82d6eae}} 
+\index{sauvegarde@{sauvegarde}!current\+Hp@{current\+Hp}}
+\index{current\+Hp@{current\+Hp}!sauvegarde@{sauvegarde}}
+\subsubsection{\texorpdfstring{current\+Hp}{currentHp}}
+{\footnotesize\ttfamily int sauvegarde\+::current\+Hp =99}
+
+vie actuelle du personnage initialiser a 99 \mbox{\Hypertarget{classsauvegarde_ada794b3462e13aff90bf35f36098da3d}\label{classsauvegarde_ada794b3462e13aff90bf35f36098da3d}} 
+\index{sauvegarde@{sauvegarde}!dexterite@{dexterite}}
+\index{dexterite@{dexterite}!sauvegarde@{sauvegarde}}
+\subsubsection{\texorpdfstring{dexterite}{dexterite}}
+{\footnotesize\ttfamily int sauvegarde\+::dexterite = 10}
+
+dexterite du personnage initialise a 10 \mbox{\Hypertarget{classsauvegarde_a858afe68a31658d493f3f5abf4bb997a}\label{classsauvegarde_a858afe68a31658d493f3f5abf4bb997a}} 
+\index{sauvegarde@{sauvegarde}!force@{force}}
+\index{force@{force}!sauvegarde@{sauvegarde}}
+\subsubsection{\texorpdfstring{force}{force}}
+{\footnotesize\ttfamily int sauvegarde\+::force = 10}
+
+force du personnage initialise a 10 \mbox{\Hypertarget{classsauvegarde_a8553de458faa853addf2c0e908c963c1}\label{classsauvegarde_a8553de458faa853addf2c0e908c963c1}} 
+\index{sauvegarde@{sauvegarde}!intelligence@{intelligence}}
+\index{intelligence@{intelligence}!sauvegarde@{sauvegarde}}
+\subsubsection{\texorpdfstring{intelligence}{intelligence}}
+{\footnotesize\ttfamily int sauvegarde\+::intelligence = 10}
+
+intelligence du personnage initialise a 10 \mbox{\Hypertarget{classsauvegarde_a6622f2f3ed50a4cb3a318e9fe32eeec1}\label{classsauvegarde_a6622f2f3ed50a4cb3a318e9fe32eeec1}} 
+\index{sauvegarde@{sauvegarde}!mob1@{mob1}}
+\index{mob1@{mob1}!sauvegarde@{sauvegarde}}
+\subsubsection{\texorpdfstring{mob1}{mob1}}
+{\footnotesize\ttfamily bool sauvegarde\+::mob1 = true}
+
+mort ou vie du monstre mob1 \mbox{\Hypertarget{classsauvegarde_af6635c848e63bfa93c24386434c67823}\label{classsauvegarde_af6635c848e63bfa93c24386434c67823}} 
+\index{sauvegarde@{sauvegarde}!mob2@{mob2}}
+\index{mob2@{mob2}!sauvegarde@{sauvegarde}}
+\subsubsection{\texorpdfstring{mob2}{mob2}}
+{\footnotesize\ttfamily bool sauvegarde\+::mob2 = true}
+
+mort ou vie du monstre mob2 \mbox{\Hypertarget{classsauvegarde_a335355cf40458a3587c66db08951d2a8}\label{classsauvegarde_a335355cf40458a3587c66db08951d2a8}} 
+\index{sauvegarde@{sauvegarde}!mob3@{mob3}}
+\index{mob3@{mob3}!sauvegarde@{sauvegarde}}
+\subsubsection{\texorpdfstring{mob3}{mob3}}
+{\footnotesize\ttfamily bool sauvegarde\+::mob3 = true}
+
+mort ou vie du monstre mob3 \mbox{\Hypertarget{classsauvegarde_a05cc593a25304fe90757c1633870f317}\label{classsauvegarde_a05cc593a25304fe90757c1633870f317}} 
+\index{sauvegarde@{sauvegarde}!mob4@{mob4}}
+\index{mob4@{mob4}!sauvegarde@{sauvegarde}}
+\subsubsection{\texorpdfstring{mob4}{mob4}}
+{\footnotesize\ttfamily bool sauvegarde\+::mob4 = true}
+
+mort ou vie du monstre mob4 \mbox{\Hypertarget{classsauvegarde_a3c9a4c2dbb3da4fd09c816012ee78655}\label{classsauvegarde_a3c9a4c2dbb3da4fd09c816012ee78655}} 
+\index{sauvegarde@{sauvegarde}!nom\+Classe@{nom\+Classe}}
+\index{nom\+Classe@{nom\+Classe}!sauvegarde@{sauvegarde}}
+\subsubsection{\texorpdfstring{nom\+Classe}{nomClasse}}
+{\footnotesize\ttfamily std\+::string sauvegarde\+::nom\+Classe}
+
+nom de la classe \mbox{\Hypertarget{classsauvegarde_a85065e9b3b749e04d24c18238a4d74f1}\label{classsauvegarde_a85065e9b3b749e04d24c18238a4d74f1}} 
+\index{sauvegarde@{sauvegarde}!row\+ID@{row\+ID}}
+\index{row\+ID@{row\+ID}!sauvegarde@{sauvegarde}}
+\subsubsection{\texorpdfstring{row\+ID}{rowID}}
+{\footnotesize\ttfamily int sauvegarde\+::row\+ID =0}
+
+slot de sauvegarde de la partie \mbox{\Hypertarget{classsauvegarde_ad53565a7435fc18c5a4ee09709e3dbdb}\label{classsauvegarde_ad53565a7435fc18c5a4ee09709e3dbdb}} 
+\index{sauvegarde@{sauvegarde}!sagesse@{sagesse}}
+\index{sagesse@{sagesse}!sauvegarde@{sauvegarde}}
+\subsubsection{\texorpdfstring{sagesse}{sagesse}}
+{\footnotesize\ttfamily int sauvegarde\+::sagesse = 10}
+
+sagesse du personnage initialise a 10 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Release/database/\mbox{\hyperlink{sauvegarde_8h}{sauvegarde.\+h}}\item 
+Release/database/sauvegarde.\+cpp\end{DoxyCompactItemize}

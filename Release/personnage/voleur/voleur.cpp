@@ -50,6 +50,10 @@ void voleur::AttaqueSpecial(personnage& ennemi)
 		if (ennemi.CA()+2 > jetToucher)
 		{
 			AvancerAttaque();
+			this->buffer.loadFromFile("./assets/sound/rate.ogg");
+			this->sound.setBuffer(this->buffer);
+			this->sound.setVolume(20);
+			this->sound.play();
 			this->text.setString("Raté");
 			this->text.setFillColor(sf::Color::Red);
 			this->text.setCharacterSize(16);
@@ -90,9 +94,10 @@ void voleur::AttaqueSpecial(personnage& ennemi)
 	}
 	else
 	{
-		this->text.setString("feinte reussi");
+		this->text.setString("Feinte reussi");
 		this->text.setFillColor(sf::Color::Red);
 		this->text.setCharacterSize(16);
+		sf::sleep(sf::milliseconds(250));
 		x = this->rect.getPosition().x;
 		this->text.setPosition(x, y - 30);
 		(this->feinte) = true;

@@ -1,0 +1,31 @@
+digraph "animationCombat::coup"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node14 [label="animationCombat::coup",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node14 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="personnage::InfligeDegat",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpersonnage.html#ac03a8156d3a1d2efc06385d4d9b901d0",tooltip="calcul le nombre de point de vie que l&#39;adversaire perd "];
+  Node15 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="paladin::AttaqueSpecial",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpaladin.html#aae8d62c6e7c30ad1d4fbc9f147161d74",tooltip="lance l&#39;attaque Justice "];
+  Node15 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="personnage::Attaque",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpersonnage.html#a5bb28bbee50818b9ee18276c9f64be65",tooltip="calcul si le personnage arrive a toucher ou non son adversaire "];
+  Node17 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="combat::startcombat",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classcombat.html#a0d35d19c972a74a3ba97192ab10d2df1",tooltip="enchaine les tours de combat jusqu&#39;a la mort d&#39;un des participant "];
+  Node18 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="jeu::Combat32",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classjeu.html#a63596fcd7c1a89fa40d5f5d89a159828",tooltip="lance une fenetre de combat et un thread d&#39;un objet combat "];
+  Node19 -> Node20 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="jeu::Startjeu",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classjeu.html#aeb59c51913d23e2f449ad04f0de2072b",tooltip="lance la fentre principal de jeu "];
+  Node20 -> Node21 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node21 [label="creationPerso::start",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classcreation_perso.html#abb820eec1f9ab02fb303926d50751f46",tooltip="lance le questionnaire "];
+  Node21 -> Node22 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node22 [label="menu::menuStart",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classmenu.html#a0f6aa4e91d4c67fdb426e9d44d9ed177",tooltip="lance le menu "];
+  Node20 -> Node23 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node23 [label="charger::start",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classcharger.html#a8e98fa0fa752226f1bf578b5d01a6319",tooltip="creer une fenetre et affiche les 3 sauvegardes "];
+  Node23 -> Node22 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 -> Node20 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 -> Node24 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node24 [label="ranger::AttaqueSpecial",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classranger.html#ab460e3ff6701998d748fa9cbdb2fdf16",tooltip="lance l&#39;attaque headshot "];
+  Node15 -> Node25 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node25 [label="voleur::AttaqueSpecial",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classvoleur.html#a3c35701899c8774ce1ae9998983a37b4",tooltip="lance l&#39;attaque feinte-backstab "];
+}

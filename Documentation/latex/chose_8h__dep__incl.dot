@@ -1,0 +1,47 @@
+digraph "Release/personnage/chose.h"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node10 [label="Release/personnage\l/chose.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node10 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="Release/personnage\l/personnage.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$personnage_8h.html",tooltip="creer et gerre les personnages joueurs et IA du jeu "];
+  Node11 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="Release/database/sauvegarde.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sauvegarde_8h.html",tooltip="classe qui reprend toutes les informations necessaire afin de les stocked en abse de donnee ..."];
+  Node12 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="Release/database/Database.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_database_8h.html",tooltip="creation ecriture modification d&#39;une bdd fichier database.db   qui permet la sauvegarde d&#39;une partie ..."];
+  Node13 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="Release/game/jeu.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$jeu_8h.html",tooltip="permet de jouer apres la creation de personnage "];
+  Node14 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="Release/game/creationPerso.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$creation_perso_8h.html",tooltip="permet au joueur de cree un personnage "];
+  Node15 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node14 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node16 [label="Release/init/menu.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$menu_8h.html",tooltip="creer une fenetre permettant d&#39;afficher les boutons du menu "];
+  Node16 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node17 [label="Release/init/charger.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$charger_8h.html",tooltip="permet d&#39;afficher les sauvegardes et cliquer sur une "];
+  Node17 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node13 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node18 [label="Release/gestionCombat\l/combat.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$combat_8h.html",tooltip="permet de gerrer le combat "];
+  Node18 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node19 [label="Release/personnage\l/paladin/paladin.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$paladin_8h.html",tooltip="attaque et calcul de soin du metier paladin "];
+  Node19 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 -> Node20 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node20 [label="Release/personnage\l/guerrier/guerrier.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$guerrier_8h.html",tooltip="attaque et calcul de soin du metier guerrier "];
+  Node20 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 -> Node21 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node21 [label="Release/personnage\l/alchimiste/alchimiste.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$alchimiste_8h.html",tooltip="attaque et calcul de soin du metier Alchimiste "];
+  Node21 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 -> Node22 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node22 [label="Release/personnage\l/ranger/ranger.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ranger_8h.html",tooltip="attaque et calcul de soin du metier ranger "];
+  Node22 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 -> Node23 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node23 [label="Release/personnage\l/voleur/voleur.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$voleur_8h.html",tooltip="attaque et calcul de soin du metier voleur "];
+  Node23 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 -> Node24 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node24 [label="Release/game/mur.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mur_8h.html",tooltip="permet de creer des blocks "];
+  Node24 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+}

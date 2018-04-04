@@ -1,0 +1,183 @@
+\hypertarget{classdatabase}{}\section{database Class Reference}
+\label{classdatabase}\index{database@{database}}
+
+
+creation ecriture modification d\textquotesingle{}une bdd fichier database.\+db qui permet la sauvegarde d\textquotesingle{}une partie  
+
+
+
+
+{\ttfamily \#include $<$Database.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdatabase_a35ec480ed529a9d092a7ebc5472b767f}{database}} ()
+\begin{DoxyCompactList}\small\item\em constructeur \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classdatabase_a31008de680565a626cd975c25d4351db}{$\sim$database}} ()
+\begin{DoxyCompactList}\small\item\em destructeur \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdatabase_a746cfcb8f33de37f99cabce2eef26d2d}{open\+Database}} ()
+\begin{DoxyCompactList}\small\item\em connection de la base de donnee \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdatabase_a9c47659b372a4f36bf68413499d4ea95}{close\+Database}} ()
+\begin{DoxyCompactList}\small\item\em fermeture de la connection a la base de donnee \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classdatabase_a2ca3b61b5dbb7f02220fd5bc277dcb8a}{execute\+Query}} (std\+::string query)
+\begin{DoxyCompactList}\small\item\em permet l\textquotesingle{}execution de requete S\+QL \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classdatabase_a287490545fa5fe82219162c6254abbfc}{insert\+Sauvegarde\+Sans\+Doublon}} (std\+::string nom\+Classe, int classe, int current\+Hp, int force, int constitution, int dexterite, int sagesse, int charisme, int intelligence, int coordx, int coordy, int mob1, int mob2, int mob3, int mob4, int id)
+\begin{DoxyCompactList}\small\item\em permet l\textquotesingle{}insertion sans doublon \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classsauvegarde}{sauvegarde}} $\ast$ $>$ $\ast$ \mbox{\hyperlink{classdatabase_abf69b9f69151bd9697365b9d69026273}{get\+All\+Sauvegarde}} ()
+\begin{DoxyCompactList}\small\item\em retourne la liste de sauvegarde \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classdatabase_a5112834fd0407d9bd04eabf5a2ebe705}{update\+Sauvegarde}} (\mbox{\hyperlink{classsauvegarde}{sauvegarde}} $\ast$save)
+\begin{DoxyCompactList}\small\item\em modifie une sauvegarde \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+creation ecriture modification d\textquotesingle{}une bdd fichier database.\+db qui permet la sauvegarde d\textquotesingle{}une partie 
+
+Cette classe surcharge les accesseurs standards du module\+\_\+voiture pour convenir aux specificites des differents modeles possibles. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classdatabase_a35ec480ed529a9d092a7ebc5472b767f}\label{classdatabase_a35ec480ed529a9d092a7ebc5472b767f}} 
+\index{database@{database}!database@{database}}
+\index{database@{database}!database@{database}}
+\subsubsection{\texorpdfstring{database()}{database()}}
+{\footnotesize\ttfamily database\+::database (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+constructeur 
+
+Constructeur de la classe Database \mbox{\Hypertarget{classdatabase_a31008de680565a626cd975c25d4351db}\label{classdatabase_a31008de680565a626cd975c25d4351db}} 
+\index{database@{database}!````~database@{$\sim$database}}
+\index{````~database@{$\sim$database}!database@{database}}
+\subsubsection{\texorpdfstring{$\sim$database()}{~database()}}
+{\footnotesize\ttfamily database\+::$\sim$database (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+destructeur 
+
+Destructeur de la classe Database 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classdatabase_a9c47659b372a4f36bf68413499d4ea95}\label{classdatabase_a9c47659b372a4f36bf68413499d4ea95}} 
+\index{database@{database}!close\+Database@{close\+Database}}
+\index{close\+Database@{close\+Database}!database@{database}}
+\subsubsection{\texorpdfstring{close\+Database()}{closeDatabase()}}
+{\footnotesize\ttfamily void database\+::close\+Database (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+fermeture de la connection a la base de donnee 
+
+permet la deconnection a la base de donnee database.\+bd \mbox{\Hypertarget{classdatabase_a2ca3b61b5dbb7f02220fd5bc277dcb8a}\label{classdatabase_a2ca3b61b5dbb7f02220fd5bc277dcb8a}} 
+\index{database@{database}!execute\+Query@{execute\+Query}}
+\index{execute\+Query@{execute\+Query}!database@{database}}
+\subsubsection{\texorpdfstring{execute\+Query()}{executeQuery()}}
+{\footnotesize\ttfamily bool database\+::execute\+Query (\begin{DoxyParamCaption}\item[{std\+::string}]{query }\end{DoxyParamCaption})}
+
+
+
+permet l\textquotesingle{}execution de requete S\+QL 
+
+execute la requete sql dans database.\+bd 
+\begin{DoxyParams}{Parameters}
+{\em query} & \+: requete sql \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si la requete a ete execute 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdatabase_abf69b9f69151bd9697365b9d69026273}\label{classdatabase_abf69b9f69151bd9697365b9d69026273}} 
+\index{database@{database}!get\+All\+Sauvegarde@{get\+All\+Sauvegarde}}
+\index{get\+All\+Sauvegarde@{get\+All\+Sauvegarde}!database@{database}}
+\subsubsection{\texorpdfstring{get\+All\+Sauvegarde()}{getAllSauvegarde()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classsauvegarde}{sauvegarde}} $\ast$ $>$ $\ast$ database\+::get\+All\+Sauvegarde (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+retourne la liste de sauvegarde 
+
+execute la requete sql dans database.\+bd afin
+
+\begin{DoxyReturn}{Returns}
+un vecteur de la classe sauvegarde pour chaque sauvegarde 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdatabase_a287490545fa5fe82219162c6254abbfc}\label{classdatabase_a287490545fa5fe82219162c6254abbfc}} 
+\index{database@{database}!insert\+Sauvegarde\+Sans\+Doublon@{insert\+Sauvegarde\+Sans\+Doublon}}
+\index{insert\+Sauvegarde\+Sans\+Doublon@{insert\+Sauvegarde\+Sans\+Doublon}!database@{database}}
+\subsubsection{\texorpdfstring{insert\+Sauvegarde\+Sans\+Doublon()}{insertSauvegardeSansDoublon()}}
+{\footnotesize\ttfamily bool database\+::insert\+Sauvegarde\+Sans\+Doublon (\begin{DoxyParamCaption}\item[{std\+::string}]{nom\+Classe,  }\item[{int}]{classe,  }\item[{int}]{current\+Hp,  }\item[{int}]{force,  }\item[{int}]{constitution,  }\item[{int}]{dexterite,  }\item[{int}]{sagesse,  }\item[{int}]{charisme,  }\item[{int}]{intelligence,  }\item[{int}]{coordx,  }\item[{int}]{coordy,  }\item[{int}]{mob1,  }\item[{int}]{mob2,  }\item[{int}]{mob3,  }\item[{int}]{mob4,  }\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+permet l\textquotesingle{}insertion sans doublon 
+
+execute une requete sql afin de sauvegarder une partie 
+\begin{DoxyParams}{Parameters}
+{\em Nom\+Classe} & \+: nom du metier de l\textquotesingle{}avatard du joueur \\
+\hline
+{\em classe} & \+: code de la classe \\
+\hline
+{\em currenthp} & pdv actuel \\
+\hline
+{\em force} & score de force \\
+\hline
+{\em constitution} & \+: score de constitution \\
+\hline
+{\em dexterite} & \+: score de dexterite \\
+\hline
+{\em sagesse} & \+: score de sagesse \\
+\hline
+{\em charisme} & \+: score de charisme \\
+\hline
+{\em intelligence} & \+: score de intelligence \\
+\hline
+{\em coordx} & \+: absysse de la position du joueur \\
+\hline
+{\em coordy} & \+: ordonne de la position du joueur \\
+\hline
+{\em mob1} & \+: indicateur si le monstre 1 est en vie \\
+\hline
+{\em mob2} & \+: indicateur si le monstre 2 est en vie \\
+\hline
+{\em mob3} & \+: indicateur si le monstre 3 est en vie \\
+\hline
+{\em mob4} & \+: indicateur si le monstre 4 est en vie \\
+\hline
+{\em id} & \+: numero du slot de sauvegarde \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si la requete a ete execute 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classdatabase_a746cfcb8f33de37f99cabce2eef26d2d}\label{classdatabase_a746cfcb8f33de37f99cabce2eef26d2d}} 
+\index{database@{database}!open\+Database@{open\+Database}}
+\index{open\+Database@{open\+Database}!database@{database}}
+\subsubsection{\texorpdfstring{open\+Database()}{openDatabase()}}
+{\footnotesize\ttfamily void database\+::open\+Database (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+connection de la base de donnee 
+
+permet la connection a la base de donnee database.\+bd \mbox{\Hypertarget{classdatabase_a5112834fd0407d9bd04eabf5a2ebe705}\label{classdatabase_a5112834fd0407d9bd04eabf5a2ebe705}} 
+\index{database@{database}!update\+Sauvegarde@{update\+Sauvegarde}}
+\index{update\+Sauvegarde@{update\+Sauvegarde}!database@{database}}
+\subsubsection{\texorpdfstring{update\+Sauvegarde()}{updateSauvegarde()}}
+{\footnotesize\ttfamily bool database\+::update\+Sauvegarde (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsauvegarde}{sauvegarde}} $\ast$}]{save }\end{DoxyParamCaption})}
+
+
+
+modifie une sauvegarde 
+
+execute la requete sql dans database.\+bd afin de modifier une sauvegarde
+
+\begin{DoxyReturn}{Returns}
+vrai si la requete est execute 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Release/database/\mbox{\hyperlink{_database_8h}{Database.\+h}}\item 
+Release/database/Database.\+cpp\end{DoxyCompactItemize}

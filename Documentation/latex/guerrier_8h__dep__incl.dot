@@ -1,0 +1,16 @@
+digraph "Release/personnage/guerrier/guerrier.h"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node14 [label="Release/personnage\l/guerrier/guerrier.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node14 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="Release/game/jeu.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$jeu_8h.html",tooltip="permet de jouer apres la creation de personnage "];
+  Node15 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node16 [label="Release/game/creationPerso.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$creation_perso_8h.html",tooltip="permet au joueur de cree un personnage "];
+  Node16 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node15 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node17 [label="Release/init/menu.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$menu_8h.html",tooltip="creer une fenetre permettant d&#39;afficher les boutons du menu "];
+  Node17 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node18 [label="Release/init/charger.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$charger_8h.html",tooltip="permet d&#39;afficher les sauvegardes et cliquer sur une "];
+  Node18 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+}

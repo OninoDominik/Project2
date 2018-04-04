@@ -1,0 +1,20 @@
+digraph "Release/personnage" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_92709420fde8ca446636ff7c23065e8b {
+    graph [ bgcolor="#ddddee", pencolor="black", label="Release" fontname="Helvetica", fontsize="10", URL="dir_92709420fde8ca446636ff7c23065e8b.html"]
+  subgraph clusterdir_3f0aabf6415b49a526ddd50d35f12c27 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_3f0aabf6415b49a526ddd50d35f12c27.html"];
+    dir_3f0aabf6415b49a526ddd50d35f12c27 [shape=plaintext label="personnage"];
+    dir_cb3009c19a7c71339a14aeff06485cab [shape=box label="alchimiste" color="black" fillcolor="white" style="filled" URL="dir_cb3009c19a7c71339a14aeff06485cab.html"];
+    dir_0eb8350aa25de3c8307853e9472ba042 [shape=box label="guerrier" color="black" fillcolor="white" style="filled" URL="dir_0eb8350aa25de3c8307853e9472ba042.html"];
+    dir_d2f21bc58073fe1b529338963b529b5c [shape=box label="paladin" color="black" fillcolor="white" style="filled" URL="dir_d2f21bc58073fe1b529338963b529b5c.html"];
+    dir_7ab765edf8b066e3a90aff52f4313fea [shape=box label="ranger" color="black" fillcolor="white" style="filled" URL="dir_7ab765edf8b066e3a90aff52f4313fea.html"];
+    dir_a18d992d2f988568877f5c3075f9c1ca [shape=box label="voleur" color="black" fillcolor="white" style="filled" URL="dir_a18d992d2f988568877f5c3075f9c1ca.html"];
+  }
+  }
+  dir_6a7db5585b58a86db9bdf01f9d1be1bc [shape=box label="gestionCombat" URL="dir_6a7db5585b58a86db9bdf01f9d1be1bc.html"];
+  dir_6a7db5585b58a86db9bdf01f9d1be1bc->dir_3f0aabf6415b49a526ddd50d35f12c27 [headlabel="2", labeldistance=1.5 headhref="dir_000003_000005.html"];
+  dir_3f0aabf6415b49a526ddd50d35f12c27->dir_6a7db5585b58a86db9bdf01f9d1be1bc [headlabel="1", labeldistance=1.5 headhref="dir_000005_000003.html"];
+}

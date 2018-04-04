@@ -194,10 +194,6 @@ void jeu::Combat32(personnage * ptrPj, personnage * Pnj, sf::Texture texturePnj,
 jeu::~jeu()
 {
 }
-int jeu::NiveauUn()
-{
-	return 1;
-}
 
 void jeu::ChargerHpPjetbarre(personnage * ptrPj)
 {
@@ -233,7 +229,7 @@ void jeu::ChargerTexteGameover()
 }
 void jeu::ChargerTexteRemerciement()
 {
-	texteRemerciement->text.setString("Merci pour :  \nla musique à \nAdrien von Ziegler\nles sprites sheet à\n87uhgb\nla map à\nRaZziraZzi,RTPCelianna\nLunarea; Pandamaru");
+	texteRemerciement->text.setString("Merci pour :  \nla musique à \nAdrien von Ziegler\nles sprites sheet à\n87uhgb\nla map à\nRaZziraZzi,RTPCelianna\nLunarea; Pandamaru\nPathfinder à Paizo");
 	texteRemerciement->text.setFillColor(sf::Color::Cyan);
 	texteRemerciement->text.setCharacterSize(20);
 	texteRemerciement->text.setPosition(0, 120);
@@ -363,11 +359,11 @@ int jeu::Startjeu(int classe,int currenthp, int force, int dexterite,int constit
 		std::cout << "pas de sprite" << std::endl;
 		return 1;
 	}
-	if (!pala.loadFromFile("./assets/img/grave.png"))
+	/*if (!pala.loadFromFile("./assets/img/grave.png"))
 	{
 		std::cout << "pas de sprite" << std::endl;
 		return 1;
-	}
+	}*/
 	if (!textureOrc.loadFromFile("./assets/img/gobarmure.png"))
 	{
 		std::cout << "pas de sprite" << std::endl;
@@ -509,6 +505,7 @@ int jeu::Startjeu(int classe,int currenthp, int force, int dexterite,int constit
 	ptrEmma->rect.setSize(sf::Vector2f(tailleblock, tailleblock));
 	ptrEmma->sprite.setPosition(ptrEmma->rect.getPosition());
 	*ptrEmma->envie = mob3;
+	*ptrEmma->bonusAttaque = 7;
 
 	sf::Sprite spritePnjOrc(textureOrc);
 	spritePnjOrc.setTextureRect(sf::IntRect(0, 0, 64, 32));
@@ -524,6 +521,7 @@ int jeu::Startjeu(int classe,int currenthp, int force, int dexterite,int constit
 	ptrOrc->rect.setSize(sf::Vector2f(tailleblock, tailleblock));
 	ptrOrc->sprite.setPosition(ptrOrc->rect.getPosition());
 	*ptrOrc->envie = mob1;
+	*ptrOrc->bonusBouclier = 1;
 
 	sf::Sprite spritePnjgobMage(texturegobMage);
 	spritePnjgobMage.setTextureRect(sf::IntRect(0, 0, 64, 32));
@@ -539,6 +537,7 @@ int jeu::Startjeu(int classe,int currenthp, int force, int dexterite,int constit
 	ptrGobMage->rect.setSize(sf::Vector2f(tailleblock, tailleblock));
 	ptrGobMage->sprite.setPosition(ptrGobMage->rect.getPosition());
 	*ptrGobMage->envie = mob4;
+	*ptrGobMage->nbrFaceDesDegat = 8;
 
 	ptrPj->text.setString(" ");
 	ptrPj->text.setFont(font);
@@ -919,101 +918,7 @@ int jeu::Startjeu(int classe,int currenthp, int force, int dexterite,int constit
 			Combat32(ptrPj, ptrGobMage, texturegobMage, coordRepopX, coordRepopY);
 			afficheText = false;
 		}
-		/*{
-		   *ptrPj->fermeCombatWindow = false;
-
-		   afficheText = true;
-		   sf::RenderWindow combatWindow(sf::VideoMode(470, 145), "Combat"); //470.145
-
-
-		   sf::Thread thread(std::bind(&combat::startcombat, ptrPj, ptrEmma));
-
-		   thread.launch(); // start the thread (internally calls task.run())
-		   ptrPj->rect.setPosition((100), (105));
-		   ptrPj->rect.setSize((sf::Vector2f(tailleblock, tailleblock)));
-		   ptrPj->sprite.setTexture(textureHero);
-		   ptrEmma->rect.setPosition((360), (105));
-		   ptrEmma->rect.setSize((sf::Vector2f(tailleblock, tailleblock)));
-		   ptrEmma->sprite.setTexture(texture3);
-
-		   int i = 0;
-		   while (combatWindow.isOpen())
-		   {
-
-			   spriteCurseurCombat.rect.setPosition((sf::Vector2f)sf::Mouse::getPosition(combatWindow));
-			   spriteCurseurCombat.rect.setSize(sf::Vector2f(4, 4));
-
-			   while (combatWindow.pollEvent(combatEvent))
-			   {
-				   if (combatEvent.type == sf::Event::Closed)
-					   combatWindow.close();
-
-				   if (combatEvent.type == sf::Event::KeyPressed && combatEvent.key.code == sf::Keyboard::Escape)
-					   combatWindow.close();
-
-			   }
-
-			   combatWindow.setFramerateLimit(20);
-
-			   ptrPj->sprite.setTextureRect(sf::IntRect(i * tailleblock, tailleblock * 2, tailleblock, tailleblock));
-			   ptrPj->Positionnement();
-
-			   ptrEmma->sprite.setTextureRect(sf::IntRect(i * tailleblock, tailleblock, tailleblock, tailleblock));
-			   ptrEmma->Positionnement();
-
-
-			   ChargerBoutonAttaquer();
-			   boutonAttaquer->text.setFont(font);
-			   ChargerBoutonSoin();
-			   boutonSoin->text.setFont(font);
-			   ChargerHpPjetbarre(ptrPj);
-			   scorePjHp->text.setFont(font);
-			   ChargerHpPnj(ptrEmma);
-			   scorePnjHP->text.setFont(font);
-			   ChargerBoutonSpecial(ptrPj);
-			   boutonSpecial->text.setFont(font);
-
-			   if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && boutonAttaquer->rect.getGlobalBounds().intersects(spriteCurseurCombat.rect.getGlobalBounds()))
-			   {
-				   *ptrPj->choix = 1;
-			   }
-			   if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && boutonSoin->rect.getGlobalBounds().intersects(spriteCurseurCombat.rect.getGlobalBounds()))
-			   {
-				   *ptrPj->choix = 2;
-			   }
-			   if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && boutonSpecial->rect.getGlobalBounds().intersects(spriteCurseurCombat.rect.getGlobalBounds()))
-			   {
-				   *ptrPj->choix = 3;
-			   }
-
-			   i = (i + 1) % 3;
-
-			   spriteAreneBack.getPosition();
-			   combatWindow.clear();
-			   combatWindow.draw(spriteAreneBack);
-			   combatWindow.draw(spriteAreneFront);
-			   combatWindow.draw(scorePjHp->rect);
-			   combatWindow.draw(ptrPj->sprite);
-			   combatWindow.draw(ptrEmma->sprite);
-			   combatWindow.draw(boutonAttaquer->text);
-			   combatWindow.draw(boutonSoin->text);
-			   combatWindow.draw(scorePjHp->text);
-			   combatWindow.draw(scorePnjHP->text);
-			   combatWindow.draw(ptrPj->text);
-			   combatWindow.draw(ptrEmma->text);
-			   combatWindow.draw(boutonSpecial->text);
-
-			   combatWindow.display();
-
-			   if (*ptrPj->fermeCombatWindow)
-			   {
-				   emma.rect.setSize(sf::Vector2f(0, 0));
-				   ptrPj->rect.setPosition(27 * tailleblock, 10 * tailleblock);
-				   cout << "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
-				   break;
-			   }
-		   }
-	   }*/
+		
 		else
 		{
 			afficheText = false;
@@ -1039,7 +944,7 @@ int jeu::Startjeu(int classe,int currenthp, int force, int dexterite,int constit
 			ptrPj->sound.play();
 			ptrPj->sound.setVolume(60);
 			sf::Event  gameOverEvent;
-			sf::RenderWindow gameOverWindow(sf::VideoMode(320, 320), "Game Over");
+			sf::RenderWindow gameOverWindow(sf::VideoMode(320, 335), "Game Over");
 			
 			while (gameOverWindow.isOpen())
 			{

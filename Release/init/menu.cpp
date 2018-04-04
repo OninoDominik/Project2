@@ -115,10 +115,10 @@ void menu::menuStart()
 
 	database bdd;
 	bdd.openDatabase();
-	bdd.executeQuery("CREATE TABLE IF NOT EXISTS sauvegarde (nomClasse TEXT,classe INT,currentHp Int,force INT, constitution INT, dexterite INT, sagesse INT, charisme INT, intelligence INT, coordx INT, coordY INT,mob1 INT, mob2 INT, mob3 INT , id INT)"); // prix FLOAT, qtevendue INT, nom TEXT
-	bdd.insertSauvegardeSansDoublon("Alchimiste", 4,99, 10, 16, 10, 10, 6, 18, 256, 1440, 1, 1, 1,1);
-	bdd.insertSauvegardeSansDoublon("Paladin", 2,99, 16, 10, 10, 6, 18, 10, 256, 1440, 1, 1, 1,2);
-	bdd.insertSauvegardeSansDoublon("Ranger", 3,99, 10, 10, 18, 16, 6, 10,256, 1440, 1, 1, 1,3);
+	bdd.executeQuery("CREATE TABLE IF NOT EXISTS sauvegarde (nomClasse TEXT,classe INT,currentHp Int,force INT, constitution INT, dexterite INT, sagesse INT, charisme INT, intelligence INT, coordx INT, coordY INT,mob1 INT, mob2 INT, mob3 INT, mob4 INT, id INT)"); // prix FLOAT, qtevendue INT, nom TEXT
+	bdd.insertSauvegardeSansDoublon("Alchimiste", 4,99, 10, 16, 10, 10, 6, 18, 256, 1440, 1, 1, 1, 1,1);
+	bdd.insertSauvegardeSansDoublon("Paladin", 2,99, 16, 10, 10, 6, 18, 10, 256, 1440, 1, 1, 1, 1,2);
+	bdd.insertSauvegardeSansDoublon("Ranger", 3,99, 10, 10, 18, 16, 6, 10,256, 1440, 1, 1, 1, 1,3);
 
 	std::vector<sauvegarde*>* produits = bdd.getAllSauvegarde();
 	for (int i = 0; i<produits->size(); i++)
@@ -180,75 +180,7 @@ void menu::menuStart()
 			menuWindow.close();
 			charger * chargeSauvegarde = new charger(largeurFenetreDeJeu, hauteurFenetreDeJeu, Affichagefps);
 			chargeSauvegarde->start();
-			/*std::vector<sauvegarde*>* produits = bdd.getAllSauvegarde();
-			for (int i = 0; i<produits->size(); i++)
-			{
-				std::cout << (*produits)[i]->nomClasse << " + " << (*produits)[i]->classe << std::endl;
-			}*/
-			/*menuWindow.setVisible(false);
-			sf::RenderWindow chargerdeWindow(sf::VideoMode(200, 260), "charger", sf::Style::Titlebar | sf::Style::Close);
-
-			chose spriteCurseurCharger;
-			spriteCurseurCharger.rect.setPosition((sf::Vector2f)sf::Mouse::getPosition(chargerdeWindow));
-			spriteCurseurCharger.rect.setSize(sf::Vector2f(3, 3));
-
-			while (chargerdeWindow.isOpen())
-			{
-				sf::Event chargerEvent;
-				while (chargerdeWindow.pollEvent(chargerEvent))
-				{
-					if (chargerEvent.type == sf::Event::Closed)
-						chargerdeWindow.close();
-					if (chargerEvent.type == sf::Event::KeyPressed && chargerEvent.key.code == sf::Keyboard::Escape)
-						chargerdeWindow.close();
-				}
-				chargerBoutonSauvegarde3();
-				chargerBoutonSauvegarde2();
-				chargerBoutonSauvegarde();
-
-
-				boutonSauvegarde1->text.setString("1 " + ((*touteSauvegarde)[0]->nomClasse));//+" "+ std::to_string((*touteSauvegarde)[0]->coordx)+" "+ std::to_string((*touteSauvegarde)[0]->coordy));
-				boutonSauvegarde1->text.setFont(font);
-				boutonSauvegarde2->text.setString("2 " + ((*touteSauvegarde)[1]->nomClasse));// + " " + std::to_string((*touteSauvegarde)[1]->coordx) + " " + std::to_string((*touteSauvegarde)[1]->coordy));
-				boutonSauvegarde2->text.setFont(font);
-				boutonSauvegarde3->text.setString("3 " + ((*touteSauvegarde)[2]->nomClasse));// + " " + std::to_string((*touteSauvegarde)[2]->coordx) + " " + std::to_string((*touteSauvegarde)[2]->coordy));
-				boutonSauvegarde3->text.setFont(font);
-
-				if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && boutonSauvegarde->rect.getGlobalBounds().intersects(spriteCurseurCharger.rect.getGlobalBounds()))
-				{
-					cout << "testttttt" << endl;
-					cout << (*touteSauvegarde)[0]->classe << (*touteSauvegarde)[0]->force << endl;
-					jeu * partie = new jeu(largeurFenetreDeJeu, hauteurFenetreDeJeu, Affichagefps);
-					cout << (*touteSauvegarde)[0]->classe << (*touteSauvegarde)[0]->force << endl;
-					partie->Startjeu((*touteSauvegarde)[0]->classe, (*touteSauvegarde)[0]->force, (*touteSauvegarde)[0]->dexterite,(*touteSauvegarde)[0]->constitution, (*touteSauvegarde)[0]->charisme, (*touteSauvegarde)[0]->sagesse, (*touteSauvegarde)[0]->intelligence, (*touteSauvegarde)[0]->coordx, (*touteSauvegarde)[0]->coordy, (*touteSauvegarde)[0]->mob1, (*touteSauvegarde)[0]->mob2, (*touteSauvegarde)[0]->mob3,1 );
-					//(int classe, int force, int dexterite, int constitution, int charisme, int sagesse, int intelligence, int coordx, int coordy, int mob1, int mob2, int mob3
-				}
-				if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && boutonSauvegarde2->rect.getGlobalBounds().intersects(spriteCurseurCharger.rect.getGlobalBounds()))
-				{
-					
-					jeu * partie = new jeu(largeurFenetreDeJeu, hauteurFenetreDeJeu, Affichagefps);
-					cout << (*touteSauvegarde)[0]->classe << (*touteSauvegarde)[0]->force << endl;
-					partie->Startjeu((*touteSauvegarde)[1]->classe, (*touteSauvegarde)[1]->force, (*touteSauvegarde)[1]->dexterite, (*touteSauvegarde)[1]->constitution, (*touteSauvegarde)[1]->charisme, (*touteSauvegarde)[1]->sagesse, (*touteSauvegarde)[1]->intelligence, (*touteSauvegarde)[1]->coordx, (*touteSauvegarde)[1]->coordy, (*touteSauvegarde)[1]->mob1, (*touteSauvegarde)[1]->mob2, (*touteSauvegarde)[1]->mob3, 2);
-					//(int classe, int force, int dexterite, int constitution, int charisme, int sagesse, int intelligence, int coordx, int coordy, int mob1, int mob2, int mob3
-				}
-				if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && boutonSauvegarde3->rect.getGlobalBounds().intersects(spriteCurseurCharger.rect.getGlobalBounds()))
-				{
-					
-					jeu * partie = new jeu(largeurFenetreDeJeu, hauteurFenetreDeJeu, Affichagefps);
-					cout << (*touteSauvegarde)[0]->classe << (*touteSauvegarde)[0]->force << endl;
-					partie->Startjeu((*touteSauvegarde)[2]->classe, (*touteSauvegarde)[2]->force, (*touteSauvegarde)[2]->dexterite, (*touteSauvegarde)[2]->constitution, (*touteSauvegarde)[2]->charisme, (*touteSauvegarde)[2]->sagesse, (*touteSauvegarde)[2]->intelligence, (*touteSauvegarde)[2]->coordx, (*touteSauvegarde)[2]->coordy, (*touteSauvegarde)[2]->mob1, (*touteSauvegarde)[2]->mob2, (*touteSauvegarde)[2]->mob3, 3);
-					//(int classe, int force, int dexterite, int constitution, int charisme, int sagesse, int intelligence, int coordx, int coordy, int mob1, int mob2, int mob3
-				}
-
-				chargerdeWindow.clear();
-				chargerdeWindow.draw(boutonSauvegarde->text);
-				chargerdeWindow.draw(boutonSauvegarde2->text);
-				chargerdeWindow.draw(boutonSauvegarde3->text);
-				chargerdeWindow.display();
-			}
-
-			menuWindow.setVisible(true);
-		*/	
+			
 		}
 		
 		if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && boutonOption->rect.getGlobalBounds().intersects(spriteCurseur.rect.getGlobalBounds()))
@@ -310,9 +242,6 @@ void menu::menuStart()
 			menuWindow.setVisible(true);
 		}
 
-		/*chargerBoutonOption();
-		chargerBoutonChargerPartie();
-		chargerBoutonNouvellePartie();*/
 		if (boutonNouvellePartie->rect.getGlobalBounds().intersects(spriteCurseur.rect.getGlobalBounds()))
 		{
 			boutonNouvellePartie->text.setFillColor(orange);

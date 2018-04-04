@@ -252,14 +252,14 @@ int personnage::Initiative()
 	cout << "init" << initiative << endl;
 	return initiative;
 }
-void personnage::afficheStat()
+/*void personnage::afficheStat()
 {
 	cout << "nom nom nom nom " << this->nom << endl;
 
 	cout << "nbrDesSoin = 0; " << *this->nbrDesSoin << endl;
 	cout << " nbrFaceDesSoin = 0; " << *this->nbrFaceDesSoin << endl;
 	cout << " niveau = 2; " << *this->niveau << endl;
-}
+}*/
 void personnage::AvancerAttaque()
 {
 

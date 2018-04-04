@@ -169,7 +169,7 @@ void personnage::InfligeDegat(personnage& ennemi)
 	}
 	buffer.loadFromFile("./assets/sound/hit.ogg");
 	sound.setBuffer(buffer);
-	sound.setVolume(50);
+	sound.setVolume(20);
 	sound.play();
 	deg += BonusStat(*nomBonusDegat);
 	this->text.setString("j'ai inflige " + to_string(deg) + " degats");
@@ -229,7 +229,7 @@ void personnage::Attaque(personnage& ennemi)
 			cout << nom << "avance";
 			this->buffer.loadFromFile("./assets/sound/rate.ogg");
 			this->sound.setBuffer(this->buffer);
-			this->sound.setVolume(50);
+			this->sound.setVolume(20);
 			this->sound.play();
 			this->text.setString("Raté");
 			this->text.setFillColor(sf::Color::White);
@@ -252,14 +252,14 @@ int personnage::Initiative()
 	cout << "init" << initiative << endl;
 	return initiative;
 }
-void personnage::afficheStat()
+/*void personnage::afficheStat()
 {
 	cout << "nom nom nom nom " << this->nom << endl;
 
 	cout << "nbrDesSoin = 0; " << *this->nbrDesSoin << endl;
 	cout << " nbrFaceDesSoin = 0; " << *this->nbrFaceDesSoin << endl;
 	cout << " niveau = 2; " << *this->niveau << endl;
-}
+}*/
 void personnage::AvancerAttaque()
 {
 

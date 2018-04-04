@@ -1,0 +1,12 @@
+digraph "paladin"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node3 [label="paladin",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="personnage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpersonnage.html",tooltip="creer et gerre les personnages joueurs et IA du jeu "];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="chose",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classchose.html",tooltip="creer les entites basique du jeu "];
+  Node6 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" anim" ,fontname="Helvetica"];
+  Node6 [label="animationCombat",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classanimation_combat.html",tooltip="permet de creer des animations "];
+}

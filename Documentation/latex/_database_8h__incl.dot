@@ -1,0 +1,43 @@
+digraph "Release/database/Database.h"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node0 [label="Release/database/Database.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 [label="../sqlite3.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node0 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="vector",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node0 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="sauvegarde.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sauvegarde_8h.html",tooltip="classe qui reprend toutes les informations necessaire afin de les stocked en abse de donnee ..."];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="string",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="../personnage/personnage.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$personnage_8h.html",tooltip="creer et gerre les personnages joueurs et IA du jeu "];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="chose.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$chose_8h.html",tooltip="creer les entites basique du jeu "];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="stdio.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node6 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="SFML/Audio.hpp",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node6 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="SFML/Graphics.hpp",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node6 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="iostream",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node6 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="cmath",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node6 -> Node12 [color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="cstdlib",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node6 -> Node13 [color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="functional",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node6 -> Node14 [color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="deque",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node6 -> Node15 [color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="list",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node5 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 -> Node16 [color="midnightblue",fontsize="10",style="solid"];
+  Node16 [label="../gestionCombat/animation\lCombat.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$animation_combat_8h.html",tooltip="permet de creer des animations "];
+  Node16 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node16 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node0 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node0 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+}

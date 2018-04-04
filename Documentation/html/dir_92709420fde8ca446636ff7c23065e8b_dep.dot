@@ -1,0 +1,23 @@
+digraph "Release" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_92709420fde8ca446636ff7c23065e8b {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_92709420fde8ca446636ff7c23065e8b.html"];
+    dir_92709420fde8ca446636ff7c23065e8b [shape=plaintext label="Release"];
+    dir_bb370cf16fbe4e4e2564525a5dd9cafc [shape=box label="database" color="black" fillcolor="white" style="filled" URL="dir_bb370cf16fbe4e4e2564525a5dd9cafc.html"];
+    dir_6f4f804087b8ddb1effea68dbabb10de [shape=box label="game" color="black" fillcolor="white" style="filled" URL="dir_6f4f804087b8ddb1effea68dbabb10de.html"];
+    dir_6a7db5585b58a86db9bdf01f9d1be1bc [shape=box label="gestionCombat" color="black" fillcolor="white" style="filled" URL="dir_6a7db5585b58a86db9bdf01f9d1be1bc.html"];
+    dir_f6a2396e4cf515d801e789d83e9e9db3 [shape=box label="init" color="black" fillcolor="white" style="filled" URL="dir_f6a2396e4cf515d801e789d83e9e9db3.html"];
+    dir_3f0aabf6415b49a526ddd50d35f12c27 [shape=box label="personnage" color="red" fillcolor="white" style="filled" URL="dir_3f0aabf6415b49a526ddd50d35f12c27.html"];
+  }
+  dir_bb370cf16fbe4e4e2564525a5dd9cafc->dir_3f0aabf6415b49a526ddd50d35f12c27 [headlabel="1", labeldistance=1.5 headhref="dir_000001_000005.html"];
+  dir_6f4f804087b8ddb1effea68dbabb10de->dir_bb370cf16fbe4e4e2564525a5dd9cafc [headlabel="1", labeldistance=1.5 headhref="dir_000002_000001.html"];
+  dir_6f4f804087b8ddb1effea68dbabb10de->dir_6a7db5585b58a86db9bdf01f9d1be1bc [headlabel="1", labeldistance=1.5 headhref="dir_000002_000003.html"];
+  dir_6f4f804087b8ddb1effea68dbabb10de->dir_3f0aabf6415b49a526ddd50d35f12c27 [headlabel="8", labeldistance=1.5 headhref="dir_000002_000005.html"];
+  dir_f6a2396e4cf515d801e789d83e9e9db3->dir_bb370cf16fbe4e4e2564525a5dd9cafc [headlabel="1", labeldistance=1.5 headhref="dir_000004_000001.html"];
+  dir_f6a2396e4cf515d801e789d83e9e9db3->dir_6f4f804087b8ddb1effea68dbabb10de [headlabel="1", labeldistance=1.5 headhref="dir_000004_000002.html"];
+  dir_f6a2396e4cf515d801e789d83e9e9db3->dir_3f0aabf6415b49a526ddd50d35f12c27 [headlabel="1", labeldistance=1.5 headhref="dir_000004_000005.html"];
+  dir_6a7db5585b58a86db9bdf01f9d1be1bc->dir_3f0aabf6415b49a526ddd50d35f12c27 [headlabel="2", labeldistance=1.5 headhref="dir_000003_000005.html"];
+  dir_3f0aabf6415b49a526ddd50d35f12c27->dir_6a7db5585b58a86db9bdf01f9d1be1bc [headlabel="1", labeldistance=1.5 headhref="dir_000005_000003.html"];
+}
