@@ -36,7 +36,7 @@ using namespace std;
 
 class chose
 {
-	
+
 public:
 	/**
 	* \brief       constructeur

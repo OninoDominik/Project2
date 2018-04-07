@@ -16,7 +16,7 @@ void combat::Choixjoueur(personnage* joueur)
 	do
 	{
 		cout << *joueur->choix << endl;
-		
+
 	} while (*joueur->choix == 0);
 
 }
@@ -82,7 +82,7 @@ void combat::startcombat(personnage* ami, personnage* ennemi)
 
 				*ennemi->envie = false;
 				cout << *ennemi->envie << endl;
-				
+
 				sf::sleep(sf::seconds(0.75));
 
 				ami->enCombat = false;
@@ -109,7 +109,7 @@ void combat::startcombat(personnage* ami, personnage* ennemi)
 						ami->sound.setBuffer(ami->buffer);
 						ami->sound.setVolume(50);
 						ami->sound.setPlayingOffset(sf::seconds(3));
-						ami->sound.play(); 
+						ami->sound.play();
 						sf::sleep(sf::seconds(0.55));
 						*ennemi->tempsDot -= 1;
 						*ennemi->pvActuel -= *ennemi->valeurDot;

@@ -22,7 +22,7 @@
 class personnage : public chose
 {
 protected:
-	
+
 public:
 
 	/**
@@ -76,13 +76,13 @@ public:
 	int * dexterite = new int(10);/*!< pointeur d'un entier qui est  la dexterite du personnage */
 	int * sagesse = new int(12);/*!< pointeur d'un entier qui est la sagesse du personnage */
 	int * charisme = new int(12);/*!< pointeur d'un entier qui est la charisme du personnage */
-	int * intelligence = new int(12);/*!< pointeur d'un entier qui est l intelligence du personnage */ 
+	int * intelligence = new int(12);/*!< pointeur d'un entier qui est l intelligence du personnage */
 	int * nbrFaceDesDegat = new int(6); /*!< pointeur d'un entier qui est nombre de face des des(dices) de degats du personnage */
 	int * nbrDesDegat = new int(3); /*!< pointeur d'un entier qui est le nombre de des (dice) lance pour calculer les degats*/
 	int * bonusArmure = new int(5); /*!< pointeur d'un entier qui est le bonus d'armure pour etre plus dur a toucher */
 	int * taille = new int(2); /*!< pointeur d'un entier qui est la taille (2 moyenne) */
-	int * pvMax = new int(35+*constitution); /*!< pointeur d'un entier qui le nombre de point de vie maximum */
-	int * pvActuel= new int(*pvMax); /*!< pointeur d'un entier qui le nombre de point de vie actuel */
+	int * pvMax = new int(35 + *constitution); /*!< pointeur d'un entier qui le nombre de point de vie maximum */
+	int * pvActuel = new int(*pvMax); /*!< pointeur d'un entier qui le nombre de point de vie actuel */
 	int * bonusInitiative = new int(0); /*!< pointeur d'un entier qui est le bonus d'initiative */
 	int * bonusAttaque = new int(4); /*!< pointeur d'un entier qui est un bonus pour toucher l'adversaire  */
 	int * bonusBouclier = new int(0); /*!< pointeur d'un entier qui est le bonus si le metier porte un bouclier pour etre plus dur a toucher */
@@ -97,7 +97,7 @@ public:
 	bool * fermeCombatWindow = new bool(false); /*!< pointeur pour ferme la fenetre de combat si un adversaire meurt dans dans un combat ou si l'avatar du joueur meurt */
 	bool * envie = new bool(true); /*!< pointeur qui indique si un personnage est mort ou non */
 	bool  estUnJoueur = false; /*!< pointeur qui indique si le personnage est un ennemi ou le joueur */
-	bool  estEtourdit = false; /*!< pointeur qui indique si l'ennemie est etourdit et qu'il passe son prochain tour */ 
+	bool  estEtourdit = false; /*!< pointeur qui indique si l'ennemie est etourdit et qu'il passe son prochain tour */
 	bool mouvementCombat = false; /*!< pointeur qui empeche de bouger quand ce n'est aps son tour en combat */
 	bool enCombat = false; /*!< pointeur qui indique si le personnage combat */
 	int seretourner = 0; /*!< pointeur qui permet de faire regarder  dans la direction voulue*/
@@ -117,7 +117,7 @@ public:
 	* \brief     methode virtuel de soin qui sera develloper par chaque metier differement
 	*
 	*  methode virtuel de soin qui sera develloper par chaque metier differement
-	* 
+	*
 	*/
 	virtual void sesoigne();
 	/**
@@ -125,7 +125,7 @@ public:
 	*
 	* calcul l'initiative du personnage c'est a dire quand le personnage pourra agir
 	* le personnage qui a la plus haute initiative agira avant l'autre personnage
-	* en cas d'egalite le joueur est prioritaire 
+	* en cas d'egalite le joueur est prioritaire
 	*
 	*/
 	int Initiative();
@@ -175,15 +175,15 @@ public:
 	*
 	* methode virtuel de l'attaque special de chaque metier qui sera develloper dans la classe de chaque metier differement
 	*
-	* \param ennemi: adresse d'un objet personnage 
+	* \param ennemi: adresse d'un objet personnage
 	*
 	*/
 	virtual void AttaqueSpecial(personnage & ennemi);
 
 	/**
-	* \brief     calcul un bonus en fonction de la caractristique du personnage 
+	* \brief     calcul un bonus en fonction de la caractristique du personnage
 	*
-	* calcul un bonus en fonction de la caractristique du personnage 
+	* calcul un bonus en fonction de la caractristique du personnage
 	*
 	* \param stat: nom de la caracteristique qui donne un bonus lors des combat
 	* \return un entier plus il est haut plus la caracteristique tester etait forte
@@ -196,12 +196,12 @@ public:
 	* calcul un bonus en fonction de la caractristique du personnage
 	*
 	* \param choixNom: nouveau nom du personnage
-	* 
+	*
 	*/
 	void setNom(string choixNom);
 
-	
-	
+
+
 };
 
 

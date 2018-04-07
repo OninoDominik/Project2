@@ -47,7 +47,7 @@ public:
 	*/
 	void arrow();
 	/**
-	* \brief      affiche une animation d'un coup d'epee 
+	* \brief      affiche une animation d'un coup d'epee
 	*
 	*   affiche un coup d'epee du joueur ver l'ennemi ou inversement et joue des sounds
 	*
@@ -99,9 +99,9 @@ public:
 	sf::Texture saignement;  /*!< une texture desaignement*/
 	sf::Texture slash; /*!< une texture de coup d'epee*/
 	sf::Texture slash2;  /*!< une texture de coup d'epee dans l'autre sens*/
-	sf::Texture fleche; /*!< une texture de fleche*/	
+	sf::Texture fleche; /*!< une texture de fleche*/
 	sf::Clock chronoAnim; /*!< temp pour les animation*/
-	int compteurPas=0; /*!< compteur d'animation en absisse*/
+	int compteurPas = 0; /*!< compteur d'animation en absisse*/
 	int compteurLigne = 0; /*!< compteur d'animation en ordonnee*/
 	sf::Sprite animSprite; /*!< sprite pour coller les texture*/
 };

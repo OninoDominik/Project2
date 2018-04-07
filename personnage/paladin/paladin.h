@@ -19,7 +19,7 @@
 */
 class paladin : public personnage
 {
-	
+
 public:
 	/**
 	* \brief       constructeur
@@ -36,11 +36,11 @@ public:
 	*
 	*/
 	~paladin();
-	
+
 	/**
-	* \brief      lance l'attaque Justice 
+	* \brief      lance l'attaque Justice
 	*
-	* calcul les effets du stun et lance une attaque apres  et lance les sounds 
+	* calcul les effets du stun et lance une attaque apres  et lance les sounds
 	* lance les animations et lance les sounds
 	*
 	* \param ennemi :adresse d'un objet personnage (un ennemie)
@@ -54,6 +54,6 @@ public:
 	*
 	*/
 	void sesoigne();
-	
+
 };
 

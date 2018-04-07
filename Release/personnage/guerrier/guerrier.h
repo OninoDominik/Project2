@@ -37,11 +37,11 @@ public:
 	~guerrier();
 
 	/**
-	* \brief      lance l'attaque saignement 
+	* \brief      lance l'attaque saignement
 	*
-	* calcul les effets de saignement pour 3 tours et lance les sounds 
+	* calcul les effets de saignement pour 3 tours et lance les sounds
 	* lance les animations et lance les sounds
-	* 
+	*
 	* \param ennemi :adresse d'un objet personnage (un ennemie)
 	*/
 	void AttaqueSpecial(personnage & ennemi);

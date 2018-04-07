@@ -40,9 +40,9 @@ public:
 	~combat();
 	int tailleblock = 32; /*!< taille en pixel d'un block de la taille d'un personnage*/
 
-	
+
 	/**
-	* \brief       boucle infini tant que le joueur ne clique aps sur un choix 
+	* \brief       boucle infini tant que le joueur ne clique aps sur un choix
 	*
 	* reinitialise le choix a 0 et attend une modification pour sortir de la boucle infini
 	*
@@ -63,7 +63,7 @@ public:
 	*
 	*/
 	static void startcombat(personnage * ami, personnage * ennemi);
-	
-	
+
+
 };
 

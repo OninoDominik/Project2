@@ -9,6 +9,16 @@ menu::menu()
 
 menu::~menu()
 {
+	delete boutonTailleEcran;
+	delete boutonFrameRate;
+	delete boutonSauvegarde;
+	delete boutonChargerPartie;
+	delete boutonNouvellePartie;
+	delete boutonOption;
+	delete boutonSauvegarde1;
+	delete boutonSauvegarde2;
+	delete boutonSauvegarde3;
+	delete logo;
 }
 
 void menu::chargerBoutonNouvellePartie()
@@ -16,10 +26,10 @@ void menu::chargerBoutonNouvellePartie()
 	boutonNouvellePartie->text.setString("	Nouvelle partie");
 	boutonNouvellePartie->text.setFillColor(sf::Color::White);
 	boutonNouvellePartie->text.setCharacterSize(20);
-	boutonNouvellePartie->text.setPosition(0, 20+ 220);
-	boutonNouvellePartie->rect.setPosition(0, 20+ 220);
+	boutonNouvellePartie->text.setPosition(0, 20 + 220);
+	boutonNouvellePartie->rect.setPosition(0, 20 + 220);
 	boutonNouvellePartie->rect.setSize((sf::Vector2f(200, 50)));
-	
+
 }
 
 void menu::chargerBoutonChargerPartie()
@@ -30,7 +40,7 @@ void menu::chargerBoutonChargerPartie()
 	boutonChargerPartie->text.setPosition(0, 80 + 220);
 	boutonChargerPartie->rect.setPosition(0, 80 + 220);
 	boutonChargerPartie->rect.setSize((sf::Vector2f(200, 50)));
-	
+
 }
 
 void menu::chargerBoutonOption()
@@ -41,14 +51,14 @@ void menu::chargerBoutonOption()
 	boutonOption->text.setPosition(0, 140 + 220);
 	boutonOption->rect.setPosition(0, 140 + 220);
 	boutonOption->rect.setSize((sf::Vector2f(200, 50)));
-	
+
 }
 void menu::chargerBoutonsmenu()
 {
 	chargerBoutonOption();
 	chargerBoutonChargerPartie();
 	chargerBoutonNouvellePartie();
-	
+
 }
 
 
@@ -76,8 +86,8 @@ void menu::ChargerBoutonTailleEcran()
 	}
 	boutonTailleEcran->text.setFillColor(sf::Color::White);
 	boutonTailleEcran->text.setCharacterSize(20);
-	boutonTailleEcran->text.setPosition(0, 20 );
-	boutonTailleEcran->rect.setPosition(0, 20 );
+	boutonTailleEcran->text.setPosition(0, 20);
+	boutonTailleEcran->rect.setPosition(0, 20);
 	boutonTailleEcran->rect.setSize((sf::Vector2f(325, 50)));
 
 }
@@ -103,27 +113,20 @@ void menu::ChargerBoutonFrameRate()
 }
 
 
-
-
-
-
-
-
-
 void menu::menuStart()
 {
 
 	database bdd;
 	bdd.openDatabase();
 	bdd.executeQuery("CREATE TABLE IF NOT EXISTS sauvegarde (nomClasse TEXT,classe INT,currentHp Int,force INT, constitution INT, dexterite INT, sagesse INT, charisme INT, intelligence INT, coordx INT, coordY INT,mob1 INT, mob2 INT, mob3 INT, mob4 INT, id INT)"); // prix FLOAT, qtevendue INT, nom TEXT
-	bdd.insertSauvegardeSansDoublon("Alchimiste", 4,99, 10, 16, 10, 10, 6, 18, 256, 1440, 1, 1, 1, 1,1);
-	bdd.insertSauvegardeSansDoublon("Paladin", 2,99, 16, 10, 10, 6, 18, 10, 256, 1440, 1, 1, 1, 1,2);
-	bdd.insertSauvegardeSansDoublon("Ranger", 3,99, 10, 10, 18, 16, 6, 10,256, 1440, 1, 1, 1, 1,3);
+	bdd.insertSauvegardeSansDoublon("Alchimiste", 4, 99, 10, 16, 10, 10, 6, 18, 256, 1440, 1, 1, 1, 1, 1);
+	bdd.insertSauvegardeSansDoublon("Paladin", 2, 99, 16, 10, 10, 6, 18, 10, 256, 1440, 1, 1, 1, 1, 2);
+	bdd.insertSauvegardeSansDoublon("Ranger", 3, 99, 10, 10, 18, 16, 6, 10, 256, 1440, 1, 1, 1, 1, 3);
 
 	std::vector<sauvegarde*>* produits = bdd.getAllSauvegarde();
-	for (int i = 0; i<produits->size(); i++)
+	for (int i = 0; i < produits->size(); i++)
 	{
-	std::cout << (*produits)[i]->nomClasse<< " + " << (*produits)[i]->classe << std::endl;
+		std::cout << (*produits)[i]->nomClasse << " + " << (*produits)[i]->classe << std::endl;
 	}
 
 	bdd.closeDatabase();
@@ -137,7 +140,7 @@ void menu::menuStart()
 	textureLogo.loadFromFile("./assets/img/iconPath.jpeg");
 
 	logo->rect.setPosition(0, 0);
-	logo->sprite.setTextureRect(sf::IntRect(0, 0, 220,220));
+	logo->sprite.setTextureRect(sf::IntRect(0, 0, 220, 220));
 	logo->sprite.setTexture(textureLogo);
 	logo->rect.setSize(sf::Vector2f(110, 64));
 	logo->sprite.setPosition(logo->rect.getPosition());
@@ -161,18 +164,18 @@ void menu::menuStart()
 		spriteCurseur.rect.setSize(sf::Vector2f(4, 4));
 
 
-		
+
 
 		if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && boutonNouvellePartie->rect.getGlobalBounds().intersects(spriteCurseur.rect.getGlobalBounds()))
 		{
 			music.stop();
 			menuWindow.close();
-			
+
 			creationPerso * crea = new creationPerso(largeurFenetreDeJeu, hauteurFenetreDeJeu, Affichagefps);
 			crea->start();
-			delete crea;
 			menuWindow.create(sf::VideoMode(tailleEcran.x, tailleEcran.y), "Pathfinder", sf::Style::Titlebar | sf::Style::Close);
 			music.play();
+			delete crea;
 		}
 		if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && boutonChargerPartie->rect.getGlobalBounds().intersects(spriteCurseur.rect.getGlobalBounds()))
 		{
@@ -182,9 +185,10 @@ void menu::menuStart()
 			chargeSauvegarde->start();
 			menuWindow.create(sf::VideoMode(tailleEcran.x, tailleEcran.y), "Pathfinder", sf::Style::Titlebar | sf::Style::Close);
 			music.play();
-			
+			delete chargeSauvegarde;
+
 		}
-		
+
 		if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && boutonOption->rect.getGlobalBounds().intersects(spriteCurseur.rect.getGlobalBounds()))
 		{
 			menuWindow.setVisible(false);
@@ -204,19 +208,19 @@ void menu::menuStart()
 				chose spriteCurseur2;
 				spriteCurseur2.rect.setPosition((sf::Vector2f)sf::Mouse::getPosition(optionWindow));
 				spriteCurseur2.rect.setSize(sf::Vector2f(4, 4));
-				
+
 				if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && boutonTailleEcran->rect.getGlobalBounds().intersects(spriteCurseur2.rect.getGlobalBounds()))
 				{
 
-						choixTailleEcran++;
-						sf::sleep(sf::milliseconds(100));
-						choixTailleEcran = (choixTailleEcran) % 3;
+					choixTailleEcran++;
+					sf::sleep(sf::milliseconds(100));
+					choixTailleEcran = (choixTailleEcran) % 3;
 
 				}
 				if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && boutonFrameRate->rect.getGlobalBounds().intersects(spriteCurseur2.rect.getGlobalBounds()))
 				{
 
-					Affichagefps= !Affichagefps;
+					Affichagefps = !Affichagefps;
 					sf::sleep(sf::milliseconds(100));
 
 				}
@@ -229,7 +233,7 @@ void menu::menuStart()
 					boutonTailleEcran->text.setFillColor(orange);
 				}
 
-				
+
 
 				boutonTailleEcran->text.setFont(font);
 				boutonFrameRate->text.setFont(font);
@@ -256,7 +260,7 @@ void menu::menuStart()
 		{
 			boutonOption->text.setFillColor(orange);
 		}
-		if  (!(boutonNouvellePartie->rect.getGlobalBounds().intersects(spriteCurseur.rect.getGlobalBounds())))
+		if (!(boutonNouvellePartie->rect.getGlobalBounds().intersects(spriteCurseur.rect.getGlobalBounds())))
 		{
 			boutonNouvellePartie->text.setFillColor(sf::Color::White);
 		}

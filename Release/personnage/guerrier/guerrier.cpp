@@ -16,7 +16,7 @@ guerrier::guerrier()
 	*nbrDesDegat = 2;
 	*bonusArmure = 7;
 	*taille = 2;
-	*pvMax = 30+2*(*constitution);
+	*pvMax = 30 + 2 * (*constitution);
 	*pvActuel = *pvMax;
 	*bonusInitiative = 2;
 	*bonusAttaque = 4;
@@ -37,7 +37,7 @@ void guerrier::AttaqueSpecial(personnage& ennemi)
 
 	AvancerAttaque();
 	cout << nom << "Saignement";
-	this->text.setString("Saignement : "+ to_string(((int)(1.5 * BonusStat("force"))))+ "pour 3 tours");
+	this->text.setString("Saignement : " + to_string(((int)(1.5 * BonusStat("force")))) + "pour 3 tours");
 	this->text.setFillColor(sf::Color::Red);
 	this->text.setCharacterSize(16);
 
@@ -51,7 +51,7 @@ void guerrier::AttaqueSpecial(personnage& ennemi)
 	this->sound.play();
 
 	*ennemi.tempsDot += 3;
-	*ennemi.valeurDot = 2*BonusStat("force");
+	*ennemi.valeurDot = 2 * BonusStat("force");
 	ReculerAttaque();
 }
 

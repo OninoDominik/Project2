@@ -16,6 +16,22 @@ creationPerso::creationPerso(int largeurFenetreDeJeu, int hauteurFenetreDeJeu, b
 
 creationPerso::~creationPerso()
 {
+	delete boutonGuerrier;
+	delete boutonPaladin;
+	delete boutonVoleur;
+	delete boutonAlchimiste;
+	delete boutonRanger;
+	delete intro;
+	delete boutonForce;
+	delete boutonDexterite;
+	delete boutonConstitution;
+	delete boutonCharisme;
+	delete boutonSagesse;
+	delete boutonIntelligence;
+	delete choixCarac;
+	delete boutonSauvegarde1;
+	delete boutonSauvegarde2;
+	delete boutonSauvegarde3;
 }
 
 void creationPerso::start()
@@ -414,7 +430,7 @@ void creationPerso::start()
 		{
 			creaWindow.close();
 			jeu * partie = new jeu(lFenetreDeJeu, hFenetreDeJeu, Affichfps);
-			partie->Startjeu(classe,99 ,force, dexterite, constitution, charisme, sagesse, intelligence, 256,1440 ,1,1,1,1,slotSauvegarde);
+			partie->Startjeu(classe, 99, force, dexterite, constitution, charisme, sagesse, intelligence, 256, 1440, 1, 1, 1, 1, slotSauvegarde);
 			delete partie;
 		}
 

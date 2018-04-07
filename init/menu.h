@@ -47,18 +47,21 @@ public:
 	~menu();
 
 	sf::RenderWindow menuWindow; /*!< fentere du menu*/
+	chose *boutonTailleEcran = new chose(); /*!< pointeur d'un objet chose du menu:  boutonTailleEcran*/
+	chose *boutonFrameRate = new chose(); /*!< pointeur d'un objet chose du menu:  boutonFrameRate*/
+	chose *boutonSauvegarde = new chose(); /*!< pointeur d'un objet chose du menu:  boutonSauvegarde*/
 	chose * boutonChargerPartie = new chose(); /*!< pointeur d'un objet chose du menu:  boutonChargerPartie*/
 	chose * boutonNouvellePartie = new chose(); /*!< pointeur d'un objet chose du menu:  boutonNouvellePartie*/
 	chose * boutonOption = new chose(); /*!< pointeur d'un objet chose du menu:  boutonOption*/
 	chose * boutonSauvegarde1 = new chose(); /*!< pointeur d'un objet chose boutonSauvegarde1*/
 	chose * boutonSauvegarde2 = new chose(); /*!< pointeur d'un objet chose boutonSauvegarde2*/
 	chose * boutonSauvegarde3 = new chose(); /*!< pointeur d'un objet chose boutonSauvegarde3*/
-	
+
 	chose * logo = new chose();   /*!< pointeur d'un objet chose du menu:  logo*/
 	sf::Texture textureLogo; /*!< texture du logo */
 
 	bool Affichagefps = false; /*!< affiche ou non les frames par seconde */
-	int largeurFenetreDeJeu=800 ; /*!< stocke la taille de la largeur de la fentere principal */
+	int largeurFenetreDeJeu = 800; /*!< stocke la taille de la largeur de la fentere principal */
 	int hauteurFenetreDeJeu = 800; /*!< stocke la taille de la hauteur de la fentere principal */
 	int choixTailleEcran = 0; /*!< comteur des choix */
 	int numeroSauvegarde = 0; /*!< numero du slot de sauvegarde */
@@ -115,9 +118,7 @@ public:
 	*/
 	void ChargerBoutonFrameRate();
 
-	chose *boutonTailleEcran = new chose(); /*!< pointeur d'un objet chose du menu:  boutonTailleEcran*/
-	chose *boutonFrameRate = new chose(); /*!< pointeur d'un objet chose du menu:  boutonFrameRate*/
-	chose *boutonSauvegarde = new chose(); /*!< pointeur d'un objet chose du menu:  boutonSauvegarde*/
+
 
 
 

@@ -40,9 +40,9 @@ void ranger::AttaqueSpecial(personnage& ennemi)
 
 	cout << nom << "headshot";
 	int jetToucher = 0;
-	int rando = (( rand() % 20) + 1);
-	jetToucher =  rando + *bonusAttaque + BonusStat(*nomBonusDegat) + BonusStat("sagesse");
-	cout << "headshot" << "rando = " << rando <<endl << "bonusAttaque ="  << *bonusAttaque << endl <<"BonusStat(nomBonusDegat)" << BonusStat(*nomBonusDegat)<< endl << *nomBonusDegat << endl <<"sagese" <<BonusStat("sagesse") << endl;;
+	int rando = ((rand() % 20) + 1);
+	jetToucher = rando + *bonusAttaque + BonusStat(*nomBonusDegat) + BonusStat("sagesse");
+	cout << "headshot" << "rando = " << rando << endl << "bonusAttaque =" << *bonusAttaque << endl << "BonusStat(nomBonusDegat)" << BonusStat(*nomBonusDegat) << endl << *nomBonusDegat << endl << "sagese" << BonusStat("sagesse") << endl;;
 
 	if (ennemi.CA() + 4 >= jetToucher)
 	{
@@ -61,8 +61,8 @@ void ranger::AttaqueSpecial(personnage& ennemi)
 	}
 	else
 	{
-		
-		*nbrDesDegat +=4 ;
+
+		*nbrDesDegat += 4;
 		AvancerAttaque();
 		this->buffer.loadFromFile("./assets/sound/ranger/arrow.ogg");
 		this->sound.setBuffer(this->buffer);

@@ -38,8 +38,8 @@ public:
 	/**
 	* \brief      lance l'attaque Bombe avec les brulure possible
 	*
-	* calcul les effets de l'attaque bombe et lance les animations et les sounds 
-	* calcul les degats et regarde si l'ennemi ou les joueurs subissent des degats supplementaire   
+	* calcul les effets de l'attaque bombe et lance les animations et les sounds
+	* calcul les degats et regarde si l'ennemi ou les joueurs subissent des degats supplementaire
 	*
 	* \param ennemi : adresse d'un objet personnage  (un ennemie)
 	*/
@@ -48,7 +48,7 @@ public:
 	* \brief     calcul les soins de l'alchimiste
 	*
 	* calcul les soins et lance les animations et les sounds
-	* 
+	*
 	*/
 	void sesoigne();
 };

@@ -44,12 +44,12 @@ public:
 	*/
 	void AttaqueSpecial(personnage & ennemi);
 	/**
-	* \brief     calcul les soins du ranger 
+	* \brief     calcul les soins du ranger
 	*
 	* calcul les soins et lance les animations et les sounds
 	*
 	*/
 	void sesoigne();
-	
+
 };
 

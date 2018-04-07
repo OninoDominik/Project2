@@ -18,7 +18,7 @@ void animationCombat::arrow()
 	animSprite.setTexture(fleche);
 	animSprite.setPosition(232, 90);
 	int longueur = 0;
-	while (longueur<125)
+	while (longueur < 125)
 	{
 
 		if (chronoAnim.getElapsedTime().asMilliseconds() > 45)
@@ -46,20 +46,20 @@ void animationCombat::coup(int i)
 	animSprite.setTexture(slash);
 	chronoAnim.restart();
 
-	while (compteurPas<300)
+	while (compteurPas < 300)
 	{
 		if (i == 0)
 		{
 			animSprite.rotate(180);
-			animSprite.setPosition(100 + 40 , 105 + 60 );
+			animSprite.setPosition(100 + 40, 105 + 60);
 			animSprite.rotate(180);
 		}
 		if (i == 1)
 		{
 			animSprite.setPosition(360 - 10, 105 - 25);
 		}
-		animSprite.setTextureRect(sf::IntRect( compteurPas, 0, 40, 80));
-		
+		animSprite.setTextureRect(sf::IntRect(compteurPas, 0, 40, 80));
+
 		if (chronoAnim.getElapsedTime().asMilliseconds() > 125)
 		{
 			compteurPas += 40;
@@ -69,8 +69,8 @@ void animationCombat::coup(int i)
 				chronoAnim.restart();
 			}
 
-			
-			
+
+
 			sf::sleep(sf::milliseconds(25));
 		}
 	}
@@ -81,14 +81,14 @@ void animationCombat::sang()
 	compteurPas = 0;
 	saignement.loadFromFile("./assets/img/guerrier/bloody2.png");
 	animSprite.setTexture(saignement);
-	while (compteurPas<12*49)
+	while (compteurPas < 12 * 49)
 	{
 
 		if (chronoAnim.getElapsedTime().asMilliseconds() > 55)
 		{
 			compteurPas += 50;
 
-			if (compteurPas > 12*49)
+			if (compteurPas > 12 * 49)
 			{
 				chronoAnim.restart();
 			}
@@ -106,7 +106,7 @@ void animationCombat::palastun()
 	compteurPas = 0;
 	stun.loadFromFile("./assets/img/fx.png");
 	animSprite.setTexture(stun);
-	while (compteurPas<200)
+	while (compteurPas < 200)
 	{
 
 		if (chronoAnim.getElapsedTime().asMilliseconds() > 25)
@@ -167,13 +167,13 @@ void animationCombat::heal()
 		if (chronoAnim.getElapsedTime().asMilliseconds() > 25)
 		{
 			compteurPas += 75;
-			animSprite.setTextureRect(sf::IntRect(compteurPas, 30 * 32 +10, 64, 4 * 31));
-			animSprite.setPosition(100 -25  / 2, 105 - 128 / 2);
+			animSprite.setTextureRect(sf::IntRect(compteurPas, 30 * 32 + 10, 64, 4 * 31));
+			animSprite.setPosition(100 - 25 / 2, 105 - 128 / 2);
 			sf::sleep(sf::milliseconds(45));
 			if (compteurPas >= 450)
 			{
 				compteurPas = -1;
-				
+
 				chronoAnim.restart();
 			}
 
@@ -187,7 +187,7 @@ void animationCombat::badaBoom()
 	compteurPas = 0;
 	explosion.loadFromFile("./assets/img/alchimiste/boom.png");
 	animSprite.setTexture(explosion);
-	while (compteurLigne<400)
+	while (compteurLigne < 400)
 	{
 
 		if (chronoAnim.getElapsedTime().asMilliseconds() > 25)
@@ -200,9 +200,9 @@ void animationCombat::badaBoom()
 				compteurPas = 0;
 				chronoAnim.restart();
 			}
-			
+
 			animSprite.setTextureRect(sf::IntRect(compteurPas, compteurLigne, 79, 79));
-			animSprite.setPosition(360-25, 105-25);
+			animSprite.setPosition(360 - 25, 105 - 25);
 			sf::sleep(sf::milliseconds(25));
 		}
 	}

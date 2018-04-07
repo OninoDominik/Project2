@@ -12,7 +12,6 @@ database::database()
 
 database::~database()
 {
-	//dtor
 }
 
 void database::openDatabase()
@@ -41,11 +40,11 @@ bool database::executeQuery(std::string query)
 	}
 }
 
-bool database::insertSauvegardeSansDoublon(std::string nomClasse, int classe,int currentHp, int force, int constitution,int dexterite, int sagesse, int charisme, int intelligence, int coordx, int coordy , int mob1, int mob2, int mob3, int mob4, int id)
+bool database::insertSauvegardeSansDoublon(std::string nomClasse, int classe, int currentHp, int force, int constitution, int dexterite, int sagesse, int charisme, int intelligence, int coordx, int coordy, int mob1, int mob2, int mob3, int mob4, int id)
 {
-	
 
-	std::string query = "INSERT INTO sauvegarde(nomClasse,classe,currentHp,force,constitution,dexterite,sagesse,charisme,intelligence,coordx,coordy,mob1,mob2,mob3,mob4, id) select'" + nomClasse + "'," + std::to_string(classe) + "," + std::to_string(currentHp) + "," + std::to_string(force) + "," + std::to_string(constitution) + "," + std::to_string(dexterite) + "," + std::to_string(sagesse) + "," + std::to_string(charisme) + "," + std::to_string(intelligence) + "," + std::to_string(coordx) + "," + std::to_string(coordy) + "," + std::to_string(mob1) + "," + std::to_string(mob2) + "," + std::to_string(mob3) +"," + std::to_string(mob4) + "," + std::to_string(id)+" WHERE NOT EXISTS (SELECT 1 FROM sauvegarde WHERE id="+ std::to_string(id)+" )";
+
+	std::string query = "INSERT INTO sauvegarde(nomClasse,classe,currentHp,force,constitution,dexterite,sagesse,charisme,intelligence,coordx,coordy,mob1,mob2,mob3,mob4, id) select'" + nomClasse + "'," + std::to_string(classe) + "," + std::to_string(currentHp) + "," + std::to_string(force) + "," + std::to_string(constitution) + "," + std::to_string(dexterite) + "," + std::to_string(sagesse) + "," + std::to_string(charisme) + "," + std::to_string(intelligence) + "," + std::to_string(coordx) + "," + std::to_string(coordy) + "," + std::to_string(mob1) + "," + std::to_string(mob2) + "," + std::to_string(mob3) + "," + std::to_string(mob4) + "," + std::to_string(id) + " WHERE NOT EXISTS (SELECT 1 FROM sauvegarde WHERE id=" + std::to_string(id) + " )";
 
 	std::cout << query << std::endl;
 

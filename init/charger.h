@@ -5,7 +5,7 @@
 * \author    Dominik Grobecker
 * \version   1.0
 * \date       04 april 2018
-* \brief      permet d'afficher les sauvegardes et cliquer sur une 
+* \brief      permet d'afficher les sauvegardes et cliquer sur une
 *
 * \details    permet d'afficher les sauvegardes et cliquer sur une afin de lancer une instance de jeu avec les info de la sauvegarde
 *

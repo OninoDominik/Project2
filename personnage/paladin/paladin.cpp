@@ -2,7 +2,7 @@
 #include <time.h>
 
 
-paladin::paladin() 
+paladin::paladin()
 {
 	*nbrDesSoin = 4;
 	*nbrFaceDesSoin = 6;
@@ -16,8 +16,8 @@ paladin::paladin()
 	*nbrDesDegat = 2;
 	*bonusArmure = 7;
 	*taille = 2;
-	*pvMax = 25+*constitution;
-	 *pvActuel = *pvMax;
+	*pvMax = 25 + *constitution;
+	*pvActuel = *pvMax;
 	*bonusInitiative = 0;
 	*bonusAttaque = 4;
 	*bonusBouclier = 1;
@@ -43,11 +43,11 @@ void paladin::AttaqueSpecial(personnage& ennemi)
 		int jetToucher = 0;
 		jetToucher = ((rand() % 20) + 1) + *bonusAttaque + BonusStat(*nomBonusDegat);
 
-		if (ennemi.CA()+2 <= jetToucher)
+		if (ennemi.CA() + 2 <= jetToucher)
 		{
 			if (i == 0)
 			{
-				
+
 				AvancerAttaque();
 				this->buffer.loadFromFile("./assets/sound/paladin/blind.ogg");
 				this->sound.setBuffer(this->buffer);
@@ -68,7 +68,7 @@ void paladin::AttaqueSpecial(personnage& ennemi)
 			{
 				AvancerAttaque();
 				this->InfligeDegat(ennemi);
-				ReculerAttaque(); 
+				ReculerAttaque();
 			}
 
 		}
@@ -78,7 +78,7 @@ void paladin::AttaqueSpecial(personnage& ennemi)
 			{
 				AvancerAttaque();
 				this->text.setString("j'ai raté l'etourdissement");
-				
+
 				this->text.setFillColor(sf::Color::White);
 				this->text.setCharacterSize(16);
 				x = this->rect.getPosition().x;
@@ -99,7 +99,7 @@ void paladin::AttaqueSpecial(personnage& ennemi)
 
 		}
 	}
-	
+
 }
 void paladin::sesoigne()
 {
@@ -110,7 +110,7 @@ void paladin::sesoigne()
 	int x = this->rect.getPosition().x;
 	int y = this->rect.getPosition().y;
 
-	int soin=0;
+	int soin = 0;
 
 	for (int i = 0; i < *nbrDesSoin; i++)
 	{
@@ -123,7 +123,7 @@ void paladin::sesoigne()
 	{
 		*pvActuel = *pvMax;
 	}
-	this->text.setString(" Soin : "+ to_string(soin));
+	this->text.setString(" Soin : " + to_string(soin));
 	this->anim->heal();
 	this->text.setFillColor(sf::Color::Green);
 	this->text.setCharacterSize(16);

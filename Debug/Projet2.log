@@ -1,77 +1,58 @@
 ﻿  jeu.cpp
 e:\projet2\project2\personnage\personnage.h(110): warning C4305: 'argument': truncation from 'double' to 'float'
-e:\projet2\project2\game\jeu.cpp(26): warning C4305: 'argument': truncation from 'double' to 'float'
-e:\projet2\project2\game\jeu.cpp(49): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(52): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(184): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(306): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(391): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(401): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
-e:\projet2\project2\game\jeu.cpp(486): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(505): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(505): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(508): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(510): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+e:\projet2\project2\game\jeu.cpp(33): warning C4305: 'argument': truncation from 'double' to 'float'
+e:\projet2\project2\game\jeu.cpp(56): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(59): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(191): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(313): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(398): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(408): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
 e:\projet2\project2\game\jeu.cpp(521): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(521): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(524): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(526): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
-e:\projet2\project2\game\jeu.cpp(538): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(538): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(541): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(543): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
-e:\projet2\project2\game\jeu.cpp(589): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(589): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(597): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(597): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(604): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(604): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(611): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(611): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(673): warning C4305: 'argument': truncation from 'double' to 'float'
-e:\projet2\project2\game\jeu.cpp(698): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(702): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(857): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(858): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(874): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(879): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(885): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(890): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(901): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
-e:\projet2\project2\game\jeu.cpp(902): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
-e:\projet2\project2\game\jeu.cpp(911): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
-e:\projet2\project2\game\jeu.cpp(912): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
-e:\projet2\project2\game\jeu.cpp(920): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
-e:\projet2\project2\game\jeu.cpp(921): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1014): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1019): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1020): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1022): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1023): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1025): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1028): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1030): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1032): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1034): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1036): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1038): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1040): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1042): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1044): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1046): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1048): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(540): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(540): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(543): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(545): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+e:\projet2\project2\game\jeu.cpp(556): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(556): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(559): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(561): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+e:\projet2\project2\game\jeu.cpp(573): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(573): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(576): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(578): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+e:\projet2\project2\game\jeu.cpp(624): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(624): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(632): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(632): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(639): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(639): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(646): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(646): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(709): warning C4305: 'argument': truncation from 'double' to 'float'
+e:\projet2\project2\game\jeu.cpp(734): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(738): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(893): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(894): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(910): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(915): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(921): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(926): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(937): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+e:\projet2\project2\game\jeu.cpp(938): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+e:\projet2\project2\game\jeu.cpp(947): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+e:\projet2\project2\game\jeu.cpp(948): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+e:\projet2\project2\game\jeu.cpp(956): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+e:\projet2\project2\game\jeu.cpp(957): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1050): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1052): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1054): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1055): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1056): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1058): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1060): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1062): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1059): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1061): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1064): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1065): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1067): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1069): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1071): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1066): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1068): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1070): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1072): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1074): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1076): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
@@ -84,53 +65,52 @@ e:\projet2\project2\game\jeu.cpp(1088): warning C4244: 'argument': conversion fr
 e:\projet2\project2\game\jeu.cpp(1090): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1092): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1094): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1095): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1097): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1096): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1098): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1100): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1101): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1103): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1104): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1106): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1105): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1107): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1108): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1110): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1111): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1113): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1112): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1114): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1116): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1117): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1119): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1118): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1120): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1122): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1123): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1125): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1124): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1126): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1128): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1130): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1131): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1133): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1135): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1134): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1136): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1137): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1139): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1141): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1143): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1145): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1140): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1142): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1144): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1146): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1147): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1149): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1151): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1150): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1152): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1154): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1153): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1155): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1156): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1157): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1158): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1159): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1161): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1163): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1165): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1162): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1164): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1166): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1167): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1169): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1171): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1172): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1174): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1173): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1175): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1177): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1179): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
@@ -138,8 +118,9 @@ e:\projet2\project2\game\jeu.cpp(1181): warning C4244: 'argument': conversion fr
 e:\projet2\project2\game\jeu.cpp(1183): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1185): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1187): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1189): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1191): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1188): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1190): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1192): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1193): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1195): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1197): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
@@ -148,7 +129,8 @@ e:\projet2\project2\game\jeu.cpp(1201): warning C4244: 'argument': conversion fr
 e:\projet2\project2\game\jeu.cpp(1203): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1205): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1207): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1209): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1208): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1210): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1211): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1213): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1215): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
@@ -162,16 +144,34 @@ e:\projet2\project2\game\jeu.cpp(1229): warning C4244: 'argument': conversion fr
 e:\projet2\project2\game\jeu.cpp(1231): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1233): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1235): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1236): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1238): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1240): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1242): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1244): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1246): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-e:\projet2\project2\game\jeu.cpp(1248): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1237): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1239): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1241): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1243): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1245): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1247): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1249): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1251): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1253): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 e:\projet2\project2\game\jeu.cpp(1255): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1257): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1259): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1261): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1263): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1265): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1267): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1269): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1271): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1272): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1274): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1276): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1278): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1280): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1282): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1284): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1285): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1287): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1289): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\projet2\project2\game\jeu.cpp(1291): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   Projet2.vcxproj -> E:\Projet2\Project2\Debug\Projet2.exe
   Projet2.vcxproj -> E:\Projet2\Project2\Debug\Projet2.pdb (Partial PDB)

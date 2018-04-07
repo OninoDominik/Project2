@@ -109,9 +109,9 @@ public:
 	int j = 0; /*!<compteur */
 
 	/**
-	* \brief       lance la fentre principal de jeu 
+	* \brief       lance la fentre principal de jeu
 	*
-	* permet de creer une fenetre, de bouger un sprite sur une map 
+	* permet de creer une fenetre, de bouger un sprite sur une map
 	*
 	* \param classe : code de la classe afin de charger le bon sprite en focntion du choix lors de la creationd e personnage ( le personnage principal du Personnage Joueur)
 	* \param currenthp  : point vie du personnage au debut du jeu ou lors du chargement de la sauvegarde
@@ -129,7 +129,7 @@ public:
 	* \param mob4 : indicateur si le monstre 4 est en vie
 	* \param numeroSauvegarde : numero du slot de sauvegarde
 	*/
-	int Startjeu(int classe, int currenthp, int force, int dexterite, int constitution, int charisme, int sagesse, int intelligence, int coordx, int coordy, int mob1, int mob2, int mob3,int mob4, int numeroSauvegarde);
+	int Startjeu(int classe, int currenthp, int force, int dexterite, int constitution, int charisme, int sagesse, int intelligence, int coordx, int coordy, int mob1, int mob2, int mob3, int mob4, int numeroSauvegarde);
 
 	vector<mur> murmap1(); /*!< listes contenant tout les objet murs de la carte*/
 	mur mur1;/*!<objet mur */
@@ -150,7 +150,7 @@ public:
 	*
 	*/
 	void ChargerBoutonSoin();
-	
+
 	/**
 	* \brief      genere une zone de texte
 	*
@@ -193,7 +193,7 @@ public:
 
 	float framerate = 60;/*!<framerate de base a 60 */
 	bool AfficherFrameRate = true; /*!<afficher framerate */
-	
+
 
 };
 

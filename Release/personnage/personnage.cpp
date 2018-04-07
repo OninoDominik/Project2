@@ -26,6 +26,7 @@ void personnage::Positionnement()
 void personnage::AttaqueSpecial(personnage & ennemi)
 {
 
+
 }
 
 void personnage::Mouvement()
@@ -34,7 +35,7 @@ void personnage::Mouvement()
 	Chronometre.restart();
 	if (this->enCombat)
 	{
-		
+
 	}
 	else
 	{
@@ -99,7 +100,7 @@ void personnage::Mouvement()
 			}
 		}
 	}
-	
+
 
 }
 
@@ -108,12 +109,39 @@ void personnage::Mouvement()
 
 personnage::~personnage()
 {
+	delete force;
+	delete constitution;
+	delete dexterite;
+	delete sagesse;
+	delete charisme;
+	delete intelligence;
+	delete nbrFaceDesDegat;
+	delete nbrDesDegat;
+	delete bonusArmure;
+	delete taille;
+	delete pvMax;
+	delete pvActuel;
+	delete bonusInitiative;
+	delete bonusAttaque;
+	delete bonusBouclier;
+	delete nbrAttaque;
+	delete choix;
+	delete nbrDesSoin;
+	delete nbrFaceDesSoin;
+	delete niveau;
+	delete tempsDot;
+	delete valeurDot;
+	delete classe;
+	delete fermeCombatWindow;
+	delete envie;
+	delete nomAttaqueSpecial;
+	delete nomBonusDegat;
 }
 int personnage::CA()
 {
 
 	int ca = BonusStat("dexterite") + 10 + 1 + *(this->bonusBouclier) + *(this->bonusArmure);
-	cout <<"boubou"<< *bonusBouclier << "  armure " << *bonusArmure << "  stat  " << BonusStat("dexterite") << endl;
+	cout << "boubou" << *bonusBouclier << "  armure " << *bonusArmure << "  stat  " << BonusStat("dexterite") << endl;
 	if (*taille == 1)
 	{
 		ca++;
@@ -155,14 +183,14 @@ void personnage::sesoigne()
 
 void personnage::InfligeDegat(personnage& ennemi)
 {
-	
+
 
 	int deg = 0;
 	int degtempo;
 	for (int i = 0; i < *nbrDesDegat; i++)
 	{
 		degtempo = 0;
-		degtempo = ((rand() % (*nbrFaceDesDegat)) + 1 );
+		degtempo = ((rand() % (*nbrFaceDesDegat)) + 1);
 		deg += degtempo;
 		cout << "pv actuel de : " << ennemi.nom << "  " << *ennemi.pvActuel << endl;
 		cout << "des de degats : " << degtempo << endl;
@@ -184,7 +212,7 @@ void personnage::InfligeDegat(personnage& ennemi)
 	}
 	sf::sleep(sf::microseconds(450));
 	*ennemi.pvActuel -= deg;
-	
+
 
 	cout << nom << " frappe  " << ennemi.nom << "  et inflige   " << deg << " Degats " << endl << "il lui reste " << *ennemi.pvActuel << " PV" << endl;
 }
@@ -216,13 +244,13 @@ void personnage::Attaque(personnage& ennemi)
 			this->text.setPosition(x, y - 30);
 
 
-			
+
 			cout << nom << " touche  " << ennemi.nom << " avec un  " << jetToucher << endl << " la ca de  " << ennemi.nom << " etait de " << ennemi.CA() << endl;
 
 			InfligeDegat(ennemi);
 			ReculerAttaque();
 
-			
+
 		}
 		else
 		{

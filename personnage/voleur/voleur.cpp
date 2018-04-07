@@ -45,9 +45,9 @@ void voleur::AttaqueSpecial(personnage& ennemi)
 	{
 		int jetToucher = 0;
 		int rando = ((rand() % 20) + 1);
-		jetToucher = rando + *bonusAttaque + BonusStat(*nomBonusDegat) ;
+		jetToucher = rando + *bonusAttaque + BonusStat(*nomBonusDegat);
 		*(this->bonusArmure) -= 4;
-		if (ennemi.CA()+2 > jetToucher)
+		if (ennemi.CA() + 2 > jetToucher)
 		{
 			AvancerAttaque();
 			this->buffer.loadFromFile("./assets/sound/rate.ogg");
@@ -72,9 +72,9 @@ void voleur::AttaqueSpecial(personnage& ennemi)
 			this->sound.play();
 			sf::sleep(sf::milliseconds(250));
 			this->rect.setPosition((392), (105));
-			*nbrDesDegat +=3 ;
+			*nbrDesDegat += 3;
 			x = this->rect.getPosition().x;
-			this->text.setPosition(x-30, y - 60);
+			this->text.setPosition(x - 30, y - 60);
 			this->seretourner = -32;
 			this->text.setString("Backstab !!");
 			sf::sleep(sf::milliseconds(750));

@@ -11,7 +11,7 @@
 * \author    Dominik Grobecker
 * \version   1.0
 * \date       04 april 2018
-* \brief       creation ecriture modification d'une base de donnees fichier database.db  
+* \brief       creation ecriture modification d'une base de donnees fichier database.db
 *                  qui permet la sauvegarde d'une partie
 * \details    cette classe permet la gestion de la basse de donnees database.db afin d'avoir trois sauvegardes a la maniere des vieux rpg
 *                  et pour sauvegarder une partie en cours et la charger ulterieurement
@@ -47,7 +47,7 @@ public:
 	* \brief       connection de la base de donnees
 	*
 	* permet la connection a la base de donnees database.bd
-	* 
+	*
 	*/
 	void openDatabase();
 
@@ -63,7 +63,7 @@ public:
 	* \brief      permet l'execution de requete SQL
 	*
 	*  execute la requete sql dans database.bd
-	* \param query : requete sql 
+	* \param query : requete sql
 	* \return true si la requete a ete executee
 	*/
 	bool executeQuery(std::string query);
@@ -91,11 +91,11 @@ public:
 	* \return true si la requete a ete execute
 	*/
 	bool insertSauvegardeSansDoublon(std::string nomClasse, int classe, int currentHp, int force, int constitution, int dexterite, int sagesse, int charisme, int intelligence, int coordx, int coordy, int mob1, int mob2, int mob3, int mob4, int id);
-	
+
 	/**
 	* \brief retourne la liste de sauvegarde
 	*
-	*  execute la requete sql dans database.bd afin 
+	*  execute la requete sql dans database.bd afin
 	*
 	* \return un pointeur de vecteur de pointeur de la classe sauvegarde
 	*/

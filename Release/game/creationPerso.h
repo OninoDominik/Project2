@@ -7,15 +7,15 @@
 * \author    Dominik Grobecker
 * \version   1.0
 * \date       04 april 2018
-* \brief      permet au joueur de creer un personnage 
-*                
-* \details     permet au joueur de creer un personnage grace a un questionnaire 
-*                  
+* \brief      permet au joueur de creer un personnage
+*
+* \details     permet au joueur de creer un personnage grace a un questionnaire
+*
 */
 
 /*! \class creationPerso
-* \brief       permet au joueur de creer un personnage 
-*                 
+* \brief       permet au joueur de creer un personnage
+*
 * \details    permet au joueur de creer un personnage grace a un questionnaire
 *
 */
@@ -95,7 +95,7 @@ public:
 	* \brief      lance le questionnaire
 	*
 	*  lance un questionnaire afin de stocker les valeurs choisies par le joueur
-	* 
+	*
 	*/
 	void start();
 	/**
@@ -123,15 +123,15 @@ public:
 	void chargerBoutonRanger();
 
 	/**
-	* \brief      cree un bouton alchimiste 
-	
+	* \brief      cree un bouton alchimiste
+
 	*    transforme le pointeur d'objet chose boutonAlchimiste en zone cliquable avec le texte "alchimiste" affiche
 	*
 	*/
 	void chargerBoutonAlchimiste();
 
 	/**
-	* \brief      creer un bouton voleur 
+	* \brief      creer un bouton voleur
 	*
 	*    transforme le pointeur d'objet chose boutonVoleur en zone cliquable avec le texte "voleur" affiche
 	*
@@ -145,9 +145,9 @@ public:
 	*
 	*/
 	void chargerBoutonclasses();
-	
+
 	/**
-	* \brief      genere une zone de texte 
+	* \brief      genere une zone de texte
 	*
 	*   genere une zone de texte  avec l'histoire du personnage
 	*

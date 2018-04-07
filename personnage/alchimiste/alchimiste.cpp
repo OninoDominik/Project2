@@ -43,38 +43,38 @@ void alchimiste::AttaqueSpecial(personnage& ennemi)
 	this->sound.setVolume(50);
 	this->sound.play();
 	cout << nom << "Bombe";
-	this->text.setString("la Bombe a infligée " + to_string(4+2 * BonusStat("intelligence")) +"dégats" );
+	this->text.setString("la Bombe a infligée " + to_string(4 + 2 * BonusStat("intelligence")) + "dégats");
 	this->text.setFillColor(sf::Color::Red);
 	this->text.setCharacterSize(16);
 	this->anim->badaBoom();
-	*ennemi.pvActuel -= 6+2 * BonusStat("intelligence");
+	*ennemi.pvActuel -= 6 + 2 * BonusStat("intelligence");
 	if (rand() % 2 == 1)
 	{
-		
+
 		sf::sleep(sf::seconds(0.25));
 		this->buffer.loadFromFile("./assets/sound/alchimiste/brulure.ogg");
 		this->sound.setBuffer(this->buffer);
 		this->sound.setVolume(50);
 		this->sound.play();
 		this->text.setString("degats bonus : " + to_string(4 + BonusStat("intelligence")));
-		*ennemi.pvActuel -= 6+ BonusStat("intelligence");
+		*ennemi.pvActuel -= 6 + BonusStat("intelligence");
 		this->anim->burn(1);
 		sf::sleep(sf::seconds(0.75));
-		
+
 	}
 	if (rand() % 2 == 1)
 	{
-		
+
 		sf::sleep(sf::seconds(0.25));
 		this->buffer.loadFromFile("./assets/sound/alchimiste/brulure.ogg");
 		this->sound.setBuffer(this->buffer);
 		this->sound.setVolume(50);
 		this->sound.play();
-		this->text.setString("Je brule : " + to_string(4+ BonusStat("intelligence")));
-		*this->pvActuel -= 6+ BonusStat("intelligence");
+		this->text.setString("Je brule : " + to_string(4 + BonusStat("intelligence")));
+		*this->pvActuel -= 6 + BonusStat("intelligence");
 		this->anim->burn(0);
 		sf::sleep(sf::seconds(0.75));
-		
+
 	}
 
 	x = this->rect.getPosition().x;

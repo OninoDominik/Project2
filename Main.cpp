@@ -19,9 +19,5 @@ int main()
 	menu * menuPartie = new menu();
 	menuPartie->menuStart();
 	delete menuPartie;
-	/*jeu * partie = new jeu();
-	partie->Startjeu();
-	delete partie;*/
-
 	return 0;
 }

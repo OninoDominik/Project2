@@ -7,14 +7,14 @@
 * \version   1.0
 * \date       04 april 2018
 * \brief       classe qui reprend toutes les informations necessaires afin de les stocker en base de donnees
-*                 
+*
 * \details    cette classe tampon permet de prendre directement les informations du jeu afin qu'elles soient utilisees par la classe DataBase
-*                  
+*
 */
 
 /*! \class sauvegarde
-* \brief       Cette classe tampon permet de prendre directement les informations du jeu afin qu'elles soient utilisees par la classe DataBase   
-*                 
+* \brief       Cette classe tampon permet de prendre directement les informations du jeu afin qu'elles soient utilisees par la classe DataBase
+*
 */
 class sauvegarde
 {
@@ -60,8 +60,8 @@ public:
 	int intelligence = 10; /*!< intelligence du personnage initialisee a 10 */
 	int coordx = 8 * 32; /*!< abscisse du personnage initialise a  256*/
 	int coordy = 45 * 32; /*!< ordonneee du personnage initialise a  1440*/
-	int rowID=0; /*!< slot de sauvegarde de la partie*/
-	int currentHp=99; /*!< vie actuelle du personnage initialisee a 99 */
+	int rowID = 0; /*!< slot de sauvegarde de la partie*/
+	int currentHp = 99; /*!< vie actuelle du personnage initialisee a 99 */
 	bool mob1 = true; /*!< mort ou vie du monstre mob1  */
 	bool mob2 = true; /*!< mort ou vie du monstre mob2 */
 	bool mob3 = true; /*!< mort ou vie du monstre mob3  */
@@ -72,7 +72,7 @@ public:
 	bool mob7 = true;
 	bool mob8 = true;
 	bool mob9 = true;
-	bool mob10 = true 
+	bool mob10 = true
 	*/;
 };
 
