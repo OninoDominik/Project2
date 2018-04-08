@@ -11,13 +11,7 @@ jeu::jeu(int largeur, int hauteur, bool Affichagefps)
 }
 jeu::jeu()
 {
-	delete  boutonAttaquer;
-	delete  boutonSoin;
-	delete  scorePjHp;
-	delete  scorePnjHP;
-	delete  boutonSpecial;
-	delete  texteGameOver;
-	delete  texteRemerciement;
+	
 
 }
 
@@ -197,6 +191,13 @@ void jeu::Combat32(personnage * ptrPj, personnage * Pnj, sf::Texture texturePnj,
 
 jeu::~jeu()
 {
+	delete  boutonAttaquer;
+	delete  boutonSoin;
+	delete  scorePjHp;
+	delete  scorePnjHP;
+	delete  boutonSpecial;
+	delete  texteGameOver;
+	delete  texteRemerciement;
 }
 
 void jeu::ChargerHpPjetbarre(personnage * ptrPj)
