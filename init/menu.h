@@ -56,7 +56,7 @@ public:
 	chose * boutonSauvegarde1 = new chose(); /*!< pointeur d'un objet chose boutonSauvegarde1*/
 	chose * boutonSauvegarde2 = new chose(); /*!< pointeur d'un objet chose boutonSauvegarde2*/
 	chose * boutonSauvegarde3 = new chose(); /*!< pointeur d'un objet chose boutonSauvegarde3*/
-
+	chose * boutonAdmin = new chose();
 	chose * logo = new chose();   /*!< pointeur d'un objet chose du menu:  logo*/
 	sf::Texture textureLogo; /*!< texture du logo */
 
@@ -102,6 +102,7 @@ public:
 	*
 	*/
 	void chargerBoutonsmenu();
+	void chargerBoutonAdmin();
 	/**
 	* \brief      creer un bouton BoutonTailleEcran
 

@@ -32,6 +32,11 @@ bool database::executeQuery(std::string query)
 	if (sqlite3_exec(db, query.c_str(), NULL, 0, &errmsg) != SQLITE_OK)
 	{
 		std::cout << errmsg << std::endl;
+		if (errmsg == "attempt to write a readonly database")
+		{
+			std::cout << "relance en ADMIN ADMIN ADMIN" << std::endl;
+
+		}
 		return false;
 	}
 	else

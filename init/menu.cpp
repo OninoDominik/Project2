@@ -58,6 +58,16 @@ void menu::chargerBoutonsmenu()
 	chargerBoutonOption();
 	chargerBoutonChargerPartie();
 	chargerBoutonNouvellePartie();
+	chargerBoutonAdmin();
+}
+void menu::chargerBoutonAdmin()
+{
+	boutonAdmin->text.setString("Relancer le jeu \n(projet2.exe) \nen Tant qu'\nADMINISTRATEUR");
+	boutonAdmin->text.setFillColor(sf::Color::Red);
+	boutonAdmin->text.setCharacterSize(20);
+	boutonAdmin->text.setPosition(0, 240);
+	boutonAdmin->rect.setPosition(0,240);
+	boutonAdmin->rect.setSize((sf::Vector2f(220, 220)));
 
 }
 
@@ -116,20 +126,7 @@ void menu::ChargerBoutonFrameRate()
 void menu::menuStart()
 {
 
-	database bdd;
-	bdd.openDatabase();
-	bdd.executeQuery("CREATE TABLE IF NOT EXISTS sauvegarde (nomClasse TEXT,classe INT,currentHp Int,force INT, constitution INT, dexterite INT, sagesse INT, charisme INT, intelligence INT, coordx INT, coordY INT,mob1 INT, mob2 INT, mob3 INT, mob4 INT, id INT)"); // prix FLOAT, qtevendue INT, nom TEXT
-	bdd.insertSauvegardeSansDoublon("Alchimiste", 4, 99, 10, 16, 10, 10, 6, 18, 256, 1440, 1, 1, 1, 1, 1);
-	bdd.insertSauvegardeSansDoublon("Paladin", 2, 99, 16, 10, 10, 6, 18, 10, 256, 1440, 1, 1, 1, 1, 2);
-	bdd.insertSauvegardeSansDoublon("Ranger", 3, 99, 10, 10, 18, 16, 6, 10, 256, 1440, 1, 1, 1, 1, 3);
-
-	std::vector<sauvegarde*>* produits = bdd.getAllSauvegarde();
-	for (int i = 0; i < produits->size(); i++)
-	{
-		std::cout << (*produits)[i]->nomClasse << " + " << (*produits)[i]->classe << std::endl;
-	}
-
-	bdd.closeDatabase();
+	
 	sf::Music music;
 	music.openFromFile("./assets/sound/Dreamseer.ogg");
 	music.play();
@@ -145,11 +142,36 @@ void menu::menuStart()
 	logo->rect.setSize(sf::Vector2f(110, 64));
 	logo->sprite.setPosition(logo->rect.getPosition());
 	chargerBoutonsmenu();
+	
 	sf::Vector2i tailleEcran(220, 420);
 	sf::RenderWindow menuWindow(sf::VideoMode(tailleEcran.x, tailleEcran.y), "Pathfinder", sf::Style::Titlebar | sf::Style::Close);
 	sf::Color orange(255, 150, 0);
+	database bdd;
+	bdd.openDatabase();
+	bool fermer = false;
+	bdd.executeQuery("CREATE TABLE IF NOT EXISTS sauvegarde (nomClasse TEXT,classe INT,currentHp Int,force INT, constitution INT, dexterite INT, sagesse INT, charisme INT, intelligence INT, coordx INT, coordY INT,mob1 INT, mob2 INT, mob3 INT, mob4 INT, id INT)");
+	if (bdd.insertSauvegardeSansDoublon("Alchimiste", 4, 99, 10, 16, 10, 10, 6, 18, 256, 1440, 1, 1, 1, 1, 1)) // prix FLOAT, qtevendue INT, nom TEXT)
+	{
+		std::cout << "tu es bien en admin" << endl ;
+	}
+	else
+	{
+		fermer = true;
+	}
+	;
+	bdd.insertSauvegardeSansDoublon("Paladin", 2, 99, 16, 10, 10, 6, 18, 10, 256, 1440, 1, 1, 1, 1, 2);
+	bdd.insertSauvegardeSansDoublon("Ranger", 3, 99, 10, 10, 18, 16, 6, 10, 256, 1440, 1, 1, 1, 1, 3);
+
+	std::vector<sauvegarde*>* produits = bdd.getAllSauvegarde();
+	for (int i = 0; i < produits->size(); i++)
+	{
+		std::cout << (*produits)[i]->nomClasse << " + " << (*produits)[i]->classe << std::endl;
+	}
+
+	bdd.closeDatabase();
 	while (menuWindow.isOpen())
 	{
+		
 		sf::Event menuEvent;
 		while (menuWindow.pollEvent(menuEvent))
 		{
@@ -158,6 +180,7 @@ void menu::menuStart()
 			if (menuEvent.type == sf::Event::KeyPressed && menuEvent.key.code == sf::Keyboard::Escape)
 				menuWindow.close();
 		}
+		
 
 		chose spriteCurseur;
 		spriteCurseur.rect.setPosition((sf::Vector2f)sf::Mouse::getPosition(menuWindow));
@@ -205,6 +228,7 @@ void menu::menuStart()
 				}
 				ChargerBoutonTailleEcran();
 				ChargerBoutonFrameRate();
+				
 				chose spriteCurseur2;
 				spriteCurseur2.rect.setPosition((sf::Vector2f)sf::Mouse::getPosition(optionWindow));
 				spriteCurseur2.rect.setSize(sf::Vector2f(4, 4));
@@ -272,19 +296,36 @@ void menu::menuStart()
 		{
 			boutonOption->text.setFillColor(sf::Color::Red);
 		}
+		
 		boutonOption->text.setFont(font);
 		boutonNouvellePartie->text.setFont(font);
 		boutonChargerPartie->text.setFont(font);
+		boutonAdmin->text.setFont(font);
 		menuWindow.clear();
-		menuWindow.draw(boutonChargerPartie->text);
-		menuWindow.draw(boutonNouvellePartie->text);
-		menuWindow.draw(boutonOption->text);
+		
+		if (fermer == false)
+		{
+			menuWindow.draw(boutonChargerPartie->text);
+			menuWindow.draw(boutonNouvellePartie->text);
+			menuWindow.draw(boutonOption->text);
+		}
+		else
+		{
+			menuWindow.draw(boutonAdmin->text);
+		}
 		menuWindow.draw(logo->sprite);
+		
 		menuWindow.display();
+		if (fermer == true)
+		{
+			sf::sleep(sf::milliseconds(10000));
+			menuWindow.close();
 
+		}
+		
+		
 	}
-
-
+	
 
 }
 
