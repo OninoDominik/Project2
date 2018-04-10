@@ -126,5 +126,3 @@ bool database::updateSauvegarde(sauvegarde* save)
 
 	return true;
 }
-
-
