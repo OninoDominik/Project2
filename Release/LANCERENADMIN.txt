@@ -1,1 +1,9 @@
-APRES L'INSTALLATION, EXECUTER PROJECT2.EXE EN ADMINISTRATEUR
+Si une erreur du format suivant arrive "Error 0xc000007b in Windows 7, 8.1, 10"
+suivez ces etapes :
+1 veuillez mettre a jour votre driver de carte graphique. 
+2 mettre a jour la version Microsoft .NET framework
+3 desinstaller le jeu 
+4 eteindre et rallumer votre PC
+5 reinstaller le jeu avec les droits adminisrateur
+
+
