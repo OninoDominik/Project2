@@ -16,6 +16,14 @@ void combat::Choixjoueur(personnage* joueur)
 	do
 	{
 		cout << *joueur->choix << endl;
+		if (*joueur->pvActuel <= 0)
+		{
+			*joueur->envie = false;
+			cout << *joueur->envie << endl;
+			joueur->enCombat = false;
+			*joueur->fermeCombatWindow = true;
+			break;
+		}
 
 	} while (*joueur->choix == 0);
 

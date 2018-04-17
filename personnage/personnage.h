@@ -96,12 +96,12 @@ public:
 	int * classe = new int(0); /*!< pointeur d'un entier qui indique le la classe par un code chiffré  */
 	bool * fermeCombatWindow = new bool(false); /*!< pointeur pour ferme la fenetre de combat si un adversaire meurt dans dans un combat ou si l'avatar du joueur meurt */
 	bool * envie = new bool(true); /*!< pointeur qui indique si un personnage est mort ou non */
-	bool  estUnJoueur = false; /*!< pointeur qui indique si le personnage est un ennemi ou le joueur */
-	bool  estEtourdit = false; /*!< pointeur qui indique si l'ennemie est etourdit et qu'il passe son prochain tour */
-	bool mouvementCombat = false; /*!< pointeur qui empeche de bouger quand ce n'est aps son tour en combat */
-	bool enCombat = false; /*!< pointeur qui indique si le personnage combat */
-	int seretourner = 0; /*!< pointeur qui permet de faire regarder  dans la direction voulue*/
-	bool feinte = false; /*!< pointeur qui indique si le joueur a effectuer une feinte */
+	bool  estUnJoueur = false; /*!< booleen qui indique si le personnage est un ennemi ou le joueur */
+	bool  estEtourdit = false; /*!< booleen qui indique si l'ennemie est etourdit et qu'il passe son prochain tour */
+	bool mouvementCombat = false; /*!< booleen qui empeche de bouger quand ce n'est aps son tour en combat */
+	bool enCombat = false; /*!< booleen qui indique si le personnage combat */
+	int seretourner = 0; /*!< entier qui permet de faire regarder  dans la direction voulue*/
+	bool feinte = false; /*!< booleen qui indique si le joueur a effectuer une feinte */
 	sf::Time difference;  /*!< temps qui permet de calculler la difference de temps entre chaque frame */
 	sf::Time Chrono; /*!< temps quichronometre */
 	sf::Sound sound;  /*!< temps quichronometre */
@@ -129,7 +129,6 @@ public:
 	*
 	*/
 	int Initiative();
-	//void afficheStat();
 	/**
 	* \brief  fait avancer le personnage vers son adversaire en combat
 	*
@@ -199,8 +198,6 @@ public:
 	*
 	*/
 	void setNom(string choixNom);
-
-
 
 };
 

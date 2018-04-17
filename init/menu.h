@@ -102,6 +102,13 @@ public:
 	*
 	*/
 	void chargerBoutonsmenu();
+
+	/**
+	* \brief      creer un bouton BoutonTailleEcran
+
+	*    transforme le pointeur d'objet chose BoutonTailleEcran en zone cliquable avec un texte qui indique que le logiciel n'a pas les droits de modifier la base de donnees
+	*
+	*/
 	void chargerBoutonAdmin();
 	/**
 	* \brief      creer un bouton BoutonTailleEcran
