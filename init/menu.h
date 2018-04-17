@@ -126,13 +126,5 @@ public:
 	*/
 	void ChargerBoutonFrameRate();
 
-
-
-
-
-
-
-
-
 };
 

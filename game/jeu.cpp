@@ -38,10 +38,15 @@ void jeu::Combat32(personnage * ptrPj, personnage * Pnj, sf::Texture texturePnj,
 	viePnj.setTexture(pvRed);
 	viePj.setTextureRect(sf::IntRect(10, 10, 72, 8));
 	viePnj.setTextureRect(sf::IntRect(10, 10, 72, 8));
-	pv.loadFromFile("./assets/img/hpBar.png");
-	pvRed.loadFromFile("./assets/img/red.png");
-
-
+	if (!pv.loadFromFile("./assets/img/hpBar.png"))
+	{
+		std::cout << "pas d image ./assets/img/hpBar.png" << std::endl;
+		
+	}
+	if (!pvRed.loadFromFile("./assets/img/red.png"))
+	{
+		std::cout << "pas d image ./assets/img/red.png" << std::endl;
+	}
 
 	sf::Thread thread(std::bind(&combat::startcombat, ptrPj, Pnj));
 
@@ -318,74 +323,69 @@ int jeu::Startjeu(int classe, int currenthp, int force, int dexterite, int const
 	window.setFramerateLimit(60);//Limitation du framerate
 
 
-								 // load texture (spritesheet)
+								 // load texture (spritesheet) et test si les texture sont presente 
 
 
 	if (!icon.loadFromFile("./assets/img/iconPath.jpeg"))
 	{
-		std::cout << "pas de sprite" << std::endl;
+		std::cout << "pas de d'icone ./assets/img/iconPath.jpeg" << std::endl;
 		return 1;
 	}
 	window.setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
 
 	if (!fond.loadFromFile("./assets/img/map/steampunkMap.png"))
 	{
-		std::cout << "pas de sprite" << std::endl;
+		std::cout << "pas de Map ./assets/img/map/steampunkMap.png" << std::endl;
 		return 1;
 	}
 	if (!cactus.loadFromFile("./assets/img/map/cactus2.png"))
 	{
-		std::cout << "pas de sprite" << std::endl;
+		std::cout << "pas de map ./assets/img/map/cactus2.png" << std::endl;
 		return 1;
 	}
 
 	if (!areneBack.loadFromFile("./assets/img/arenaFront.png"))
 	{
-		std::cout << "pas de sprite" << std::endl;
+		std::cout << "pas de petite map ./assets/img/arenaFront.png" << std::endl;
 		return 1;
 	}
 	if (!areneFront.loadFromFile("./assets/img/arenaFront.png"))
 	{
-		std::cout << "pas de sprite" << std::endl;
+		std::cout << "pas de petite map ./assets/img/arenaFront.png" << std::endl;
 		return 1;
 	}
 	if (!texturegobMage.loadFromFile("./assets/img/gobMage.png"))
 	{
-		std::cout << "pas de sprite" << std::endl;
+		std::cout << "pas de spritesheet ./assets/img/gobMage.png" << std::endl;
 		return 1;
 	}
 
 	if (!texture3.loadFromFile("./assets/img/gobGuerrier.png"))
 	{
-		std::cout << "pas de sprite" << std::endl;
+		std::cout << "pas de spritesheet ./assets/img/gobGuerrier.png" << std::endl;
 		return 1;
 	}
 	if (!texture4.loadFromFile("./assets/img/darkBoss.png"))
 	{
-		std::cout << "pas de sprite" << std::endl;
+		std::cout << "pas de spritesheet ./assets/img/darkBoss.png" << std::endl;
 		return 1;
 	}
 	if (!grave.loadFromFile("./assets/img/grave.png"))
 	{
-		std::cout << "pas de sprite" << std::endl;
+		std::cout << "pas de texture ./assets/img/grave.png" << std::endl;
 		return 1;
 	}
-	/*if (!pala.loadFromFile("./assets/img/grave.png"))
-	{
-		std::cout << "pas de sprite" << std::endl;
-		return 1;
-	}*/
 	if (!textureOrc.loadFromFile("./assets/img/gobarmure.png"))
 	{
-		std::cout << "pas de sprite" << std::endl;
+		std::cout << "pas de spritesheet" << std::endl;
 		return 1;
 	}
 
 	int tailleblock = 32;
-	//sf::Font font;
+
 	if (!font.loadFromFile("./assets/font/Champ.ttf"))
 	{
-		std::cout << "pas de font pixel" << std::endl;
+		std::cout << "pas de font ./assets/font/Champ.ttf" << std::endl;
 		return 1;
 	}
 	sf::Text text("Ecartez vous !! Manant !!", font, 16);
@@ -429,7 +429,7 @@ int jeu::Startjeu(int classe, int currenthp, int force, int dexterite, int const
 	{
 		if (!textureHero.loadFromFile("./assets/img/paladin/paladin.png"))
 		{
-			std::cout << "pas de sprite" << std::endl;
+			std::cout << "pas de spritesheet ./assets/img/paladin/paladin.png" << std::endl;
 			return 1;
 		}
 		ptrPj = ptrPal;
@@ -446,7 +446,7 @@ int jeu::Startjeu(int classe, int currenthp, int force, int dexterite, int const
 	{
 		if (!textureHero.loadFromFile("./assets/img/guerrier/guerrier.png"))
 		{
-			std::cout << "pas de sprite" << std::endl;
+			std::cout << "pas de spritesheet ./assets/img/guerrier/guerrier.png" << std::endl;
 			return 1;
 		}
 		ptrPj = ptrGue;
@@ -462,7 +462,7 @@ int jeu::Startjeu(int classe, int currenthp, int force, int dexterite, int const
 	{
 		if (!textureHero.loadFromFile("./assets/img/alchimiste/alchimiste.png"))
 		{
-			std::cout << "pas de sprite" << std::endl;
+			std::cout << "pas de spritesheet ./assets/img/alchimiste/alchimiste.png" << std::endl;
 			return 1;
 		}
 		ptrPj = ptrAlc;
@@ -479,7 +479,7 @@ int jeu::Startjeu(int classe, int currenthp, int force, int dexterite, int const
 	{
 		if (!textureHero.loadFromFile("./assets/img/ranger/ranger.png"))
 		{
-			std::cout << "pas de sprite" << std::endl;
+			std::cout << "pas de spritesheet ./assets/img/ranger/ranger.png" << std::endl;
 			return 1;
 		}
 		ptrPj = ptrRan;
@@ -495,7 +495,7 @@ int jeu::Startjeu(int classe, int currenthp, int force, int dexterite, int const
 	{
 		if (!textureHero.loadFromFile("./assets/img/voleur/voleur.png"))
 		{
-			std::cout << "pas de sprite" << std::endl;
+			std::cout << "pas de spritesheet ./assets/img/voleur/voleur.png" << std::endl;
 			return 1;
 		}
 		ptrPj = ptrVol;
@@ -723,9 +723,17 @@ int jeu::Startjeu(int classe, int currenthp, int force, int dexterite, int const
 			viePj.setTexture(pvRed);
 			viePnj.setTexture(pvRed);
 			viePj.setTextureRect(sf::IntRect(10, 10, 72, 8));
-			viePnj.setTextureRect(sf::IntRect(10, 10, 72, 8));
-			pv.loadFromFile("./assets/img/hpBar.png");
-			pvRed.loadFromFile("./assets/img/red.png");
+			viePnj.setTextureRect(sf::IntRect(10, 10, 72, 8)); 
+			if (!pv.loadFromFile("./assets/img/hpBar.png"))
+			{
+				std::cout << "pas d image ./assets/img/hpBar.png" << std::endl;
+				return 1;
+			}
+			if (!pvRed.loadFromFile("./assets/img/red.png"))
+			{
+				std::cout << "pas d image ./assets/img/red.png" << std::endl;
+				return 1;
+			}
 			sf::RenderWindow combatWindow2(sf::VideoMode(470, 145), "Combat", sf::Style::Titlebar); //470.145
 
 			sf::Thread thread(std::bind(&combat::startcombat, ptrPj, ptrDB));
@@ -979,7 +987,11 @@ int jeu::Startjeu(int classe, int currenthp, int force, int dexterite, int const
 		{
 			music.stop();
 			window.close();
-			ptrPj->buffer.loadFromFile("./assets/sound/gameOver.ogg");
+			if (!(ptrPj->buffer.loadFromFile("./assets/sound/gameOver.ogg")))
+			{
+				std::cout << "pas de sound ./assets/sound/gameOver.ogg" << std::endl;
+				return 1;
+			}
 			ptrPj->sound.setBuffer(ptrPj->buffer);
 			ptrPj->sound.setPlayingOffset(sf::seconds(1));
 			ptrPj->sound.play();
