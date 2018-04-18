@@ -9,6 +9,7 @@ jeu::jeu(int largeur, int hauteur, bool Affichagefps)
 	hauteurEcranPrincipal = hauteur;
 
 }
+
 jeu::jeu()
 {
 	

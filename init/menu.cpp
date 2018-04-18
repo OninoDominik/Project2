@@ -53,6 +53,8 @@ void menu::chargerBoutonOption()
 	boutonOption->rect.setSize((sf::Vector2f(200, 50)));
 
 }
+
+
 void menu::chargerBoutonsmenu()
 {
 	chargerBoutonOption();
@@ -101,6 +103,46 @@ void menu::ChargerBoutonTailleEcran()
 	boutonTailleEcran->rect.setSize((sf::Vector2f(325, 50)));
 
 }
+void menu::chargerBoutonSon(int sound)
+{
+	boutonSon->text.setString("Volume : " + to_string(sound));
+	boutonSon->text.setFillColor(sf::Color::White);
+	boutonSon->text.setCharacterSize(20);
+	boutonSon->text.setPosition(0, 120);
+	boutonSon->rect.setPosition(0, 120);
+	boutonSon->rect.setSize((sf::Vector2f(120, 50)));
+
+}
+void menu::chargerBoutonPlus()
+{
+	boutonPlus->text.setString(" + ");
+	boutonPlus->text.setFillColor(sf::Color::Green);
+	boutonPlus->text.setCharacterSize(20);
+	boutonPlus->text.setPosition(120, 120);
+	boutonPlus->rect.setPosition(120, 120);
+	boutonPlus->rect.setSize((sf::Vector2f(50, 50)));
+}
+void menu::chargerBoutonMoins()
+{
+	boutonMoins->text.setString(" - ");
+	boutonMoins->text.setFillColor(sf::Color::Green);
+	boutonMoins->text.setCharacterSize(20);
+	boutonMoins->text.setPosition(170, 120);
+	boutonMoins->rect.setPosition(170, 120);
+	boutonMoins->rect.setSize((sf::Vector2f(50, 50)));
+}
+void menu::chargerBoutonValider()
+{
+	boutonValider->text.setString(" Retour au menu");
+	boutonValider->text.setFillColor(sf::Color::Blue);
+	boutonValider->text.setCharacterSize(20);
+	boutonValider->text.setPosition(170, 170);
+	boutonValider->rect.setPosition(170, 170);
+	boutonValider->rect.setSize((sf::Vector2f(150, 50)));
+}
+
+
+
 void menu::ChargerBoutonFrameRate()
 {
 	switch (Affichagefps)
@@ -215,7 +257,7 @@ void menu::menuStart()
 		if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && boutonOption->rect.getGlobalBounds().intersects(spriteCurseur.rect.getGlobalBounds()))
 		{
 			menuWindow.setVisible(false);
-			sf::RenderWindow optionWindow(sf::VideoMode((325), 125), "Pathfinder", sf::Style::Titlebar | sf::Style::Close);
+			sf::RenderWindow optionWindow(sf::VideoMode((325), 225), "Pathfinder", sf::Style::Titlebar | sf::Style::Close);
 			while (optionWindow.isOpen())
 			{
 				sf::Event optionEvent;
@@ -228,7 +270,11 @@ void menu::menuStart()
 				}
 				ChargerBoutonTailleEcran();
 				ChargerBoutonFrameRate();
-				
+				chargerBoutonSon(volume);
+				chargerBoutonPlus();
+				chargerBoutonMoins();
+				chargerBoutonValider();
+
 				chose spriteCurseur2;
 				spriteCurseur2.rect.setPosition((sf::Vector2f)sf::Mouse::getPosition(optionWindow));
 				spriteCurseur2.rect.setSize(sf::Vector2f(4, 4));
@@ -256,17 +302,44 @@ void menu::menuStart()
 				{
 					boutonTailleEcran->text.setFillColor(orange);
 				}
+				if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && boutonPlus->rect.getGlobalBounds().intersects(spriteCurseur2.rect.getGlobalBounds()))
+				{
 
+					volume += 5;
+					sf::sleep(sf::milliseconds(80));
 
+				}
+				if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && boutonMoins->rect.getGlobalBounds().intersects(spriteCurseur2.rect.getGlobalBounds()))
+				{
+
+					volume -= 5;
+					sf::sleep(sf::milliseconds(80));
+
+				}
+				if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && boutonValider->rect.getGlobalBounds().intersects(spriteCurseur2.rect.getGlobalBounds()))
+				{
+					menuWindow.setVisible(true);
+					sf::sleep(sf::milliseconds(80));
+					optionWindow.close();
+
+				}
 
 				boutonTailleEcran->text.setFont(font);
 				boutonFrameRate->text.setFont(font);
+				boutonSon->text.setFont(font);
+				boutonPlus->text.setFont(font);
+				boutonMoins->text.setFont(font);
+				boutonValider->text.setFont(font);
+
 
 				optionWindow.clear();
 				optionWindow.draw(boutonTailleEcran->text);
 				optionWindow.draw(boutonFrameRate->text);
+				optionWindow.draw(boutonSon->text);
+				optionWindow.draw(boutonPlus->text);
+				optionWindow.draw(boutonMoins->text);
+				optionWindow.draw(boutonValider->text);
 				optionWindow.display();
-
 
 			}
 			menuWindow.setVisible(true);
