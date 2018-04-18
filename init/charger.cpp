@@ -54,7 +54,7 @@ charger::~charger()
 void charger::start()
 {
 	sf::Image icon ;
-	sf::RenderWindow chargerWindow(sf::VideoMode(600, 600), "Chargement", sf::Style::Titlebar | sf::Style::Close);
+	sf::RenderWindow chargerWindow(sf::VideoMode(200, 250), "Chargement", sf::Style::Titlebar | sf::Style::Close);
 	if (!icon.loadFromFile("./assets/img/iconPath.jpeg"))
 	{
 		std::cout << "pas de d'icone ./assets/img/iconPath.jpeg" << std::endl;

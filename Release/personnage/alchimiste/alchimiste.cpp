@@ -40,7 +40,7 @@ void alchimiste::AttaqueSpecial(personnage& ennemi)
 	AvancerAttaque();
 	this->buffer.loadFromFile("./assets/sound/alchimiste/boom.ogg");
 	this->sound.setBuffer(this->buffer);
-	this->sound.setVolume(50);
+	this->sound.setVolume(volume);
 	this->sound.play();
 	cout << nom << "Bombe";
 	this->text.setString("la Bombe a infligée " + to_string(4 + 2 * BonusStat("intelligence")) + "dégats");
@@ -54,7 +54,7 @@ void alchimiste::AttaqueSpecial(personnage& ennemi)
 		sf::sleep(sf::seconds(0.25));
 		this->buffer.loadFromFile("./assets/sound/alchimiste/brulure.ogg");
 		this->sound.setBuffer(this->buffer);
-		this->sound.setVolume(50);
+		this->sound.setVolume(volume);
 		this->sound.play();
 		this->text.setString("degats bonus : " + to_string(4 + BonusStat("intelligence")));
 		*ennemi.pvActuel -= 6 + BonusStat("intelligence");
@@ -68,13 +68,12 @@ void alchimiste::AttaqueSpecial(personnage& ennemi)
 		sf::sleep(sf::seconds(0.25));
 		this->buffer.loadFromFile("./assets/sound/alchimiste/brulure.ogg");
 		this->sound.setBuffer(this->buffer);
-		this->sound.setVolume(50);
+		this->sound.setVolume(volume);
 		this->sound.play();
 		this->text.setString("Je brule : " + to_string(4 + BonusStat("intelligence")));
 		*this->pvActuel -= 6 + BonusStat("intelligence");
 		this->anim->burn(0);
 		sf::sleep(sf::seconds(0.75));
-
 	}
 
 	x = this->rect.getPosition().x;
@@ -90,7 +89,7 @@ void alchimiste::sesoigne()
 	this->buffer.loadFromFile("./assets/sound/heal.ogg");
 	this->sound.setBuffer(this->buffer);
 	this->sound.play();
-	this->sound.setVolume(20);
+	this->sound.setVolume(volume);
 
 	int x = this->rect.getPosition().x;
 	int y = this->rect.getPosition().y;

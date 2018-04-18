@@ -1,7 +1,7 @@
 var classjeu =
 [
     [ "jeu", "classjeu.html#a38513a7bfd0a7ea4e3a5612da2856016", null ],
-    [ "jeu", "classjeu.html#a2f669239f8bb86c9cac7fadacfc52095", null ],
+    [ "jeu", "classjeu.html#a02bdc9808292e3829e2ed341f3480e8d", null ],
     [ "~jeu", "classjeu.html#a55385a33ef40e0579eb3a3634566c4a8", null ],
     [ "ChargerBoutonAttaquer", "classjeu.html#a9d82e7f21e8863d1ed8bc7ef7d7aec87", null ],
     [ "ChargerBoutonSoin", "classjeu.html#a176fa4a5355a3529a833592d8f81294e", null ],
@@ -11,6 +11,7 @@ var classjeu =
     [ "ChargerTexteGameover", "classjeu.html#a79b4c4305a9aa1dde4183547ffb94203", null ],
     [ "ChargerTexteRemerciement", "classjeu.html#a3c2e2246dd5ee2d41ccf37c7e78262d0", null ],
     [ "Combat32", "classjeu.html#a63596fcd7c1a89fa40d5f5d89a159828", null ],
+    [ "majVue", "classjeu.html#a68aa323e3ac2c98ee66ce5387ccd7036", null ],
     [ "murmap1", "classjeu.html#a4671d4fd828d6709ca472994855ab4ff", null ],
     [ "Startjeu", "classjeu.html#aeb59c51913d23e2f449ad04f0de2072b", null ],
     [ "AfficherFrameRate", "classjeu.html#a838215cb29965391c0e4c8313a6442da", null ],
@@ -19,6 +20,7 @@ var classjeu =
     [ "boutonAttaquer", "classjeu.html#ac2abbfb40adca68f9d6ef5b3c34e2deb", null ],
     [ "boutonSoin", "classjeu.html#a6396acebe5d701ce532d0b27fb9468dd", null ],
     [ "boutonSpecial", "classjeu.html#a90c1e01c86044871fa86b3c1e1f3c3ea", null ],
+    [ "cactus", "classjeu.html#adaf5d51d4bad9851ed9316f4a16620d1", null ],
     [ "combatEvent", "classjeu.html#aa3d0d1f40c3f67f92a2bd01da43acc12", null ],
     [ "combatWindow", "classjeu.html#a2f5828306a38cec451fda205a71ee04c", null ],
     [ "combatWindow2", "classjeu.html#ae6f1468cb8e294592cfe59c9bcf0cea2", null ],
@@ -32,6 +34,7 @@ var classjeu =
     [ "j", "classjeu.html#a91c0fab688b58c38cd214c0d8cd8cc8e", null ],
     [ "largeurEcranPrincipal", "classjeu.html#a1fcaf4729384cac7fdeb17bad1d602b0", null ],
     [ "mur1", "classjeu.html#aae067b47cfeb93fa11ddf3b7d1c9910d", null ],
+    [ "ptrPj", "classjeu.html#aebc276749bf1b096f02451b3c8fac396", null ],
     [ "scorePjHp", "classjeu.html#a80f00b1c807ea6817bdb432a069600b7", null ],
     [ "scorePnjHP", "classjeu.html#abc8d0cfa5849ba7e4159fcf5fbe7e91a", null ],
     [ "spriteAreneBack", "classjeu.html#a0c9e3f7c5f2f0cf31bd5da9e3916fcb0", null ],
@@ -45,5 +48,7 @@ var classjeu =
     [ "texture4", "classjeu.html#a81c879ee186537a4e177bb29d9dbd7bc", null ],
     [ "texturegobMage", "classjeu.html#a558ca100cca1c6e3e97adba954a404fe", null ],
     [ "textureHero", "classjeu.html#acba2731c1a3cf75b98bfba2149a00c8e", null ],
-    [ "textureOrc", "classjeu.html#a0082b3920e78d4471d157a53608e1674", null ]
+    [ "textureOrc", "classjeu.html#a0082b3920e78d4471d157a53608e1674", null ],
+    [ "volume", "classjeu.html#a41428959db9c5a6336a60eb6e8673e9f", null ],
+    [ "vuePj", "classjeu.html#aa81b1d5cd233fbd85565819d6498d24b", null ]
 ];

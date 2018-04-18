@@ -16,6 +16,14 @@ void combat::Choixjoueur(personnage* joueur)
 	do
 	{
 		cout << *joueur->choix << endl;
+		if (*joueur->pvActuel <= 0)
+		{
+			*joueur->envie = false;
+			cout << *joueur->envie << endl;
+			joueur->enCombat = false;
+			*joueur->fermeCombatWindow = true;
+			break;
+		}
 
 	} while (*joueur->choix == 0);
 
@@ -77,7 +85,7 @@ void combat::startcombat(personnage* ami, personnage* ennemi)
 			{
 				ami->buffer.loadFromFile("./assets/sound/mort.ogg");
 				ami->sound.setBuffer(ami->buffer);
-				ami->sound.setVolume(50);
+				ami->sound.setVolume(100);
 				ami->sound.play();
 
 				*ennemi->envie = false;
@@ -107,7 +115,7 @@ void combat::startcombat(personnage* ami, personnage* ennemi)
 					{
 						ami->buffer.loadFromFile("./assets/sound/guerrier/saignement.ogg");
 						ami->sound.setBuffer(ami->buffer);
-						ami->sound.setVolume(50);
+						ami->sound.setVolume(ami->volume);
 						ami->sound.setPlayingOffset(sf::seconds(3));
 						ami->sound.play();
 						sf::sleep(sf::seconds(0.55));

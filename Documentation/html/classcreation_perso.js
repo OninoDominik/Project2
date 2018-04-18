@@ -1,7 +1,7 @@
 var classcreation_perso =
 [
     [ "creationPerso", "classcreation_perso.html#a5a8374710869ac8a418f5f4d03c92f38", null ],
-    [ "creationPerso", "classcreation_perso.html#a96cec16f1318c3c37f4fecf29b0aafb4", null ],
+    [ "creationPerso", "classcreation_perso.html#ad34a0d0d3c46c8687a1d78ea7a9564d6", null ],
     [ "~creationPerso", "classcreation_perso.html#a5fc5f3f1be4914230a401749b3b47b97", null ],
     [ "chargerBoutonAlchimiste", "classcreation_perso.html#a19064b75ffeba3f699290d645467b823", null ],
     [ "chargerBoutonCaracteristique", "classcreation_perso.html#a67df3ef2ac574cf22c7cd5c5cc3ed70b", null ],
@@ -59,5 +59,6 @@ var classcreation_perso =
     [ "lFenetreDeJeu", "classcreation_perso.html#a9750488ca098a79df9deb533ddcc435c", null ],
     [ "sagesse", "classcreation_perso.html#a6f97303cedfc1fac85b9689d5280e519", null ],
     [ "slotSauvegarde", "classcreation_perso.html#ac50c9fbaac90137486e82b5440eece3a", null ],
-    [ "spriteCurseurCrea", "classcreation_perso.html#ab1c947c0775a79ecd6711000fbdc46f7", null ]
+    [ "spriteCurseurCrea", "classcreation_perso.html#ab1c947c0775a79ecd6711000fbdc46f7", null ],
+    [ "volumeSon", "classcreation_perso.html#a225429e0f45e33622f4e31d8855352c5", null ]
 ];

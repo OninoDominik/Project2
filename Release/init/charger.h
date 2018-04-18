@@ -35,8 +35,9 @@ public:
 	* \param largeurFenetreDeJeu : stocke la taille de la largeur de la fentere principal
 	* \param hauteurFenetreDeJeu : stocke la taille de la hauteur de la fentere principal
 	* \param Affichagefps : stocke l'information si l'utilisateur souhaite l'affichage des frames par seconde
+	* \param volume : stocke le volume sonore
 	*/
-	charger(int largeurFenetreDeJeu, int hauteurFenetreDeJeu, int Affichagefps);
+	charger(int largeurFenetreDeJeu, int hauteurFenetreDeJeu, int Affichagefps, int volume);
 	/**
 	* \brief       destructeur
 	*
@@ -68,7 +69,7 @@ public:
 	int largeurFenetreDeJeu;/*!< stocke la taille de la largeur de la fentere principal */
 	int hauteurFenetreDeJeu; /*!< stocke la taille de la hauteur de la fentere principal */
 	int Affichagefps;  /*!< affiche ou non les frames par seconde */
-
+	int volumeSon; /*!< stocke le volume sonore */
 	/**
 	* \brief      creer un bouton Sauvegarde1
 	*    transforme le pointeur d'objet chose boutonSauvegarde2 en zone cliquable avec le nom de la classe de la derniere sauvegarde sur le slot 2

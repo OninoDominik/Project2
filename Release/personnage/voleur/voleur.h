@@ -17,6 +17,7 @@
 * \details     attaque et calcul de soin du metier voleur
 *
 */
+
 class voleur : public personnage
 {
 public:

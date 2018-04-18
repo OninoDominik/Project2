@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['majvue',['majVue',['../classjeu.html#a68aa323e3ac2c98ee66ce5387ccd7036',1,'jeu']]],
   ['menu',['menu',['../classmenu.html',1,'menu'],['../classmenu.html#ad345b60b72c4992525cf064d5642c1d9',1,'menu::menu()']]],
   ['menu_2eh',['menu.h',['../menu_8h.html',1,'']]],
   ['menustart',['menuStart',['../classmenu.html#a0f6aa4e91d4c67fdb426e9d44d9ed177',1,'menu']]],

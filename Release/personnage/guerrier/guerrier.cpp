@@ -46,7 +46,7 @@ void guerrier::AttaqueSpecial(personnage& ennemi)
 
 	this->buffer.loadFromFile("./assets/sound/guerrier/saignement.ogg");
 	this->sound.setBuffer(this->buffer);
-	this->sound.setVolume(50);
+	this->sound.setVolume(volume);
 	this->sound.setPlayingOffset(sf::seconds(3));
 	this->sound.play();
 
@@ -63,7 +63,7 @@ void guerrier::sesoigne()
 	this->buffer.loadFromFile("./assets/sound/heal.ogg");
 	this->sound.setBuffer(this->buffer);
 	this->sound.play();
-	this->sound.setVolume(20);
+	this->sound.setVolume(volume);
 	int x = this->rect.getPosition().x;
 	int y = this->rect.getPosition().y;
 

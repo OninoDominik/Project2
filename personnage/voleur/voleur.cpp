@@ -67,7 +67,7 @@ void voleur::AttaqueSpecial(personnage& ennemi)
 		{
 			this->buffer.loadFromFile("./assets/sound/voleur/vanish.ogg");
 			this->sound.setBuffer(this->buffer);
-			this->sound.setVolume(volume);
+			this->sound.setVolume(this->volume);
 			this->sound.setPlayingOffset(sf::seconds(24));
 			this->sound.play();
 			sf::sleep(sf::milliseconds(250));

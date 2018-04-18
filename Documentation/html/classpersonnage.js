@@ -3,7 +3,6 @@ var classpersonnage =
     [ "personnage", "classpersonnage.html#acd9ca516f8c5c110687e5167dab8db59", null ],
     [ "personnage", "classpersonnage.html#a40624405bf8005c96c9b8a9526b42e02", null ],
     [ "~personnage", "classpersonnage.html#a3258008aea95a40b54591ee6bc7129be", null ],
-    [ "afficheStat", "classpersonnage.html#ae77393bc6619f2991bd02c26ae02c2ea", null ],
     [ "Attaque", "classpersonnage.html#a5bb28bbee50818b9ee18276c9f64be65", null ],
     [ "AttaqueSpecial", "classpersonnage.html#ab8f27aff95ffc033fb22d56e549bd415", null ],
     [ "AvancerAttaque", "classpersonnage.html#a98da8fa6b4dd288153df279561b46bac", null ],
@@ -63,5 +62,6 @@ var classpersonnage =
     [ "tempsAnime", "classpersonnage.html#a052ffdde376cdc9da554fd4d6b66c247", null ],
     [ "tempsDot", "classpersonnage.html#af0f1272ec2df47c9ad4beccb9ab3b102", null ],
     [ "valeurDot", "classpersonnage.html#ac3530b838f4eb8e9b6eb2e0102a5d4e0", null ],
-    [ "vitesse", "classpersonnage.html#ad87c7202fadb5ed485e21a7d2e46bbb0", null ]
+    [ "vitesse", "classpersonnage.html#ad87c7202fadb5ed485e21a7d2e46bbb0", null ],
+    [ "volume", "classpersonnage.html#a6d883321aedaedf6016e82fc08934e68", null ]
 ];

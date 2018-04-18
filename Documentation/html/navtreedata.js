@@ -23,7 +23,10 @@ for the JavaScript code in this file
 */
 var NAVTREE =
 [
-  [ "Projet2", "index.html", [
+  [ "RPGPathfinder", "index.html", [
+    [ "Namespaces", "namespaces.html", [
+      [ "Namespace List", "namespaces.html", "namespaces_dup" ]
+    ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -42,8 +45,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_database_8cpp.html",
-"classpersonnage.html#a597311d1a5a89f3999c3fa77bc7a6967"
+"_database_8h.html",
+"classpersonnage.html#a2664acffa6fccd8487b9e03b63fbd6da"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

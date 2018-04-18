@@ -29,12 +29,13 @@
 /*! \class jeu
 * \brief      permet de jouer apres la creation de personnage
 *
-* \details    permete de creer une fenetre , de bouger un sprite sur une map de lancer des combat et de generer une fenetre de combat
+* \details    permet de creer une fenetre , de bouger un sprite sur une map de lancer des combat et de generer une fenetre de combat
 *
 */
 class jeu
 {
 public:
+	
 	/**
 	* \brief       constructeur
 	*
@@ -51,8 +52,9 @@ public:
 	* \param largeur : stocke la taille de la largeur de la fentere principal
 	* \param hauteur : stocke la taille de la hauteur de la fentere principal
 	* \param framerate : stocke l'information si l'utilisateur souhaite l'affichage des frames par seconde
+	* \param volumeSon : stocke le niveau de volume
 	*/
-	jeu(int largeur, int hauteur, bool framerate);
+	jeu(int largeur, int hauteur, bool Affichagefps, int volumeSon);
 
 	/**
 	* \brief       lance une fenetre de combat et un thread d'un objet combat
@@ -66,6 +68,15 @@ public:
 	* \param y: ordonne de la position du joueur
 	*/
 	void Combat32(personnage * ptrPj, personnage * Pnj, sf::Texture texturePnj, int x, int y);
+	/**
+	* \brief       met a jour la vue 
+	*
+	* met a jour la vue 
+	*
+	* \param sf::View vuePj : vue centré actuelle
+	* \return sf::View vuePj mise a jour dans le cas des coins
+	*/
+	sf::View majVue(sf::View vuePj);
 
 	/**
 	* \brief       destructeur
@@ -97,6 +108,7 @@ public:
 	sf::Font font; /*!<Font qui definit la police d'ecriture */
 	int largeurEcranPrincipal = 800;  /*!<largeur de la fentere principal*/
 	int hauteurEcranPrincipal = 600; /*!<hauteur de la fentere principal*/
+	int volume = 50; /*!<niveau du son de la musique */
 	chose * boutonAttaquer = new chose();  /*!< pointeur d'un objet chose bouton attaquer*/
 	chose * boutonSoin = new chose();  /*!< pointeur d'un objet chose bouton Soin*/
 	chose * scorePjHp = new chose();  /*!< pointeur d'un objet chose pour afficher la barre de vie du joueur*/
@@ -105,6 +117,8 @@ public:
 	chose * texteGameOver = new chose(); /*!< pointeur d'un objet chose pour afficher le texte de Game Over*/
 	chose * texteRemerciement = new chose(); /*!< pointeur d'un objet chose pour afficher le texte des credits*/
 	sf::Event combatEvent; /*!< evenement de la fenetre de combat*/
+	sf::View vuePj; /*!< vue pour la camera */
+	personnage * ptrPj;  /*!< pointeur du Personnage du joueur */
 	int i = 0; /*!<compteur */
 	int j = 0; /*!<compteur */
 
@@ -190,7 +204,7 @@ public:
 	*/
 	void ChargerBoutonSpecial(personnage * ptrPj);
 
-
+	
 	float framerate = 60;/*!<framerate de base a 60 */
 	bool AfficherFrameRate = true; /*!<afficher framerate */
 

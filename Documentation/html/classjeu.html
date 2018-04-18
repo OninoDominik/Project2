@@ -5,10 +5,18 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Projet2: jeu Class Reference</title>
+<title>RPGPathfinder: jeu Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -22,9 +30,10 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="iconPath.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Projet2
+   <div id="projectname">RPGPathfinder
+   &#160;<span id="projectnumber">V1</span>
    </div>
-   <div id="projectbrief">RPG Pathfinder</div>
+   <div id="projectbrief">RPG dans le monde de Pathfinder avec des combats au tour par tour</div>
   </td>
  </tr>
  </tbody>
@@ -47,6 +56,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classjeu.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -61,7 +87,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -82,12 +107,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a38513a7bfd0a7ea4e3a5612da2856016"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjeu.html#a38513a7bfd0a7ea4e3a5612da2856016">jeu</a> ()</td></tr>
 <tr class="memdesc:a38513a7bfd0a7ea4e3a5612da2856016"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructeur  <a href="#a38513a7bfd0a7ea4e3a5612da2856016">More...</a><br /></td></tr>
 <tr class="separator:a38513a7bfd0a7ea4e3a5612da2856016"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f669239f8bb86c9cac7fadacfc52095"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjeu.html#a2f669239f8bb86c9cac7fadacfc52095">jeu</a> (int largeur, int hauteur, bool <a class="el" href="classjeu.html#a6a6fdfc55acc0b08ea2c7f9874060f58">framerate</a>)</td></tr>
-<tr class="memdesc:a2f669239f8bb86c9cac7fadacfc52095"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructeur  <a href="#a2f669239f8bb86c9cac7fadacfc52095">More...</a><br /></td></tr>
-<tr class="separator:a2f669239f8bb86c9cac7fadacfc52095"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63596fcd7c1a89fa40d5f5d89a159828"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjeu.html#a63596fcd7c1a89fa40d5f5d89a159828">Combat32</a> (<a class="el" href="classpersonnage.html">personnage</a> *ptrPj, <a class="el" href="classpersonnage.html">personnage</a> *Pnj, sf::Texture texturePnj, int x, int y)</td></tr>
+<tr class="memitem:a02bdc9808292e3829e2ed341f3480e8d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjeu.html#a02bdc9808292e3829e2ed341f3480e8d">jeu</a> (int largeur, int hauteur, bool Affichagefps, int volumeSon)</td></tr>
+<tr class="memdesc:a02bdc9808292e3829e2ed341f3480e8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructeur  <a href="#a02bdc9808292e3829e2ed341f3480e8d">More...</a><br /></td></tr>
+<tr class="separator:a02bdc9808292e3829e2ed341f3480e8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63596fcd7c1a89fa40d5f5d89a159828"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjeu.html#a63596fcd7c1a89fa40d5f5d89a159828">Combat32</a> (<a class="el" href="classpersonnage.html">personnage</a> *<a class="el" href="classjeu.html#aebc276749bf1b096f02451b3c8fac396">ptrPj</a>, <a class="el" href="classpersonnage.html">personnage</a> *Pnj, sf::Texture texturePnj, int x, int y)</td></tr>
 <tr class="memdesc:a63596fcd7c1a89fa40d5f5d89a159828"><td class="mdescLeft">&#160;</td><td class="mdescRight">lance une fenetre de combat et un thread d'un objet combat  <a href="#a63596fcd7c1a89fa40d5f5d89a159828">More...</a><br /></td></tr>
 <tr class="separator:a63596fcd7c1a89fa40d5f5d89a159828"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68aa323e3ac2c98ee66ce5387ccd7036"><td class="memItemLeft" align="right" valign="top">sf::View&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjeu.html#a68aa323e3ac2c98ee66ce5387ccd7036">majVue</a> (sf::View <a class="el" href="classjeu.html#aa81b1d5cd233fbd85565819d6498d24b">vuePj</a>)</td></tr>
+<tr class="memdesc:a68aa323e3ac2c98ee66ce5387ccd7036"><td class="mdescLeft">&#160;</td><td class="mdescRight">met a jour la vue  <a href="#a68aa323e3ac2c98ee66ce5387ccd7036">More...</a><br /></td></tr>
+<tr class="separator:a68aa323e3ac2c98ee66ce5387ccd7036"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55385a33ef40e0579eb3a3634566c4a8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjeu.html#a55385a33ef40e0579eb3a3634566c4a8">~jeu</a> ()</td></tr>
 <tr class="memdesc:a55385a33ef40e0579eb3a3634566c4a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">destructeur  <a href="#a55385a33ef40e0579eb3a3634566c4a8">More...</a><br /></td></tr>
 <tr class="separator:a55385a33ef40e0579eb3a3634566c4a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -96,7 +124,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aeb59c51913d23e2f449ad04f0de2072b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4671d4fd828d6709ca472994855ab4ff"><td class="memItemLeft" align="right" valign="top">vector&lt; <a class="el" href="classmur.html">mur</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjeu.html#a4671d4fd828d6709ca472994855ab4ff">murmap1</a> ()</td></tr>
 <tr class="separator:a4671d4fd828d6709ca472994855ab4ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2793dcdba700455a3b1353dcc18a048e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjeu.html#a2793dcdba700455a3b1353dcc18a048e">ChargerHpPjetbarre</a> (<a class="el" href="classpersonnage.html">personnage</a> *ptrPj)</td></tr>
+<tr class="memitem:a2793dcdba700455a3b1353dcc18a048e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjeu.html#a2793dcdba700455a3b1353dcc18a048e">ChargerHpPjetbarre</a> (<a class="el" href="classpersonnage.html">personnage</a> *<a class="el" href="classjeu.html#aebc276749bf1b096f02451b3c8fac396">ptrPj</a>)</td></tr>
 <tr class="memdesc:a2793dcdba700455a3b1353dcc18a048e"><td class="mdescLeft">&#160;</td><td class="mdescRight">charge le sprite qui entoure la barre de vie et gerre la redimension de la barre de vie  <a href="#a2793dcdba700455a3b1353dcc18a048e">More...</a><br /></td></tr>
 <tr class="separator:a2793dcdba700455a3b1353dcc18a048e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a176fa4a5355a3529a833592d8f81294e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjeu.html#a176fa4a5355a3529a833592d8f81294e">ChargerBoutonSoin</a> ()</td></tr>
@@ -114,7 +142,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6cf6a0482228d4b76ba62a6589aab74e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjeu.html#a6cf6a0482228d4b76ba62a6589aab74e">ChargerHpPnj</a> (<a class="el" href="classpersonnage.html">personnage</a> *ptrPNJ)</td></tr>
 <tr class="memdesc:a6cf6a0482228d4b76ba62a6589aab74e"><td class="mdescLeft">&#160;</td><td class="mdescRight">charge le sprite qui entoure la barre de vie et gerre la redimension de la barre de vie  <a href="#a6cf6a0482228d4b76ba62a6589aab74e">More...</a><br /></td></tr>
 <tr class="separator:a6cf6a0482228d4b76ba62a6589aab74e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78dcb0b1f6e462a994ddcf28ce059115"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjeu.html#a78dcb0b1f6e462a994ddcf28ce059115">ChargerBoutonSpecial</a> (<a class="el" href="classpersonnage.html">personnage</a> *ptrPj)</td></tr>
+<tr class="memitem:a78dcb0b1f6e462a994ddcf28ce059115"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjeu.html#a78dcb0b1f6e462a994ddcf28ce059115">ChargerBoutonSpecial</a> (<a class="el" href="classpersonnage.html">personnage</a> *<a class="el" href="classjeu.html#aebc276749bf1b096f02451b3c8fac396">ptrPj</a>)</td></tr>
 <tr class="memdesc:a78dcb0b1f6e462a994ddcf28ce059115"><td class="mdescLeft">&#160;</td><td class="mdescRight">creer un boutonSpecial  <a href="#a78dcb0b1f6e462a994ddcf28ce059115">More...</a><br /></td></tr>
 <tr class="separator:a78dcb0b1f6e462a994ddcf28ce059115"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -136,6 +164,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a5afb10301e3f76d2482ed9859c3db9bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa42fb5a7a75a731cdabbabafbd8c6afa"><td class="memItemLeft" align="right" valign="top">sf::Texture&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjeu.html#aa42fb5a7a75a731cdabbabafbd8c6afa">areneFront</a></td></tr>
 <tr class="separator:aa42fb5a7a75a731cdabbabafbd8c6afa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaf5d51d4bad9851ed9316f4a16620d1"><td class="memItemLeft" align="right" valign="top">sf::Texture&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjeu.html#adaf5d51d4bad9851ed9316f4a16620d1">cactus</a></td></tr>
+<tr class="separator:adaf5d51d4bad9851ed9316f4a16620d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0082b3920e78d4471d157a53608e1674"><td class="memItemLeft" align="right" valign="top">sf::Texture&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjeu.html#a0082b3920e78d4471d157a53608e1674">textureOrc</a></td></tr>
 <tr class="separator:a0082b3920e78d4471d157a53608e1674"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a558ca100cca1c6e3e97adba954a404fe"><td class="memItemLeft" align="right" valign="top">sf::Texture&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjeu.html#a558ca100cca1c6e3e97adba954a404fe">texturegobMage</a></td></tr>
@@ -160,6 +190,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a1fcaf4729384cac7fdeb17bad1d602b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab57f032f42308237e6bf9069f42870e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjeu.html#aab57f032f42308237e6bf9069f42870e">hauteurEcranPrincipal</a> = 600</td></tr>
 <tr class="separator:aab57f032f42308237e6bf9069f42870e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41428959db9c5a6336a60eb6e8673e9f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjeu.html#a41428959db9c5a6336a60eb6e8673e9f">volume</a> = 50</td></tr>
+<tr class="separator:a41428959db9c5a6336a60eb6e8673e9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2abbfb40adca68f9d6ef5b3c34e2deb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classchose.html">chose</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjeu.html#ac2abbfb40adca68f9d6ef5b3c34e2deb">boutonAttaquer</a> = new <a class="el" href="classchose.html">chose</a>()</td></tr>
 <tr class="separator:ac2abbfb40adca68f9d6ef5b3c34e2deb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6396acebe5d701ce532d0b27fb9468dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classchose.html">chose</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjeu.html#a6396acebe5d701ce532d0b27fb9468dd">boutonSoin</a> = new <a class="el" href="classchose.html">chose</a>()</td></tr>
@@ -176,6 +208,10 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a506ea767918d5ac9622a4cadf1b8eaea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3d0d1f40c3f67f92a2bd01da43acc12"><td class="memItemLeft" align="right" valign="top">sf::Event&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjeu.html#aa3d0d1f40c3f67f92a2bd01da43acc12">combatEvent</a></td></tr>
 <tr class="separator:aa3d0d1f40c3f67f92a2bd01da43acc12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa81b1d5cd233fbd85565819d6498d24b"><td class="memItemLeft" align="right" valign="top">sf::View&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjeu.html#aa81b1d5cd233fbd85565819d6498d24b">vuePj</a></td></tr>
+<tr class="separator:aa81b1d5cd233fbd85565819d6498d24b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebc276749bf1b096f02451b3c8fac396"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classpersonnage.html">personnage</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjeu.html#aebc276749bf1b096f02451b3c8fac396">ptrPj</a></td></tr>
+<tr class="separator:aebc276749bf1b096f02451b3c8fac396"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ea074d22112a65a6da5b898cdc87ea2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjeu.html#a6ea074d22112a65a6da5b898cdc87ea2">i</a> = 0</td></tr>
 <tr class="separator:a6ea074d22112a65a6da5b898cdc87ea2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91c0fab688b58c38cd214c0d8cd8cc8e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classjeu.html#a91c0fab688b58c38cd214c0d8cd8cc8e">j</a> = 0</td></tr>
@@ -189,7 +225,7 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>permet de jouer apres la creation de personnage </p>
-<p>permete de creer une fenetre , de bouger un sprite sur une map de lancer des combat et de generer une fenetre de combat </p>
+<p>permet de creer une fenetre , de bouger un sprite sur une map de lancer des combat et de generer une fenetre de combat </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a38513a7bfd0a7ea4e3a5612da2856016"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a38513a7bfd0a7ea4e3a5612da2856016">&#9670;&nbsp;</a></span>jeu() <span class="overload">[1/2]</span></h2>
@@ -211,8 +247,8 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a2f669239f8bb86c9cac7fadacfc52095"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2f669239f8bb86c9cac7fadacfc52095">&#9670;&nbsp;</a></span>jeu() <span class="overload">[2/2]</span></h2>
+<a id="a02bdc9808292e3829e2ed341f3480e8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02bdc9808292e3829e2ed341f3480e8d">&#9670;&nbsp;</a></span>jeu() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -233,7 +269,13 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>framerate</em>&#160;</td>
+          <td class="paramname"><em>Affichagefps</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>volumeSon</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -250,6 +292,7 @@ Public Attributes</h2></td></tr>
     <tr><td class="paramname">largeur</td><td>: stocke la taille de la largeur de la fentere principal </td></tr>
     <tr><td class="paramname">hauteur</td><td>: stocke la taille de la hauteur de la fentere principal </td></tr>
     <tr><td class="paramname">framerate</td><td>: stocke l'information si l'utilisateur souhaite l'affichage des frames par seconde </td></tr>
+    <tr><td class="paramname">volumeSon</td><td>: stocke le niveau de volume </td></tr>
   </table>
   </dd>
 </dl>
@@ -491,6 +534,34 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a68aa323e3ac2c98ee66ce5387ccd7036"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68aa323e3ac2c98ee66ce5387ccd7036">&#9670;&nbsp;</a></span>majVue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::View jeu::majVue </td>
+          <td>(</td>
+          <td class="paramtype">sf::View&#160;</td>
+          <td class="paramname"><em>vuePj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>met a jour la vue </p>
+<p>met a jour la vue</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sf::View</td><td>vuePj : vue centré actuelle </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>sf::View vuePj mise a jour dans le cas des coins </dd></dl>
+
+</div>
+</div>
 <a id="a4671d4fd828d6709ca472994855ab4ff"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4671d4fd828d6709ca472994855ab4ff">&#9670;&nbsp;</a></span>murmap1()</h2>
 
@@ -729,6 +800,21 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="adaf5d51d4bad9851ed9316f4a16620d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adaf5d51d4bad9851ed9316f4a16620d1">&#9670;&nbsp;</a></span>cactus</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Texture jeu::cactus</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>une texture pour les cactus </p>
+
+</div>
+</div>
 <a id="aa3d0d1f40c3f67f92a2bd01da43acc12"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa3d0d1f40c3f67f92a2bd01da43acc12">&#9670;&nbsp;</a></span>combatEvent</h2>
 
@@ -921,6 +1007,21 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>objet mur </p>
+
+</div>
+</div>
+<a id="aebc276749bf1b096f02451b3c8fac396"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebc276749bf1b096f02451b3c8fac396">&#9670;&nbsp;</a></span>ptrPj</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classpersonnage.html">personnage</a>* jeu::ptrPj</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>pointeur du Personnage du joueur </p>
 
 </div>
 </div>
@@ -1134,16 +1235,50 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a41428959db9c5a6336a60eb6e8673e9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41428959db9c5a6336a60eb6e8673e9f">&#9670;&nbsp;</a></span>volume</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int jeu::volume = 50</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>niveau du son de la musique </p>
+
+</div>
+</div>
+<a id="aa81b1d5cd233fbd85565819d6498d24b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa81b1d5cd233fbd85565819d6498d24b">&#9670;&nbsp;</a></span>vuePj</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::View jeu::vuePj</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>vue pour la camera </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>Release/game/<a class="el" href="jeu_8h_source.html">jeu.h</a></li>
-<li>Release/game/jeu.cpp</li>
+<li>game/<a class="el" href="jeu_8h_source.html">jeu.h</a></li>
+<li>game/jeu.cpp</li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classjeu.html">jeu</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

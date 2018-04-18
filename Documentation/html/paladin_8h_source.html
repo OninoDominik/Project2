@@ -5,10 +5,18 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Projet2: Release/personnage/paladin/paladin.h Source File</title>
+<title>RPGPathfinder: personnage/paladin/paladin.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -22,9 +30,10 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="iconPath.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Projet2
+   <div id="projectname">RPGPathfinder
+   &#160;<span id="projectnumber">V1</span>
    </div>
-   <div id="projectbrief">RPG Pathfinder</div>
+   <div id="projectbrief">RPG dans le monde de Pathfinder avec des combats au tour par tour</div>
   </td>
  </tr>
  </tbody>
@@ -47,6 +56,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('paladin_8h_source.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -61,28 +87,27 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_92709420fde8ca446636ff7c23065e8b.html">Release</a></li><li class="navelem"><a class="el" href="dir_3f0aabf6415b49a526ddd50d35f12c27.html">personnage</a></li><li class="navelem"><a class="el" href="dir_d2f21bc58073fe1b529338963b529b5c.html">paladin</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">paladin.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="paladin_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;../personnage.h&quot;</span></div><div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classpaladin.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="classpaladin.html">paladin</a> : <span class="keyword">public</span> <a class="code" href="classpersonnage.html">personnage</a></div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    </div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="classpaladin.html#ab9bcad664a521ddc81e4acc6552edfd2">paladin</a>();</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="classpaladin.html#a2d16bf83b24776ac60bc662f5c7593c1">~paladin</a>();</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    </div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classpaladin.html#aae8d62c6e7c30ad1d4fbc9f147161d74">AttaqueSpecial</a>(<a class="code" href="classpersonnage.html">personnage</a> &amp; ennemi);</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classpaladin.html#af97688ef9f2cc305e9e942818a3916d7">sesoigne</a>();</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    </div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;};</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div><div class="ttc" id="classpaladin_html_aae8d62c6e7c30ad1d4fbc9f147161d74"><div class="ttname"><a href="classpaladin.html#aae8d62c6e7c30ad1d4fbc9f147161d74">paladin::AttaqueSpecial</a></div><div class="ttdeci">void AttaqueSpecial(personnage &amp;ennemi)</div><div class="ttdoc">lance l&amp;#39;attaque Justice </div><div class="ttdef"><b>Definition:</b> paladin.cpp:36</div></div>
+<a href="paladin_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;../personnage.h&quot;</span></div><div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classpaladin.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="classpaladin.html">paladin</a> : <span class="keyword">public</span> <a class="code" href="classpersonnage.html">personnage</a></div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="classpaladin.html#ab9bcad664a521ddc81e4acc6552edfd2">paladin</a>();</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="classpaladin.html#a2d16bf83b24776ac60bc662f5c7593c1">~paladin</a>();</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classpaladin.html#aae8d62c6e7c30ad1d4fbc9f147161d74">AttaqueSpecial</a>(<a class="code" href="classpersonnage.html">personnage</a> &amp; ennemi);</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classpaladin.html#af97688ef9f2cc305e9e942818a3916d7">sesoigne</a>();</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;};</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div><div class="ttc" id="classpaladin_html_aae8d62c6e7c30ad1d4fbc9f147161d74"><div class="ttname"><a href="classpaladin.html#aae8d62c6e7c30ad1d4fbc9f147161d74">paladin::AttaqueSpecial</a></div><div class="ttdeci">void AttaqueSpecial(personnage &amp;ennemi)</div><div class="ttdoc">lance l&amp;#39;attaque Justice </div><div class="ttdef"><b>Definition:</b> paladin.cpp:36</div></div>
 <div class="ttc" id="classpersonnage_html"><div class="ttname"><a href="classpersonnage.html">personnage</a></div><div class="ttdoc">creer et gerre les personnages joueurs et IA du jeu </div><div class="ttdef"><b>Definition:</b> personnage.h:22</div></div>
 <div class="ttc" id="classpaladin_html_ab9bcad664a521ddc81e4acc6552edfd2"><div class="ttname"><a href="classpaladin.html#ab9bcad664a521ddc81e4acc6552edfd2">paladin::paladin</a></div><div class="ttdeci">paladin()</div><div class="ttdoc">constructeur </div><div class="ttdef"><b>Definition:</b> paladin.cpp:5</div></div>
 <div class="ttc" id="classpaladin_html_af97688ef9f2cc305e9e942818a3916d7"><div class="ttname"><a href="classpaladin.html#af97688ef9f2cc305e9e942818a3916d7">paladin::sesoigne</a></div><div class="ttdeci">void sesoigne()</div><div class="ttdoc">calcul les soins du paladin </div><div class="ttdef"><b>Definition:</b> paladin.cpp:104</div></div>
 <div class="ttc" id="classpaladin_html_a2d16bf83b24776ac60bc662f5c7593c1"><div class="ttname"><a href="classpaladin.html#a2d16bf83b24776ac60bc662f5c7593c1">paladin::~paladin</a></div><div class="ttdeci">~paladin()</div><div class="ttdoc">destructeur </div><div class="ttdef"><b>Definition:</b> paladin.cpp:33</div></div>
 <div class="ttc" id="classpaladin_html"><div class="ttname"><a href="classpaladin.html">paladin</a></div><div class="ttdoc">attaque et calcul de soin du metier paladin </div><div class="ttdef"><b>Definition:</b> paladin.h:20</div></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_306c5406fa51eef92ed67b191288ec13.html">personnage</a></li><li class="navelem"><a class="el" href="dir_83d7d859ba6ca07db4ccd16397aee22d.html">paladin</a></li><li class="navelem"><a class="el" href="paladin_8h.html">paladin.h</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

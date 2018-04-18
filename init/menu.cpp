@@ -79,17 +79,17 @@ void menu::ChargerBoutonTailleEcran()
 	switch (choixTailleEcran)
 	{
 	case 0:
-		boutonTailleEcran->text.setString("Taille de l'ecran de jeu :800*600");
+		boutonTailleEcran->text.setString("Taille de l'écran de jeu :800*600");
 		largeurFenetreDeJeu = 800;
 		hauteurFenetreDeJeu = 600;
 		break;
 	case 1:
-		boutonTailleEcran->text.setString("Taille de l'ecran de jeu :1200*900");
+		boutonTailleEcran->text.setString("Taille de l'écran de jeu :1200*900");
 		largeurFenetreDeJeu = 1200;
 		hauteurFenetreDeJeu = 900;
 		break;
 	case 2:
-		boutonTailleEcran->text.setString("Taille de l'ecran de jeu :400*300");
+		boutonTailleEcran->text.setString("Taille de l'écran de jeu :400*300");
 		largeurFenetreDeJeu = 600;
 		hauteurFenetreDeJeu = 300;
 		break;
@@ -170,11 +170,14 @@ void menu::menuStart()
 {
 	sf::Image icon;
 	sf::Music music;
-	music.openFromFile("./assets/sound/Dreamseer.ogg");
+	if (!music.openFromFile("./assets/sound/Dreamseer.ogg"))
+	{
+		std::cout << "pas de de musique ./assets/sound/Dreamseer.ogg" << std::endl;
+	}
 	music.play();
 	music.setLoop(true);
-	sf::Font font;
 	music.setVolume(volume);
+	sf::Font font;
 	font.loadFromFile("./assets/font/Champ.ttf");
 
 	textureLogo.loadFromFile("./assets/img/iconPath.jpeg");
@@ -192,7 +195,6 @@ void menu::menuStart()
 	if (!icon.loadFromFile("./assets/img/iconPath.jpeg"))
 	{
 		std::cout << "pas de d'icone ./assets/img/iconPath.jpeg" << std::endl;
-
 	}
 	menuWindow.setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
 	database bdd;
@@ -334,8 +336,8 @@ void menu::menuStart()
 				if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && boutonValider->rect.getGlobalBounds().intersects(spriteCurseur2.rect.getGlobalBounds()))
 				{
 					menuWindow.setVisible(true);
-					sf::sleep(sf::milliseconds(80));
 					optionWindow.close();
+					sf::sleep(sf::milliseconds(100));
 				}
 				
 

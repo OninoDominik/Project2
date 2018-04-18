@@ -1,7 +1,7 @@
 var classcharger =
 [
     [ "charger", "classcharger.html#ad1fa3b994691eedb2c210570f5ccd5f3", null ],
-    [ "charger", "classcharger.html#a2776f26278d60aef70fffee5b76faabf", null ],
+    [ "charger", "classcharger.html#aa44a61ecf7a4925dd20895dd3928becd", null ],
     [ "~charger", "classcharger.html#aa8b0a28880b7cc8e795db7b052659da6", null ],
     [ "chargerBoutonSauvegarde1", "classcharger.html#abde85cfd32f9917182de0df3f5001208", null ],
     [ "chargerBoutonSauvegarde2", "classcharger.html#adfbbcec1cd93c4b06284e8743c79925e", null ],
@@ -13,5 +13,6 @@ var classcharger =
     [ "boutonSauvegarde3", "classcharger.html#a8ac0d4c842e02190e452892932107887", null ],
     [ "font", "classcharger.html#a170a19058e540e380bd17c9947fb0401", null ],
     [ "hauteurFenetreDeJeu", "classcharger.html#ae16952f21bfdfdf537575ef898993145", null ],
-    [ "largeurFenetreDeJeu", "classcharger.html#a9778bdc90d1404a3b1af81349fbd8c60", null ]
+    [ "largeurFenetreDeJeu", "classcharger.html#a9778bdc90d1404a3b1af81349fbd8c60", null ],
+    [ "volumeSon", "classcharger.html#acfdfc4c884bad7b5a9b2e85a461f2d6e", null ]
 ];

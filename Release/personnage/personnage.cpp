@@ -175,6 +175,8 @@ int personnage::BonusStat(string stat)
 	{
 		return (*intelligence - 10) / 2;
 	}
+	cout << "mauvais parametre" << endl;
+	return 0;
 }
 void personnage::sesoigne()
 {
@@ -198,7 +200,7 @@ void personnage::InfligeDegat(personnage& ennemi)
 	}
 	buffer.loadFromFile("./assets/sound/hit.ogg");
 	sound.setBuffer(buffer);
-	sound.setVolume(20);
+	sound.setVolume(volume);
 	sound.play();
 	deg += BonusStat(*nomBonusDegat);
 	this->text.setString("j'ai inflige " + to_string(deg) + " degats");
@@ -258,7 +260,7 @@ void personnage::Attaque(personnage& ennemi)
 			cout << nom << "avance";
 			this->buffer.loadFromFile("./assets/sound/rate.ogg");
 			this->sound.setBuffer(this->buffer);
-			this->sound.setVolume(20);
+			this->sound.setVolume(volume);
 			this->sound.play();
 			this->text.setString("Raté");
 			this->text.setFillColor(sf::Color::White);

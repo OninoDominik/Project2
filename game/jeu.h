@@ -29,7 +29,7 @@
 /*! \class jeu
 * \brief      permet de jouer apres la creation de personnage
 *
-* \details    permete de creer une fenetre , de bouger un sprite sur une map de lancer des combat et de generer une fenetre de combat
+* \details    permet de creer une fenetre , de bouger un sprite sur une map de lancer des combat et de generer une fenetre de combat
 *
 */
 class jeu
@@ -68,6 +68,15 @@ public:
 	* \param y: ordonne de la position du joueur
 	*/
 	void Combat32(personnage * ptrPj, personnage * Pnj, sf::Texture texturePnj, int x, int y);
+	/**
+	* \brief       met a jour la vue 
+	*
+	* met a jour la vue ce qui permet de centrer la camera sur le personnage sauf quand il est trop pres des bord de la carte afin de cacher les barres noires
+	*
+	* \param sf::View vuePj : vue centré actuelle
+	* \return sf::View vuePj mise a jour dans le cas des coins
+	*/
+	sf::View majVue(sf::View vuePj);
 
 	/**
 	* \brief       destructeur
@@ -80,7 +89,6 @@ public:
 	sf::Texture texture;  /*!< une texture de monstre*/
 	sf::Texture texture3;  /*!< une texture de monstre*/
 	sf::Texture texture4;  /*!< une texture de monstre*/
-	// sf::Texture pala; /*!< une texture */
 	sf::Texture textureHero; /*!< une texture qui stocke le skin du perso enf ocntion du metier choisis*/
 	sf::Texture grave; /*!< une texture pour indiquer la mort d'un ennemi */
 	sf::Texture fond; /*!< une texture qui generera la carte*/
@@ -108,6 +116,8 @@ public:
 	chose * texteGameOver = new chose(); /*!< pointeur d'un objet chose pour afficher le texte de Game Over*/
 	chose * texteRemerciement = new chose(); /*!< pointeur d'un objet chose pour afficher le texte des credits*/
 	sf::Event combatEvent; /*!< evenement de la fenetre de combat*/
+	sf::View vuePj; /*!< vue pour la camera */
+	personnage * ptrPj;  /*!< pointeur du Personnage du joueur */
 	int i = 0; /*!<compteur */
 	int j = 0; /*!<compteur */
 
@@ -193,7 +203,7 @@ public:
 	*/
 	void ChargerBoutonSpecial(personnage * ptrPj);
 
-
+	
 	float framerate = 60;/*!<framerate de base a 60 */
 	bool AfficherFrameRate = true; /*!<afficher framerate */
 

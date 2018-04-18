@@ -1,7 +1,8 @@
 var searchData=
 [
   ['ca',['CA',['../classpersonnage.html#a2d5681bc0026643d0a736b1beb13126a',1,'personnage']]],
-  ['charger',['charger',['../classcharger.html#ad1fa3b994691eedb2c210570f5ccd5f3',1,'charger::charger()'],['../classcharger.html#a2776f26278d60aef70fffee5b76faabf',1,'charger::charger(int largeurFenetreDeJeu, int hauteurFenetreDeJeu, int Affichagefps)']]],
+  ['charger',['charger',['../classcharger.html#ad1fa3b994691eedb2c210570f5ccd5f3',1,'charger::charger()'],['../classcharger.html#aa44a61ecf7a4925dd20895dd3928becd',1,'charger::charger(int largeurFenetreDeJeu, int hauteurFenetreDeJeu, int Affichagefps, int volume)']]],
+  ['chargerboutonadmin',['chargerBoutonAdmin',['../classmenu.html#a2d257fa0f4b7ad0d1f537601c087e3f5',1,'menu']]],
   ['chargerboutonalchimiste',['chargerBoutonAlchimiste',['../classcreation_perso.html#a19064b75ffeba3f699290d645467b823',1,'creationPerso']]],
   ['chargerboutonattaquer',['ChargerBoutonAttaquer',['../classjeu.html#a9d82e7f21e8863d1ed8bc7ef7d7aec87',1,'jeu']]],
   ['chargerboutoncaracteristique',['chargerBoutonCaracteristique',['../classcreation_perso.html#a67df3ef2ac574cf22c7cd5c5cc3ed70b',1,'creationPerso']]],
@@ -14,9 +15,11 @@ var searchData=
   ['chargerboutonframerate',['ChargerBoutonFrameRate',['../classmenu.html#ad6efc2e7479c9214b699b29f9ed82815',1,'menu']]],
   ['chargerboutonguerrier',['chargerBoutonGuerrier',['../classcreation_perso.html#a0ffdd6751b6b5c9316da4013dca06a3b',1,'creationPerso']]],
   ['chargerboutonintelligence',['chargerBoutonIntelligence',['../classcreation_perso.html#aada5728112251fc4cb405af8673e03bb',1,'creationPerso']]],
+  ['chargerboutonmoins',['chargerBoutonMoins',['../classmenu.html#aad1b13ff7f5693010cf521cf2bd08783',1,'menu']]],
   ['chargerboutonnouvellepartie',['chargerBoutonNouvellePartie',['../classmenu.html#ae677fc7873a22b0ed1de9f1f53e85d37',1,'menu']]],
   ['chargerboutonoption',['chargerBoutonOption',['../classmenu.html#a7b9fc371fe13a2bf37e876d7635299c9',1,'menu']]],
   ['chargerboutonpaladin',['chargerBoutonPaladin',['../classcreation_perso.html#a3583fdac495106d90f9fdcf25744756d',1,'creationPerso']]],
+  ['chargerboutonplus',['chargerBoutonPlus',['../classmenu.html#a6c935528f5e1ffdc654c444c44990294',1,'menu']]],
   ['chargerboutonranger',['chargerBoutonRanger',['../classcreation_perso.html#a3604fa946dd5ddd44dc61a8f6cc15207',1,'creationPerso']]],
   ['chargerboutonsagesse',['chargerBoutonSagesse',['../classcreation_perso.html#ac9e542e12f58ebf3b1a3325d391b1988',1,'creationPerso']]],
   ['chargerboutonsauvegarde1',['chargerBoutonSauvegarde1',['../classcreation_perso.html#a619e558bf68658a349ef0cba5b7f57b7',1,'creationPerso::chargerBoutonSauvegarde1()'],['../classcharger.html#abde85cfd32f9917182de0df3f5001208',1,'charger::chargerBoutonSauvegarde1()']]],
@@ -24,8 +27,10 @@ var searchData=
   ['chargerboutonsauvegarde3',['chargerBoutonSauvegarde3',['../classcreation_perso.html#aa45669d158425545f7af20320bda0757',1,'creationPerso::chargerBoutonSauvegarde3()'],['../classcharger.html#a4d72ffa3dccbc7b0cca8be8da5d22de6',1,'charger::chargerBoutonSauvegarde3()']]],
   ['chargerboutonsmenu',['chargerBoutonsmenu',['../classmenu.html#acf8e92d81eea07dc6b5dc023469a90ff',1,'menu']]],
   ['chargerboutonsoin',['ChargerBoutonSoin',['../classjeu.html#a176fa4a5355a3529a833592d8f81294e',1,'jeu']]],
+  ['chargerboutonson',['chargerBoutonSon',['../classmenu.html#ad0325927eea6faf1d5e378be19e461bb',1,'menu']]],
   ['chargerboutonspecial',['ChargerBoutonSpecial',['../classjeu.html#a78dcb0b1f6e462a994ddcf28ce059115',1,'jeu']]],
   ['chargerboutontailleecran',['ChargerBoutonTailleEcran',['../classmenu.html#a97deef80922bf2c9959a495f236516a1',1,'menu']]],
+  ['chargerboutonvalider',['chargerBoutonValider',['../classmenu.html#aa518dfda2d00920a95a1c10d5aedc1c6',1,'menu']]],
   ['chargerboutonvoleur',['chargerBoutonVoleur',['../classcreation_perso.html#a6b2ed7464f349b3b88c04751b7f824a4',1,'creationPerso']]],
   ['chargerchoixcarac',['chargerChoixCarac',['../classcreation_perso.html#ac73177de9e1409bcd8e0edf404fd90e5',1,'creationPerso']]],
   ['chargerhppjetbarre',['ChargerHpPjetbarre',['../classjeu.html#a2793dcdba700455a3b1353dcc18a048e',1,'jeu']]],
@@ -39,5 +44,5 @@ var searchData=
   ['combat',['combat',['../classcombat.html#a24684829bb4a17a24b2716f7ebdc7da1',1,'combat']]],
   ['combat32',['Combat32',['../classjeu.html#a63596fcd7c1a89fa40d5f5d89a159828',1,'jeu']]],
   ['coup',['coup',['../classanimation_combat.html#a6036a41df3714dadffa186a80f961886',1,'animationCombat']]],
-  ['creationperso',['creationPerso',['../classcreation_perso.html#a5a8374710869ac8a418f5f4d03c92f38',1,'creationPerso::creationPerso()'],['../classcreation_perso.html#a96cec16f1318c3c37f4fecf29b0aafb4',1,'creationPerso::creationPerso(int largeurFenetreDeJeu, int hauteurFenetreDeJeu, bool Affichagefps)']]]
+  ['creationperso',['creationPerso',['../classcreation_perso.html#a5a8374710869ac8a418f5f4d03c92f38',1,'creationPerso::creationPerso()'],['../classcreation_perso.html#ad34a0d0d3c46c8687a1d78ea7a9564d6',1,'creationPerso::creationPerso(int largeurFenetreDeJeu, int hauteurFenetreDeJeu, bool Affichagefps, int volume)']]]
 ];

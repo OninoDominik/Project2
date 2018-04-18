@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['majvue',['majVue',['../classjeu.html#a68aa323e3ac2c98ee66ce5387ccd7036',1,'jeu']]],
   ['menu',['menu',['../classmenu.html#ad345b60b72c4992525cf064d5642c1d9',1,'menu']]],
   ['menustart',['menuStart',['../classmenu.html#a0f6aa4e91d4c67fdb426e9d44d9ed177',1,'menu']]],
   ['mouvement',['Mouvement',['../classpersonnage.html#ace7628e7c3d3fc81dae375d51b3beb50',1,'personnage']]],

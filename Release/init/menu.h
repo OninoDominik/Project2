@@ -56,14 +56,20 @@ public:
 	chose * boutonSauvegarde1 = new chose(); /*!< pointeur d'un objet chose boutonSauvegarde1*/
 	chose * boutonSauvegarde2 = new chose(); /*!< pointeur d'un objet chose boutonSauvegarde2*/
 	chose * boutonSauvegarde3 = new chose(); /*!< pointeur d'un objet chose boutonSauvegarde3*/
-
+	chose * boutonAdmin = new chose();/*!< pointeur d'un objet chose boutonAdmin*/
+	chose * boutonSon = new chose(); /*!< pointeur d'un objet chose boutonSon*/
+	chose * boutonPlus = new chose(); /*!< pointeur d'un objet chose boutonPlus*/
+	chose * boutonMoins = new chose(); /*!< pointeur d'un objet chose boutonMoins*/
+	chose * boutonValider =new chose(); /*!< pointeur d'un objet chose boutonValider*/
 	chose * logo = new chose();   /*!< pointeur d'un objet chose du menu:  logo*/
+
 	sf::Texture textureLogo; /*!< texture du logo */
 
-	bool Affichagefps = false; /*!< affiche ou non les frames par seconde */
-	int largeurFenetreDeJeu = 800; /*!< stocke la taille de la largeur de la fentere principal */
-	int hauteurFenetreDeJeu = 800; /*!< stocke la taille de la hauteur de la fentere principal */
-	int choixTailleEcran = 0; /*!< comteur des choix */
+	bool Affichagefps = false; /*!< affiche ou non les frames par seconde de la fentere principal generer  par jeu.cpp nome :window*/
+	int largeurFenetreDeJeu = 800; /*!< stocke la taille de la largeur de la fentere principal generer par jeu.cpp nome :window*/
+	int hauteurFenetreDeJeu = 800; /*!< stocke la taille de la hauteur de la fentere principal generer par jeu.cpp nome :window*/
+	int volume = 50;   /*!< stocke le volume de la fenetre principal generer par jeu.cpp nome :window */
+	int choixTailleEcran = 0; /*!< compteur des choix */
 	int numeroSauvegarde = 0; /*!< numero du slot de sauvegarde */
 	chose spriteCurseurCombat;   /*!< objet chose afin de suivre la sourie */
 
@@ -102,6 +108,14 @@ public:
 	*
 	*/
 	void chargerBoutonsmenu();
+
+	/**
+	* \brief      creer un bouton BoutonTailleEcran
+
+	*    transforme le pointeur d'objet chose BoutonTailleEcran en zone cliquable avec un texte qui indique que le logiciel n'a pas les droits de modifier la base de donnees
+	*
+	*/
+	void chargerBoutonAdmin();
 	/**
 	* \brief      creer un bouton BoutonTailleEcran
 
@@ -109,6 +123,36 @@ public:
 	*
 	*/
 	void ChargerBoutonTailleEcran();
+	/**
+	* \brief      creer un bouton son non clickable
+
+	*    transforme le pointeur d'objet chose boutonSon pour lui ajouter un texte
+	*
+	*/
+	void chargerBoutonSon(int sound);
+	/**
+	* \brief      creer un bouton plus
+
+	*    transforme le pointeur d'objet chose boutonPlus en zone cliquable avec un texte afin de modifier le volume son
+	*
+	* \param int: attribut volume de la classe menu 
+	*/
+	void chargerBoutonPlus();
+	/**
+	* \brief      creer un bouton Moins
+
+	*    transforme le pointeur d'objet chose boutonPlus en zone cliquable avec un texte afin de modifier le volume son
+	*
+	*/
+	void chargerBoutonMoins();
+	/**
+	* \brief      creer un bouton FrameRate
+
+	*    transforme le pointeur d'objet chose BoutonTailleEcran en zone cliquable avec un texte  
+	*    ce bouron servira a fermer la fenete option
+	*
+	*/
+	void chargerBoutonValider();
 
 	/**
 	* \brief      creer un bouton FrameRate
@@ -117,14 +161,6 @@ public:
 	*
 	*/
 	void ChargerBoutonFrameRate();
-
-
-
-
-
-
-
-
 
 };
 

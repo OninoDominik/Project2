@@ -50,7 +50,7 @@ void ranger::AttaqueSpecial(personnage& ennemi)
 		AvancerAttaque();
 		this->buffer.loadFromFile("./assets/sound/rate.ogg");
 		this->sound.setBuffer(this->buffer);
-		this->sound.setVolume(50);
+		this->sound.setVolume(volume);
 		this->sound.play();
 		this->text.setString("j'ai raté");
 		this->text.setFillColor(sf::Color::White);
@@ -66,7 +66,7 @@ void ranger::AttaqueSpecial(personnage& ennemi)
 		AvancerAttaque();
 		this->buffer.loadFromFile("./assets/sound/ranger/arrow.ogg");
 		this->sound.setBuffer(this->buffer);
-		this->sound.setVolume(50);
+		this->sound.setVolume(volume);
 		this->sound.play();
 		this->anim->arrow();
 		this->InfligeDegat(ennemi);
@@ -83,7 +83,7 @@ void ranger::sesoigne()
 	this->buffer.loadFromFile("./assets/sound/heal.ogg");
 	this->sound.setBuffer(this->buffer);
 	this->sound.play();
-	this->sound.setVolume(20);
+	this->sound.setVolume(volume);
 	int x = this->rect.getPosition().x;
 	int y = this->rect.getPosition().y;
 

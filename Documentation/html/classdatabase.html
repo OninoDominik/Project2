@@ -5,10 +5,18 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Projet2: database Class Reference</title>
+<title>RPGPathfinder: database Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -22,9 +30,10 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="iconPath.ico"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Projet2
+   <div id="projectname">RPGPathfinder
+   &#160;<span id="projectnumber">V1</span>
    </div>
-   <div id="projectbrief">RPG Pathfinder</div>
+   <div id="projectbrief">RPG dans le monde de Pathfinder avec des combats au tour par tour</div>
   </td>
  </tr>
  </tbody>
@@ -47,6 +56,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classdatabase.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -61,7 +87,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -71,7 +96,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>creation ecriture modification d'une bdd fichier database.db qui permet la sauvegarde d'une partie  
+<p>creation ecriture modification d'une base de donnees fichier database.db qui permet la sauvegarde d'une partie  
  <a href="classdatabase.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_database_8h_source.html">Database.h</a>&gt;</code></p>
@@ -85,10 +110,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a31008de680565a626cd975c25d4351db"><td class="mdescLeft">&#160;</td><td class="mdescRight">destructeur  <a href="#a31008de680565a626cd975c25d4351db">More...</a><br /></td></tr>
 <tr class="separator:a31008de680565a626cd975c25d4351db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a746cfcb8f33de37f99cabce2eef26d2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdatabase.html#a746cfcb8f33de37f99cabce2eef26d2d">openDatabase</a> ()</td></tr>
-<tr class="memdesc:a746cfcb8f33de37f99cabce2eef26d2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">connection de la base de donnee  <a href="#a746cfcb8f33de37f99cabce2eef26d2d">More...</a><br /></td></tr>
+<tr class="memdesc:a746cfcb8f33de37f99cabce2eef26d2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">connection de la base de donnees  <a href="#a746cfcb8f33de37f99cabce2eef26d2d">More...</a><br /></td></tr>
 <tr class="separator:a746cfcb8f33de37f99cabce2eef26d2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c47659b372a4f36bf68413499d4ea95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdatabase.html#a9c47659b372a4f36bf68413499d4ea95">closeDatabase</a> ()</td></tr>
-<tr class="memdesc:a9c47659b372a4f36bf68413499d4ea95"><td class="mdescLeft">&#160;</td><td class="mdescRight">fermeture de la connection a la base de donnee  <a href="#a9c47659b372a4f36bf68413499d4ea95">More...</a><br /></td></tr>
+<tr class="memdesc:a9c47659b372a4f36bf68413499d4ea95"><td class="mdescLeft">&#160;</td><td class="mdescRight">fermeture de la connection a la base de donnees  <a href="#a9c47659b372a4f36bf68413499d4ea95">More...</a><br /></td></tr>
 <tr class="separator:a9c47659b372a4f36bf68413499d4ea95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ca3b61b5dbb7f02220fd5bc277dcb8a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdatabase.html#a2ca3b61b5dbb7f02220fd5bc277dcb8a">executeQuery</a> (std::string query)</td></tr>
 <tr class="memdesc:a2ca3b61b5dbb7f02220fd5bc277dcb8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">permet l'execution de requete SQL  <a href="#a2ca3b61b5dbb7f02220fd5bc277dcb8a">More...</a><br /></td></tr>
@@ -104,7 +129,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5112834fd0407d9bd04eabf5a2ebe705"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>creation ecriture modification d'une bdd fichier database.db qui permet la sauvegarde d'une partie </p>
+<div class="textblock"><p>creation ecriture modification d'une base de donnees fichier database.db qui permet la sauvegarde d'une partie </p>
 <p>Cette classe surcharge les accesseurs standards du module_voiture pour convenir aux specificites des differents modeles possibles. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a35ec480ed529a9d092a7ebc5472b767f"></a>
@@ -171,8 +196,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>fermeture de la connection a la base de donnee </p>
-<p>permet la deconnection a la base de donnee database.bd </p>
+<p>fermeture de la connection a la base de donnees </p>
+<p>permet la deconnection a la base de donnees database.bd </p>
 
 </div>
 </div>
@@ -199,7 +224,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true si la requete a ete execute </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true si la requete a ete executee </dd></dl>
 
 </div>
 </div>
@@ -220,7 +245,7 @@ Public Member Functions</h2></td></tr>
 
 <p>retourne la liste de sauvegarde </p>
 <p>execute la requete sql dans database.bd afin</p>
-<dl class="section return"><dt>Returns</dt><dd>un vecteur de la classe sauvegarde pour chaque sauvegarde </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>un pointeur de vecteur de pointeur de la classe sauvegarde </dd></dl>
 
 </div>
 </div>
@@ -337,17 +362,17 @@ Public Member Functions</h2></td></tr>
 <p>permet l'insertion sans doublon </p>
 <p>execute une requete sql afin de sauvegarder une partie </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">NomClasse</td><td>: nom du metier de l'avatard du joueur </td></tr>
-    <tr><td class="paramname">classe</td><td>: code de la classe </td></tr>
-    <tr><td class="paramname">currenthp</td><td>pdv actuel </td></tr>
+    <tr><td class="paramname">nomClasse</td><td>: nom du metier de l'avatard du joueur </td></tr>
+    <tr><td class="paramname">classe</td><td>: code du metier </td></tr>
+    <tr><td class="paramname">currenthp</td><td>points de vie actuels </td></tr>
     <tr><td class="paramname">force</td><td>score de force </td></tr>
     <tr><td class="paramname">constitution</td><td>: score de constitution </td></tr>
     <tr><td class="paramname">dexterite</td><td>: score de dexterite </td></tr>
     <tr><td class="paramname">sagesse</td><td>: score de sagesse </td></tr>
     <tr><td class="paramname">charisme</td><td>: score de charisme </td></tr>
-    <tr><td class="paramname">intelligence</td><td>: score de intelligence </td></tr>
-    <tr><td class="paramname">coordx</td><td>: absysse de la position du joueur </td></tr>
-    <tr><td class="paramname">coordy</td><td>: ordonne de la position du joueur </td></tr>
+    <tr><td class="paramname">intelligence</td><td>: score d'intelligence </td></tr>
+    <tr><td class="paramname">coordx</td><td>: abscisse de la position du joueur </td></tr>
+    <tr><td class="paramname">coordy</td><td>: ordonnee de la position du joueur </td></tr>
     <tr><td class="paramname">mob1</td><td>: indicateur si le monstre 1 est en vie </td></tr>
     <tr><td class="paramname">mob2</td><td>: indicateur si le monstre 2 est en vie </td></tr>
     <tr><td class="paramname">mob3</td><td>: indicateur si le monstre 3 est en vie </td></tr>
@@ -375,8 +400,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>connection de la base de donnee </p>
-<p>permet la connection a la base de donnee database.bd </p>
+<p>connection de la base de donnees </p>
+<p>permet la connection a la base de donnees database.bd </p>
 
 </div>
 </div>
@@ -398,20 +423,24 @@ Public Member Functions</h2></td></tr>
 
 <p>modifie une sauvegarde </p>
 <p>execute la requete sql dans database.bd afin de modifier une sauvegarde</p>
-<dl class="section return"><dt>Returns</dt><dd>vrai si la requete est execute </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>vrai si la requete est executee </dd></dl>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>Release/database/<a class="el" href="_database_8h_source.html">Database.h</a></li>
-<li>Release/database/Database.cpp</li>
+<li>database/<a class="el" href="_database_8h_source.html">Database.h</a></li>
+<li>database/Database.cpp</li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classdatabase.html">database</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -6,6 +6,7 @@ var searchData=
   ['personnage',['personnage',['../classpersonnage.html',1,'personnage'],['../classpersonnage.html#acd9ca516f8c5c110687e5167dab8db59',1,'personnage::personnage()'],['../classpersonnage.html#a40624405bf8005c96c9b8a9526b42e02',1,'personnage::personnage(string nomDuPerso)']]],
   ['personnage_2eh',['personnage.h',['../personnage_8h.html',1,'']]],
   ['positionnement',['Positionnement',['../classpersonnage.html#aa5449bd5d325778ff2c7679d0304d6bb',1,'personnage']]],
+  ['ptrpj',['ptrPj',['../classjeu.html#aebc276749bf1b096f02451b3c8fac396',1,'jeu']]],
   ['pvactuel',['pvActuel',['../classpersonnage.html#a597311d1a5a89f3999c3fa77bc7a6967',1,'personnage']]],
   ['pvmax',['pvMax',['../classpersonnage.html#a621c030d08ec5d552ebcf82b7e97fc20',1,'personnage']]]
 ];
