@@ -41,8 +41,13 @@ void creationPerso::start()
 	bdd.openDatabase();
 	std::vector<sauvegarde*>* touteSauvegarde;
 	touteSauvegarde = bdd.getAllSauvegarde();
-
+	sf::Image icon;
 	sf::RenderWindow creaWindow(sf::VideoMode(1000, 510), "Creation de personnage");
+	if (!icon.loadFromFile("./assets/img/iconPath.jpeg"))
+	{
+		std::cout << "pas de d'icone ./assets/img/iconPath.jpeg" << std::endl;
+	}
+	creaWindow.setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
 	chargerBoutonclasses();
 	chargerIntro();
 

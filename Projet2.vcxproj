@@ -104,6 +104,10 @@
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalLibraryDirectories>C:\Users\adai06\Documents\Visual Studio 2015\Projects\Projet2\Sfml\sfgui-0.3.1-vs2015-32\lib;E:\Projet2\SFML-2.4.2\lib;C:\Users\adai06\Documents\Visual Studio 2015\Projects\Projet2\Sfml\SFML-2.4.2\lib;C:\Users\adai06\Documents\Visual Studio 2015\Projects\Projet2\Projet2;C:\Users\adai06\Documents\Visual Studio 2015\Projects\Projet2\Projet2\Sfml\SFML-2.4.2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-graphics-s.lib;freetype.lib;jpeg.lib;sfml-window-s.lib;opengl32.lib;gdi32.lib;sfml-audio-s.lib;openal32.lib;flac.lib;vorbisenc.lib;vorbisfile.lib;vorbis.lib;ogg.lib;sfml-network-s.lib;ws2_32.lib;sfml-system-s.lib;winmm.lib;sqlite3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>
+      </SubSystem>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">

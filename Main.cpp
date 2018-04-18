@@ -10,7 +10,7 @@
 #include <time.h>
 #include"./game/jeu.h"
 #include "./init/menu.h"
-
+#pragma comment(linker, "/subsystem:windows /ENTRY:mainCRTStartup")
  
 using namespace std;
 
@@ -19,5 +19,5 @@ int main()
 	menu * menuPartie = new menu();
 	menuPartie->menuStart();
 	delete menuPartie;
-	return 0;
+	return 1;
 }

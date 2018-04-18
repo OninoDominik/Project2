@@ -167,7 +167,7 @@ void menu::ChargerBoutonFrameRate()
 
 void menu::menuStart()
 {
-
+	sf::Image icon;
 	sf::Music music;
 	music.openFromFile("./assets/sound/Dreamseer.ogg");
 	music.play();
@@ -188,6 +188,12 @@ void menu::menuStart()
 	sf::Vector2i tailleEcran(220, 420);
 	sf::RenderWindow menuWindow(sf::VideoMode(tailleEcran.x, tailleEcran.y), "Pathfinder", sf::Style::Titlebar | sf::Style::Close);
 	sf::Color orange(255, 150, 0);
+	if (!icon.loadFromFile("./assets/img/iconPath.jpeg"))
+	{
+		std::cout << "pas de d'icone ./assets/img/iconPath.jpeg" << std::endl;
+
+	}
+	menuWindow.setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
 	database bdd;
 	bdd.openDatabase();
 	bool fermer = false;
@@ -239,6 +245,7 @@ void menu::menuStart()
 			creationPerso * crea = new creationPerso(largeurFenetreDeJeu, hauteurFenetreDeJeu, Affichagefps,volume);
 			crea->start();
 			menuWindow.create(sf::VideoMode(tailleEcran.x, tailleEcran.y), "Pathfinder", sf::Style::Titlebar | sf::Style::Close);
+			menuWindow.setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
 			music.play();
 			delete crea;
 		}
@@ -249,6 +256,7 @@ void menu::menuStart()
 			charger * chargeSauvegarde = new charger(largeurFenetreDeJeu, hauteurFenetreDeJeu, Affichagefps,volume);
 			chargeSauvegarde->start();
 			menuWindow.create(sf::VideoMode(tailleEcran.x, tailleEcran.y), "Pathfinder", sf::Style::Titlebar | sf::Style::Close);
+			menuWindow.setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
 			music.play();
 			delete chargeSauvegarde;
 
@@ -257,7 +265,8 @@ void menu::menuStart()
 		if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && boutonOption->rect.getGlobalBounds().intersects(spriteCurseur.rect.getGlobalBounds()))
 		{
 			menuWindow.setVisible(false);
-			sf::RenderWindow optionWindow(sf::VideoMode((325), 225), "Pathfinder", sf::Style::Titlebar | sf::Style::Close);
+			sf::RenderWindow optionWindow(sf::VideoMode((325), 225), "Pathfinder Option", sf::Style::Titlebar | sf::Style::Close);
+			optionWindow.setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
 			while (optionWindow.isOpen())
 			{
 				sf::Event optionEvent;
@@ -326,8 +335,8 @@ void menu::menuStart()
 					menuWindow.setVisible(true);
 					sf::sleep(sf::milliseconds(80));
 					optionWindow.close();
-
 				}
+				
 
 				boutonTailleEcran->text.setFont(font);
 				boutonFrameRate->text.setFont(font);
