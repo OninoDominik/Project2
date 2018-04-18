@@ -52,7 +52,7 @@ void voleur::AttaqueSpecial(personnage& ennemi)
 			AvancerAttaque();
 			this->buffer.loadFromFile("./assets/sound/rate.ogg");
 			this->sound.setBuffer(this->buffer);
-			this->sound.setVolume(20);
+			this->sound.setVolume(volume);
 			this->sound.play();
 			this->text.setString("Raté");
 			this->text.setFillColor(sf::Color::Red);
@@ -67,7 +67,7 @@ void voleur::AttaqueSpecial(personnage& ennemi)
 		{
 			this->buffer.loadFromFile("./assets/sound/voleur/vanish.ogg");
 			this->sound.setBuffer(this->buffer);
-			this->sound.setVolume(50);
+			this->sound.setVolume(volume);
 			this->sound.setPlayingOffset(sf::seconds(24));
 			this->sound.play();
 			sf::sleep(sf::milliseconds(250));
@@ -115,7 +115,7 @@ void voleur::sesoigne()
 	this->buffer.loadFromFile("./assets/sound/heal.ogg");
 	this->sound.setBuffer(this->buffer);
 	this->sound.play();
-	this->sound.setVolume(20);
+	this->sound.setVolume(volume);
 	int x = this->rect.getPosition().x;
 	int y = this->rect.getPosition().y;
 

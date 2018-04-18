@@ -35,6 +35,7 @@
 class jeu
 {
 public:
+	
 	/**
 	* \brief       constructeur
 	*
@@ -51,8 +52,9 @@ public:
 	* \param largeur : stocke la taille de la largeur de la fentere principal
 	* \param hauteur : stocke la taille de la hauteur de la fentere principal
 	* \param framerate : stocke l'information si l'utilisateur souhaite l'affichage des frames par seconde
+	* \param volumeSon : stocke le niveau de volume
 	*/
-	jeu(int largeur, int hauteur, bool framerate);
+	jeu(int largeur, int hauteur, bool Affichagefps, int volumeSon);
 
 	/**
 	* \brief       lance une fenetre de combat et un thread d'un objet combat
@@ -97,6 +99,7 @@ public:
 	sf::Font font; /*!<Font qui definit la police d'ecriture */
 	int largeurEcranPrincipal = 800;  /*!<largeur de la fentere principal*/
 	int hauteurEcranPrincipal = 600; /*!<hauteur de la fentere principal*/
+	int volume = 50; /*!<niveau du son de la musique */
 	chose * boutonAttaquer = new chose();  /*!< pointeur d'un objet chose bouton attaquer*/
 	chose * boutonSoin = new chose();  /*!< pointeur d'un objet chose bouton Soin*/
 	chose * scorePjHp = new chose();  /*!< pointeur d'un objet chose pour afficher la barre de vie du joueur*/

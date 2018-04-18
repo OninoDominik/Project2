@@ -2,12 +2,12 @@
 #include <math.h>
 
 
-jeu::jeu(int largeur, int hauteur, bool Affichagefps)
+jeu::jeu(int largeur, int hauteur, bool Affichagefps,int volumeSon)
 {
 	AfficherFrameRate = Affichagefps;
 	largeurEcranPrincipal = largeur;
 	hauteurEcranPrincipal = hauteur;
-
+	volume = volumeSon;
 }
 
 jeu::jeu()
@@ -306,7 +306,7 @@ int jeu::Startjeu(int classe, int currenthp, int force, int dexterite, int const
 	if (!music.openFromFile("./assets/sound/Gleipnir.ogg"))
 		return -1; // erreur
 	music.play();
-	music.setVolume(5);
+	music.setVolume(volume);
 	music.setLoop(true);
 
 	bool * fermeCombatWindow = new bool(false);
@@ -996,7 +996,7 @@ int jeu::Startjeu(int classe, int currenthp, int force, int dexterite, int const
 			ptrPj->sound.setBuffer(ptrPj->buffer);
 			ptrPj->sound.setPlayingOffset(sf::seconds(1));
 			ptrPj->sound.play();
-			ptrPj->sound.setVolume(60);
+			ptrPj->sound.setVolume(volume);
 			sf::Event  gameOverEvent;
 			sf::RenderWindow gameOverWindow(sf::VideoMode(320, 335), "Game Over");
 

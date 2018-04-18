@@ -102,6 +102,7 @@ public:
 	bool enCombat = false; /*!< booleen qui indique si le personnage combat */
 	int seretourner = 0; /*!< entier qui permet de faire regarder  dans la direction voulue*/
 	bool feinte = false; /*!< booleen qui indique si le joueur a effectuer une feinte */
+	int volume; /*!< entier qui stoke le volume sonore du jeu */
 	sf::Time difference;  /*!< temps qui permet de calculler la difference de temps entre chaque frame */
 	sf::Time Chrono; /*!< temps quichronometre */
 	sf::Sound sound;  /*!< temps quichronometre */

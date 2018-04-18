@@ -51,7 +51,7 @@ void paladin::AttaqueSpecial(personnage& ennemi)
 				AvancerAttaque();
 				this->buffer.loadFromFile("./assets/sound/paladin/blind.ogg");
 				this->sound.setBuffer(this->buffer);
-				this->sound.setVolume(50);
+				this->sound.setVolume(volume);
 				this->sound.setPlayingOffset(sf::seconds(24));
 				this->sound.play();
 				this->anim->palastun();
@@ -106,7 +106,7 @@ void paladin::sesoigne()
 	this->buffer.loadFromFile("./assets/sound/heal.ogg");
 	this->sound.setBuffer(this->buffer);
 	this->sound.play();
-	this->sound.setVolume(20);
+	this->sound.setVolume(volume);
 	int x = this->rect.getPosition().x;
 	int y = this->rect.getPosition().y;
 

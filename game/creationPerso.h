@@ -31,6 +31,8 @@ public:
 	*/
 	creationPerso();
 
+	
+
 	/**
 	* \brief       constructeur
 	*
@@ -39,8 +41,9 @@ public:
 	* \param largeurFenetreDeJeu : stocke la taille de la largeur de la fentere principale
 	* \param hauteurFenetreDeJeu : stocke la taille de la hauteur de la fentere principale
 	* \param Affichagefps : stocke l'information si l'utilisateur souhaite l'affichage des frames par seconde
+	* \param volume : stocke le volume du jeu
 	*/
-	creationPerso(int largeurFenetreDeJeu, int hauteurFenetreDeJeu, bool Affichagefps);
+	creationPerso(int largeurFenetreDeJeu, int hauteurFenetreDeJeu, bool Affichagefps, int volume);
 	/**
 	* \brief       destructeur
 	*
@@ -72,6 +75,7 @@ public:
 	int lFenetreDeJeu; /*!< stocke la taille de la largeur de la fentere principale */
 	int hFenetreDeJeu; /*!< stocke la taille de la hauteur de la fentere principale */
 	bool Affichfps;  /*!< affiche ou non les frames par seconde */
+	int volumeSon; /*!< affiche ou non les frames par seconde */
 	int classe;   /*!< code chiffre de la classe */
 	int force = 10; /*!< force du personnage initialise a 10 */
 	int constitution = 10;/*!< constitution du personnage initialisee a 10 */

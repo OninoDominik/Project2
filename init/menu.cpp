@@ -168,12 +168,12 @@ void menu::ChargerBoutonFrameRate()
 void menu::menuStart()
 {
 
-	
 	sf::Music music;
 	music.openFromFile("./assets/sound/Dreamseer.ogg");
 	music.play();
 	music.setLoop(true);
 	sf::Font font;
+	music.setVolume(volume);
 	font.loadFromFile("./assets/font/Champ.ttf");
 
 	textureLogo.loadFromFile("./assets/img/iconPath.jpeg");
@@ -200,7 +200,6 @@ void menu::menuStart()
 	{
 		fermer = true;
 	}
-	;
 	bdd.insertSauvegardeSansDoublon("Paladin", 2, 99, 16, 10, 10, 6, 18, 10, 256, 1440, 1, 1, 1, 1, 2);
 	bdd.insertSauvegardeSansDoublon("Ranger", 3, 99, 10, 10, 18, 16, 6, 10, 256, 1440, 1, 1, 1, 1, 3);
 
@@ -213,6 +212,7 @@ void menu::menuStart()
 	bdd.closeDatabase();
 	while (menuWindow.isOpen())
 	{
+		
 		
 		sf::Event menuEvent;
 		while (menuWindow.pollEvent(menuEvent))
@@ -230,13 +230,13 @@ void menu::menuStart()
 
 
 
-
+		music.setVolume(volume);
 		if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && boutonNouvellePartie->rect.getGlobalBounds().intersects(spriteCurseur.rect.getGlobalBounds()))
 		{
 			music.stop();
 			menuWindow.close();
 
-			creationPerso * crea = new creationPerso(largeurFenetreDeJeu, hauteurFenetreDeJeu, Affichagefps);
+			creationPerso * crea = new creationPerso(largeurFenetreDeJeu, hauteurFenetreDeJeu, Affichagefps,volume);
 			crea->start();
 			menuWindow.create(sf::VideoMode(tailleEcran.x, tailleEcran.y), "Pathfinder", sf::Style::Titlebar | sf::Style::Close);
 			music.play();
@@ -246,7 +246,7 @@ void menu::menuStart()
 		{
 			music.stop();
 			menuWindow.close();
-			charger * chargeSauvegarde = new charger(largeurFenetreDeJeu, hauteurFenetreDeJeu, Affichagefps);
+			charger * chargeSauvegarde = new charger(largeurFenetreDeJeu, hauteurFenetreDeJeu, Affichagefps,volume);
 			chargeSauvegarde->start();
 			menuWindow.create(sf::VideoMode(tailleEcran.x, tailleEcran.y), "Pathfinder", sf::Style::Titlebar | sf::Style::Close);
 			music.play();
@@ -304,16 +304,21 @@ void menu::menuStart()
 				}
 				if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && boutonPlus->rect.getGlobalBounds().intersects(spriteCurseur2.rect.getGlobalBounds()))
 				{
-
-					volume += 5;
-					sf::sleep(sf::milliseconds(80));
+					if (volume < 100)
+					{
+						volume += 5;
+						sf::sleep(sf::milliseconds(80));
+					}
+					
 
 				}
 				if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && boutonMoins->rect.getGlobalBounds().intersects(spriteCurseur2.rect.getGlobalBounds()))
 				{
-
-					volume -= 5;
-					sf::sleep(sf::milliseconds(80));
+					if (volume > 0)
+					{
+						volume -= 5;
+						sf::sleep(sf::milliseconds(80));
+					}
 
 				}
 				if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && boutonValider->rect.getGlobalBounds().intersects(spriteCurseur2.rect.getGlobalBounds()))

@@ -1,11 +1,13 @@
 ﻿  menu.cpp
-e:\projet2\project2\database\../personnage/personnage.h(110): warning C4305: 'argument': truncation from 'double' to 'float'
-init\menu.cpp(160): warning C4809: switch statement has redundant 'default' label; all possible 'case' labels are given
-init\menu.cpp(208): warning C4018: '<': signed/unsigned mismatch
-  Generating code
-  1 of 628 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
+c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\database\../personnage/personnage.h(111): warning C4305: 'argument' : troncation de 'double' à 'float'
+init\menu.cpp(160): warning C4809: l'instruction switch a une étiquette 'default' redondante ; toutes les étiquettes 'case' possibles sont fournies
+init\menu.cpp(177): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+init\menu.cpp(208): warning C4018: '<' : incompatibilité signed/unsigned
+init\menu.cpp(234): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+  Génération de code en cours
+  2 of 628 functions ( 0.3%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    1 functions had inline decision re-evaluated but remain unchanged
-  Finished generating code
-  Projet2.vcxproj -> E:\Projet2\Project2\Release\Projet2.exe
-  Projet2.vcxproj -> E:\Projet2\Project2\Release\Projet2.pdb (Full PDB)
+    14 functions had inline decision re-evaluated but remain unchanged
+  Fin de la génération du code
+  Projet2.vcxproj -> C:\Users\adai06\Documents\Visual Studio 2015\Projects\Projet2\Project2\Release\Projet2.exe
+  Projet2.vcxproj -> C:\Users\adai06\Documents\Visual Studio 2015\Projects\Projet2\Project2\Release\Projet2.pdb (Full PDB)

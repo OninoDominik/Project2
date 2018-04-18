@@ -6,11 +6,12 @@ creationPerso::creationPerso()
 {
 }
 
-creationPerso::creationPerso(int largeurFenetreDeJeu, int hauteurFenetreDeJeu, bool Affichagefps)
+creationPerso::creationPerso(int largeurFenetreDeJeu, int hauteurFenetreDeJeu, bool Affichagefps,int volume)
 {
 	lFenetreDeJeu = largeurFenetreDeJeu;
 	hFenetreDeJeu = hauteurFenetreDeJeu;
 	Affichfps = Affichagefps;
+	volumeSon = volume;
 }
 
 
@@ -429,7 +430,7 @@ void creationPerso::start()
 		if (i == 4)
 		{
 			creaWindow.close();
-			jeu * partie = new jeu(lFenetreDeJeu, hFenetreDeJeu, Affichfps);
+			jeu * partie = new jeu(lFenetreDeJeu, hFenetreDeJeu, Affichfps,volumeSon);
 			partie->Startjeu(classe, 99, force, dexterite, constitution, charisme, sagesse, intelligence, 256, 1440, 1, 1, 1, 1, slotSauvegarde);
 			delete partie;
 		}
