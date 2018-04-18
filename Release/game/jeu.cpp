@@ -196,20 +196,20 @@ void jeu::Combat32(personnage * ptrPj, personnage * Pnj, sf::Texture texturePnj,
 sf::View jeu::majVue(sf::View vuePj)
 {
 	vuePj.setCenter(ptrPj->rect.getPosition());
-	//Bloque la caméra lorsque le perso arrive à droite de la map
+	
 	if (ptrPj->rect.getPosition().x + (largeurEcranPrincipal / 2) > 1600)
 	{
-		//Bloque la caméra si le perso arrive dans un coin bas
+		
 		if (ptrPj->rect.getPosition().y + (hauteurEcranPrincipal / 2) >1600)
 		{
 			vuePj.setCenter(1600 - (largeurEcranPrincipal / 2), 1600 - (hauteurEcranPrincipal / 2));
 		}
-		//Bloque la caméra si le perso arrive dans un coin haut droite
+		
 		else if (ptrPj->rect.getPosition().y - (hauteurEcranPrincipal / 2) < 0)
 		{
 			vuePj.setCenter(1600 - largeurEcranPrincipal / 2, hauteurEcranPrincipal / 2);
 		}
-		else // Laisse la caméra centré sur le joueur
+		else 
 		{
 			vuePj.setCenter(1600 - (largeurEcranPrincipal / 2), ptrPj->rect.getPosition().y);
 		}
@@ -217,34 +217,28 @@ sf::View jeu::majVue(sf::View vuePj)
 
 	else if (ptrPj->rect.getPosition().y + (hauteurEcranPrincipal / 2) > 1600)
 	{
-		//Bloque la caméra si la personnage arrive dans le coin bas gauche
 		if (ptrPj->rect.getPosition().x - (largeurEcranPrincipal / 2) < 0)
 		{
 			vuePj.setCenter(largeurEcranPrincipal / 2, 1600 - hauteurEcranPrincipal / 2);
 		}
-		//Bloque la caméra en bas
 		else
 		{
 			vuePj.setCenter(ptrPj->rect.getPosition().x, 1600 - (hauteurEcranPrincipal / 2));
 		}
 	}
-	//Bloque la map à gauche
 	else if (ptrPj->rect.getPosition().x - (largeurEcranPrincipal / 2) < 0)
 	{
 
-		//Bloque la caméra sur le coint haut doite
 		if (ptrPj->rect.getPosition().y - (hauteurEcranPrincipal / 2) < 0)
 		{
 			vuePj.setCenter(largeurEcranPrincipal / 2, hauteurEcranPrincipal / 2);
 		}
-		//la caméra suit le joueur
 		else
 		{
 			vuePj.setCenter(largeurEcranPrincipal / 2, ptrPj->rect.getPosition().y);
 		}
 
 	}
-	//Bloque la map en haut
 	else if (ptrPj->rect.getPosition().y - (hauteurEcranPrincipal / 2) < 0)
 	{
 		vuePj.setCenter(ptrPj->rect.getPosition().x, hauteurEcranPrincipal / 2);
@@ -298,7 +292,7 @@ void jeu::ChargerTexteGameover()
 }
 void jeu::ChargerTexteRemerciement()
 {
-	texteRemerciement->text.setString("Merci pour :  \nla musique à \nAdrien von Ziegler\nles sprites sheet à\n87uhgb\nla map à\nRaZziraZzi,RTPCelianna\nLunarea; Pandamaru\nPathfinder à Paizo");
+	texteRemerciement->text.setString("Merci pour :  \nla musique à \nAdrian von Ziegler\nles sprites sheet à\n87uhgb\nla map à\nRaZziraZzi,RTPCelianna\nLunarea; Pandamaru\nPathfinder à Paizo");
 	texteRemerciement->text.setFillColor(sf::Color::Cyan);
 	texteRemerciement->text.setCharacterSize(20);
 	texteRemerciement->text.setPosition(0, 120);
@@ -465,6 +459,7 @@ int jeu::Startjeu(int classe, int currenthp, int force, int dexterite, int const
 	ptrDB->text.setFillColor(sf::Color::White);
 	ptrDB->text.setCharacterSize(16);
 	ptrDB->volume = volume;
+	(*ptrDB->bonusInitiative) = 25;
 	*ptrDB->nbrAttaque = 2;
 	*ptrDB->envie = mob2;
 
@@ -805,16 +800,16 @@ int jeu::Startjeu(int classe, int currenthp, int force, int dexterite, int const
 			ptrPj->rect.setSize((sf::Vector2f(tailleblock, tailleblock)));
 			ptrPj->sprite.setTexture(textureHero);
 			ptrPj->sprite.setTextureRect(sf::IntRect(i * tailleblock, tailleblock * 2 + ptrPj->seretourner, tailleblock, tailleblock));
+
 			ptrDB->rect.setPosition((300), (77));
 			ptrDB->rect.setSize((sf::Vector2f(110, tailleblock * 2)));
 			ptrDB->sprite.setTexture(texture4);
-
-			int i = 0;
-			int j = 0;
+			bool aaa = true;
+			
 			while (combatWindow2.isOpen())
 			{
-
-
+				
+				
 				spriteCurseurCombat.rect.setPosition((sf::Vector2f)sf::Mouse::getPosition(combatWindow2));
 				spriteCurseurCombat.rect.setSize(sf::Vector2f(4, 4));
 
@@ -827,17 +822,19 @@ int jeu::Startjeu(int classe, int currenthp, int force, int dexterite, int const
 						combatWindow2.close();
 
 				}
+				
 				ChargerHpPjetbarre(ptrPj);
 				ChargerHpPnj(ptrDB);
 				ChargerBoutonSpecial(ptrPj);
 
 				combatWindow2.setFramerateLimit(60);
-				if (ptrPj->mouvementCombat)
+				if (ptrPj->mouvementCombat || aaa)
 				{
 					ptrPj->sprite.setTextureRect(sf::IntRect(compteurPas * tailleblock, tailleblock * 2 + ptrPj->seretourner, tailleblock, tailleblock));
 				}
 
 				ptrPj->Positionnement();
+				aaa = false;
 
 				if (ptrDB->mouvementCombat)
 				{

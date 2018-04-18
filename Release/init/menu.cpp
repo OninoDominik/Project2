@@ -170,11 +170,14 @@ void menu::menuStart()
 {
 	sf::Image icon;
 	sf::Music music;
-	music.openFromFile("./assets/sound/Dreamseer.ogg");
+	if (!music.openFromFile("./assets/sound/Dreamseer.ogg"))
+	{
+		std::cout << "pas de de musique ./assets/sound/Dreamseer.ogg" << std::endl;
+	}
 	music.play();
 	music.setLoop(true);
-	sf::Font font;
 	music.setVolume(volume);
+	sf::Font font;
 	font.loadFromFile("./assets/font/Champ.ttf");
 
 	textureLogo.loadFromFile("./assets/img/iconPath.jpeg");
@@ -192,7 +195,6 @@ void menu::menuStart()
 	if (!icon.loadFromFile("./assets/img/iconPath.jpeg"))
 	{
 		std::cout << "pas de d'icone ./assets/img/iconPath.jpeg" << std::endl;
-
 	}
 	menuWindow.setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
 	database bdd;

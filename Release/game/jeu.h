@@ -71,7 +71,7 @@ public:
 	/**
 	* \brief       met a jour la vue 
 	*
-	* met a jour la vue 
+	* met a jour la vue ce qui permet de centrer la camera sur le personnage sauf quand il est trop pres des bord de la carte afin de cacher les barres noires
 	*
 	* \param sf::View vuePj : vue centré actuelle
 	* \return sf::View vuePj mise a jour dans le cas des coins
@@ -89,7 +89,6 @@ public:
 	sf::Texture texture;  /*!< une texture de monstre*/
 	sf::Texture texture3;  /*!< une texture de monstre*/
 	sf::Texture texture4;  /*!< une texture de monstre*/
-	// sf::Texture pala; /*!< une texture */
 	sf::Texture textureHero; /*!< une texture qui stocke le skin du perso enf ocntion du metier choisis*/
 	sf::Texture grave; /*!< une texture pour indiquer la mort d'un ennemi */
 	sf::Texture fond; /*!< une texture qui generera la carte*/

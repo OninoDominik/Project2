@@ -75,7 +75,7 @@ public:
 	int lFenetreDeJeu; /*!< stocke la taille de la largeur de la fentere principale */
 	int hFenetreDeJeu; /*!< stocke la taille de la hauteur de la fentere principale */
 	bool Affichfps;  /*!< affiche ou non les frames par seconde */
-	int volumeSon; /*!< affiche ou non les frames par seconde */
+	int volumeSon; /*!< stocke le volume */
 	int classe;   /*!< code chiffre de la classe */
 	int force = 10; /*!< force du personnage initialise a 10 */
 	int constitution = 10;/*!< constitution du personnage initialisee a 10 */

@@ -42,6 +42,14 @@ void creationPerso::start()
 	std::vector<sauvegarde*>* touteSauvegarde;
 	touteSauvegarde = bdd.getAllSauvegarde();
 	sf::Image icon;
+	sf::Music music;
+	if (!music.openFromFile("./assets/sound/Necromancy.ogg"))
+	{
+		std::cout << "pas de de musique ./assets/sound/Necromancy.ogg" << std::endl;
+	}
+	music.play();
+	music.setVolume(volumeSon / 2);
+	music.setLoop(true);
 	sf::RenderWindow creaWindow(sf::VideoMode(1000, 510), "Creation de personnage", sf::Style::Titlebar | sf::Style::Close);
 	if (!icon.loadFromFile("./assets/img/iconPath.jpeg"))
 	{
@@ -434,6 +442,7 @@ void creationPerso::start()
 		}
 		if (i == 4)
 		{
+			music.stop();
 			creaWindow.close();
 			jeu * partie = new jeu(lFenetreDeJeu, hFenetreDeJeu, Affichfps,volumeSon);
 			partie->Startjeu(classe, 99, force, dexterite, constitution, charisme, sagesse, intelligence, 256, 1440, 1, 1, 1, 1, slotSauvegarde);
