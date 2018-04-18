@@ -175,6 +175,8 @@ int personnage::BonusStat(string stat)
 	{
 		return (*intelligence - 10) / 2;
 	}
+	cout << "mauvais parametre" << endl;
+	return 0;
 }
 void personnage::sesoigne()
 {

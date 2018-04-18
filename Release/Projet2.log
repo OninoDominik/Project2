@@ -1,20 +1,9 @@
 ﻿  creationPerso.cpp
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\game\../personnage/personnage.h(111): warning C4305: 'argument' : troncation de 'double' à 'float'
-  charger.cpp
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\database\../personnage/personnage.h(111): warning C4305: 'argument' : troncation de 'double' à 'float'
-init\charger.cpp(104): warning C4800: 'int' : valeur forcée à la valeur booléenne 'true' ou 'false' (avertissement sur les performances)
-init\charger.cpp(111): warning C4800: 'int' : valeur forcée à la valeur booléenne 'true' ou 'false' (avertissement sur les performances)
-init\charger.cpp(118): warning C4800: 'int' : valeur forcée à la valeur booléenne 'true' ou 'false' (avertissement sur les performances)
-  menu.cpp
-c:\users\adai06\documents\visual studio 2015\projects\projet2\project2\database\../personnage/personnage.h(111): warning C4305: 'argument' : troncation de 'double' à 'float'
-init\menu.cpp(160): warning C4809: l'instruction switch a une étiquette 'default' redondante ; toutes les étiquettes 'case' possibles sont fournies
-init\menu.cpp(176): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-init\menu.cpp(213): warning C4018: '<' : incompatibilité signed/unsigned
-init\menu.cpp(239): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-  Génération de code en cours
-  4 of 629 functions ( 0.6%) were compiled, the rest were copied from previous compilation.
+e:\projet2\project2\game\../personnage/personnage.h(111): warning C4305: 'argument': truncation from 'double' to 'float'
+  Generating code
+  1 of 629 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    14 functions had inline decision re-evaluated but remain unchanged
-  Fin de la génération du code
-  Projet2.vcxproj -> C:\Users\adai06\Documents\Visual Studio 2015\Projects\Projet2\Project2\Release\Projet2.exe
-  Projet2.vcxproj -> C:\Users\adai06\Documents\Visual Studio 2015\Projects\Projet2\Project2\Release\Projet2.pdb (Full PDB)
+    17 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  Projet2.vcxproj -> E:\Projet2\Project2\Release\Projet2.exe
+  Projet2.vcxproj -> E:\Projet2\Project2\Release\Projet2.pdb (Full PDB)

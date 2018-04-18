@@ -156,6 +156,7 @@ void menu::ChargerBoutonFrameRate()
 		boutonFrameRate->text.setFillColor(sf::Color::Green);
 		break;
 	default:
+		cout << "erreur bouton frame rate" << endl;
 		break;
 	}
 	boutonFrameRate->text.setCharacterSize(16);

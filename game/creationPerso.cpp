@@ -96,7 +96,7 @@ void creationPerso::start()
 		{
 			classe = 1;
 			avantChoix = false;
-			intro->text.setString("Rezza te demanda de le suivre et d'un claquement de doigts vous avez disparu dans les ombres\nTu reapparu seul devant une femme rousse seconder par un tiefling de 2 metres de haut et celui-ci dit:\n je suis William prêtre du dieux de la guerre gorum Et voici ma soeur Emma seigneur du duché nord du mendev.\n  Alors petit, comme ça on veut devenir un guerrier  ? Moi aussi à ton âge j’avais ce rêve - là, et me voilà\nà diriger des armées et former des jeunots comme toi !Tu verras, ce n’est pas une vie facile, tu feras\ncouler le sang et perdra beaucoup du tien lors des batailles.En somme il faut que ta force soit sans\négale pour pourfendre tes ennemis et que tu aies la constitution d’un ours des montagnes.\n et c'est ainsi que tu t'entraina pendant les 8 prochaines années.");
+			intro->text.setString("Rezza te demanda de le suivre et, d'un claquement de doigts, vous avez disparu dans les ombres.\nLorsque la lumière revint, tu te retrouvas, seul, devant une femme rousse en armure lourde, secondée par un imposant Tiefling.\nCe dernier se présente :\nje suis William prêtre de Gorum, dieux de la guerre et voici ma soeur Emma, seigneur du duché du nord du Mendev.\nCette dernière prit la parole : Alors petit, comme ça on veut devenir un guerrier ? Moi aussi à ton âge j'avais ce rêve - là,\net me voilà à diriger des armées et former de jeunots comme toi ! Tu verras, ce n'est pas une vie facile,\ntu feras couler le sang et perdra beaucoup du tien lors des batailles. En somme il faut que ta force soit sans\négale pour pourfendre tes ennemis et que tu aies la constitution d'un ours des montagnes.\net c'est ainsi que tu t'entrainas pendant les huit années suivantes.");
 			apreschoix = true;
 			boutonVoleur->rect.setSize((sf::Vector2f(0, 0)));
 			boutonGuerrier->rect.setSize((sf::Vector2f(0, 0)));
@@ -109,7 +109,7 @@ void creationPerso::start()
 		{
 			classe = 2;
 			avantChoix = false;
-			intro->text.setString("Rezza te demanda de le suivre et d'un claquement de doigts vous avez disparu dans les ombres\nTu reapparu seul devant un Gnome dont les cheveux brillait d'un orange que tu avais déjà vu lors de certain crepuscule d'été et celui-ci dit:\n Je suis Abroshtor paladin de Sarenrae. J'ai besoin d'un nouvel ecuyer, suis-moi, tu vas avoir beaucoup a apprendre.\nTu passa 8 ans a apprendre la magie du soins et le combat dans l'ordre de la luciole.\nLe jour de ton adoubement c'est Abroshtor qui preside la céremonie: Te voilà qui devient Paladin, au service du Bien et de la Lumière\nEn ce monde envahi par des créatures de l’ombre.\nTon rôle sera de mener les Hommes vers le droit chemin et d’éliminer ceux qui les en empêchent.\nTu as été choisi pour ton charisme qui guidera et soignera tes compagnons sur le champ de bataille \net pour ta force qui fera tomber tes ennemis.");
+			intro->text.setString("Rezza te demanda de le suivre et d'un claquement de doigts vous avez disparu dans les ombres\n Lorsque la lumière revint, tu te retrouvas, seul, devant un Gnome dont les cheveux étincelaient\nd'un orange pareil à celui d'un crépuscule d'été. D'une voix forte mais amicale, il se présenta :\nJe suis Abroshtor, paladin de Sarenrae, Fleur de l'Aube. J'ai besoin d'un nouvel écuyer, \nsuis-moi, tu vas avoir beaucoup à apprendre.\nLes huit années qui suivirent furent consacrées à ton apprentissage de la magie du soin et du combat au sein de l'Ordre de la Luciole.\nChaque jour tu bombardais Abroshtor de questions auxquelles il ne répondait jamais. \nC'est qu'il était sourd, mais ça, tu l'ignorais encore à cette époque.\nLe jour de ton adoubement, c'est Abroshtor qui présida la cérémonie :\nTe voilà qui deviens Paladin, au service du Bien et de la Lumière\nEn ce monde envahi par des créatures de l'ombre.\nTon rôle sera de mener les Hommes vers le droit chemin et d'éliminer ceux qui les en empêchent.\nTu as été choisi pour ton charisme qui guidera et soignera tes compagnons sur le champ de bataille \net pour ta force qui fera tomber tes ennemis.");
 			apreschoix = true;
 			boutonVoleur->rect.setSize((sf::Vector2f(0, 0)));
 			boutonGuerrier->rect.setSize((sf::Vector2f(0, 0)));
@@ -121,7 +121,7 @@ void creationPerso::start()
 		{
 			classe = 3;
 			avantChoix = false;
-			intro->text.setString("Rezza te demanda de le suivre et d'un claquement de doigts vous avez disparu dans les ombres\nTu reapparu seul devant une demi elfe blonde et son ours de compagnie\nAh !Te voilà ! je suis Eline ,druide, Rezza m'a demandé de te former.\n Il nous fallait un nouveau ranger pour pister ces monstres qui rodent en nos terres.\nL’on oublie souvent à quel point il est essentiel de connaître un territoire avant de vouloir y partir en guerre.\nA l’image de ces braves et rutilants Paladin tu guides les armées vers la victoire.\n Mais c'est grâce à ta sagesse et ta dextérité qui te font toujours trouver les meilleurs chemins. Tu appris avec elle pendant huits années");
+			intro->text.setString("Rezza te demanda de le suivre et d'un claquement de doigts vous avez disparu dans les ombres\nLorsque la lumière revint, tu te retrouvas, seul, devant une Demi-Elfe qui apprenait des tours à un jeune ours.\nAh ! Te voilà ! Je m'appelle Eline et je suis druide. Lui, c'est Misha. \nL'ours te lança un regard suspicieux, comme pour te prévenir de ne pas faire de mal à sa maîtresse. \nRezza m'a demandé de te former, continua-t-elle, il nous faut un nouveau ranger pour pister ces monstres qui rodent en nos terres.\nOn oublie souvent à quel point il est essentiel de connaître un territoire avant de vouloir y partir en guerre.\nA l'image de ces braves et rutilants Paladin tu guides les armées vers la victoire.\nMais c'est grâce à ta sagesse et à ta dextérité qui te font toujours trouver les meilleurs chemins. \nEt c'est ainsi que débutèrent tes huit ans d'apprentissage");
 			apreschoix = true;
 			boutonVoleur->rect.setSize((sf::Vector2f(0, 0)));
 			boutonGuerrier->rect.setSize((sf::Vector2f(0, 0)));
@@ -133,7 +133,7 @@ void creationPerso::start()
 		{
 			classe = 4;
 			avantChoix = false;
-			intro->text.setString("Rezza te demanda de le suivre et d'un claquement de doigts vous avez disparu dans les ombres\nTu reapparu avec rezza un dans une tour faites d'ombres rempli de livre. Rezza dit: il m'a fallu une vie pour collectionner tout ceci\n tu restera ici avec moi jusqu'a connaite la plupart de ces écrits.\nTu veux t'essayer aux sciences et devenir alchimiste, très bien !\nJ’espère que tu es bien conscient que ton métier servira plus à créer des armes toujours plus puissantes qu’à trouver je ne sais quel remède…\nOn ne sait jamais les miracles arrive vite.\n Tu verras, ça reste un métier passionnant où l’intelligence est la clé de la réussite!\nIl ta fallu 8 ans d'etudes avant que rezza te juge digne de sortir de la tour en tant que son apprenti.");
+			intro->text.setString("Rezza te demanda de le suivre et d'un claquement de doigts vous avez disparu dans les ombres\nLorsque la lumière revint, tu te retrouvas, seul, dans une tour nimbée d'ombre. \nLes murs étaient recouverts d'étagères remplies d'imposants grimoires. Rezza te dit: \nil m'a fallu toute une vie pour rassembler ces ouvrages. Tu resteras ici avec moi jusqu'à ce que tu connaisses la plupart de ces écrits. \nC'est très bien de vouloir s'essayer aux sciences et devenir alchimiste mais il te faudra beaucoup étudier avant d'arriver à tes fins !\nJ'espère aussi que tu es bien conscient que ton métier servira plus à créer des armes toujours plus puissantes qu'à trouver \nje ne sais quel remède... Tu verras, ça reste un métier passionnant où l'intelligence est la clé de la réussite!\nIl t'a fallu huit ans d'études avant que Rezza te juge digne de sortir de la tour en tant que son apprenti.");
 			apreschoix = true;
 			boutonVoleur->rect.setSize((sf::Vector2f(0, 0)));
 			boutonGuerrier->rect.setSize((sf::Vector2f(0, 0)));
@@ -145,7 +145,7 @@ void creationPerso::start()
 		{
 			classe = 5;
 			avantChoix = false;
-			intro->text.setString("Rezza te demanda de le suivre et d'un claquement de doigts vous avez disparu dans les ombres\nTu reapparu devant un Goblin, Je suis Isotope le regicide, grace a Isotop, la qualité de vos regicides sont au top !!\nTu veux devenir un lame de l'ombre pour eliminer les ennemis de ta cause \nNoble intention mais pour y parvenir tu avs devoir anneantir tout once de compassion ou de noblesse sinon tu n'y arrivera jamais.\nJe te declare novice Voleur de la lame d'ombre\nIl te faudra une grande dextérité, les poches sont de mieux en mieux cousues de nos jours.\nNe néglige pas ta forme physique cependant ta constitution sera ton salut si jamais tu venais à devoir encaisser quelques réprimandes.\nIl ta fallu 8 ans pour apprendre quelques techniques interdites.");
+			intro->text.setString("Rezza te demanda de le suivre et d'un claquement de doigts vous avez disparu dans les ombres\n Lorsque la lumière revint, tu te retrouvas, seul, devant un Goblin qui t'accueillit en sautillant.\nJe suis Isotope le Régicide ! Grâce à Isotope, la qualité de vos régicides est au top !!\nTu veux devenir un lame de l'ombre pour éliminer les ennemis de ta cause ?\nNoble intention mais pour y parvenir tu vas devoir te défaire de toute compassion et de ton honneur sinon tu n'y arriveras jamais.\nBien, bien bien, dit-il avant d'imiter un geste d’adoubement avec sa dague. Je te déclare novice de la lame d'ombre !\nIl te faudra une grande dextérité, tu sais, les poches sont de mieux en mieux cousues de nos jours.\nNe néglige cependant pas ta constitution : elle sera ton salut si jamais tu venais à devoir encaisser quelques réprimandes.\nAprès huit ans d'apprentissage, tu pus te complaire enfin dans les basses oeuvres dont tu avais tant rêvé, \nmême si tu n'étais pas aussi au top qu'Isotope.");
 			apreschoix = true;
 			boutonVoleur->rect.setSize((sf::Vector2f(0, 0)));
 			boutonGuerrier->rect.setSize((sf::Vector2f(0, 0)));
@@ -551,7 +551,7 @@ void creationPerso::chargerBoutonclasses()
 }
 void creationPerso::chargerIntro()
 {
-	intro->text.setString("Tu as 15 ans, ton nom est Gallwell.\nTu n'as connus que ton orphelinat comme foyer.\nUn soir, la gardienne de l'orphelinat reveille tout les enfants et les fait attendre dans un couloir,\nA tour de rôle vous rentrer un par un dans le bureau du directeur.\nles enfants ne restent que quelque secondes dans le bureau pour ressortir sans rien dire, ton tour arrive tu entre\nTu vois un homme à la peaux grise et au cheveux noirs ebene, il te regarde de ces yeux severes.\nIl dit :Je suis Rezza, Heros de Kenabres, Liberateur de Drezen; Un eclat d'une pierre de garde s'est loger dans ton âme\nCelle ci te donnera acces a une grandeur que les autres ne peuvent entrevoir.\nJe suis ici pour te donner un choix,que souhaite tu devenir ?");
+	intro->text.setString("Galdwell est un jeune garçon de quatorze ans qui a eu l'orphelinat pour unique foyer. Ce Galdwell, c'est toi.\nUn soir, la gardienne de l'orphelinat réveilla tous les enfants et les fit attendre dans un couloir, \nA tour de rôle tu vis tes camarades entrer dans le bureau du directeur\npour en ressortir un court instant plus tard, sans rien dire. Ton tour arriva bien vite.\nFace à toi, tu vis non pas le directeur mais un homme à la peau grise et au cheveux noir ébène. \nIl te lança un regard sévère et te dit :\nJe suis Rezza, Heros de Kenabres, Libérateur de Drezen. Un éclat d'une pierre de garde s'est logé dans ton âme\nIl te donnera accès à une grandeur que nul autre ne pourra jamais atteindre.\nTu es promis à un avenir fabuleux, à toi de choisir la voie pour y parvenir: que souhaites-tu devenir ?");
 	intro->text.setFillColor(sf::Color::White);
 	intro->text.setCharacterSize(16);
 	intro->text.setPosition(50, 10);
@@ -628,8 +628,8 @@ void creationPerso::chargerChoixCarac()
 	choixCarac->text.setString("Choisis ta meuilleur caracteristique !");
 	choixCarac->text.setFillColor(sf::Color::Magenta);
 	choixCarac->text.setCharacterSize(20);
-	choixCarac->text.setPosition(50, 250);
-	choixCarac->rect.setPosition(50, 250);
+	choixCarac->text.setPosition(50, 350);
+	choixCarac->rect.setPosition(50, 350);
 	choixCarac->rect.setSize((sf::Vector2f(100, 40)));
 }
 void creationPerso::chargerBoutonSauvegarde1()
